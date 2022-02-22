@@ -9,6 +9,9 @@ A list of enemies from Zelda's Adventure mapped to their counterparts from the 3
 - There is a pink bird called the **Moby** and a grey **Romraven** in the CDi version, they are represented by the Gameboy **Crow**
 - There is a purple and turquoise variety of the **Seagull** in the CDi version, the Gameboy **Dacto** represents them
 
+## Enemies 
+Regular enemies found in the overworld and dungeons.
+
 | CDi         | Gameboy     |
 | :---------: | :---------: |
 | ![Bago-Bago CDi](bestiary/ZA_Bago-Bago.png) <br /> Bago-Bago | ![Piranha DMG](bestiary/LA_Piranha.png) <br /> Piranha |
@@ -65,3 +68,28 @@ A list of enemies from Zelda's Adventure mapped to their counterparts from the 3
 | ![Zol CDi](bestiary/ZA_Red-Zol.png) <br /> Zol | ![Buzz Blob DMG](bestiary/LA_Buzz-Blob.png) <br /> Buzz Blob |
 | ![Stingray CDi](bestiary/ZA_Stingray.png) <br /> Stingray | ![Water Tektite DMG](bestiary/LA_Water-Tektite.png) <br /> Water Tektite |
 
+## Mini-Bosses
+Special enemies and mid-dungeon bosses.
+
+| CDi         | Gameboy     |
+| :---------: | :---------: |
+| ![Sardak CDi](bestiary/ZA_Sardak.png) <br />Sardak | ![Shrouded Stalfos DMG](bestiary/LA_Shrouded-Stalfos.png) <br /> Shrouded Stalfos |
+| ![Vapora CDi](bestiary/ZA_Vapora.png) <br />Vapora | ![Smog DMG](bestiary/OoA_Smog.png) <br /> Smog |
+| ![Seamonster CDi](bestiary/ZA_Seamonster.png) <br />Seamonster | ![Aquamentus DMG](bestiary/OoS_Aquamentus.png) <br /> Aquamentus |
+| ![Kelpie CDi](bestiary/ZA_Kelpi.png) <br />Kelpie | ![Possessed Nayru DMG](bestiary/OoA_Possessed_Nayru.png) <br /> Possessed Nayru |
+| ![Knight CDi](bestiary/ZA_Green_Knight.png) <br />Red/Blue/Green Knight | ![Ambi Guard riding Dimitri DMG](bestiary/OoA-Dimitri.png) <br /> Ambi Guard riding Dimitri |
+| ![Maxus CDi](bestiary/ZA_Maxus.png) <br />Maxus | ![Ambi Guard DMG](bestiary/OoA_Guard.png) <br /> Ambi Guard |
+
+## Bosses
+Dungeon masters guarding a celestial sign.
+
+| CDi         | Gameboy     |
+| :---------: | :---------: |
+| ![Llort CDi](bestiary/ZA_Llort.png) <br />Llort | ![Blue Stalfos DMG](bestiary/OoA_Blue-Stalfos.png) <br /> Blue Stalfos |
+| ![Pasquinade CDi](bestiary/ZA_Pasquinade.png) <br />Pasquinade | ![Pumpkin Head DMG](bestiary/OoA_Pumpkin-Head.png) <br /> Pumpkin Head |
+| ![Avianna CDi](bestiary/ZA_Avianna.png) <br />Avianna | ![Swoop DMG](bestiary/OoA_Swoop.png) <br /> Swoop |
+| ![Malmord CDi](bestiary/ZA_Malmord.png) <br />Malmord | ![Agunima DMG](bestiary/OoS_Agunima.png) <br /> Agunima |
+| ![Agwanda CDi](bestiary/ZA_Agwanda.png) <br />Agwanda | ![Green Camo Goblin DMG](bestiary/LADX_Green-Camo-Goblin.png) <br /> Green Camo Goblin |
+| ![Ursore CDi](bestiary/ZA_Ursore.png) <br />Ursore | ![Moosh DMG](bestiary/OoA-Moosh.png) <br /> Moosh |
+| ![Warbane CDi](bestiary/ZA_Warbane.png) <br />Warbane | ![Vire DMG](bestiary/LA_Vire.png) <br /> Vire |
+| ![Gannon CDi](bestiary/ZA_Gannon.png) <br />Gannon | ![Ganon DMG](bestiary/OoA_Ganon.png) <br /> Ganon |
