@@ -3,22 +3,24 @@ Miscellaneous notes and research.
 
 ## Spells
 
-Single Projectile
-- Boomerang
+Single Projectile (straight line)
 - Bow & Arrow
 - Broadsword
 - Dagger
-- Hammer
 - Noise
+- Jade ring
+
+Single Projectile (spins)
+- Hammer
 - roar stick
 - short axe
+- Boomerang
 
 Triple Projectile
 - Calm
 - Gold Necklace
 - Feather
 - Jade Amulet
-- Jade ring
 - joust
 - turquoise ring
 
