@@ -5,7 +5,7 @@
     "_release": "3",
     "scenes": [
         {
-            "name": "Scene 1",
+            "name": "Vision Henge",
             "backgroundId": "6a3dc472-8253-47b8-ace9-1c1e66f886c2",
             "width": 20,
             "height": 18,
@@ -155,7 +155,7 @@
                                     "direction": "down",
                                     "__collapseElse": true,
                                     "__disableElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -257,7 +257,7 @@
                                                 "x": 0,
                                                 "y": 0,
                                                 "otherActorId": "$self$",
-                                                "direction": "up",
+                                                "direction": "right",
                                                 "angle": 45,
                                                 "angleVariable": "L0",
                                                 "directionType": "direction",
@@ -312,7 +312,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "ca3eeff0-9585-4e19-9b7f-803570a8f51a",
-            "x": 258.7142857142857,
+            "x": 257.2142857142857,
             "y": 31,
             "actors": [
                 {
@@ -332,7 +332,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Equip. $10$"
+                                    "Equip. $10$\nWorld. $11$"
                                 ],
                                 "avatarId": ""
                             },
@@ -465,12 +465,36 @@
                     "y": 7
                 }
             ],
-            "triggers": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "1714d3ae-1a56-4ccc-aa9b-6e801010c03d",
+                    "x": 1,
+                    "y": 17,
+                    "symbol": "trigger_16",
+                    "width": 18,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "36b2f94b-0a38-46cc-9779-06036764b91a",
+                                "x": 9,
+                                "y": 6,
+                                "direction": "down",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "a4c88ab0-2f8e-483c-91bf-d8cf4bad9d05"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "symbol": "scene_scene_1",
             "playerSpriteSheetId": "17cc9796-c8bb-40a4-a773-c7b17df12caf"
         },
         {
-            "name": "Scene 2",
+            "name": "Inventory",
             "backgroundId": "a5fb6aed-cdb9-4788-874d-4aef3f34ab8c",
             "width": 20,
             "height": 18,
@@ -1731,7 +1755,7 @@
                     "args": {
                         "sceneId": "ca3eeff0-9585-4e19-9b7f-803570a8f51a",
                         "x": 9,
-                        "y": 9,
+                        "y": 10,
                         "direction": "down",
                         "fadeSpeed": "2"
                     },
@@ -1748,9 +1772,66 @@
             "triggers": [],
             "symbol": "scene_4",
             "playerSpriteSheetId": "17cc9796-c8bb-40a4-a773-c7b17df12caf"
+        },
+        {
+            "name": "Celestial Sign",
+            "backgroundId": "fef9e5c5-037b-4c92-bca4-2b2b38b07726",
+            "width": 20,
+            "height": 18,
+            "type": "ZELDASADVENTURE",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "36b2f94b-0a38-46cc-9779-06036764b91a",
+            "symbol": "scene_5",
+            "x": 439,
+            "y": 32,
+            "actors": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "b4733925-0a45-40e1-b478-aa9b72d99580",
+                    "x": 9,
+                    "y": 17,
+                    "symbol": "trigger_17",
+                    "width": 2,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "ca3eeff0-9585-4e19-9b7f-803570a8f51a",
+                                "x": 9,
+                                "y": 14,
+                                "direction": "down",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "8f9dfaff-91e2-4e05-a270-63128134fc99"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "17cc9796-c8bb-40a4-a773-c7b17df12caf"
         }
     ],
     "backgrounds": [
+        {
+            "id": "fef9e5c5-037b-4c92-bca4-2b2b38b07726",
+            "name": "celestial-sign",
+            "symbol": "bg_celestial_sign",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "celestial-sign.png",
+            "tileColors": []
+        },
         {
             "id": "a5fb6aed-cdb9-4788-874d-4aef3f34ab8c",
             "name": "inventory",
@@ -4138,7 +4219,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
+        "worldScrollX": 247,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": false,
