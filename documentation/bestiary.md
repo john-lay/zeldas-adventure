@@ -93,3 +93,13 @@ Dungeon masters guarding a celestial sign.
 | ![Ursore CDi](bestiary/ZA_Ursore.png) <br />Ursore | ![Moosh DMG](bestiary/OoA-Moosh.png) <br /> Moosh |
 | ![Warbane CDi](bestiary/ZA_Warbane.png) <br />Warbane | ![Vire DMG](bestiary/LA_Vire.png) <br /> Vire |
 | ![Gannon CDi](bestiary/ZA_Gannon.png) <br />Gannon | ![Ganon DMG](bestiary/OoA_Ganon.png) <br /> Ganon |
+
+
+## Notes on enemy attack/defence
+
+### Zelda with 3 hearts
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Zol   | 1 (half heart) | 2 |
+| Moblin | 1 (half heart) | 3 |
