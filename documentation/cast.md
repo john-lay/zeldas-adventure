@@ -55,3 +55,14 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![White Steed Patron 1 CDi](cast/ZA_White-Steed-patron-1.png) <br />White Steed Patron 1 | ![OoS Drunk DMG](cast/OoS-Drunk.png) <br /> OoS Drunk | n/a |
 | ![White Steed Patron 2 CDi](cast/ZA_White-Steed-patron-2.png) <br />White Steed Patron 2 | ![OoA Present NPC Old Guy DMG](cast/OoA-Present-Old-Guy.png) <br /> OoA Present NPC Old Guy | n/a |
 | ![Waldensop CDi](cast/ZA_Waldensop.png) <br />Waldensop | ![OoA Mayor Plen DMG](cast/OoA_Mayor-Plen.png) <br /> OoA Mayor Plen | n/a |
+
+## Ubato Hills
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Bard 1 CDi](cast/ZA_Bard1.png) <br />Bard 1 | ![OoS Guitar DMG](cast/OoS_Guitar.png) <br /> OoS Guitar Player | n/a |
+| ![Bard 2 CDi](cast/ZA_Bard2.png) <br />Bard 2 | ![OoA Past Young Guy Alt DMG](cast/OoA-Past-Young-Guy-Alt.png) <br /> OoA Past Young Guy Alt | n/a |
+| ![Ethera CDi](cast/ZA_Ethera.png) <br />Ethera | ![OoS Dog Owner DMG](cast/OoS-Dog-Owner.png) <br /> OoS Dog Owner | n/a |
+| ![Ethera's Dog CDi](cast/ZA_Ethera-Dog.png) <br />Ethera's Dog | ![OoS Flash DMG](cast/OoS-Flash.png) <br /> OoS Flash | n/a |
+| ![Gwynla CDi](cast/ZA_Gwynla.png) <br />Gwynla | ![OoA Present Yound Lady DMG](cast/OoA_Present-Young-Lady.png) <br /> OoA Present Yound Lady | n/a |
+| ![Lonlyn CDi](cast/ZA_Lonlyn.png) <br />Lonlyn | ![OoS Old Guy DMG](cast/OoS-Old-Guy.png) <br /> OoS Old Guy | n/a |
