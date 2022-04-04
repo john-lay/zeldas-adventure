@@ -66,3 +66,19 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Ethera's Dog CDi](cast/ZA_Ethera-Dog.png) <br />Ethera's Dog | ![OoS Flash DMG](cast/OoS_Flash.png) <br /> OoS Flash | n/a |
 | ![Gwynla CDi](cast/ZA_Gwynla.png) <br />Gwynla | ![OoA Present Yound Lady DMG](cast/OoA_Present-Young-Lady.png) <br /> OoA Present Yound Lady | n/a |
 | ![Lonlyn CDi](cast/ZA_Lonlyn.png) <br />Lonlyn | ![OoS Old Guy DMG](cast/OoS_Old-Guy.png) <br /> OoS Old Guy | n/a |
+
+## North Gubasha Desert
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Bitterbeck CDi](cast/ZA_Bitterbeck.png) <br />Bitterbeck | ![LA Fisherman DMG](cast/LA_Fisherman.png) <br /> LA Fisherman | House keeper |
+| ![Nimonee CDi](cast/ZA_Nimonee.png) <br />Nimonee | ![OoS Impa DMG](cast/OoS_Impa.png) <br /> OoS Impa | North-East tip of world map |
+| ![Thabul CDi](cast/ZA_Thabul.png) <br />Thabul | ![OoS Old Lady DMG](cast/OoS_Old-Lady.png) <br /> OoS Old Lady | mystic outside cave |
+
+## South Gubasha Desert
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Myntoll CDi](cast/ZA_Myntoll.png) <br />Myntoll | ![OoA Carpenter DMG](cast/OoA_Carpenter.png) <br /> OoA Carpenter | n/a |
+| ![Toatobar CDi](cast/ZA_Toatobar.png) <br />Toatobar | ![OoS Young Lady DMG](cast/OoS_Young-Lady.png) <br /> OoS Young Lady | n/a |
+| ![Gubasha Sleeping Guard CDi](cast/ZA_Gubasha-Sleeping.png) <br />Gubasha Sleeping Guard | ![OoS Sokra DMG](cast/OoS_Sokra.png) <br /> OoS Sokra | n/a |
