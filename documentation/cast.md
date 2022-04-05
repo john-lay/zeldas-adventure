@@ -96,3 +96,14 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Seacoast Pirate 2 CDi](cast/ZA_Seacoast-Pirate-2.png) <br />Seacoast Pirate 2 | ![OoS Pirate DMG](cast/OoS_Pirate.png) <br /> OoS Pirate | n/a |
 | ![Seacoast Sailor CDi](cast/ZA_Seacoast-Sailor.png) <br />Seacoast Sailor | ![OoA Past Pickaxe DMG](cast/OoA_Past-Pickaxe.png) <br /> OoA Past Pickaxe | n/a |
 | ![Seacoast Sailor 2 CDi](cast/ZA_Seacoast-Sailor-2.png) <br />Seacoast Sailor 2 | ![OoA Glasses DMG](cast/OoA_Glasses.png) <br /> OoA Glasses | n/a |
+
+## Vendoss
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Faust CDi](cast/ZA_Faust.png) <br />Faust | ![OoA Rafton DMG](cast/OoA_Rafton.png) <br /> OoA Rafton | Both sell a ferry service |
+| ![Gate Keeper CDi](cast/ZA_Gate-Keeper.png) <br />Gate Keeper | ![OoA Present Young Guy DMG](cast/OoA_Present-Young-Guy.png) <br /> OoA Present Young Guy | n/a |
+| ![Hooded Woman CDi](cast/ZA_Hooded-Woman.png) <br />Hooded Woman | ![OoS Old Lady Alt DMG](cast/OoS_Old-Lady-Alt.png) <br /> OoS Old Lady Alt | Not named alt in DMG III |
+| ![Links Guide CDi](cast/ZA_Links-Guide.png) <br />Links Guide | ![OoS Young Lady Alt DMG](cast/OoS_Young-Lady-Alt.png) <br /> OoS Young Lady Alt | Would an injured person be better? |
+| ![Sirram Bew CDi](cast/ZA_Sirram-Bew.png) <br />Sirram Bew | ![OoA Man with Cane DMG](cast/OoA-Man-with-Cane.png) <br /> OoA Man with Cane | Mis-named OoS in DMG III |
+| ![Swamp Merchant CDi](cast/ZA_Swamp-Merchant.png) <br />Swamp Merchant | ![LA Photographer DMG](cast/LA_Photographer.png) <br /> LA Photographer | Appears to be wearing a rat mask |
