@@ -82,3 +82,17 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Myntoll CDi](cast/ZA_Myntoll.png) <br />Myntoll | ![OoA Carpenter DMG](cast/OoA_Carpenter.png) <br /> OoA Carpenter | n/a |
 | ![Toatobar CDi](cast/ZA_Toatobar.png) <br />Toatobar | ![OoS Young Lady DMG](cast/OoS_Young-Lady.png) <br /> OoS Young Lady | n/a |
 | ![Gubasha Sleeping Guard CDi](cast/ZA_Gubasha-Sleeping.png) <br />Gubasha Sleeping Guard | ![OoS Sokra DMG](cast/OoS_Sokra.png) <br /> OoS Sokra | n/a |
+
+## Seacoast Plain
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Beach Merchant CDi](cast/ZA_Beach-Merchant.png) <br />Beach Merchant | ![OoS Vasu DMG](cast/OoS_Vasu.png) <br /> OoS Vasu | n/a |
+| ![Beach House Old Man CDi](cast/ZA_Beach-House-Old-Man.png) <br />Beach House Old Man | ![LA Old Man DMG](cast/LA_Old-Man.png) <br /> LA Old Man | n/a |
+| ![Beach House Old Woman CDi](cast/ZA_Beach-House-Old-Woman.png) <br />Beach House Old Woman | ![OoA Old Lady DMG](cast/OoA_Old-Lady.png) <br /> OoA Old Lady | n/a |
+| ![Seafarer CDi](cast/ZA_Seafarer.png) <br />Seafarer | ![OoA Postman DMG](cast/OoA_Postman.png) <br /> OoA Postman | n/a |
+| ![Seafarer 2 CDi](cast/ZA_Seafarer-2.png) <br />Seafarer 2 | ![OoA Old Man DMG](cast/OoA_Old-man.png) <br /> OoA Old man | n/a |
+| ![Seacoast Pirate CDi](cast/ZA_Seacoast-Pirate.png) <br />Seacoast Pirate | ![OoS Pirate Captain DMG](cast/OoS_Pirate-Captain.png) <br /> OoS Pirate Captain | n/a |
+| ![Seacoast Pirate 2 CDi](cast/ZA_Seacoast-Pirate-2.png) <br />Seacoast Pirate 2 | ![OoS Pirate DMG](cast/OoS_Pirate.png) <br /> OoS Pirate | n/a |
+| ![Seacoast Sailor CDi](cast/ZA_Seacoast-Sailor.png) <br />Seacoast Sailor | ![OoA Past Pickaxe DMG](cast/OoA_Past-Pickaxe.png) <br /> OoA Past Pickaxe | n/a |
+| ![Seacoast Sailor 2 CDi](cast/ZA_Seacoast-Sailor-2.png) <br />Seacoast Sailor 2 | ![OoA Glasses DMG](cast/OoA_Glasses.png) <br /> OoA Glasses | n/a |
