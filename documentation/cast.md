@@ -107,3 +107,11 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Links Guide CDi](cast/ZA_Links-Guide.png) <br />Links Guide | ![OoS Young Lady Alt DMG](cast/OoS_Young-Lady-Alt.png) <br /> OoS Young Lady Alt | Would an injured person be better? |
 | ![Sirram Bew CDi](cast/ZA_Sirram-Bew.png) <br />Sirram Bew | ![OoA Man with Cane DMG](cast/OoA-Man-with-Cane.png) <br /> OoA Man with Cane | Mis-named OoS in DMG III |
 | ![Swamp Merchant CDi](cast/ZA_Swamp-Merchant.png) <br />Swamp Merchant | ![LA Photographer DMG](cast/LA_Photographer.png) <br /> LA Photographer | Appears to be wearing a rat mask |
+
+## East Forest
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Quarry Miner CDi](cast/ZA_Quarry-Miner.png) <br />Quarry Miner | ![OoA Subrosian DMG](cast/OoA-Subrosian.png) <br /> OoA Subrosian | Partner of Subrosian Smithy |
+| ![Rebellion Soldiers CDi](cast/ZA_Rebellion-Soldiers.png) <br />Rebellion Soldiers | ![OoA Ambi Guards DMG](cast/OoA_Ambi-Guards.png) <br /> OoA Ambi Guards | n/a |
+
