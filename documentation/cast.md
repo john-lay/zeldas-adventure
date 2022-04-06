@@ -148,6 +148,6 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | :---------: | :---------: | :--------- |
 | ![Goblin CDi](cast/ZA_Canvula-Goblin.png) <br />Goblin | ![LA Zombie DMG](cast/LA_Zombie.png) <br /> LA Zombie | n/a |
 | ![Goblin Alt CDi](cast/ZA_Canvula-Goblin-Alt.png) <br />Goblin (Alt) | ![LA Zombie DMG](cast/LA_Zombie.png) <br /> LA Zombie | n/a |
-| ![Shopkeeper CDi](cast/ZA_Canvula-shopkeeper.png) <br />Shopkeeper | ![OoA Past Fisherman DMG](cast/OoA_Past-Fisherman.png) <br /> OoA Past Fisherman | n/a |
+| ![Shopkeeper CDi](cast/ZA_Canvula-Shopkeeper.png) <br />Shopkeeper | ![OoA Past Fisherman DMG](cast/OoA_Past-Fisherman.png) <br /> OoA Past Fisherman | n/a |
 | ![Skate Dude CDi](cast/ZA_Skate-Dude.png) <br />Skate Dude | ![OoA Ricky DMG](cast/OoA-Ricky.png) <br /> OoA Ricky | Last animal helper! |
 
