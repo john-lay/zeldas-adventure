@@ -115,3 +115,16 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Quarry Miner CDi](cast/ZA_Quarry-Miner.png) <br />Quarry Miner | ![OoA Subrosian DMG](cast/OoA-Subrosian.png) <br /> OoA Subrosian | Partner of Subrosian Smithy |
 | ![Rebellion Soldiers CDi](cast/ZA_Rebellion-Soldiers.png) <br />Rebellion Soldiers | ![OoA Ambi Guards DMG](cast/OoA_Ambi-Guards.png) <br /> OoA Ambi Guards | n/a |
 
+## Shrine of Strength
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Entrance Merchant CDi](cast/ZA_Strength-Shine-Entrance-Merchant.png) <br />Entrance Merchant | ![OoA Young Lady DMG](cast/OoA_Young-Lady.png) <br /> OoA Young Lady | n/a |
+| ![Water Bearer CDi](cast/ZA_Strength-Shine-Water-Bearer.png) <br />Water Bearer | ![OoS Young Lady Alt 2 DMG](cast/OoS_Young-Lady-Alt-2.png) <br /> OoS Young Lady Alt 2 | Mis-named OoA in DMG III |
+| ![Stall Owner CDi](cast/ZA_Strength-Shine-Stall-Owner.png) <br />Stall Owner | ![OoA Tower Builder DMG](cast/OoA_Tower-Builder.png) <br /> OoA Tower Builder | n/a |
+| ![Pickpocket CDi](cast/ZA_Strength-Shine-Pickpocket.png) <br />Pickpocket | ![OoA Boy DMG](cast/OoA-Boy.png) <br /> OoA Boy | n/a |
+| ![Thirsty Child CDi](cast/ZA_Strength-Shine-Thirsty-Child.png) <br />Thirsty Child | ![OoA Girl DMG](cast/OoA-Girl.png) <br /> OoA Girl | n/a |
+| ![Shooting Gallery Owner CDi](cast/ZA_Strength-Shine-Shooting-Gallery-Owner.png) <br />Shooting Gallery Owner | ![OoA Shooting Gallery Owner DMG](cast/OoA_Shooting-Gallery-Owner.png) <br /> OoA Shooting Gallery Owner | n/a |
+| ![Joust Stall Owner CDi](cast/ZA_Strength-Shine-Joust-Stall-Owner.png) <br />Joust Stall Owner | ![OoS Mrs Ruul DMG](cast/OoS_Mrs-Ruul.png) <br /> OoS Mrs Ruul | n/a |
+| ![Joust Custodian CDi](cast/ZA_Strength-Shine-Joust-Custodian.png) <br />Joust Custodian | ![OoS Angry Man DMG](cast/OoS_Angry-Man.png) <br /> OoS Angry Man | n/a |
+| ![Broadsword Stall Owner CDi](cast/ZA_Strength-Shine-Broadsword-Stall-Owner.png) <br />Broadsword Stall Owner | ![OoA Tokkey DMG](cast/OoA-Tokkey.png) <br /> OoA Tokkey | Can this cast choice be improved? |
