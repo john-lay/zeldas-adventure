@@ -83,6 +83,13 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Toatobar CDi](cast/ZA_Toatobar.png) <br />Toatobar | ![OoS Young Lady DMG](cast/OoS_Young-Lady.png) <br /> OoS Young Lady | n/a |
 | ![Gubasha Sleeping Guard CDi](cast/ZA_Gubasha-Sleeping.png) <br />Gubasha Sleeping Guard | ![OoS Sokra DMG](cast/OoS_Sokra.png) <br /> OoS Sokra | n/a |
 
+## Dry Canyon
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Sleeping Guard CDi](cast/ZA_Dry-Canyon-Sleeping-Guard.png) <br />Sleeping Guard | ![OoS Sleeping Talon DMG](cast/OoS_Sleeping-Talon.png) <br /> OoS Sleeping Talon | n/a |
+| ![Shurmak CDi](cast/ZA_Shurmak.png) <br />Shurmak | ![OoA Queen Ambi DMG](cast/OoA_Ambi.png) <br /> OoA Queen Ambi | n/a |
+
 ## Seacoast Plain
 
 | CDi         | Gameboy     | Notes      |
@@ -91,18 +98,24 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Beach House Old Man CDi](cast/ZA_Beach-House-Old-Man.png) <br />Beach House Old Man | ![LA Old Man DMG](cast/LA_Old-Man.png) <br /> LA Old Man | n/a |
 | ![Beach House Old Woman CDi](cast/ZA_Beach-House-Old-Woman.png) <br />Beach House Old Woman | ![OoA Old Lady DMG](cast/OoA_Old-Lady.png) <br /> OoA Old Lady | n/a |
 | ![Seafarer CDi](cast/ZA_Seafarer.png) <br />Seafarer | ![OoA Postman DMG](cast/OoA_Postman.png) <br /> OoA Postman | n/a |
-| ![Seafarer 2 CDi](cast/ZA_Seafarer-2.png) <br />Seafarer 2 | ![OoA Old Man DMG](cast/OoA_Old-man.png) <br /> OoA Old man | n/a |
+| ![Seafarer 2 CDi](cast/ZA_Seafarer-2.png) <br />Seafarer 2 | ![OoA Old Man DMG](cast/OoA_Old-man.png) <br /> OoA Old man | Wearing a Bandana |
 | ![Seacoast Pirate CDi](cast/ZA_Seacoast-Pirate.png) <br />Seacoast Pirate | ![OoS Pirate Captain DMG](cast/OoS_Pirate-Captain.png) <br /> OoS Pirate Captain | n/a |
 | ![Seacoast Pirate 2 CDi](cast/ZA_Seacoast-Pirate-2.png) <br />Seacoast Pirate 2 | ![OoS Pirate DMG](cast/OoS_Pirate.png) <br /> OoS Pirate | n/a |
 | ![Seacoast Sailor CDi](cast/ZA_Seacoast-Sailor.png) <br />Seacoast Sailor | ![OoA Past Pickaxe DMG](cast/OoA_Past-Pickaxe.png) <br /> OoA Past Pickaxe | n/a |
 | ![Seacoast Sailor 2 CDi](cast/ZA_Seacoast-Sailor-2.png) <br />Seacoast Sailor 2 | ![OoA Glasses DMG](cast/OoA_Glasses.png) <br /> OoA Glasses | n/a |
+
+## Forest of Albon
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Merchant CDi](cast/ZA_Forest-of-Albon-Merchant.png) <br />Merchant | ![OoA Present Dr Troy DMG](cast/OoA-Present-Dr-Troy.png) <br /> OoA Present Dr Troy | Kron the Pegleg |
+| ![Gate Keeper CDi](cast/ZA_Gate-Keeper.png) <br />Gate Keeper | ![OoA Present Young Guy DMG](cast/OoA_Present-Young-Guy.png) <br /> OoA Present Young Guy | n/a |
 
 ## Vendoss
 
 | CDi         | Gameboy     | Notes      |
 | :---------: | :---------: | :--------- |
 | ![Faust CDi](cast/ZA_Faust.png) <br />Faust | ![OoA Rafton DMG](cast/OoA_Rafton.png) <br /> OoA Rafton | Both sell a ferry service |
-| ![Gate Keeper CDi](cast/ZA_Gate-Keeper.png) <br />Gate Keeper | ![OoA Present Young Guy DMG](cast/OoA_Present-Young-Guy.png) <br /> OoA Present Young Guy | n/a |
 | ![Hooded Woman CDi](cast/ZA_Hooded-Woman.png) <br />Hooded Woman | ![OoS Old Lady Alt DMG](cast/OoS_Old-Lady-Alt.png) <br /> OoS Old Lady Alt | Not named alt in DMG III |
 | ![Links Guide CDi](cast/ZA_Links-Guide.png) <br />Links Guide | ![OoS Young Lady Alt DMG](cast/OoS_Young-Lady-Alt.png) <br /> OoS Young Lady Alt | Would an injured person be better? |
 | ![Sirram Bew CDi](cast/ZA_Sirram-Bew.png) <br />Sirram Bew | ![OoA Man with Cane DMG](cast/OoA-Man-with-Cane.png) <br /> OoA Man with Cane | Mis-named OoS in DMG III |
@@ -128,3 +141,13 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Joust Stall Owner CDi](cast/ZA_Strength-Shine-Joust-Stall-Owner.png) <br />Joust Stall Owner | ![OoS Mrs Ruul DMG](cast/OoS_Mrs-Ruul.png) <br /> OoS Mrs Ruul | n/a |
 | ![Joust Custodian CDi](cast/ZA_Strength-Shine-Joust-Custodian.png) <br />Joust Custodian | ![OoS Angry Man DMG](cast/OoS_Angry-Man.png) <br /> OoS Angry Man | n/a |
 | ![Broadsword Stall Owner CDi](cast/ZA_Strength-Shine-Broadsword-Stall-Owner.png) <br />Broadsword Stall Owner | ![OoA Tokkey DMG](cast/OoA-Tokkey.png) <br /> OoA Tokkey | Can this cast choice be improved? |
+
+## Forest of Canvula
+
+| CDi         | Gameboy     | Notes      |
+| :---------: | :---------: | :--------- |
+| ![Goblin CDi](cast/ZA_Canvula-Goblin.png) <br />Goblin | ![LA Zombie DMG](cast/LA_Zombie.png) <br /> LA Zombie | n/a |
+| ![Goblin Alt CDi](cast/ZA_Canvula-Goblin-Alt.png) <br />Goblin (Alt) | ![LA Zombie DMG](cast/LA_Zombie.png) <br /> LA Zombie | n/a |
+| ![Shopkeeper CDi](cast/ZA_Canvula-shopkeeper.png) <br />Shopkeeper | ![OoA Past Fisherman DMG](cast/OoA_Past-Fisherman.png) <br /> OoA Past Fisherman | n/a |
+| ![Skate Dude CDi](cast/ZA_Skate-Dude.png) <br />Skate Dude | ![OoA Ricky DMG](cast/OoA-Ricky.png) <br /> OoA Ricky | Last animal helper! |
+
