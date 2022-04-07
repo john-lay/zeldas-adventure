@@ -2280,6 +2280,49 @@
                         }
                     ],
                     "leaveScript": []
+                },
+                {
+                    "name": "",
+                    "id": "8964726e-a7fb-4da3-ab0b-1dfa46933f0f",
+                    "x": 19,
+                    "y": 1,
+                    "symbol": "trigger_30",
+                    "width": 1,
+                    "height": 16,
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_GET_POSITION",
+                            "args": {
+                                "actorId": "$self$",
+                                "vectorX": "12",
+                                "vectorY": "13"
+                            },
+                            "id": "22b3cf8f-e013-471e-a275-f07a41e869aa"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "value": {
+                                    "type": "number",
+                                    "value": 2
+                                }
+                            },
+                            "id": "ebc093be-e0df-4ab6-b222-361ce204c4e9"
+                        },
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "e0746f8c-ec28-435a-903f-4f921a436b47",
+                                "x": 2,
+                                "y": 9,
+                                "direction": "right",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "0a4136de-25be-4953-a0de-cbcef1b54db4"
+                        }
+                    ],
+                    "leaveScript": []
                 }
             ],
             "script": [
@@ -2865,9 +2908,96 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "playerSpriteSheetId": "17cc9796-c8bb-40a4-a773-c7b17df12caf"
+        },
+        {
+            "name": "Beach House East",
+            "backgroundId": "b54e1eca-17eb-4464-b317-949e73da4c62",
+            "width": 20,
+            "height": 18,
+            "type": "ZELDASADVENTURE",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "e0746f8c-ec28-435a-903f-4f921a436b47",
+            "symbol": "scene_10",
+            "x": 625,
+            "y": 34,
+            "actors": [],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "b4da39da-53ad-4cd1-a2cc-8c4c808870a2",
+                    "x": 0,
+                    "y": 1,
+                    "symbol": "trigger_31",
+                    "width": 1,
+                    "height": 16,
+                    "script": [
+                        {
+                            "command": "EVENT_ACTOR_GET_POSITION",
+                            "args": {
+                                "actorId": "$self$",
+                                "vectorX": "12",
+                                "vectorY": "13"
+                            },
+                            "id": "31ee9ca8-e955-4497-b33f-eb6c6a2d0978"
+                        },
+                        {
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "14",
+                                "value": {
+                                    "type": "number",
+                                    "value": 4
+                                }
+                            },
+                            "id": "5f456a02-5259-4b26-867f-cf6a151e9e5d"
+                        },
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "36b2f94b-0a38-46cc-9779-06036764b91a",
+                                "x": 16,
+                                "y": 9,
+                                "direction": "left",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "0ca64948-eb78-4e32-a081-68cb5d07d5d7"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
+            "script": [
+                {
+                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                    "args": {
+                        "customEventId": "f7967cad-ab4a-451a-aaec-140864c00df3",
+                        "$variable[0]$": "14",
+                        "$variable[1]$": "12",
+                        "$variable[2]$": "13"
+                    },
+                    "id": "bc0a6274-8757-406b-91e9-230758102b74"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "17cc9796-c8bb-40a4-a773-c7b17df12caf"
         }
     ],
     "backgrounds": [
+        {
+            "id": "b54e1eca-17eb-4464-b317-949e73da4c62",
+            "name": "beach-house-east",
+            "symbol": "bg_beach_house_east",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "beach-house-east.png"
+        },
         {
             "id": "fef9e5c5-037b-4c92-bca4-2b2b38b07726",
             "name": "celestial-sign",
@@ -6053,9 +6183,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 307,
+        "worldScrollX": 612,
         "worldScrollY": 0,
-        "zoom": 250,
+        "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -6083,9 +6213,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            202,
-            191,
-            563
+            195,
+            185,
+            546
         ],
         "showNavigator": true,
         "defaultFontId": "a0b6cef5-6606-4817-b783-9c6390f8d7d7",
