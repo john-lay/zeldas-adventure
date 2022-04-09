@@ -206,3 +206,17 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 
 
 ~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
+
+## Animated tiles guide
+
+There are 9 different animated tiles which use a different key in the HUD to identify them.
+
+- A scene with sea tiles will have sea tile 0 followed by sea tile 1
+- A scene with crashing wave will have wave tile 0, wave tile 1, sea tile 0 and sea tile 1
+- A scene with river tiles will have river tile 0
+- A scene with sea tiles and river tiles will have sea tile 1, sea tile 0 and river tile 0
+- A scene with lake tiles will have lake tile 0
+- A scene with lava tiles will have lava tile 0 followed by lava tile 1
+- A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
+- A scene with torch tiles will have torch tile 0
+- A scene with torch tiles and lamp tiles will have torch tile 3, lamp tile 0 and lamp tile 1
