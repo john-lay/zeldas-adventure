@@ -323,6 +323,29 @@
                         "$variable[2]$": "13"
                     },
                     "id": "77bc412b-1263-482d-b796-a8b591af3b45"
+                },
+                {
+                    "command": "EVENT_CLEAR_FLAGS",
+                    "args": {
+                        "variable": "17",
+                        "flag1": true,
+                        "flag2": true,
+                        "flag3": true,
+                        "flag4": true,
+                        "flag5": true,
+                        "flag6": true,
+                        "flag7": true,
+                        "flag8": true,
+                        "flag9": true,
+                        "flag10": true,
+                        "flag11": true,
+                        "flag12": true,
+                        "flag13": true,
+                        "flag14": true,
+                        "flag15": true,
+                        "flag16": true
+                    },
+                    "id": "ed975c5b-746c-4192-a790-99e2c3305305"
                 }
             ],
             "playerHit1Script": [],
@@ -527,17 +550,6 @@
                                 }
                             },
                             "id": "a51a1fec-44e6-4ca8-bea8-7657877cef3a"
-                        },
-                        {
-                            "command": "EVENT_SET_VALUE",
-                            "args": {
-                                "variable": "L2",
-                                "value": {
-                                    "type": "number",
-                                    "value": 2
-                                }
-                            },
-                            "id": "b1832ca7-5fab-4e0d-9e6c-33ff09d550c4"
                         }
                     ],
                     "updateScript": [
@@ -778,6 +790,13 @@
                             "children": {
                                 "true": [
                                     {
+                                        "command": "EVENT_COMMENT",
+                                        "args": {
+                                            "text": "Should be possible to use enemy position to set collectable position"
+                                        },
+                                        "id": "78934a69-936a-4861-9cb0-0507451c2ae5"
+                                    },
+                                    {
                                         "command": "EVENT_ACTOR_GET_POSITION",
                                         "args": {
                                             "actorId": "$self$",
@@ -874,7 +893,7 @@
                             "command": "EVENT_ACTOR_HIDE",
                             "args": {
                                 "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
-                                "__comment": true
+                                "__comment": false
                             },
                             "id": "646d169a-bff6-4dba-bfdb-0e96e9bf1ccc"
                         }
@@ -2039,7 +2058,7 @@
                     "id": "37f44011-8579-4ccb-9af4-d55398765948",
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__collapse": true,
+                        "__collapse": false,
                         "__label": "Initialise global variables"
                     },
                     "children": {
@@ -2187,7 +2206,7 @@
                         "flag14": false,
                         "flag15": false,
                         "flag16": false,
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "id": "bcbaff66-323a-4269-b11f-8cc65ea4de7f"
                 },
@@ -6403,6 +6422,17 @@
                                 "id": "cfc96edc-9156-49a0-83c7-112422ed60c3"
                             },
                             {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Health = $V1$\nDamage = $V2$"
+                                    ],
+                                    "avatarId": "",
+                                    "__comment": true
+                                },
+                                "id": "3b435741-0bc8-4002-a07e-0768572b60e6"
+                            },
+                            {
                                 "command": "EVENT_VARIABLE_MATH",
                                 "args": {
                                     "vectorX": "1",
@@ -6415,6 +6445,17 @@
                                     "clamp": true
                                 },
                                 "id": "51570fee-7efc-4482-b060-ff9ce6a0328f"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Health = $V1$\nDamage = $V2$"
+                                    ],
+                                    "avatarId": "",
+                                    "__comment": true
+                                },
+                                "id": "dfd28b00-3450-4a89-b9b6-14fcc3e02732"
                             },
                             {
                                 "command": "EVENT_WAIT",
@@ -6531,13 +6572,13 @@
                                 "command": "EVENT_SWITCH",
                                 "args": {
                                     "variable": "1",
-                                    "choices": 2,
+                                    "choices": 3,
                                     "__collapseCase0": false,
                                     "value0": 0,
                                     "__collapseCase1": false,
                                     "value1": 1,
                                     "__collapseCase2": false,
-                                    "value2": 3,
+                                    "value2": 2,
                                     "__collapseCase3": false,
                                     "value3": 4,
                                     "__collapseCase4": false,
@@ -6569,6 +6610,14 @@
                                 },
                                 "children": {
                                     "true0": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "Spawn Heart",
+                                                "__collapse": true
+                                            },
+                                            "id": "06795660-f80c-43a6-b565-09b42839eecb"
+                                        },
                                         {
                                             "command": "EVENT_ADD_FLAGS",
                                             "args": {
@@ -6609,10 +6658,18 @@
                                                 "actorId": "0",
                                                 "__comment": false
                                             },
-                                            "id": "91a92fbb-40d9-48e9-8930-9912b656a01a"
+                                            "id": "58ee5699-39f9-4fc2-8fbe-f30ae7a6603e"
                                         }
                                     ],
                                     "true1": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "Spawn Heart",
+                                                "__collapse": true
+                                            },
+                                            "id": "09efd4bb-bc25-4688-902b-fa87c239b01d"
+                                        },
                                         {
                                             "command": "EVENT_ADD_FLAGS",
                                             "args": {
@@ -6656,7 +6713,23 @@
                                             "id": "abbe6643-317c-432e-8bf0-f3cfbe1e3f0f"
                                         }
                                     ],
-                                    "true2": [],
+                                    "true2": [
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "Spawn Nothing\nCollectable being placed outside script needs to be fixed.",
+                                                "__collapse": false
+                                            },
+                                            "id": "2deca534-af2c-4002-b665-abe6512b5eda"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_DEACTIVATE",
+                                            "args": {
+                                                "actorId": "0"
+                                            },
+                                            "id": "118147ce-b436-416f-bbd0-7699edc621b5"
+                                        }
+                                    ],
                                     "true3": [],
                                     "true4": [],
                                     "true5": [],
@@ -7142,6 +7215,16 @@
             "symbol": "var_attack_power"
         },
         {
+            "id": "16",
+            "name": "Spell Cost",
+            "symbol": "var_spell_cost"
+        },
+        {
+            "id": "17",
+            "name": "Scene Flags",
+            "symbol": "var_scene_flags"
+        },
+        {
             "id": "ca3eeff0-9585-4e19-9b7f-803570a8f51a__L0",
             "name": "Has Taken Damage",
             "symbol": "var_has_taken_damage"
@@ -7197,16 +7280,6 @@
             "symbol": "var_posx"
         },
         {
-            "id": "16",
-            "name": "Spell Cost",
-            "symbol": "var_spell_cost"
-        },
-        {
-            "id": "17",
-            "name": "Scene Flags",
-            "symbol": "var_scene_flags"
-        },
-        {
             "id": "72e34116-9a52-489e-a483-3491d4389d7f__L4",
             "name": "PosY",
             "symbol": "var_posy"
@@ -7232,7 +7305,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 366,
+        "worldScrollX": 125,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": false,
@@ -7262,9 +7335,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            200,
+            198,
             191,
-            565
+            567
         ],
         "showNavigator": true,
         "defaultFontId": "a0b6cef5-6606-4817-b783-9c6390f8d7d7",
