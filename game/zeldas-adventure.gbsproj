@@ -84,7 +84,8 @@
                                                 "__collapseElse": true,
                                                 "__comment": false,
                                                 "__disableElse": true,
-                                                "__label": "Wand"
+                                                "__label": "Wand",
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -252,6 +253,100 @@
                                                 "false": []
                                             },
                                             "id": "6c5173b5-cceb-4c22-8697-d292ce55fa12"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 2,
+                                                "__collapseElse": true,
+                                                "__label": "Bow & Arrow",
+                                                "__disableElse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 1
+                                                            }
+                                                        },
+                                                        "id": "882c7b88-e12c-4aa4-8252-8bd82b800c23"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                    "args": {
+                                                                        "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                        "spriteStateId": "",
+                                                                        "actorId": "$self$",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "otherActorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "angle": 0,
+                                                                        "angleVariable": "L0",
+                                                                        "directionType": "actor",
+                                                                        "initialOffset": 0,
+                                                                        "speed": 2,
+                                                                        "animSpeed": 15,
+                                                                        "lifeTime": 1,
+                                                                        "collisionGroup": "1",
+                                                                        "collisionMask": [
+                                                                            "1",
+                                                                            "2"
+                                                                        ],
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "62c7046d-847c-4211-891f-627e92936c69"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "ff444aa9-e201-4eea-b311-a69480c7603b"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "811e353c-493f-463c-8ccf-fc86f96911ad"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "fab96fa0-c73f-44b6-b5e9-53975a6784af"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "66aa8b2d-6fc0-4310-a2db-a050fc68bb8b"
                                         }
                                     ]
                                 },
@@ -7462,8 +7557,8 @@
         "playerPaletteId": "",
         "navigatorSplitSizes": [
             195,
-            211,
-            550
+            210,
+            551
         ],
         "showNavigator": true,
         "defaultFontId": "a0b6cef5-6606-4817-b783-9c6390f8d7d7",
