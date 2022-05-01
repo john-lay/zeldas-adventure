@@ -2814,7 +2814,7 @@
                                                 "__collapseElse": true,
                                                 "__label": "17. Short Axe",
                                                 "__disableElse": true,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -2899,6 +2899,551 @@
                                                 "false": []
                                             },
                                             "id": "b551c9b4-e324-4b18-846c-040deb24c338"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 18,
+                                                "__collapseElse": true,
+                                                "__label": "18. Turquoise Ring",
+                                                "__disableElse": true,
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 26
+                                                            }
+                                                        },
+                                                        "id": "eeca80d6-0d50-41b1-a616-9aa183f21e11"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "direction": "left",
+                                                                        "__collapseElse": true,
+                                                                        "__collapse": true,
+                                                                        "__disableElse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 0,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "actor",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "d4accfc5-9f84-436f-bc77-ffc935cabc4e"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 180,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": null,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "d9123e6e-cd7c-4a21-97ed-d0f24d4948ae"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 205,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "d3a3f836-9b20-47bd-83d8-0077e1dceb43"
+                                                                            }
+                                                                        ],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "436a4a94-9549-4fa7-8067-af820c58cfc4"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "direction": "up",
+                                                                        "__collapseElse": true,
+                                                                        "__collapse": false,
+                                                                        "__disableElse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 0,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "actor",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "6748b96d-5e45-4c59-b184-e3863d716d68"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 245,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "12e9ac5e-68be-42fd-80fb-725ddc8c16c8"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 270,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "e61e0a8e-74bf-41bc-8982-7fa289f5c1be"
+                                                                            }
+                                                                        ],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "98de91a6-deb5-42de-b29a-04747f59e4cf"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "direction": "down",
+                                                                        "__collapseElse": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 0,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "actor",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "e29d6842-76fa-4882-84f5-98555e5b54e8"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 140,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": null,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": false,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "bbd73cf3-7f1a-4a5d-ad1b-b9251c4273f6"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 115,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "9add2dd2-fc95-4dbd-8cfc-02f0a9cb8cb2"
+                                                                            }
+                                                                        ],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "48a9a82d-2979-417f-955d-12235d33be44"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "__collapseElse": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 0,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "actor",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "957e7e14-2c08-4124-a5ab-363b4ab5a5c6"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 75,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": null,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": false,
+                                                                                    "__comment": false
+                                                                                },
+                                                                                "id": "ed81f1f1-a3d6-4722-879c-43b785e845ec"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                "args": {
+                                                                                    "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                    "spriteStateId": "",
+                                                                                    "actorId": "$self$",
+                                                                                    "x": 0,
+                                                                                    "y": 0,
+                                                                                    "otherActorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "angle": 50,
+                                                                                    "angleVariable": "L0",
+                                                                                    "directionType": "angle",
+                                                                                    "initialOffset": 0,
+                                                                                    "speed": 2,
+                                                                                    "animSpeed": 15,
+                                                                                    "lifeTime": 1,
+                                                                                    "collisionGroup": "1",
+                                                                                    "collisionMask": [
+                                                                                        "1",
+                                                                                        "2"
+                                                                                    ],
+                                                                                    "__collapse": false
+                                                                                },
+                                                                                "id": "951e1328-f2ff-4dc5-9e2a-45dcc2e7db15"
+                                                                            }
+                                                                        ],
+                                                                        "false": []
+                                                                    },
+                                                                    "id": "bc11cc4b-d62b-43cf-9641-b9bdab47ccaf"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "0de8da59-0e1a-47aa-8205-4cc501a5f555"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "c12913ea-8f45-4a1a-9497-fa8d8b05c04b"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "ec0dbf0f-1a9d-49fe-998a-506240e43d84"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "7ee8abd0-b8d1-4716-b3be-adf96703995a"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 19,
+                                                "__collapseElse": true,
+                                                "__label": "19. Boomerang - ANIMATE ME!",
+                                                "__disableElse": true,
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 1
+                                                            }
+                                                        },
+                                                        "id": "25197916-dbeb-4b36-9850-adb19ff07f59"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                    "args": {
+                                                                        "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                        "spriteStateId": "",
+                                                                        "actorId": "$self$",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "otherActorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "angle": 0,
+                                                                        "angleVariable": "L0",
+                                                                        "directionType": "actor",
+                                                                        "initialOffset": 0,
+                                                                        "speed": 2,
+                                                                        "animSpeed": 15,
+                                                                        "lifeTime": 1,
+                                                                        "collisionGroup": "1",
+                                                                        "collisionMask": [
+                                                                            "1",
+                                                                            "2"
+                                                                        ],
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "8a778bf0-856e-4978-84ca-035461a2a78a"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "e6cc134e-bcab-4bbe-9364-47aa29fdac03"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "f47f76ea-f528-43e2-b8a3-765207d299f0"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "44730a99-9e45-460d-9ecc-64265168a37a"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "5ef3a15b-64f6-4b36-a68e-26ff131edd4c"
                                         }
                                     ]
                                 },
