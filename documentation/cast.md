@@ -116,7 +116,7 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | CDi         | Gameboy     | Notes      |
 | :---------: | :---------: | :--------- |
 | ![Faust CDi](cast/ZA_Faust.png) <br />Faust | ![OoA Rafton DMG](cast/OoA_Rafton.png) <br /> OoA Rafton | Both sell a ferry service |
-| ![Hooded Woman CDi](cast/ZA_Hooded-Woman.png) <br />Hooded Woman | ![OoS Old Lady Alt DMG](cast/OoS_Old-Lady-Alt.png) <br /> OoS Old Lady Alt | Not named alt in DMG III |
+| ![Hooded Woman CDi](cast/ZA_Hooded-Woman.png) <br />Hooded Woman | ![OoS Old Lady Alt DMG](cast/OoS_Old-Lady-Alt.png) <br /> OoS Old Lady Alt | Not named alt in DMG III <br /> OoA Master Diver's Wife |
 | ![Links Guide CDi](cast/ZA_Links-Guide.png) <br />Links Guide | ![OoS Young Lady Alt DMG](cast/OoS_Young-Lady-Alt.png) <br /> OoS Young Lady Alt | Would an injured person be better? |
 | ![Sirram Bew CDi](cast/ZA_Sirram-Bew.png) <br />Sirram Bew | ![OoA Man with Cane DMG](cast/OoA-Man-with-Cane.png) <br /> OoA Man with Cane | Mis-named OoS in DMG III |
 | ![Swamp Merchant CDi](cast/ZA_Swamp-Merchant.png) <br />Swamp Merchant | ![LA Photographer DMG](cast/LA_Photographer.png) <br /> LA Photographer | Appears to be wearing a rat mask |
@@ -135,11 +135,11 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Entrance Merchant CDi](cast/ZA_Strength-Shine-Entrance-Merchant.png) <br />Entrance Merchant | ![OoA Young Lady DMG](cast/OoA_Young-Lady.png) <br /> OoA Young Lady | n/a |
 | ![Water Bearer CDi](cast/ZA_Strength-Shine-Water-Bearer.png) <br />Water Bearer | ![OoS Young Lady Alt 2 DMG](cast/OoS_Young-Lady-Alt-2.png) <br /> OoS Young Lady Alt 2 | Mis-named OoA in DMG III |
 | ![Stall Owner CDi](cast/ZA_Strength-Shine-Stall-Owner.png) <br />Stall Owner | ![OoA Tower Builder DMG](cast/OoA_Tower-Builder.png) <br /> OoA Tower Builder | n/a |
-| ![Pickpocket CDi](cast/ZA_Strength-Shine-Pickpocket.png) <br />Pickpocket | ![OoA Boy DMG](cast/OoA-Boy.png) <br /> OoA Boy | n/a |
+| ![Pickpocket CDi](cast/ZA_Strength-Shine-Pickpocket.png) <br />Pickpocket | ![OoA Boy DMG](cast/OoA-Boy.png) <br /> OoA Dr Troy's Assistant <br /> OoS Safety Patrol | n/a |
 | ![Thirsty Child CDi](cast/ZA_Strength-Shine-Thirsty-Child.png) <br />Thirsty Child | ![OoA Girl DMG](cast/OoA-Girl.png) <br /> OoA Girl | n/a |
 | ![Shooting Gallery Owner CDi](cast/ZA_Strength-Shine-Shooting-Gallery-Owner.png) <br />Shooting Gallery Owner | ![OoA Shooting Gallery Owner DMG](cast/OoA_Shooting-Gallery-Owner.png) <br /> OoA Shooting Gallery Owner | n/a |
 | ![Joust Stall Owner CDi](cast/ZA_Strength-Shine-Joust-Stall-Owner.png) <br />Joust Stall Owner | ![OoS Mrs Ruul DMG](cast/OoS_Mrs-Ruul.png) <br /> OoS Mrs Ruul | n/a |
-| ![Joust Custodian CDi](cast/ZA_Strength-Shine-Joust-Custodian.png) <br />Joust Custodian | ![OoS Angry Man DMG](cast/OoS_Angry-Man.png) <br /> OoS Angry Man | n/a |
+| ![Joust Custodian CDi](cast/ZA_Strength-Shine-Joust-Custodian.png) <br />Joust Custodian | ![OoS Angry Man DMG](cast/OoS_Angry-Man.png) <br /> OoS Master Diver's Son | n/a |
 | ![Broadsword Stall Owner CDi](cast/ZA_Strength-Shine-Broadsword-Stall-Owner.png) <br />Broadsword Stall Owner | ![OoA Tokkey DMG](cast/OoA-Tokkey.png) <br /> OoA Tokkey | Can this cast choice be improved? |
 
 ## Forest of Canvula
