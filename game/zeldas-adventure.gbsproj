@@ -2521,7 +2521,7 @@
                                                 "__collapseElse": true,
                                                 "__label": "13. Dagger",
                                                 "__disableElse": true,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -2606,6 +2606,299 @@
                                                 "false": []
                                             },
                                             "id": "ef7c72c1-e431-4a95-aeba-537fef904e36"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 14,
+                                                "__collapseElse": true,
+                                                "__label": "14. Noise",
+                                                "__disableElse": true,
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 1
+                                                            }
+                                                        },
+                                                        "id": "1a313489-ca92-4336-bc4b-c71168c3f0c0"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                    "args": {
+                                                                        "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                        "spriteStateId": "",
+                                                                        "actorId": "$self$",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "otherActorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "angle": 0,
+                                                                        "angleVariable": "L0",
+                                                                        "directionType": "actor",
+                                                                        "initialOffset": 0,
+                                                                        "speed": 2,
+                                                                        "animSpeed": 15,
+                                                                        "lifeTime": 1,
+                                                                        "collisionGroup": "1",
+                                                                        "collisionMask": [
+                                                                            "1",
+                                                                            "2"
+                                                                        ],
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "8434758c-aa0c-417f-9814-9968742a1739"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "c3c2157f-a631-4594-95aa-8ec9feacf6ef"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "3e57a323-7041-41c9-a690-9042513905b5"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "e3cd91ae-4bba-4cd2-a60f-3f6b7574c183"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "77a6b2fb-4756-4640-8a39-8c5db5158a1a"
+                                        },
+                                        {
+                                            "command": "EVENT_COMMENT",
+                                            "args": {
+                                                "text": "15. Pyros",
+                                                "__collapse": true
+                                            },
+                                            "id": "da2450a1-1e7f-4c8f-a788-da82c1e1605a"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 16,
+                                                "__collapseElse": true,
+                                                "__label": "16. Roar Stick",
+                                                "__disableElse": true,
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 3
+                                                            }
+                                                        },
+                                                        "id": "249fb77e-4caf-4bc1-a08b-d16c8d3569eb"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                    "args": {
+                                                                        "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                        "spriteStateId": "",
+                                                                        "actorId": "$self$",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "otherActorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "angle": 0,
+                                                                        "angleVariable": "L0",
+                                                                        "directionType": "actor",
+                                                                        "initialOffset": 0,
+                                                                        "speed": 2,
+                                                                        "animSpeed": 15,
+                                                                        "lifeTime": 1,
+                                                                        "collisionGroup": "1",
+                                                                        "collisionMask": [
+                                                                            "1",
+                                                                            "2"
+                                                                        ],
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "f8b23ad6-6b74-4b17-8699-a8261cbc9730"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "0cb40fd1-c7ed-48d3-8030-251a40888db7"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "cb82f77f-d7cb-41d6-b97f-6af2c7efacbd"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "12421d30-e5d0-4ccb-8d71-71c20911a4a2"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "2686185f-91b5-4df7-9896-c3bf864fcc68"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_VALUE",
+                                            "args": {
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 17,
+                                                "__collapseElse": true,
+                                                "__label": "17. Short Axe",
+                                                "__disableElse": true,
+                                                "__collapse": false
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 2
+                                                            }
+                                                        },
+                                                        "id": "8682f760-71aa-48a3-8a18-a97f45b86d9d"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                    "args": {
+                                                                        "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                        "spriteStateId": "",
+                                                                        "actorId": "$self$",
+                                                                        "x": 0,
+                                                                        "y": 0,
+                                                                        "otherActorId": "$self$",
+                                                                        "direction": "right",
+                                                                        "angle": 0,
+                                                                        "angleVariable": "L0",
+                                                                        "directionType": "actor",
+                                                                        "initialOffset": 0,
+                                                                        "speed": 2,
+                                                                        "animSpeed": 15,
+                                                                        "lifeTime": 1,
+                                                                        "collisionGroup": "1",
+                                                                        "collisionMask": [
+                                                                            "1",
+                                                                            "2"
+                                                                        ],
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "bc60dcb2-0bdd-4ff5-80de-75edc64a6b28"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "077c5fc5-b092-4744-94f9-8e8bdc68429c"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "273be997-ed9e-41e2-868d-e88881ada9f8"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "8b0a5228-6356-4b35-ad28-f76abbbbec65"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "b551c9b4-e324-4b18-846c-040deb24c338"
                                         }
                                     ]
                                 },
