@@ -2703,12 +2703,490 @@
                                             "id": "77a6b2fb-4756-4640-8a39-8c5db5158a1a"
                                         },
                                         {
-                                            "command": "EVENT_COMMENT",
+                                            "command": "EVENT_IF_VALUE",
                                             "args": {
-                                                "text": "15. Pyros",
-                                                "__collapse": true
+                                                "variable": "10",
+                                                "operator": "==",
+                                                "comparator": 15,
+                                                "__collapseElse": true,
+                                                "__label": "15. Pyros",
+                                                "__disableElse": true,
+                                                "__collapse": true,
+                                                "__comment": false
                                             },
-                                            "id": "da2450a1-1e7f-4c8f-a788-da82c1e1605a"
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "command": "EVENT_SET_VALUE",
+                                                        "args": {
+                                                            "variable": "16",
+                                                            "value": {
+                                                                "type": "number",
+                                                                "value": 4
+                                                            }
+                                                        },
+                                                        "id": "1432e83e-d0f9-4660-a048-d7e5a94a5441"
+                                                    },
+                                                    {
+                                                        "command": "EVENT_IF_VALUE_COMPARE",
+                                                        "args": {
+                                                            "vectorX": "5",
+                                                            "operator": ">=",
+                                                            "vectorY": "16",
+                                                            "__collapseElse": false,
+                                                            "__label": "Has Enough Rupees"
+                                                        },
+                                                        "children": {
+                                                            "true": [
+                                                                {
+                                                                    "command": "EVENT_IF_VALUE_COMPARE",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operator": ">=",
+                                                                        "vectorY": "16",
+                                                                        "__collapseElse": false,
+                                                                        "__label": "Has Enough Rupees"
+                                                                    },
+                                                                    "children": {
+                                                                        "true": [
+                                                                            {
+                                                                                "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "direction": "left",
+                                                                                    "__collapseElse": true,
+                                                                                    "__collapse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 0,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "7899c8c8-989a-4740-a29d-0f088a1de2b7"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": null,
+                                                                                                "y": -24,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "8c6fd603-a0f0-4830-abb8-24edfb135196"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": null,
+                                                                                                "y": 24,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "7e154c06-dc38-4b23-aac0-049704b8961b"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "15c03f4f-8e11-49c8-b5cc-9b4d3d7c1481"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "direction": "up",
+                                                                                    "__collapseElse": true,
+                                                                                    "__collapse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 0,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "062f6577-eb8c-4465-9873-295a061452ea"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": -24,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "45d76c2f-778e-49e2-9d16-782b04c25673"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 24,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "1d22bf6c-257c-4e73-a027-e50226d8ca71"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "7d60bdd1-9db1-4615-9474-66c4cb631ca5"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "direction": "down",
+                                                                                    "__collapseElse": true,
+                                                                                    "__collapse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 0,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "d53dd941-cc62-4d5a-ab51-708a228f5778"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": -24,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "c1dfafae-feae-4f2d-aa9f-b579b810b76e"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 24,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "e557858c-df32-4632-bc38-5c89459a8eae"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "ca628eae-79e6-40a1-8589-b8d0b75a6c83"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_IF_ACTOR_DIRECTION",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "direction": "right",
+                                                                                    "__collapseElse": true,
+                                                                                    "__collapse": true,
+                                                                                    "__disableElse": true
+                                                                                },
+                                                                                "children": {
+                                                                                    "true": [
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": 0,
+                                                                                                "y": 0,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "a05ef17c-ee6e-4db7-8214-f76f5dec27bb"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": null,
+                                                                                                "y": -24,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "1762eafc-2dea-4407-9211-e6a23df8ec79"
+                                                                                        },
+                                                                                        {
+                                                                                            "command": "EVENT_LAUNCH_PROJECTILE",
+                                                                                            "args": {
+                                                                                                "spriteSheetId": "140520b0-6043-49f4-b85e-fcb77b2635f7",
+                                                                                                "spriteStateId": "Spell - Pyros",
+                                                                                                "actorId": "$self$",
+                                                                                                "x": null,
+                                                                                                "y": 24,
+                                                                                                "otherActorId": "$self$",
+                                                                                                "direction": "right",
+                                                                                                "angle": 0,
+                                                                                                "angleVariable": "L0",
+                                                                                                "directionType": "actor",
+                                                                                                "initialOffset": 24,
+                                                                                                "speed": 0,
+                                                                                                "animSpeed": 15,
+                                                                                                "lifeTime": 2,
+                                                                                                "collisionGroup": "1",
+                                                                                                "collisionMask": [
+                                                                                                    "1",
+                                                                                                    "2"
+                                                                                                ],
+                                                                                                "__collapse": true
+                                                                                            },
+                                                                                            "id": "01ce6906-a0cf-4d17-a72c-7502ee51f003"
+                                                                                        }
+                                                                                    ],
+                                                                                    "false": []
+                                                                                },
+                                                                                "id": "3ccef76f-ebbf-4998-a06f-975c4cfa9f91"
+                                                                            },
+                                                                            {
+                                                                                "command": "EVENT_VARIABLE_MATH",
+                                                                                "args": {
+                                                                                    "vectorX": "5",
+                                                                                    "operation": "sub",
+                                                                                    "other": "var",
+                                                                                    "vectorY": "16",
+                                                                                    "value": "0",
+                                                                                    "minValue": "0",
+                                                                                    "maxValue": "32767",
+                                                                                    "clamp": true,
+                                                                                    "__collapse": true
+                                                                                },
+                                                                                "id": "b23d811b-4483-43f5-a2e5-d12899e21d75"
+                                                                            }
+                                                                        ],
+                                                                        "false": [
+                                                                            {
+                                                                                "command": "EVENT_ACTOR_EMOTE",
+                                                                                "args": {
+                                                                                    "actorId": "$self$",
+                                                                                    "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                                },
+                                                                                "id": "1fac0d0a-ce22-416b-aae4-6dd3889ea731"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "id": "53eb7bc1-b0bd-4b0c-8521-bfea706d19b9"
+                                                                },
+                                                                {
+                                                                    "command": "EVENT_VARIABLE_MATH",
+                                                                    "args": {
+                                                                        "vectorX": "5",
+                                                                        "operation": "sub",
+                                                                        "other": "var",
+                                                                        "vectorY": "16",
+                                                                        "value": "0",
+                                                                        "minValue": "0",
+                                                                        "maxValue": "32767",
+                                                                        "clamp": true,
+                                                                        "__collapse": true
+                                                                    },
+                                                                    "id": "53ac5572-7363-4b3e-b8af-b31a9a354ebb"
+                                                                }
+                                                            ],
+                                                            "false": [
+                                                                {
+                                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                                    "args": {
+                                                                        "actorId": "$self$",
+                                                                        "emoteId": "a41417db-f17e-4017-9f9e-8c1580d075d1"
+                                                                    },
+                                                                    "id": "0028c177-e5c7-4b91-bd10-a46d42470fec"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "id": "260770bb-65f4-469b-9259-167df93618a8"
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "b8e7b81e-b532-4867-88ac-6b6b8db565cd"
                                         },
                                         {
                                             "command": "EVENT_IF_VALUE",
@@ -2719,7 +3197,8 @@
                                                 "__collapseElse": true,
                                                 "__label": "16. Roar Stick",
                                                 "__disableElse": true,
-                                                "__collapse": true
+                                                "__collapse": true,
+                                                "__comment": false
                                             },
                                             "children": {
                                                 "true": [
@@ -3357,9 +3836,10 @@
                                                 "operator": "==",
                                                 "comparator": 19,
                                                 "__collapseElse": true,
-                                                "__label": "19. Boomerang - ANIMATE ME!",
+                                                "__label": "19. Boomerang",
                                                 "__disableElse": true,
-                                                "__collapse": false
+                                                "__collapse": true,
+                                                "__comment": false
                                             },
                                             "children": {
                                                 "true": [
@@ -3370,7 +3850,8 @@
                                                             "value": {
                                                                 "type": "number",
                                                                 "value": 1
-                                                            }
+                                                            },
+                                                            "__collapse": true
                                                         },
                                                         "id": "25197916-dbeb-4b36-9850-adb19ff07f59"
                                                     },
@@ -3492,7 +3973,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "ca3eeff0-9585-4e19-9b7f-803570a8f51a",
-            "x": 257.2142857142857,
+            "x": 256.7142857142857,
             "y": 30.1,
             "actors": [
                 {
@@ -5254,7 +5735,7 @@
                         "variable": "10",
                         "value": {
                             "type": "number",
-                            "value": 19
+                            "value": 16
                         },
                         "__collapse": false
                     },
@@ -8090,7 +8571,7 @@
                 },
                 {
                     "id": "646a0846-c9ba-4a2e-8f5f-d085c1150428",
-                    "name": "Boomerang Spell",
+                    "name": "Spell - Boomerang",
                     "animations": [
                         {
                             "id": "d1c041e5-948b-44e8-9ae6-18bc72ebf4ec",
@@ -8280,6 +8761,144 @@
                             "frames": [
                                 {
                                     "id": "e0377b1d-14ea-4bcf-ac2a-075cd1f8578b",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ],
+                    "animationType": "fixed",
+                    "flipLeft": true
+                },
+                {
+                    "id": "98e20262-5283-497e-a02d-395125ae98d5",
+                    "name": "Spell - Pyros",
+                    "animations": [
+                        {
+                            "id": "a7003f5a-5380-4f95-a6b1-284c2ab2ebe3",
+                            "frames": [
+                                {
+                                    "id": "bf44ea8c-a571-4aca-8306-146b03a57799",
+                                    "tiles": [
+                                        {
+                                            "id": "25df78de-1e19-4410-bb24-f25caa929636",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "2b42d873-5eda-474e-9b9e-47f9ca1614ab",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "ca97f893-44f4-4b93-84d0-a21a500fe92e",
+                                    "tiles": [
+                                        {
+                                            "id": "970d4d1e-afdb-4e37-9648-9cb1c55b70c0",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "39c50b66-0fd0-4e4a-946b-af979965016f",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0e42a68d-d04a-43f6-a946-108b05a80ea0",
+                            "frames": [
+                                {
+                                    "id": "8adc97f7-2f76-4dbd-b4e7-78be0ac2bcb9",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7a0b9efb-1ff3-460d-ad3d-235e32853bae",
+                            "frames": [
+                                {
+                                    "id": "2f888075-26eb-4b69-8433-24c5bb7b0f43",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f13342bc-e4e9-4d77-bed9-1093228ebe97",
+                            "frames": [
+                                {
+                                    "id": "add4ee67-eb5e-4c0d-9e5e-256063bba71b",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "257a8f36-32b0-4cff-a386-288ccabc6167",
+                            "frames": [
+                                {
+                                    "id": "2f7715e6-7465-4df7-8073-abd26933bb14",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "75e104c0-d824-4cef-9862-8922ebf11f1b",
+                            "frames": [
+                                {
+                                    "id": "919521b6-9127-4b21-8f82-41e4364f2197",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b3356d45-253c-403d-8ece-d50f4275b132",
+                            "frames": [
+                                {
+                                    "id": "2d772d70-696e-4ccc-bdf5-c587e9a42c43",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ce8dda56-b086-4550-a742-824e94106cd1",
+                            "frames": [
+                                {
+                                    "id": "b0faf858-8529-4309-9232-a15178189e17",
                                     "tiles": []
                                 }
                             ]
