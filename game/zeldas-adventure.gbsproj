@@ -5964,7 +5964,8 @@
                                             "args": {
                                                 "variable": "L0",
                                                 "trueText": "New Game",
-                                                "falseText": "Continue"
+                                                "falseText": "Continue",
+                                                "__collapse": false
                                             }
                                         },
                                         {
@@ -5973,7 +5974,8 @@
                                             "args": {
                                                 "variable": "L0",
                                                 "__collapse": false,
-                                                "__collapseElse": false
+                                                "__collapseElse": false,
+                                                "__label": "New Game"
                                             },
                                             "children": {
                                                 "true": [
@@ -6032,7 +6034,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "id": "a3ac0799-e4ef-4f08-a0eb-f7b8751bd2dc",
-            "x": 77,
+            "x": 76.5,
             "y": 32,
             "actors": [],
             "triggers": [],
@@ -8081,14 +8083,6 @@
             "tileColors": [],
             "script": [
                 {
-                    "id": "0407cd11-7080-44ab-9812-446bf272d373",
-                    "command": "EVENT_PLAYER_SET_SPRITE",
-                    "args": {
-                        "spriteSheetId": "1c8a9db2-711a-4306-9274-9c2a1d5ee412",
-                        "persist": false
-                    }
-                },
-                {
                     "id": "124dae4d-9963-4e49-a489-7a4b39b60769",
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
@@ -8135,7 +8129,7 @@
                     ],
                     "id": "c59c742f-d012-4f24-856f-111160b68ac2",
                     "x": 5,
-                    "y": 10,
+                    "y": 11,
                     "width": 6,
                     "height": 1,
                     "leaveScript": [],
@@ -8155,7 +8149,7 @@
                     ],
                     "id": "6bfaebd4-293e-4dbf-8577-8e61a3f80a88",
                     "x": 5,
-                    "y": 11,
+                    "y": 12,
                     "width": 11,
                     "height": 1,
                     "leaveScript": [],
@@ -8201,7 +8195,7 @@
                     ],
                     "id": "2cc01719-12b7-4040-ab59-03f7dd458c93",
                     "x": 5,
-                    "y": 6,
+                    "y": 5,
                     "width": 11,
                     "height": 1,
                     "leaveScript": [],
@@ -8284,7 +8278,8 @@
                         "__collapseElse": false,
                         "__label": "Save & Continue",
                         "__comment": false,
-                        "__disableElse": true
+                        "__disableElse": true,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -8292,7 +8287,7 @@
                                 "id": "1073c944-1090-463e-9026-061f327b5208",
                                 "command": "EVENT_CLEAR_FLAGS",
                                 "args": {
-                                    "variable": "19",
+                                    "variable": "18",
                                     "flag1": true,
                                     "flag2": false,
                                     "flag3": false,
@@ -8319,7 +8314,7 @@
                                 "command": "EVENT_SCENE_POP_STATE",
                                 "args": {
                                     "fadeSpeed": "2",
-                                    "__collapse": true
+                                    "__collapse": false
                                 }
                             }
                         ],
@@ -8335,7 +8330,8 @@
                             "type": "number",
                             "value": 0
                         },
-                        "__label": "Clear Zelda's screen position"
+                        "__label": "Clear Zelda's screen position",
+                        "__collapse": true
                     }
                 },
                 {
@@ -8355,7 +8351,7 @@
                                 "id": "973cee85-fd08-43fd-8c21-642ba7421b82",
                                 "command": "EVENT_CLEAR_FLAGS",
                                 "args": {
-                                    "variable": "19",
+                                    "variable": "18",
                                     "flag1": false,
                                     "flag2": true,
                                     "flag3": false,
@@ -8370,23 +8366,24 @@
                                 "id": "255ed9f9-cf6b-4872-99d7-135cc1ecd5fd",
                                 "command": "EVENT_SAVE_DATA",
                                 "args": {
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "saveSlot": 0
                                 },
                                 "children": {
-                                    "true": []
-                                }
-                            },
-                            {
-                                "id": "47c47ef2-3630-4e03-9d4e-3f41e19c4bb7",
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "a3ac0799-e4ef-4f08-a0eb-f7b8751bd2dc",
-                                    "x": 0,
-                                    "y": 0,
-                                    "direction": "",
-                                    "fadeSpeed": "2",
-                                    "__collapse": false
+                                    "true": [
+                                        {
+                                            "id": "47c47ef2-3630-4e03-9d4e-3f41e19c4bb7",
+                                            "command": "EVENT_SWITCH_SCENE",
+                                            "args": {
+                                                "sceneId": "a3ac0799-e4ef-4f08-a0eb-f7b8751bd2dc",
+                                                "x": 0,
+                                                "y": 0,
+                                                "direction": "",
+                                                "fadeSpeed": "2",
+                                                "__collapse": false
+                                            }
+                                        }
+                                    ]
                                 }
                             }
                         ],
@@ -8472,7 +8469,8 @@
                     "id": "9d5b904b-0a63-4ce6-be19-9d870cb47060",
                     "command": "EVENT_GROUP",
                     "args": {
-                        "__label": "Resume from Starting Screen"
+                        "__label": "Resume from Starting Screen",
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -8480,7 +8478,7 @@
                                 "id": "67609f34-5ed5-4157-a1f9-6416ff7ebc39",
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
-                                    "sceneId": "a3ac0799-e4ef-4f08-a0eb-f7b8751bd2dc",
+                                    "sceneId": "691d00e7-7a56-4136-91bc-c6081a677b0f",
                                     "x": 12,
                                     "y": 9,
                                     "direction": "down",
@@ -14321,7 +14319,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 73,
-        "worldScrollY": 1319,
+        "worldScrollY": 700,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
