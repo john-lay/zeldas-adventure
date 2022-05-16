@@ -224,8 +224,23 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$19$: Variable 019` Map PosX - `number`. (Stores the player's dungeon position. Shows which dungeon room the player is in on the minimap)
 * `$20$: Variable 020` Map PosY - `number`. (Stores the player's dungeon position. Shows which dungeon room the player is in on the minimap)
 * `$21$: Variable 021` Enemy Counter - `number`. (Indicates the number of Zelda has defeated in this scene)
-
-
+* `$22$: Variable 022` Earth Shrine Flags - `word`.
+  * (Flag 1 is the Earth Shrine Map)
+  * (Flag 2 is the Earth Shrine Compass)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
 ~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
 
 ## Animated tiles guide

@@ -5895,6 +5895,30 @@
                     "id": "4fc3653d-4fe3-483d-8b48-27b6e1eaf541"
                 },
                 {
+                    "command": "EVENT_ADD_FLAGS",
+                    "args": {
+                        "variable": "22",
+                        "flag1": true,
+                        "flag2": true,
+                        "flag3": false,
+                        "flag4": false,
+                        "flag5": false,
+                        "flag6": false,
+                        "flag7": false,
+                        "flag8": false,
+                        "flag9": false,
+                        "flag10": false,
+                        "flag11": false,
+                        "flag12": false,
+                        "flag13": false,
+                        "flag14": false,
+                        "flag15": false,
+                        "flag16": false,
+                        "__collapse": true
+                    },
+                    "id": "f50f9c11-c9ec-43f4-a8f1-02e12b400315"
+                },
+                {
                     "command": "EVENT_WAIT",
                     "args": {
                         "time": 0.2,
@@ -6217,7 +6241,7 @@
                         ],
                         "override": false,
                         "__scriptTabs": "press",
-                        "__collapse": false,
+                        "__collapse": true,
                         "__comment": false
                     },
                     "children": {
@@ -6757,6 +6781,65 @@
                         "$variable[2]$": "13"
                     },
                     "id": "32125157-161d-47fb-ae3a-b14ff1f20264"
+                },
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "start"
+                        ],
+                        "override": false,
+                        "__scriptTabs": "press",
+                        "__collapse": false,
+                        "__comment": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_SCENE_PUSH_STATE",
+                                "args": {},
+                                "id": "741a7aa0-acc5-4b12-b54c-e74cb22a1709"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "b930c0b6-9ad8-4b5b-94f6-80ef33ef933a",
+                                    "x": 8,
+                                    "y": 9,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "76bccacb-cb74-4dcf-930f-7057044d05aa"
+                            }
+                        ]
+                    },
+                    "id": "e298e469-a5d3-4368-80c3-8a142718c274"
+                },
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "b"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press",
+                        "__collapse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_CALL_CUSTOM_EVENT",
+                                "args": {
+                                    "customEventId": "c56e5b85-b14b-4e61-8829-839b0dd22485",
+                                    "$variable[0]$": "10",
+                                    "$variable[1]$": "16",
+                                    "$variable[2]$": "5"
+                                },
+                                "id": "8e42654a-5b13-4487-8f85-379b501049a3"
+                            }
+                        ]
+                    },
+                    "id": "637e9b42-deca-4bc9-a10d-3daa6e4c29b9"
                 }
             ],
             "playerHit1Script": [],
@@ -9817,6 +9900,69 @@
                                 "avatarId": ""
                             },
                             "id": "d80f706f-6014-4b97-aac6-c8efbec85314"
+                        },
+                        {
+                            "command": "EVENT_IF_FLAGS_COMPARE",
+                            "args": {
+                                "variable": "22",
+                                "flag": 1,
+                                "__collapseElse": true,
+                                "__disableElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Use the Earth Shrine \ncompass to warp here?"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "eafda390-2fd5-48ab-b8b0-d64d566cd763"
+                                    },
+                                    {
+                                        "id": "4dbd9fee-13af-4150-9598-f891253db404",
+                                        "command": "EVENT_CHOICE",
+                                        "args": {
+                                            "variable": "L0",
+                                            "trueText": "Warp!",
+                                            "falseText": "Stay Here",
+                                            "__collapse": false
+                                        }
+                                    },
+                                    {
+                                        "id": "8e17ab22-8def-49b6-9569-ba33ee7f6230",
+                                        "command": "EVENT_IF_TRUE",
+                                        "args": {
+                                            "variable": "L0",
+                                            "__collapse": false,
+                                            "__collapseElse": false,
+                                            "__label": "",
+                                            "__disableElse": true
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "id": "a4aebea4-32d3-42fc-af0b-9290102e6981",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "5525a878-cc64-4d10-82d6-c50e83fba006",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "down",
+                                                        "fadeSpeed": "2",
+                                                        "__comment": false
+                                                    }
+                                                }
+                                            ],
+                                            "false": []
+                                        }
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "fa918262-63ef-48a9-85bf-cb3211e8d037"
                         }
                     ],
                     "leaveScript": []
@@ -18935,6 +19081,21 @@
             "id": "a3ac0799-e4ef-4f08-a0eb-f7b8751bd2dc__L1",
             "name": "Debug",
             "symbol": "var_debug_0"
+        },
+        {
+            "id": "21",
+            "name": "Enemy Counter",
+            "symbol": "var_enemy_counter"
+        },
+        {
+            "id": "f333d12b-d033-4078-a92a-b15f88751dfc__L0",
+            "name": "Warp",
+            "symbol": "var_warp"
+        },
+        {
+            "id": "22",
+            "name": "Earth Shrine Flags",
+            "symbol": "var_earth_shrine_flags"
         }
     ],
     "engineFieldValues": [
@@ -18952,8 +19113,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 25,
-        "worldScrollY": 0,
+        "worldScrollX": 0,
+        "worldScrollY": 219,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -18982,9 +19143,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            194,
-            195,
-            567
+            188,
+            189,
+            549
         ],
         "showNavigator": true,
         "defaultFontId": "7fab427a-38eb-4421-a264-83451340e246",
