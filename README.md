@@ -256,3 +256,9 @@ There are 9 different animated tiles which use a different key in the HUD to ide
 - A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
 - A scene with torch tiles will have torch tile 0
 - A scene with torch tiles and lamp tiles will have torch tile 3, lamp tile 0 and lamp tile 1
+
+## Collision Guide
+
+- Group 1 represents Zelda's attack spells and the Enemies collision group
+- Group 2 represents Zelda's attack spells and switches
+- Group 3 represent Enemy projectile attacks
