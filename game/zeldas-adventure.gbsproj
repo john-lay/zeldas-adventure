@@ -97,14 +97,15 @@
                         ],
                         "override": true,
                         "__scriptTabs": "press",
-                        "__collapse": false
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
                             {
                                 "command": "EVENT_GROUP",
                                 "args": {
-                                    "__label": "Attack with equipped weapon"
+                                    "__label": "Attack with equipped weapon",
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -118,7 +119,7 @@
                                                 "__comment": false,
                                                 "__disableElse": true,
                                                 "__label": "1. Wand",
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -296,7 +297,7 @@
                                                 "__collapseElse": true,
                                                 "__label": "2. Bow & Arrow",
                                                 "__disableElse": true,
-                                                "__collapse": false
+                                                "__collapse": true
                                             },
                                             "children": {
                                                 "true": [
@@ -3974,7 +3975,8 @@
                         "customEventId": "f7967cad-ab4a-451a-aaec-140864c00df3",
                         "$variable[0]$": "14",
                         "$variable[1]$": "12",
-                        "$variable[2]$": "13"
+                        "$variable[2]$": "13",
+                        "__collapse": true
                     },
                     "id": "77bc412b-1263-482d-b796-a8b591af3b45"
                 },
@@ -3997,7 +3999,8 @@
                         "flag13": true,
                         "flag14": true,
                         "flag15": true,
-                        "flag16": true
+                        "flag16": true,
+                        "__collapse": true
                     },
                     "id": "ed975c5b-746c-4192-a790-99e2c3305305"
                 }
@@ -4104,205 +4107,225 @@
                     ],
                     "updateScript": [
                         {
-                            "command": "EVENT_WAIT",
+                            "command": "EVENT_GROUP",
                             "args": {
-                                "time": 0.2,
-                                "frames": 30,
-                                "units": "time",
                                 "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "48b092c8-28a5-40b6-a91c-33299f44697d"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_STATE",
-                            "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "",
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "47ae40c4-7aa4-4ec4-a529-b32e4eb8272c"
-                        },
-                        {
-                            "command": "EVENT_WAIT",
-                            "args": {
-                                "time": 2,
-                                "frames": 30,
-                                "units": "time",
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "603cca30-2b61-4a31-baaa-05da245caa93"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 3,
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "fbfba25c-9eeb-47e0-a403-e0eac09fa87d"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_STATE",
-                            "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "Shake",
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "aadff813-4135-4d91-9c23-5f19a0c73daf"
-                        },
-                        {
-                            "command": "EVENT_WAIT",
-                            "args": {
-                                "time": 0.8,
-                                "frames": 30,
-                                "units": "time",
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "ae9d1b68-003a-46e5-96cd-48283c174c2d"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 15,
-                                "__collapse": true,
-                                "__comment": false
-                            },
-                            "id": "c614071d-f08d-4359-b528-8e7741a9922b"
-                        },
-                        {
-                            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
-                            "args": {
-                                "actorId": "player",
-                                "operation": "up",
-                                "otherActorId": "$self$",
-                                "__collapseElse": false,
-                                "__collapse": true,
-                                "__comment": false
+                                "__comment": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                                        "command": "EVENT_WAIT",
                                         "args": {
-                                            "actorId": "player",
-                                            "operation": "left",
-                                            "otherActorId": "$self$",
-                                            "__collapseElse": false,
-                                            "__collapse": true
+                                            "time": 0.2,
+                                            "frames": 30,
+                                            "units": "time",
+                                            "__collapse": true,
+                                            "__comment": false
                                         },
-                                        "children": {
-                                            "true": [
-                                                {
-                                                    "command": "EVENT_ACTOR_SET_STATE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "spriteStateId": "Jump"
-                                                    },
-                                                    "id": "07fd1563-3cdb-41ed-a7a1-efc77b89f3e5"
-                                                },
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": -2,
-                                                        "y": -2,
-                                                        "moveType": "diagonal",
-                                                        "useCollisions": false
-                                                    },
-                                                    "id": "0f19db9c-7549-4059-b4e4-2032adbfd41c"
-                                                }
-                                            ],
-                                            "false": [
-                                                {
-                                                    "command": "EVENT_ACTOR_SET_STATE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "spriteStateId": "Jump"
-                                                    },
-                                                    "id": "a43d6782-fad3-41f7-b0e2-93a5ebb64a72"
-                                                },
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 2,
-                                                        "y": -2,
-                                                        "moveType": "diagonal",
-                                                        "useCollisions": false
-                                                    },
-                                                    "id": "54263c7c-7119-46e4-98ce-9a0bc57033c7"
-                                                }
-                                            ]
+                                        "id": "48b092c8-28a5-40b6-a91c-33299f44697d"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "",
+                                            "__collapse": true,
+                                            "__comment": false
                                         },
-                                        "id": "54f82c9a-c68b-4ea8-b8fe-a2f1c514bc5d"
-                                    }
-                                ],
-                                "false": [
+                                        "id": "47ae40c4-7aa4-4ec4-a529-b32e4eb8272c"
+                                    },
+                                    {
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 2,
+                                            "frames": 30,
+                                            "units": "time",
+                                            "__collapse": true,
+                                            "__comment": false
+                                        },
+                                        "id": "603cca30-2b61-4a31-baaa-05da245caa93"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "speed": 3,
+                                            "__collapse": true,
+                                            "__comment": false
+                                        },
+                                        "id": "fbfba25c-9eeb-47e0-a403-e0eac09fa87d"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Enemy - Zol Shake",
+                                            "__collapse": true,
+                                            "__comment": false
+                                        },
+                                        "id": "aadff813-4135-4d91-9c23-5f19a0c73daf"
+                                    },
+                                    {
+                                        "command": "EVENT_WAIT",
+                                        "args": {
+                                            "time": 0.8,
+                                            "frames": 30,
+                                            "units": "time",
+                                            "__collapse": true,
+                                            "__comment": false
+                                        },
+                                        "id": "ae9d1b68-003a-46e5-96cd-48283c174c2d"
+                                    },
+                                    {
+                                        "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "speed": 15,
+                                            "__collapse": true,
+                                            "__comment": false
+                                        },
+                                        "id": "c614071d-f08d-4359-b528-8e7741a9922b"
+                                    },
                                     {
                                         "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
                                         "args": {
                                             "actorId": "player",
-                                            "operation": "left",
+                                            "operation": "up",
                                             "otherActorId": "$self$",
                                             "__collapseElse": false,
-                                            "__collapse": true
+                                            "__collapse": true,
+                                            "__comment": false
                                         },
                                         "children": {
                                             "true": [
                                                 {
-                                                    "command": "EVENT_ACTOR_SET_STATE",
+                                                    "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
                                                     "args": {
-                                                        "actorId": "$self$",
-                                                        "spriteStateId": "Jump"
+                                                        "actorId": "player",
+                                                        "operation": "left",
+                                                        "otherActorId": "$self$",
+                                                        "__collapseElse": false,
+                                                        "__collapse": false
                                                     },
-                                                    "id": "14892576-296a-4ecb-a129-dbbaa51c4bde"
-                                                },
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": -2,
-                                                        "y": 2,
-                                                        "moveType": "diagonal",
-                                                        "useCollisions": false
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "spriteStateId": "Enemy - Zol Jump"
+                                                                },
+                                                                "id": "07fd1563-3cdb-41ed-a7a1-efc77b89f3e5"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": -2,
+                                                                    "y": -2,
+                                                                    "moveType": "diagonal",
+                                                                    "useCollisions": false
+                                                                },
+                                                                "id": "0f19db9c-7549-4059-b4e4-2032adbfd41c"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "spriteStateId": "Enemy - Zol Jump"
+                                                                },
+                                                                "id": "a43d6782-fad3-41f7-b0e2-93a5ebb64a72"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 2,
+                                                                    "y": -2,
+                                                                    "moveType": "diagonal",
+                                                                    "useCollisions": false
+                                                                },
+                                                                "id": "54263c7c-7119-46e4-98ce-9a0bc57033c7"
+                                                            }
+                                                        ]
                                                     },
-                                                    "id": "04e1f830-357f-485e-8c84-80e628e1890b"
+                                                    "id": "54f82c9a-c68b-4ea8-b8fe-a2f1c514bc5d"
                                                 }
                                             ],
                                             "false": [
                                                 {
-                                                    "command": "EVENT_ACTOR_SET_STATE",
+                                                    "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
                                                     "args": {
-                                                        "actorId": "$self$",
-                                                        "spriteStateId": "Jump"
+                                                        "actorId": "player",
+                                                        "operation": "left",
+                                                        "otherActorId": "$self$",
+                                                        "__collapseElse": false,
+                                                        "__collapse": false
                                                     },
-                                                    "id": "67e28412-ecbb-483d-b7a1-17aa854ef809"
-                                                },
-                                                {
-                                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                                                    "args": {
-                                                        "actorId": "$self$",
-                                                        "x": 2,
-                                                        "y": 2,
-                                                        "moveType": "diagonal",
-                                                        "useCollisions": false
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "spriteStateId": "Enemy - Zol Jump"
+                                                                },
+                                                                "id": "14892576-296a-4ecb-a129-dbbaa51c4bde"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": -2,
+                                                                    "y": 2,
+                                                                    "moveType": "diagonal",
+                                                                    "useCollisions": false
+                                                                },
+                                                                "id": "04e1f830-357f-485e-8c84-80e628e1890b"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "command": "EVENT_ACTOR_SET_STATE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "spriteStateId": "Enemy - Zol Jump"
+                                                                },
+                                                                "id": "67e28412-ecbb-483d-b7a1-17aa854ef809"
+                                                            },
+                                                            {
+                                                                "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": 2,
+                                                                    "y": 2,
+                                                                    "moveType": "diagonal",
+                                                                    "useCollisions": false
+                                                                },
+                                                                "id": "38822cd9-6f9e-41fd-82e2-52004b231801"
+                                                            }
+                                                        ]
                                                     },
-                                                    "id": "38822cd9-6f9e-41fd-82e2-52004b231801"
+                                                    "id": "c2c1c23c-171f-4fed-89da-19ae60319659"
                                                 }
                                             ]
                                         },
-                                        "id": "c2c1c23c-171f-4fed-89da-19ae60319659"
+                                        "id": "b0fb105e-02be-4629-9ee3-382fff843001"
                                     }
                                 ]
                             },
-                            "id": "b0fb105e-02be-4629-9ee3-382fff843001"
+                            "id": "d109d24a-43bb-41e6-9b58-56153e7bdceb"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "74ca3145-22fa-44bb-895d-d2f77e34c488",
+                                "$actor[0]$": "72e34116-9a52-489e-a483-3491d4389d7f"
+                            },
+                            "id": "8d0de4f3-c5e8-4246-a55f-90b964d7421b"
                         }
                     ],
                     "hit1Script": [
@@ -5960,9 +5983,9 @@
                                 "id": "85f2c7cb-e9dc-44ff-b772-25f7143757ba",
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
-                                    "sceneId": "999271ba-2879-42ba-ba66-151315433421",
-                                    "x": 8,
-                                    "y": 14,
+                                    "sceneId": "ca3eeff0-9585-4e19-9b7f-803570a8f51a",
+                                    "x": 3,
+                                    "y": 3,
                                     "direction": "down",
                                     "fadeSpeed": "2",
                                     "__comment": false
@@ -33197,7 +33220,7 @@
                 },
                 {
                     "id": "31c89876-4dec-46f6-abfd-129e6183bcb7",
-                    "name": "Shake",
+                    "name": "Enemy - Zol Shake",
                     "animations": [
                         {
                             "id": "e7e15ec7-0b3a-4b6b-8c45-8c94db4fb75a",
@@ -33397,7 +33420,7 @@
                 },
                 {
                     "id": "32cfa8de-92b9-417a-a839-8c9061827ca7",
-                    "name": "Jump",
+                    "name": "Enemy - Zol Jump",
                     "animations": [
                         {
                             "id": "8d6c5556-2901-46b3-bd0e-b708da0b9615",
@@ -39520,6 +39543,222 @@
                     }
                 }
             ]
+        },
+        {
+            "id": "74ca3145-22fa-44bb-895d-d2f77e34c488",
+            "name": "AI: Zol Movement",
+            "description": "Behaviour of Zol enemy",
+            "variables": {},
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Zol"
+                }
+            },
+            "symbol": "script_8",
+            "script": [
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 0.2,
+                        "frames": 30,
+                        "units": "time",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "ad6bfb08-563a-467c-af29-bbf980e5cda6"
+                },
+                {
+                    "command": "EVENT_ACTOR_SET_STATE",
+                    "args": {
+                        "actorId": "0",
+                        "spriteStateId": "",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "7d0024eb-d16e-4aa6-ae52-c53a16bacd16"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 2,
+                        "frames": 30,
+                        "units": "time",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "3f5666a0-b07a-4379-be16-24fe94e820e3"
+                },
+                {
+                    "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                    "args": {
+                        "actorId": "0",
+                        "speed": 3,
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "7a5d1de9-bb66-4188-8dfb-6bf5fd8e9080"
+                },
+                {
+                    "command": "EVENT_ACTOR_SET_STATE",
+                    "args": {
+                        "actorId": "0",
+                        "spriteStateId": "Enemy - Zol Shake",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "7a197484-c191-4489-aa14-2300e46a3e82"
+                },
+                {
+                    "command": "EVENT_WAIT",
+                    "args": {
+                        "time": 0.8,
+                        "frames": 30,
+                        "units": "time",
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "3e61bed2-1a6d-4159-95d4-0867744b4122"
+                },
+                {
+                    "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                    "args": {
+                        "actorId": "0",
+                        "speed": 15,
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "id": "62c3554c-1ff9-43af-bd49-bb7b922a7986"
+                },
+                {
+                    "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                    "args": {
+                        "actorId": "player",
+                        "operation": "up",
+                        "otherActorId": "0",
+                        "__collapseElse": false,
+                        "__collapse": true,
+                        "__comment": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                                "args": {
+                                    "actorId": "player",
+                                    "operation": "left",
+                                    "otherActorId": "0",
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_ACTOR_SET_STATE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "spriteStateId": "Enemy - Zol Jump"
+                                            },
+                                            "id": "d748b375-bd8d-44a4-a7d2-c0fd6af9ad71"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": -2,
+                                                "y": -2,
+                                                "moveType": "diagonal",
+                                                "useCollisions": false
+                                            },
+                                            "id": "fc59692a-0f72-480d-ba61-d2bba1592086"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_ACTOR_SET_STATE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "spriteStateId": "Enemy - Zol Jump"
+                                            },
+                                            "id": "e1582f86-bc58-44a2-844b-31b8891c2e02"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": 2,
+                                                "y": -2,
+                                                "moveType": "diagonal",
+                                                "useCollisions": false
+                                            },
+                                            "id": "c94a3f57-a7bd-4ac9-b130-07909df34b08"
+                                        }
+                                    ]
+                                },
+                                "id": "f750256c-de23-4951-af58-5a6bcd56305b"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                                "args": {
+                                    "actorId": "player",
+                                    "operation": "left",
+                                    "otherActorId": "0",
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_ACTOR_SET_STATE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "spriteStateId": "Enemy - Zol Jump"
+                                            },
+                                            "id": "4eb9c04b-59bb-4e8c-bb17-5a6b3b015f1c"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": -2,
+                                                "y": 2,
+                                                "moveType": "diagonal",
+                                                "useCollisions": false
+                                            },
+                                            "id": "eab3a3d9-17b4-4e4c-9ed4-9f27a4e4d910"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_ACTOR_SET_STATE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "spriteStateId": "Enemy - Zol Jump"
+                                            },
+                                            "id": "0f4064ba-bf03-4227-89bd-03571e60682b"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                            "args": {
+                                                "actorId": "0",
+                                                "x": 2,
+                                                "y": 2,
+                                                "moveType": "diagonal",
+                                                "useCollisions": false
+                                            },
+                                            "id": "996402a6-19d7-4078-9d80-0923fdd319eb"
+                                        }
+                                    ]
+                                },
+                                "id": "a9d246eb-b828-4e1d-8547-dd355ba6f75d"
+                            }
+                        ]
+                    },
+                    "id": "d9c26cd7-6604-4596-952c-7c27f685cd09"
+                }
+            ]
         }
     ],
     "music": [
@@ -40046,9 +40285,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 1205,
-        "worldScrollY": 5643,
-        "zoom": 125,
+        "worldScrollX": 1496,
+        "worldScrollY": 10857,
+        "zoom": 225,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -40076,9 +40315,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            188,
-            188,
-            550
+            194,
+            194,
+            568
         ],
         "showNavigator": true,
         "defaultFontId": "7fab427a-38eb-4421-a264-83451340e246",
