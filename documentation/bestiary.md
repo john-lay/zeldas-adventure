@@ -103,3 +103,4 @@ Dungeon masters guarding a celestial sign.
 | :---: | :----------------------: | :--------------------: |
 | Zol   | 1 (half heart) | 2 |
 | Moblin | 1 (half heart) | 3 |
+| Peahat | 2 (1 heart) | 3 |
