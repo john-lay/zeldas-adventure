@@ -102,5 +102,6 @@ Dungeon masters guarding a celestial sign.
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
 | Zol   | 1 (half heart) | 2 |
-| Moblin | 1 (half heart) | 3 |
+| Goriya | 1 (half heart) | 3 |
 | Peahat | 2 (1 heart) | 3 |
+| Moblin | 2 (1 heart) | 4 |
