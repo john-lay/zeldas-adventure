@@ -9,10 +9,10 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | :---------: | :---------: | :--------- |
 | ![Beggar CDi](cast/ZA_Beggar.png) <br />Beggar | ![Mamasha DMG](cast/LA_Mamasha.png) <br /> Mamasha | Looking for money for her Children |
 | ![Glebb CDi](cast/ZA_Glebb.png) <br />Glebb | ![Grandma Ulrira DMG](cast/LA_Grandma-Ulrira.png) <br /> Grandma Ulrira | n/a |
-| ![Krebb CDi](cast/ZA_Krebb.png) <br />Krebb | ![Cucco Keeper DMG](cast/LA_Cucco-Keeper.png) <br /> Cucco Keeper | (Mobilin's Head Inn) Gives dagger |
+| ![Krebb CDi](cast/ZA_Krebb.png) <br />Krebb | ![Grandpa Ulrira DMG](cast/LA_Grandpa-Ulrira.png) <br /> Grandpa Ulrira | (Mobilin's Head Inn) Gives dagger |
 | ![Lothar CDi](cast/ZA_Lothar.png) <br />Lothar | ![Trendy Game Shop Owner DMG](cast/LA_Trendy-Game-Shop-Owner.png) <br /> Trendy Game Shop Owner | (Mobilin's Head Inn) Inn Keeper |
 | ![Riddle Woman CDi](cast/ZA_Riddle-Woman.png) <br />Riddle Woman | ![Madam Meow-Meow DMG](cast/LA_Madam-MeowMeow.png) <br /> Madam Meow-Meow | (Mobilin's Head Inn) |
-| ![Tired Traveller CDi](cast/ZA_Tired-Traveller.png) <br />Tired Traveller | ![Grandpa Ulrira DMG](cast/LA_Grandpa-Ulrira.png) <br /> Grandpa Ulrira | (Mobilin's Head Inn) |
+| ![Tired Traveller CDi](cast/ZA_Tired-Traveller.png) <br />Tired Traveller | ![OoS Drunk DMG](cast/OoS_Drunk.png) <br /> OoS Drunk | (Mobilin's Head Inn) |
 
 ## Forest of Ogbam
 
@@ -52,7 +52,7 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Sir Basil CDi](cast/ZA_Sir-Basil.png) <br />Sir Basil | ![Ambi Guard DMG](cast/OoA_Ambi-Guard.png) <br /> Ambi Guard | n/a |
 | ![White Steed Lodgekeeper CDi](cast/ZA_White-Steed-Lodgekeeper.png) <br />White Steed Lodgekeeper | ![Prince Richard DMG](cast/LA_Prince-Richard.png) <br /> Prince Richard | n/a |
 | ![White Steed Barman CDi](cast/ZA_White-Steed-Barman.png) <br />White Steed Barman | ![Mayor Ruul DMG](cast/OoS_Mayor-Ruul.png) <br /> Mayor Ruul | n/a |
-| ![White Steed Patron 1 CDi](cast/ZA_White-Steed-patron-1.png) <br />White Steed Patron 1 | ![OoS Drunk DMG](cast/OoS_Drunk.png) <br /> OoS Drunk | n/a |
+| ![White Steed Patron 1 CDi](cast/ZA_White-Steed-patron-1.png) <br />White Steed Patron 1 | ![OoS Drunk Alt DMG](cast/OoS_Drunk-Alt.png) <br /> OoS Drunk Alt | n/a |
 | ![White Steed Patron 2 CDi](cast/ZA_White-Steed-patron-2.png) <br />White Steed Patron 2 | ![OoA Present NPC Old Guy DMG](cast/OoA_Present-Old-Guy.png) <br /> OoA Present NPC Old Guy | n/a |
 | ![Waldensop CDi](cast/ZA_Waldensop.png) <br />Waldensop | ![OoA Mayor Plen DMG](cast/OoA_Mayor-Plen.png) <br /> OoA Mayor Plen | n/a |
 
