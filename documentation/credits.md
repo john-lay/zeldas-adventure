@@ -3,7 +3,6 @@ There are a lot of people and places that helped me put this project together. I
 
 - [Gaming Monsters youtube channel](https://www.youtube.com/channel/UCMMhSfBStEti-Lqzs30HYWw) Taught me a lot about GBDK
 - [MundyC's Guide and Walkthrough](https://gamefaqs.gamespot.com/cdi/564215-zeldas-adventure/faqs/78656/) Invaluable source of information and names
-- [MundyC's Guide and Walkthrough](https://gamefaqs.gamespot.com/cdi/564215-zeldas-adventure/faqs/78656/) Invaluable source of information and names
 - [Zelda Fandom Enemy reference](https://zelda.fandom.com/wiki/Enemies_in_Zelda%27s_Adventure)
 - [Zelda Fandom Spell reference](https://zelda.fandom.com/wiki/Spells_of_Zelda%27s_Adventure)
 - [Zelda Fandom Item reference](https://zelda.fandom.com/wiki/Items_in_Zelda%27s_Adventure)
