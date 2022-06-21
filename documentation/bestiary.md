@@ -105,3 +105,4 @@ Dungeon masters guarding a celestial sign.
 | Goriya | 1 (half heart) | 3 |
 | Peahat | 2 (1 heart) | 3 |
 | Moblin | 2 (1 heart) | 4 |
+| Moby | 1 (half heart) | 2 |
