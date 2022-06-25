@@ -106,3 +106,4 @@ Dungeon masters guarding a celestial sign.
 | Peahat | 2 (1 heart) | 3 |
 | Moblin | 2 (1 heart) | 4 |
 | Moby | 1 (half heart) | 2 |
+| Leever | 1 (half heart) | 2 |
