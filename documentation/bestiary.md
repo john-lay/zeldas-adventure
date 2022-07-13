@@ -108,3 +108,4 @@ Dungeon masters guarding a celestial sign.
 | Moby | 1 (half heart) | 2 |
 | Leever | 1 (half heart) | 2 |
 | Deeler (purple) | 1 (half heart) | 2 |
+| Tektite | 1 (half heart) | 2 |
