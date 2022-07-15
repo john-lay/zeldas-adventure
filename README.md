@@ -227,7 +227,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$22$: Variable 022` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
-  * (Flag 3 is ???)
+  * (Flag 3 represents Zelda has used the ladder)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)
