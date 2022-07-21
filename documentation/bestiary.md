@@ -109,3 +109,4 @@ Dungeon masters guarding a celestial sign.
 | Leever | 1 (half heart) | 2 |
 | Deeler (purple) | 1 (half heart) | 2 |
 | Tektite | 1 (half heart) | 2 |
+| Keese | 1 (half heart) | 3 |
