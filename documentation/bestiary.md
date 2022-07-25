@@ -110,3 +110,4 @@ Dungeon masters guarding a celestial sign.
 | Deeler (purple) | 1 (half heart) | 2 |
 | Tektite | 1 (half heart) | 2 |
 | Keese | 1 (half heart) | 3 |
+| Sardak | 2 (1 heart) | 4 |
