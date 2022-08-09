@@ -281,3 +281,25 @@ There are 9 different animated tiles which use a different key in the HUD to ide
 - Group 1 represents Zelda's attack spells and the Enemies collision group
 - Group 2 represents Zelda's attack spells and switches
 - Group 3 represent Enemy projectile attacks
+
+## Emotes
+
+Notes on the emote icons and when they're used. Available emotes: \
+__Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), Music (♫), Sleep (Zzz)__
+### Zelda
+- __Shock (!)__ 
+  - Spell doesn't work on enemy
+  - Using a treasure to reveal the path forwards
+- __Sweat (O_O;)__
+  - Not enough rupees to cast a spell
+### NPCs
+- __Pause (...)__
+  - Krebb after receiving the dagger spell
+- __Music (♫)__
+  - Yvonne singing
+  - Bard playing instrument
+- __Sleep (Zzz)__
+  - sleeping soldier
+### Enemies
+- __Shock (!)__ 
+  - Taking damage
