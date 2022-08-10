@@ -164,6 +164,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
+    * (5 represents Zelda's screen position is explicitly managed)
 * `$15$: Variable 015` Attack Power - `number`. (Zelda's attack power)
 * `$16$: Variable 016` Spell Cost - `number`. (Cost of the equipped spell)
 ```
@@ -207,15 +208,15 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$18$: Variable 018` Resume location - `word`.
   * (Flag 1 represents a Save and Continue operation)
   * (Flag 2 represents a Save and Quit operation)
-  * (Flag 3 represents Zelda should resume in the Water Shrine)
-  * (Flag 4 represents Zelda should resume in the Strength Shrine)
-  * (Flag 5 represents Zelda should resume in the Fire Shrine)
-  * (Flag 6 is ???)
-  * (Flag 7 is ???)
-  * (Flag 8 is ???)
-  * (Flag 9 is ???)
-  * (Flag 10 is ???)
-  * (Flag 11 is ???)
+  * (Flag 3 represents Zelda should resume at Vision Henge)
+  * (Flag 4 represents Zelda should resume in the Earth Shrine)
+  * (Flag 5 represents Zelda should resume in the Illusion Shrine)
+  * (Flag 6 represents Zelda should resume in the Air Shrine)
+  * (Flag 7 represents Zelda should resume in the Destiny Shrine)
+  * (Flag 8 represents Zelda should resume in the Water Shrine)
+  * (Flag 9 represents Zelda should resume in the Strength Shrine)
+  * (Flag 10 represents Zelda should resume in the Fire Shrine)
+  * (Flag 11 represents Zelda should resume outside a boss room)
   * (Flag 12 is ???)
   * (Flag 13 is ???)
   * (Flag 14 is ???)
@@ -227,6 +228,24 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$22$: Variable 022` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
+  * (Flag 3 represents Zelda has used the ladder)
+  * (Flag 4 represents Zelda has defeated the Red Sardak)
+  * (Flag 5 represents Zelda has defeated the Blue Sardak)
+  * (Flag 6 represents Zelda has used the candle)
+  * (Flag 7 represents Llort has given his first speech)
+  * (Flag 8 represents Zelda has defeated the Yellow Sardak)
+  * (Flag 9 represents Llort has given his second speech)
+  * (Flag 10 represents Zelda has defeated Llort)
+  * (Flag 11 represents Zelda has collected the heart piece)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$23$: Variable 023` Zelda Direction - `number`. (Stores Zelda's direction between scenes)
+* `$24$: Variable 024` ZA Engine Flags - `word`.
+  * (Flag 1 extend the spell reference sprite search to include region `0x8800`-`0x8FFF`. Causes slow scene load - use with caution!)
+  * (Flag 2 is ???)
   * (Flag 3 is ???)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
@@ -262,3 +281,25 @@ There are 9 different animated tiles which use a different key in the HUD to ide
 - Group 1 represents Zelda's attack spells and the Enemies collision group
 - Group 2 represents Zelda's attack spells and switches
 - Group 3 represent Enemy projectile attacks
+
+## Emotes
+
+Notes on the emote icons and when they're used. Available emotes: \
+__Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), Music (♫), Sleep (Zzz)__
+### Zelda
+- __Shock (!)__ 
+  - Spell doesn't work on enemy
+  - Using a treasure to reveal the path forwards
+- __Sweat (O_O;)__
+  - Not enough rupees to cast a spell
+### NPCs
+- __Pause (...)__
+  - Krebb after receiving the dagger spell
+- __Music (♫)__
+  - Yvonne singing
+  - Bard playing instrument
+- __Sleep (Zzz)__
+  - sleeping soldier
+### Enemies
+- __Shock (!)__ 
+  - Taking damage
