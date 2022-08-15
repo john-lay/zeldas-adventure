@@ -26,11 +26,11 @@ Regular enemies found in the overworld and dungeons.
 | ![Floor Spikes CDi](bestiary/ZA_Floor_Spikes.jpg) <br /> Floor Spikes | ![Floor Spikes DMG](bestiary/LA_Floor-Spikes.png) <br /> Floor Spikes |
 | ![Gibdo CDi](bestiary/ZA_Gibdo.png) <br /> Gibdo | ![Gibdo DMG](bestiary/LA_Gibdo.png) <br /> Gibdo |
 | ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Bloober DMG](bestiary/LA_Bloober.png) <br /> Bloober |
-| ![Goriya CDi](bestiary/ZA_Goriya.png) <br /> Goriya | ![Goriya DMG](bestiary/LA_Goriya.png) <br /> Goriya |
+| ![Goriya CDi](bestiary/ZA_Goriya.png) <br /> Goriya | ![Goriya Brother DMG](bestiary/OoS-Goriya-Brother.png) <br /> Goriya Brother |
 | ![Iron Knuckle CDi](bestiary/ZA_Iron-Knuckle.png) <br /> Iron Knuckle | ![Darknut DMG](bestiary/LA_Darknut.png) <br /> Darknut |
 | ![Jack CDi](bestiary/ZA_Jack.png) <br /> Jack | ![Anti-Fairy DMG](bestiary/LA_Anti-Fairy.png) <br /> Anti-Fairy |
 | ![Jackaroo CDi](bestiary/ZA_Jackaroo.png) <br /> Jackaroo | ![Iron Mask DMG](bestiary/LA_Iron-Mask.png) <br /> Iron Mask |
-| ![Kannis CDi](bestiary/ZA_Kannis.png) <br /> Kannis | ![Moosh DMG](bestiary/OoA-Moosh.png) <br /> Moosh |
+| ![Kannis CDi](bestiary/ZA_Kannis.png) <br /> Kannis | ![Lynel DMG](bestiary/OoS_Lynel.png) <br /> Lynel |
 | ![Keese CDi](bestiary/ZA_Keese.png) <br /> Keese | ![Keese DMG](bestiary/LA_Keese.png) <br /> Keese |
 | ![Lanmola CDi](bestiary/ZA_Lanmola.png) <br /> Lanmola | ![Pincer DMG](bestiary/LA_Pincer.png) <br /> Pincer |
 | ![Leever CDi](bestiary/ZA_Leever.png) <br /> Leever | ![Leever DMG](bestiary/LA_Leever.png) <br /> Leever |
@@ -88,7 +88,7 @@ Dungeon masters guarding a celestial sign.
 | ![Llort CDi](bestiary/ZA_Llort.png) <br />Llort | ![Blue Stalfos DMG](bestiary/OoA_Blue-Stalfos.png) <br /> Blue Stalfos |
 | ![Pasquinade CDi](bestiary/ZA_Pasquinade.png) <br />Pasquinade | ![Pumpkin Head DMG](bestiary/OoA_Pumpkin-Head.png) <br /> Pumpkin Head |
 | ![Avianna CDi](bestiary/ZA_Avianna.png) <br />Avianna | ![Swoop DMG](bestiary/OoA_Swoop.png) <br /> Swoop |
-| ![Malmord CDi](bestiary/ZA_Malmord.png) <br />Malmord | ![Agunima DMG](bestiary/OoS_Agunima.png) <br /> Agunima |
+| ![Malmord CDi](bestiary/ZA_Malmord.png) <br />Malmord | ![Agunima DMG](bestiary/OoA_Shadow-Hag.png) <br /> Shadow Hag |
 | ![Agwanda CDi](bestiary/ZA_Agwanda.png) <br />Agwanda | ![Green Camo Goblin DMG](bestiary/LADX_Green-Camo-Goblin.png) <br /> Green Camo Goblin |
 | ![Ursore CDi](bestiary/ZA_Ursore.png) <br />Ursore | ![Moosh DMG](bestiary/OoA-Moosh.png) <br /> Moosh |
 | ![Warbane CDi](bestiary/ZA_Warbane.png) <br />Warbane | ![Vire DMG](bestiary/LA_Vire.png) <br /> Vire |
