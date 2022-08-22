@@ -111,3 +111,5 @@ Dungeon masters guarding a celestial sign.
 | Tektite | 1 (half heart) | 2 |
 | Keese | 1 (half heart) | 3 |
 | Sardak | 2 (1 heart) | 4 |
+| - | - | - |
+| octorok | 4 (2 heart) | 9 |
