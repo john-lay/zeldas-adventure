@@ -305,3 +305,28 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### Enemies
 - __Shock (!)__ 
   - Taking damage
+
+## Spells
+
+Zelda can cast 18 different spells, which I've bundled into 4 discreet categories. More details [here](/documentation/notes.md#spells)
+
+1. Single projectile (i.e. __arrow__) [`5 spells`]
+2. Single animated projectile (i.e. spinning __boomerang__) [`4 spells`]
+3. Triple projectile (i.e. __calm__ spell produces 3 fireballs emanating from Zelda's wand) [`6 spells`]
+4. Other (spells which don't conform to the above) [`3 spells`]
+
+When animating these spells in GB Studio, Zelda fires a reference spell (a sprite placeholder with suitably unique tiles) which is swapped based on the equipped spell.
+- Sprites are found in [/assets/sprites/spells/](/assets/sprites/spells/)
+- [GB Studio modification for spell tile swap](https://github.com/john-lay/gb-studio/blob/develop/appData/src/gb/src/core/zeldasSpellData.c)
+
+### Known Limitations
+
+There are 2 main issues when trying to animate the spells in GB Studio
+
+1. The animation state isn't respected for a projectile. [issue logged here](https://github.com/chrismaltby/gb-studio/issues/1026#issuecomment-1138993250) which prevents spells from being properly animated (category 2 above). Of the 4 spells affected: __hammer__, __roar stick__, __short axe__ and __boomerang__, the __boomerang__ is the spell which doesn't work as a static animation. The work around for this is to create a unique animation for the __boomerang__.
+2. The sprite animation limit on each scene. For the other category there are 3 spells. The __firestorm__ spell shoots a projectile in each of the cardinal directions. The __rings of fire__ fire 3 spells in a line and the __pyros__ spell places 3 sprites around Zelda in the direction she's facing. The first 2 spells can reuse the default animation which is called _Four Directions_ in GB Studio. The __pyros__ spell, however requires a 2 frame animation, so again (like the __boomerang__) requires a unique animation. 
+
+If an on screen enemy can also fire a projectile, then the 2 unique sprites + enemy projectile pushes the GB Studio engine past its limit and causes the scene to never load.
+\
+\
+Now that the 2 problematic spells have been identified: __boomerang__ and __pyros__ a compromise has to be reached. As the pyros spell is not required or especially effective against any enemy, this spell has been reduced to a single screen cameo.
