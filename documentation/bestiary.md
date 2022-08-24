@@ -112,4 +112,5 @@ Dungeon masters guarding a celestial sign.
 | Keese | 1 (half heart) | 3 |
 | Sardak | 2 (1 heart) | 4 |
 | - | - | - |
+| bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 heart) | 9 |
