@@ -114,3 +114,4 @@ Dungeon masters guarding a celestial sign.
 | - | - | - |
 | bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 heart) | 9 |
+| swap zola (green) | 2 (1 heart) | 6 |
