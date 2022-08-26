@@ -101,6 +101,7 @@ Dungeon masters guarding a celestial sign.
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
+| __Andor__ | - | - |
 | Zol   | 1 (half heart) | 2 |
 | Goriya | 1 (half heart) | 3 |
 | Peahat | 2 (1 heart) | 3 |
@@ -109,10 +110,13 @@ Dungeon masters guarding a celestial sign.
 | Leever | 1 (half heart) | 2 |
 | Deeler (purple) | 1 (half heart) | 2 |
 | Tektite | 1 (half heart) | 2 |
+| __Earth Shrine__ | - | - |
 | Keese | 1 (half heart) | 3 |
 | Sardak | 2 (1 heart) | 4 |
-| - | - | - |
+| __Wimbich / Torian__ | - | - |
 | bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 heart) | 9 |
 | swap zola (green) | 2 (1 heart) | 6 |
 | mimic mole | 2 (1 heart) | 3 |
+| cave zola (grey) | 2 (1 heart) | 6 |
+| molluska | 2 (1 heart) | 4 |
