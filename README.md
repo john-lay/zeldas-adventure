@@ -290,6 +290,7 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 - __Shock (!)__ 
   - Spell doesn't work on enemy
   - Using a treasure to reveal the path forwards
+  - Interacting with a barrier
 - __Love (❤)__
   - Collect a treasure/weapon, heart container or regain health
 - __Sweat (O_O;)__
