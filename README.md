@@ -271,6 +271,7 @@ There are 9 different animated tiles which use a different key in the HUD to ide
 - A scene with river tiles will have river tile 0
 - A scene with sea tiles and river tiles will have sea tile 1, sea tile 0 and river tile 0
 - A scene with lake tiles will have lake tile 0
+- A scene with lake tiles and river tiles will have lake tile 1 and river tile 0
 - A scene with lava tiles will have lava tile 0 followed by lava tile 1
 - A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
 - A scene with torch tiles will have torch tile 0
