@@ -331,4 +331,4 @@ There are 2 main issues when trying to animate the spells in GB Studio
 If an on screen enemy can also fire a projectile, then the 2 unique sprites + enemy projectile pushes the GB Studio engine past its limit and causes the scene to never load.
 \
 \
-Now that the 2 problematic spells have been identified: __boomerang__ and __pyros__ a compromise has to be reached. As the pyros spell is not required or especially effective against any enemy, this spell has been reduced to a single screen cameo.
+Now that the 2 problematic spells have been identified: __boomerang__ and __pyros__ a compromise has to be reached. As the pyros spell is not required or especially effective against any enemy, this spell has been reduced to a small cameo and can only be used in the 4 screens that surround the Wimbich pond.
