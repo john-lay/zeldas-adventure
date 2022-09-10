@@ -38,8 +38,8 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Eric and Ian CDi](cast/ZA_Eric-Ian.png) <br />Eric and Ian | ![Quadruplets DMG](cast/LA_Quadruplet.png) ![Quadruplet DMG](cast/LA_Quadruplet.png) <br /> Quadruplets | n/a |
 | ![Twins Dad CDi](cast/ZA_Twins-Dad.png) <br />Twins Dad | ![Papahl DMG](cast/LA_Papahl.png) <br /> Papahl | n/a |
 | ![Lounger CDi](cast/ZA_Wimbich-Lounger.png) <br />Lounger | ![OoA Past NPC Young Guy DMG](cast/OoA_Past-Young-Guy.png) <br /> OoA Past NPC Young Guy | n/a |
-| ![Madam Kriggle CDi](cast/ZA_Madam-Kriggle.png) <br />Madam-Kriggle | ![OoA Present NPC Old Lady DMG](cast/OoA_Present-Old-Lady.png) <br /> OoA Present NPC Old Lady | n/a |
-| ![Shopkeeper CDi](cast/ZA_Wimbich-Shopkeeper.png) <br />Shopkeeper | ![OoA Mamamu-Yan DMG](cast/OoA_Present-Mamamu-Yan.png) <br /> OoA Mamamu-Yan | dog owner |
+| ![Madam Kriggle CDi](cast/ZA_Madam-Kriggle.png) <br />Madam Kriggle | ![OoA Present NPC Old Lady DMG](cast/OoA_Present-Old-Lady.png) <br /> OoA Present NPC Old Lady | n/a |
+| ![Shopkeeper CDi](cast/ZA_Wimbich-Shopkeeper.png) <br />Shop Keeper | ![OoA Mamamu-Yan DMG](cast/OoA_Present-Mamamu-Yan.png) <br /> OoA Mamamu-Yan | dog owner |
 | ![Knave CDi](cast/ZA_Wimbich-Knave.png) <br />Knave | ![OoA Comedian DMG](cast/OoA_Present-Comedian.png) <br /> OoA Comedian | n/a |
 | ![Dog CDi](cast/ZA_Wimbich-Dog.png) <br />Dog | ![OoA Mamamu-Yan's Dog DMG](cast/OoA_Present-Mamamu-Yan-Dog.png) <br /> OoA Mamamu-Yan's Dog | n/a |
 | ![Town Merchant CDi](cast/ZA_Wimbich-Town-Merchant.png) <br />Town Merchant | ![Crazy Tracy DMG](cast/LA_Crazy-Tracy.png) <br /> Crazy Tracy | n/a |
