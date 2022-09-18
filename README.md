@@ -148,8 +148,8 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 6 represents Zelda has collected the Strength Shrine)
   * (Flag 7 represents Zelda has collected the Fire Shrine)
   * (Flag 8 represents Shurmak has given her Vision Henge speech)
-  * (Flag 9 is ???)
-  * (Flag 10 is ???)
+  * (Flag 9 represents Zelda has spoken to the White Steed Lodgekeep)
+  * (Flag 10 represents Zelda has collected the Torian forest heart container)
   * (Flag 11 is ???)
   * (Flag 12 is ???)
   * (Flag 13 is ???)
@@ -271,6 +271,7 @@ There are 9 different animated tiles which use a different key in the HUD to ide
 - A scene with river tiles will have river tile 0
 - A scene with sea tiles and river tiles will have sea tile 1, sea tile 0 and river tile 0
 - A scene with lake tiles will have lake tile 0
+- A scene with lake tiles and river tiles will have lake tile 1 and river tile 0
 - A scene with lava tiles will have lava tile 0 followed by lava tile 1
 - A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
 - A scene with torch tiles will have torch tile 0
@@ -290,6 +291,9 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 - __Shock (!)__ 
   - Spell doesn't work on enemy
   - Using a treasure to reveal the path forwards
+  - Interacting with a barrier
+- __Love (❤)__
+  - Collect a treasure/weapon, heart container or regain health
 - __Sweat (O_O;)__
   - Not enough rupees to cast a spell
 ### NPCs
@@ -303,3 +307,28 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### Enemies
 - __Shock (!)__ 
   - Taking damage
+
+## Spells
+
+Zelda can cast 18 different spells, which I've bundled into 4 discreet categories. More details [here](/documentation/notes.md#spells)
+
+1. Single projectile (i.e. __arrow__) [`5 spells`]
+2. Single animated projectile (i.e. spinning __boomerang__) [`4 spells`]
+3. Triple projectile (i.e. __calm__ spell produces 3 fireballs emanating from Zelda's wand) [`6 spells`]
+4. Other (spells which don't conform to the above) [`3 spells`]
+
+When animating these spells in GB Studio, Zelda fires a reference spell (a sprite placeholder with suitably unique tiles) which is swapped based on the equipped spell.
+- Sprites are found in [/assets/sprites/spells/](/assets/sprites/spells/)
+- [GB Studio modification for spell tile swap](https://github.com/john-lay/gb-studio/blob/develop/appData/src/gb/src/core/zeldasSpellData.c)
+
+### Known Limitations
+
+There are 2 main issues when trying to animate the spells in GB Studio
+
+1. The animation state isn't respected for a projectile. [issue logged here](https://github.com/chrismaltby/gb-studio/issues/1026#issuecomment-1138993250) which prevents spells from being properly animated (category 2 above). Of the 4 spells affected: __hammer__, __roar stick__, __short axe__ and __boomerang__, the __boomerang__ is the spell which doesn't work as a static animation. The work around for this is to create a unique animation for the __boomerang__.
+2. The sprite animation limit on each scene. For the other category there are 3 spells. The __firestorm__ spell shoots a projectile in each of the cardinal directions. The __rings of fire__ fire 3 spells in a line and the __pyros__ spell places 3 sprites around Zelda in the direction she's facing. The first 2 spells can reuse the default animation which is called _Four Directions_ in GB Studio. The __pyros__ spell, however requires a 2 frame animation, so again (like the __boomerang__) requires a unique animation. 
+
+If an on screen enemy can also fire a projectile, then the 2 unique sprites + enemy projectile pushes the GB Studio engine past its limit and causes the scene to never load.
+\
+\
+Now that the 2 problematic spells have been identified: __boomerang__ and __pyros__ a compromise has to be reached. As the pyros spell is not required or especially effective against any enemy, this spell has been reduced to a small cameo and can only be used in the 4 screens that surround the Wimbich pond.
