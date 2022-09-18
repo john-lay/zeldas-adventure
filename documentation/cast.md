@@ -38,9 +38,9 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | ![Eric and Ian CDi](cast/ZA_Eric-Ian.png) <br />Eric and Ian | ![Quadruplets DMG](cast/LA_Quadruplet.png) ![Quadruplet DMG](cast/LA_Quadruplet.png) <br /> Quadruplets | n/a |
 | ![Twins Dad CDi](cast/ZA_Twins-Dad.png) <br />Twins Dad | ![Papahl DMG](cast/LA_Papahl.png) <br /> Papahl | n/a |
 | ![Lounger CDi](cast/ZA_Wimbich-Lounger.png) <br />Lounger | ![OoA Past NPC Young Guy DMG](cast/OoA_Past-Young-Guy.png) <br /> OoA Past NPC Young Guy | n/a |
-| ![Madam Kriggle CDi](cast/ZA_Madam-Kriggle.png) <br />Madam-Kriggle | ![OoA Present NPC Old Lady DMG](cast/OoA_Present-Old-Lady.png) <br /> OoA Present NPC Old Lady | n/a |
-| ![Shopkeeper CDi](cast/ZA_Wimbich-Shopkeeper.png) <br />Shopkeeper | ![OoA Mamamu-Yan DMG](cast/OoA_Present-Mamamu-Yan.png) <br /> OoA Mamamu-Yan | dog owner |
-| ![Knave CDi](cast/ZA_Wimbich-Knave.png) <br />Knave | ![OoA Comedian DMG](cast/OoA_Present-Comedian.png) <br /> [OoA Comedian | n/a |
+| ![Madam Kriggle CDi](cast/ZA_Madam-Kriggle.png) <br />Madam Kriggle | ![OoA Present NPC Old Lady DMG](cast/OoA_Present-Old-Lady.png) <br /> OoA Present NPC Old Lady | n/a |
+| ![Shopkeeper CDi](cast/ZA_Wimbich-Shopkeeper.png) <br />Shop Keeper | ![OoA Mamamu-Yan DMG](cast/OoA_Present-Mamamu-Yan.png) <br /> OoA Mamamu-Yan | dog owner |
+| ![Knave CDi](cast/ZA_Wimbich-Knave.png) <br />Knave | ![OoA Comedian DMG](cast/OoA_Present-Comedian.png) <br /> OoA Comedian | n/a |
 | ![Dog CDi](cast/ZA_Wimbich-Dog.png) <br />Dog | ![OoA Mamamu-Yan's Dog DMG](cast/OoA_Present-Mamamu-Yan-Dog.png) <br /> OoA Mamamu-Yan's Dog | n/a |
 | ![Town Merchant CDi](cast/ZA_Wimbich-Town-Merchant.png) <br />Town Merchant | ![Crazy Tracy DMG](cast/LA_Crazy-Tracy.png) <br /> Crazy Tracy | n/a |
 | ![Yvonne CDi](cast/ZA_Yvonne.png) <br />Yvonne | ![Marin DMG](cast/LA_Marin.png) <br /> Marin | musician |
@@ -51,7 +51,7 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 | :---------: | :---------: | :--------- |
 | ![Sir Basil CDi](cast/ZA_Sir-Basil.png) <br />Sir Basil | ![Ambi Guard DMG](cast/OoA_Ambi-Guard.png) <br /> Ambi Guard | n/a |
 | ![White Steed Lodgekeeper CDi](cast/ZA_White-Steed-Lodgekeeper.png) <br />White Steed Lodgekeeper | ![Prince Richard DMG](cast/LA_Prince-Richard.png) <br /> Prince Richard | n/a |
-| ![White Steed Barman CDi](cast/ZA_White-Steed-Barman.png) <br />White Steed Barman | ![Mayor Ruul DMG](cast/OoS_Mayor-Ruul.png) <br /> Mayor Ruul | n/a |
+| ![White Steed Barman CDi](cast/ZA_White-Steed-Barman.png) <br />White Steed Barman | ![Mayor Ruul DMG](cast/OoS_Mayor-Ruul.png) <br /> OoS Mayor Ruul | n/a |
 | ![White Steed Patron 1 CDi](cast/ZA_White-Steed-patron-1.png) <br />White Steed Patron 1 | ![OoS Drunk Alt DMG](cast/OoS_Drunk-Alt.png) <br /> OoS Drunk Alt | n/a |
 | ![White Steed Patron 2 CDi](cast/ZA_White-Steed-patron-2.png) <br />White Steed Patron 2 | ![OoA Present NPC Old Guy DMG](cast/OoA_Present-Old-Guy.png) <br /> OoA Present NPC Old Guy | n/a |
 | ![Waldensop CDi](cast/ZA_Waldensop.png) <br />Waldensop | ![OoA Mayor Plen DMG](cast/OoA_Mayor-Plen.png) <br /> OoA Mayor Plen | n/a |
