@@ -34745,30 +34745,14 @@
             "id": "f7967cad-ab4a-451a-aaec-140864c00df3",
             "name": "Restore Zelda's Position",
             "description": "Maintain Zelda's X/Y between scenes",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Exit Screen: Top, Right, Bottom, Left",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Zelda PosX",
-                    "passByReference": true
-                },
-                "V2": {
-                    "id": "V2",
-                    "name": "Zelda PosY",
-                    "passByReference": true
-                }
-            },
+            "variables": {},
             "actors": {},
             "symbol": "script_1",
             "script": [
                 {
                     "command": "EVENT_SWITCH",
                     "args": {
-                        "variable": "V0",
+                        "variable": "14",
                         "choices": 4,
                         "__collapseCase0": false,
                         "value0": 1,
@@ -34813,7 +34797,7 @@
                                     "actorId": "$self$",
                                     "x": {
                                         "type": "variable",
-                                        "value": "V1"
+                                        "value": "12"
                                     },
                                     "y": {
                                         "type": "number",
@@ -34834,7 +34818,7 @@
                                     },
                                     "y": {
                                         "type": "variable",
-                                        "value": "V2"
+                                        "value": "13"
                                     }
                                 },
                                 "id": "af26ae10-d2ff-432b-a971-a85a9ec6d949"
@@ -34847,7 +34831,7 @@
                                     "actorId": "$self$",
                                     "x": {
                                         "type": "variable",
-                                        "value": "V1"
+                                        "value": "12"
                                     },
                                     "y": {
                                         "type": "number",
@@ -34868,7 +34852,7 @@
                                     },
                                     "y": {
                                         "type": "variable",
-                                        "value": "V2"
+                                        "value": "13"
                                     }
                                 },
                                 "id": "e2b4a1cc-dbe6-47be-b84e-5c6272379cad"
@@ -34900,11 +34884,6 @@
                 "V0": {
                     "id": "V0",
                     "name": "Has taken damage",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Health",
                     "passByReference": true
                 },
                 "V2": {
@@ -34954,7 +34933,7 @@
                             {
                                 "command": "EVENT_VARIABLE_MATH",
                                 "args": {
-                                    "vectorX": "V1",
+                                    "vectorX": "1",
                                     "operation": "sub",
                                     "other": "var",
                                     "vectorY": "V2",
@@ -34988,7 +34967,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V1",
+                                    "variable": "1",
                                     "operator": "==",
                                     "comparator": "0",
                                     "__collapseElse": true,
@@ -35037,11 +35016,6 @@
             "name": "Spawn Collectable",
             "description": "Enemy randomly drops either a heart, rupee or nothing",
             "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Scene Flags",
-                    "passByReference": true
-                },
                 "V1": {
                     "id": "V1",
                     "name": "Random Number",
@@ -35059,7 +35033,7 @@
                 {
                     "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
+                        "variable": "17",
                         "flag": 2,
                         "__collapseElse": false,
                         "__collapse": false
@@ -35143,7 +35117,7 @@
                                         {
                                             "command": "EVENT_ADD_FLAGS",
                                             "args": {
-                                                "variable": "V0",
+                                                "variable": "17",
                                                 "flag1": true,
                                                 "flag2": false,
                                                 "flag3": true,
@@ -35195,7 +35169,7 @@
                                         {
                                             "command": "EVENT_ADD_FLAGS",
                                             "args": {
-                                                "variable": "V0",
+                                                "variable": "17",
                                                 "flag1": false,
                                                 "flag2": true,
                                                 "flag3": true,
@@ -35280,29 +35254,9 @@
             "name": "Collect Heart/Rupee",
             "description": "Allow Zelda to collect a heart or (10) rupees",
             "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Scene Flags",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Health",
-                    "passByReference": true
-                },
-                "V2": {
-                    "id": "V2",
-                    "name": "Max Hearts",
-                    "passByReference": true
-                },
                 "V3": {
                     "id": "V3",
                     "name": "Full Health",
-                    "passByReference": true
-                },
-                "V4": {
-                    "id": "V4",
-                    "name": "Rupees",
                     "passByReference": true
                 }
             },
@@ -35317,7 +35271,7 @@
                 {
                     "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
+                        "variable": "17",
                         "flag": 0,
                         "__collapseElse": true,
                         "__disableElse": true,
@@ -35336,14 +35290,14 @@
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V1"
+                                                "variable": "1"
                                             },
                                             "id": "a181dcca-fd36-4a93-a662-9bd680865cc2"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V1"
+                                                "variable": "1"
                                             },
                                             "id": "d665c21f-bf04-4a42-8130-b117847d2b02"
                                         }
@@ -35364,7 +35318,7 @@
                                                 "vectorX": "V3",
                                                 "operation": "set",
                                                 "other": "var",
-                                                "vectorY": "V2",
+                                                "vectorY": "3",
                                                 "value": "0",
                                                 "minValue": "0",
                                                 "maxValue": "32767",
@@ -35389,7 +35343,7 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V1",
+                                                "vectorX": "1",
                                                 "operator": ">",
                                                 "vectorY": "V3",
                                                 "__collapseElse": true,
@@ -35400,7 +35354,7 @@
                                                     {
                                                         "command": "EVENT_SET_VALUE",
                                                         "args": {
-                                                            "variable": "V1",
+                                                            "variable": "1",
                                                             "value": {
                                                                 "type": "variable",
                                                                 "value": "V3"
@@ -35425,12 +35379,12 @@
                 {
                     "command": "EVENT_IF_FLAGS_COMPARE",
                     "args": {
-                        "variable": "V0",
+                        "variable": "17",
                         "flag": 1,
                         "__collapseElse": true,
                         "__disableElse": true,
                         "__label": "If Rupee",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -35445,7 +35399,7 @@
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
                                             "id": "43dad7ca-08d0-4fcd-a047-7271cf0cc738"
@@ -35453,34 +35407,34 @@
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "b55c99cc-dfa5-4ecf-b846-1bc929a48a44"
+                                            "id": "0cc68cbc-9a1d-40c5-afbb-1584246669ea"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "05ff994e-477d-4d74-9fd0-341600bf4a63"
+                                            "id": "56785f56-7c6a-4821-89ee-b9174517798d"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "4306e763-7205-41e0-aefd-fac76c34ab72"
+                                            "id": "eb397059-2ccc-400f-b352-ff7f9d759db5"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "252557fc-df72-4488-b074-b6820def2d39"
+                                            "id": "ab0ff2ad-42a5-4af7-a684-e1b5355033bd"
                                         }
                                     ]
                                 },
@@ -35497,46 +35451,46 @@
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "075a7e8f-4904-41c3-89db-58434bb7551b"
+                                            "id": "da828d74-7e93-4814-a14d-b7a3e5741a74"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "51790910-dc2c-471d-a6a8-9681cdc162b2"
+                                            "id": "a73aed29-880f-4543-ade7-15153c7f2d64"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "46dbc695-1e13-4225-bc48-ae7fb66a95d3"
+                                            "id": "ed39715f-4a79-471f-b6da-d766ac7f98cd"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "d082682a-73da-4512-9790-17942ca670d2"
+                                            "id": "bd0f18dd-7282-405e-be8d-ae92c21c0b26"
                                         },
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V4",
+                                                "variable": "5",
                                                 "__collapse": true
                                             },
-                                            "id": "37d4e387-72ec-42b5-bb75-c856bb7416c2"
+                                            "id": "f48b7c4d-0027-4e79-b28e-5090e579aba1"
                                         }
                                     ]
                                 },
-                                "id": "43a9e307-721d-47bd-b296-99a7fc8ad54c"
+                                "id": "59a67aa4-4576-4667-90b9-bdad5eaf6fc8"
                             }
                         ],
                         "false": []
@@ -35591,23 +35545,7 @@
             "id": "c56e5b85-b14b-4e61-8829-839b0dd22485",
             "name": "Attack Spell",
             "description": "Zelda Attacks with the equipped spell\nPyros spell disabled in Andor",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Equipped",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Spell Cost",
-                    "passByReference": true
-                },
-                "V2": {
-                    "id": "V2",
-                    "name": "Rupees",
-                    "passByReference": true
-                }
-            },
+            "variables": {},
             "actors": {},
             "symbol": "script_5",
             "script": [
@@ -35637,7 +35575,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 1,
                                     "__collapseElse": true,
@@ -35820,7 +35758,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 2,
                                     "__collapseElse": true,
@@ -35833,7 +35771,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -35844,9 +35782,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -35881,10 +35819,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -35915,7 +35853,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 3,
                                     "__collapseElse": true,
@@ -35928,7 +35866,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -35939,9 +35877,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -35976,10 +35914,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -36010,7 +35948,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 4,
                                     "__collapseElse": true,
@@ -36023,7 +35961,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -36034,9 +35972,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -36241,7 +36179,7 @@
                                                             "actorId": "$self$",
                                                             "direction": "down",
                                                             "__collapseElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__disableElse": true
                                                         },
                                                         "children": {
@@ -36428,10 +36366,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -36462,7 +36400,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 5,
                                     "__collapseElse": true,
@@ -36475,7 +36413,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -36486,12 +36424,12 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "children": {
                                                 "true": [
@@ -36501,7 +36439,7 @@
                                                             "actorId": "$self$",
                                                             "direction": "left",
                                                             "__collapseElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__disableElse": true
                                                         },
                                                         "children": {
@@ -36881,10 +36819,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -36915,7 +36853,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 6,
                                     "__collapseElse": true,
@@ -36928,7 +36866,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 3
@@ -36939,9 +36877,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -36978,7 +36916,8 @@
                                                         "args": {
                                                             "time": 0.12,
                                                             "frames": 30,
-                                                            "units": "time"
+                                                            "units": "time",
+                                                            "__collapse": true
                                                         },
                                                         "id": "5a3bce57-5928-4762-ad15-045ab7203bf6"
                                                     },
@@ -37013,7 +36952,8 @@
                                                         "args": {
                                                             "time": 0.12,
                                                             "frames": 30,
-                                                            "units": "time"
+                                                            "units": "time",
+                                                            "__collapse": true
                                                         },
                                                         "id": "2773c031-45c3-4177-b2a5-02698f651659"
                                                     },
@@ -37046,10 +36986,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -37080,7 +37020,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 7,
                                     "__collapseElse": true,
@@ -37093,7 +37033,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -37104,9 +37044,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -37219,10 +37159,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -37253,7 +37193,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 8,
                                     "__collapseElse": true,
@@ -37266,7 +37206,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -37277,9 +37217,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -37671,10 +37611,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -37705,7 +37645,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 9,
                                     "__collapseElse": true,
@@ -37718,7 +37658,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -37729,9 +37669,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -37766,10 +37706,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -37800,7 +37740,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 10,
                                     "__collapseElse": true,
@@ -37813,7 +37753,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 24
@@ -37824,9 +37764,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -38218,10 +38158,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -38252,7 +38192,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 11,
                                     "__collapseElse": true,
@@ -38265,7 +38205,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 3
@@ -38276,9 +38216,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -38313,10 +38253,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -38347,7 +38287,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 12,
                                     "__collapseElse": true,
@@ -38360,7 +38300,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 3
@@ -38371,9 +38311,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -38408,10 +38348,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -38442,7 +38382,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 13,
                                     "__collapseElse": true,
@@ -38455,7 +38395,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -38466,9 +38406,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -38503,10 +38443,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -38537,7 +38477,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 14,
                                     "__collapseElse": true,
@@ -38550,7 +38490,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -38561,9 +38501,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -38598,10 +38538,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -38632,7 +38572,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 15,
                                     "__collapseElse": true,
@@ -38646,7 +38586,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 4
@@ -38657,9 +38597,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees",
                                                 "__collapse": false
@@ -38672,7 +38612,7 @@
                                                             "actorId": "$self$",
                                                             "direction": "left",
                                                             "__collapseElse": true,
-                                                            "__collapse": false,
+                                                            "__collapse": true,
                                                             "__disableElse": true
                                                         },
                                                         "children": {
@@ -39045,10 +38985,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -39079,13 +39019,13 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 15,
                                     "__collapseElse": true,
                                     "__label": "15. Pyros (custom sprite)",
                                     "__disableElse": true,
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "__comment": true
                                 },
                                 "children": {
@@ -39093,7 +39033,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 4
@@ -39104,9 +39044,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees",
                                                 "__collapse": false
@@ -39493,10 +39433,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -39527,7 +39467,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 15,
                                     "__collapseElse": true,
@@ -39554,7 +39494,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 16,
                                     "__collapseElse": true,
@@ -39568,7 +39508,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 3
@@ -39579,9 +39519,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -39616,10 +39556,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -39650,7 +39590,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 17,
                                     "__collapseElse": true,
@@ -39663,7 +39603,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 2
@@ -39674,9 +39614,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -39711,10 +39651,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -39745,7 +39685,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 18,
                                     "__collapseElse": true,
@@ -39758,7 +39698,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 26
@@ -39769,9 +39709,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees"
                                             },
@@ -40163,10 +40103,10 @@
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -40197,13 +40137,13 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 19,
                                     "__collapseElse": true,
                                     "__label": "19. Boomerang (respect animation state)",
                                     "__disableElse": true,
-                                    "__collapse": false,
+                                    "__collapse": true,
                                     "__comment": true
                                 },
                                 "children": {
@@ -40211,7 +40151,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -40223,9 +40163,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees",
                                                 "__collapse": false
@@ -40254,17 +40194,17 @@
                                                                 "1",
                                                                 "2"
                                                             ],
-                                                            "__collapse": false
+                                                            "__collapse": true
                                                         },
                                                         "id": "065208d3-049e-4f8e-a04b-91285f9d25dc"
                                                     },
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -40295,7 +40235,7 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 19,
                                     "__collapseElse": true,
@@ -40309,7 +40249,7 @@
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "16",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
@@ -40321,9 +40261,9 @@
                                         {
                                             "command": "EVENT_IF_VALUE_COMPARE",
                                             "args": {
-                                                "vectorX": "V2",
+                                                "vectorX": "5",
                                                 "operator": ">=",
-                                                "vectorY": "V1",
+                                                "vectorY": "16",
                                                 "__collapseElse": false,
                                                 "__label": "Has Enough Rupees",
                                                 "__collapse": false
@@ -40352,17 +40292,17 @@
                                                                 "1",
                                                                 "2"
                                                             ],
-                                                            "__collapse": false
+                                                            "__collapse": true
                                                         },
                                                         "id": "812916f7-66cb-436d-82da-75e48cb748b7"
                                                     },
                                                     {
                                                         "command": "EVENT_VARIABLE_MATH",
                                                         "args": {
-                                                            "vectorX": "V2",
+                                                            "vectorX": "5",
                                                             "operation": "sub",
                                                             "other": "var",
-                                                            "vectorY": "V1",
+                                                            "vectorY": "16",
                                                             "value": "0",
                                                             "minValue": "0",
                                                             "maxValue": "32767",
@@ -40393,12 +40333,12 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 33,
                                     "__collapseElse": true,
                                     "__label": "33. Harp",
-                                    "__collapse": true,
+                                    "__collapse": false,
                                     "__disableElse": true
                                 },
                                 "children": {
@@ -40431,13 +40371,13 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V0",
+                                    "variable": "10",
                                     "operator": "==",
                                     "comparator": 35,
                                     "__collapseElse": true,
                                     "__disableElse": true,
                                     "__label": "35. Life Potion",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
@@ -42100,28 +42040,17 @@
             "id": "e64a0eb5-ad83-4193-83c7-8e2d55820b43",
             "name": "Fully Restore Health",
             "description": "Replenishes all available hearts. \n\nIn a scenario with 3 hearts, Zelda's health can have a maximum value of 6:\n6x half hearts = 3 hearts\n\nTo replenish all hearts set the health to max hearts twice.\nIn a scenario with 3 hearts and 6 health:\n\n1. health = Max hearts. (Health now 3)\n2. health += max hearts (Health now 6)",
-            "variables": {
-                "V0": {
-                    "id": "V0",
-                    "name": "Health",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Max Hearts",
-                    "passByReference": true
-                }
-            },
+            "variables": {},
             "actors": {},
             "symbol": "script_11",
             "script": [
                 {
                     "command": "EVENT_VARIABLE_MATH",
                     "args": {
-                        "vectorX": "V0",
+                        "vectorX": "1",
                         "operation": "set",
                         "other": "var",
-                        "vectorY": "V1",
+                        "vectorY": "3",
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
@@ -42132,10 +42061,10 @@
                 {
                     "command": "EVENT_VARIABLE_MATH",
                     "args": {
-                        "vectorX": "V0",
+                        "vectorX": "1",
                         "operation": "add",
                         "other": "var",
-                        "vectorY": "V1",
+                        "vectorY": "3",
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
@@ -64504,8 +64433,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
+        "worldScrollX": 2948,
+        "worldScrollY": 3721,
         "zoom": 175,
         "customColorsEnabled": false,
         "sgbEnabled": false,
