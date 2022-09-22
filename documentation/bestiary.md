@@ -120,3 +120,11 @@ Dungeon masters guarding a celestial sign.
 | mimic mole | 2 (1 heart) | 3 |
 | cave zola (grey) | 2 (1 heart) | 6 |
 | molluska | 2 (1 heart) | 4 |
+
+### Zelda with 4 hearts
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| __Illusion Shrine__ | - | - |
+| Jackaroo | 2 (1 heart) | 3 |
+| Stalfos | 2 (1 heart) | 4 |

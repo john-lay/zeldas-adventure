@@ -260,6 +260,23 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
+* `$25$: Variable 025` Illusion Shrine Flags - `word`.
+  * (Flag 1 is the Illusion Shrine Map)
+  * (Flag 2 is the Illusion Shrine Compass)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
 ~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
 
 ## Animated tiles guide
