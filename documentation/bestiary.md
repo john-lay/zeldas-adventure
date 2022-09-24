@@ -128,3 +128,6 @@ Dungeon masters guarding a celestial sign.
 | __Illusion Shrine__ | - | - |
 | Jackaroo | 2 (1 heart) | 3 |
 | Stalfos | 2 (1 heart) | 4 |
+| Vire | 2 (1 heart) | 4 |
+| Pols Voice | 2 (1 heart) | 4 (with Noise spell) |
+| Wizzrobe | 2 (1 heart) | 4 (with Dagger spell) |
