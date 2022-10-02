@@ -263,7 +263,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$25$: Variable 025` Illusion Shrine Flags - `word`.
   * (Flag 1 is the Illusion Shrine Map)
   * (Flag 2 is the Illusion Shrine Compass)
-  * (Flag 3 is ???)
+  * (Flag 3 represents Zelda has placed the Orb on the pedestal)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)

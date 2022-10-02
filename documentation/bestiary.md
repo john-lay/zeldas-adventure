@@ -131,3 +131,4 @@ Dungeon masters guarding a celestial sign.
 | Vire | 2 (1 heart) | 4 |
 | Pols Voice | 2 (1 heart) | 4 (with Noise spell) |
 | Wizzrobe | 2 (1 heart) | 4 (with Dagger spell) |
+| Eyesoar | 1 (half heart) | 2 |
