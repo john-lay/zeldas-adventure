@@ -150,7 +150,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 8 represents Shurmak has given her Vision Henge speech)
   * (Flag 9 represents Zelda has spoken to the White Steed Lodgekeep)
   * (Flag 10 represents Zelda has collected the Torian forest heart container)
-  * (Flag 11 is ???)
+  * (Flag 11 represents Zelda has spoken to Lonlyn in Verna)
   * (Flag 12 is ???)
   * (Flag 13 is ???)
   * (Flag 14 is ???)
@@ -316,6 +316,7 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### NPCs
 - __Pause (...)__
   - Krebb after receiving the dagger spell
+  - Lonlyn after giving Zelda rupees
 - __Music (♫)__
   - Yvonne singing
   - Bard playing instrument

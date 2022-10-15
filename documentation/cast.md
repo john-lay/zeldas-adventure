@@ -60,8 +60,8 @@ A list of the Zelda's Adventure characters can be found [here](https://zelda.fan
 
 | CDi         | Gameboy     | Notes      |
 | :---------: | :---------: | :--------- |
-| ![Bard 1 CDi](cast/ZA_Bard1.png) <br />Bard 1 | ![OoS Guitar DMG](cast/OoS_Guitar.png) <br /> OoS Guitar Player | n/a |
-| ![Bard 2 CDi](cast/ZA_Bard2.png) <br />Bard 2 | ![OoA Past Young Guy Alt DMG](cast/OoA_Past-Young-Guy-Alt.png) <br /> OoA Past Young Guy Alt | n/a |
+| ![Bard 1 CDi](cast/ZA_Bard1.png) <br />Merribal | ![OoS Guitar DMG](cast/OoS_Guitar.png) <br /> OoS Guitar Player | n/a |
+| ![Bard 2 CDi](cast/ZA_Bard2.png) <br />Squire Grip | ![OoA Past Young Guy Alt DMG](cast/OoA_Past-Young-Guy-Alt.png) <br /> OoA Past Young Guy Alt | n/a |
 | ![Ethera CDi](cast/ZA_Ethera.png) <br />Ethera | ![OoS Dog Owner DMG](cast/OoS_Dog-Owner.png) <br /> OoS Dog Owner | Horon NPC, not Flash's owner |
 | ![Ethera's Dog CDi](cast/ZA_Ethera-Dog.png) <br />Ethera's Dog | ![OoS Flash DMG](cast/OoS_Flash.png) <br /> OoS Flash | n/a |
 | ![Gwynla CDi](cast/ZA_Gwynla.png) <br />Gwynla | ![OoA Present Yound Lady DMG](cast/OoA_Present-Young-Lady.png) <br /> OoA Present Yound Lady | n/a |
