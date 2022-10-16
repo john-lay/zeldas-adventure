@@ -150,7 +150,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 8 represents Shurmak has given her Vision Henge speech)
   * (Flag 9 represents Zelda has spoken to the White Steed Lodgekeep)
   * (Flag 10 represents Zelda has collected the Torian forest heart container)
-  * (Flag 11 is ???)
+  * (Flag 11 represents Zelda has spoken to Lonlyn in Verna)
   * (Flag 12 is ???)
   * (Flag 13 is ???)
   * (Flag 14 is ???)
@@ -260,6 +260,23 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
+* `$25$: Variable 025` Illusion Shrine Flags - `word`.
+  * (Flag 1 is the Illusion Shrine Map)
+  * (Flag 2 is the Illusion Shrine Compass)
+  * (Flag 3 represents Zelda has placed the Orb on the pedestal)
+  * (Flag 4 represents Zelda has opened the first locked door)
+  * (Flag 5 represents Pasquinade has given his first speech)
+  * (Flag 6 represents Zelda has used the candle)
+  * (Flag 7 represents Zelda has opened the second locked door)
+  * (Flag 8 represents Pasquinade has given his second speech)
+  * (Flag 9 represents Zelda has defeated Pasquinade)
+  * (Flag 10 represents Zelda has collected the heart piece)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
 ~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
 
 ## Animated tiles guide
@@ -299,6 +316,7 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### NPCs
 - __Pause (...)__
   - Krebb after receiving the dagger spell
+  - Lonlyn after giving Zelda rupees
 - __Music (♫)__
   - Yvonne singing
   - Bard playing instrument
