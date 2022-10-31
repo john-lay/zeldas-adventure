@@ -97,7 +97,7 @@ Dungeon masters guarding a celestial sign.
 
 ## Notes on enemy attack/defence
 
-### Zelda with 3 hearts
+### Zelda with no shrines completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
@@ -121,7 +121,7 @@ Dungeon masters guarding a celestial sign.
 | cave zola (grey) | 2 (1 heart) | 6 |
 | molluska | 2 (1 heart) | 4 |
 
-### Zelda with 4 hearts
+### Zelda with 1 shrine completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
@@ -132,3 +132,9 @@ Dungeon masters guarding a celestial sign.
 | Pols Voice | 2 (1 heart) | 4 (with Noise spell) |
 | Wizzrobe | 2 (1 heart) | 4 (with Dagger spell) |
 | Eyesoar | 1 (half heart) | 2 |
+
+### Zelda with 2 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Lowder | 2 (1 heart) | 3 |
