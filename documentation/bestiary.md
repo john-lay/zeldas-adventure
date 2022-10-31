@@ -138,3 +138,4 @@ Dungeon masters guarding a celestial sign.
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
 | Lowder | 2 (1 heart) | 3 |
+| Purple Gull | 2 (1 heart) | 5 |
