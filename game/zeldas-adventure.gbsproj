@@ -2276,9 +2276,9 @@
                                 "id": "18da2b66-ae6a-4d24-9f23-e0b7938d0d45",
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
-                                    "sceneId": "30effde6-372e-4d88-be3b-fb2c2dab8049",
-                                    "x": 12,
-                                    "y": 6,
+                                    "sceneId": "c26b9c85-918c-45f7-8224-3da57931d42c",
+                                    "x": 11,
+                                    "y": 11,
                                     "direction": "down",
                                     "fadeSpeed": "2",
                                     "__comment": false
@@ -10578,7 +10578,7 @@
                     "paletteId": "",
                     "isPinned": false,
                     "collisionGroup": "",
-                    "symbol": "actor_124",
+                    "symbol": "actor_0",
                     "script": [
                         {
                             "command": "EVENT_ACTOR_EMOTE",
@@ -11279,7 +11279,7 @@
                     "id": "361d8b89-af0b-44a7-adbc-70b22cf65586",
                     "x": 4,
                     "y": 17,
-                    "symbol": "trigger_118",
+                    "symbol": "trigger_0",
                     "width": 14,
                     "height": 1,
                     "script": [
@@ -11329,7 +11329,7 @@
                     "id": "3d092fe8-13f0-4840-9cea-85a447a23f27",
                     "x": 0,
                     "y": 2,
-                    "symbol": "trigger_120",
+                    "symbol": "trigger_1",
                     "width": 1,
                     "height": 12,
                     "script": [
@@ -11379,7 +11379,7 @@
                     "id": "f7cfad2a-1cfd-424d-85ab-c75a5e13d081",
                     "x": 1,
                     "y": 1,
-                    "symbol": "trigger_129",
+                    "symbol": "trigger_2",
                     "width": 12,
                     "height": 1,
                     "script": [
@@ -12393,14 +12393,14 @@
             "tileColors": []
         },
         {
-            "id": "8a40d56a-e94b-4dbf-8845-48a9212ded98",
-            "name": "harp-cave",
-            "symbol": "bg_harp_cave",
+            "id": "7c6117f5-b5e6-4546-8fcd-c4ff6af7060a",
+            "name": "harp-tunnel",
+            "symbol": "bg_harp_tunnel",
             "width": 20,
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "harp-cave.png",
+            "filename": "harp-tunnel.png",
             "tileColors": []
         },
         {
@@ -50145,11 +50145,95 @@
                                 "args": {
                                     "variable": "V0",
                                     "operator": "==",
+                                    "comparator": 33,
+                                    "__collapseElse": true,
+                                    "__label": "33. Harp",
+                                    "__disableElse": true
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
+                                            "args": {
+                                                "variable": "18",
+                                                "flag": 3,
+                                                "__collapseElse": true,
+                                                "__disableElse": true,
+                                                "__label": "Earth Shrine",
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "7ebce546-cdab-4cae-a265-79f5c9dc4679",
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "13933603-aa88-48d1-bec4-ec318bfe1699",
+                                                            "x": 6,
+                                                            "y": 2,
+                                                            "direction": "down",
+                                                            "fadeSpeed": "2",
+                                                            "__collapse": false
+                                                        }
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "2768fd30-364c-4fb8-846f-0a4a34804fba"
+                                        },
+                                        {
+                                            "command": "EVENT_IF_FLAGS_COMPARE",
+                                            "args": {
+                                                "variable": "18",
+                                                "flag": 4,
+                                                "__collapseElse": true,
+                                                "__disableElse": true,
+                                                "__label": "Illusion Shrine",
+                                                "__collapse": true
+                                            },
+                                            "children": {
+                                                "true": [
+                                                    {
+                                                        "id": "2d0aa02b-f881-4b2d-8b50-c6321056407f",
+                                                        "command": "EVENT_SWITCH_SCENE",
+                                                        "args": {
+                                                            "sceneId": "ae80f38c-d146-4e43-b223-0d72a558ee78",
+                                                            "x": 9,
+                                                            "y": 13,
+                                                            "direction": "down",
+                                                            "fadeSpeed": "2",
+                                                            "__collapse": false
+                                                        }
+                                                    }
+                                                ],
+                                                "false": []
+                                            },
+                                            "id": "d037a8ef-15ee-452c-b296-e2a4c2207a46"
+                                        },
+                                        {
+                                            "command": "EVENT_ACTOR_EMOTE",
+                                            "args": {
+                                                "actorId": "$self$",
+                                                "emoteId": "61eb08b9-b724-4fd4-9141-63814b776bf7",
+                                                "__collapse": true
+                                            },
+                                            "id": "3cde4aed-7c27-450b-82f9-c4636c9e4aa1"
+                                        }
+                                    ],
+                                    "false": []
+                                },
+                                "id": "4d178e8e-86c4-4562-9f4d-bbee2e53142d"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "V0",
+                                    "operator": "==",
                                     "comparator": 35,
                                     "__collapseElse": true,
                                     "__label": "35. Life Potion",
                                     "__disableElse": true,
-                                    "__collapse": false
+                                    "__collapse": true
                                 },
                                 "children": {
                                     "true": [
@@ -82690,9 +82774,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 0,
-        "worldScrollY": 0,
-        "zoom": 25,
+        "worldScrollX": 9767,
+        "worldScrollY": 3841,
+        "zoom": 225,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
