@@ -139,3 +139,7 @@ Dungeon masters guarding a celestial sign.
 | :---: | :----------------------: | :--------------------: |
 | Lowder | 2 (1 heart) | 3 |
 | Purple Gull | 2 (1 heart) | 5 |
+| __Air Shrine__ | - | - |
+| Tornado | 2 (1 heart) | 4 (with Calm spell) |
+| Locassin | 2 (1 heart) | 5 |
+| Crystal Shard | 1 (half heart) | n/a |
