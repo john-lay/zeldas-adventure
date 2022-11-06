@@ -280,7 +280,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$26$: Variable 026` Air Shrine Flags - `word`.
   * (Flag 1 is the Air Shrine Map)
   * (Flag 2 is the Air Shrine Compass)
-  * (Flag 3 is ???)
+  * (Flag 3 represents Zelda has defeated the 1st Vapora)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)
