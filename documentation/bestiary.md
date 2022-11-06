@@ -143,3 +143,4 @@ Dungeon masters guarding a celestial sign.
 | Tornado | 2 (1 heart) | 4 (with Calm spell) |
 | Locassin | 2 (1 heart) | 5 |
 | Crystal Shard | 1 (half heart) | n/a |
+| Vapora | 3 (1.5 heart) (projectile 1) | 7 |
