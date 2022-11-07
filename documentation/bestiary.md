@@ -22,7 +22,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Crystal Shard CDi](bestiary/ZA_Crystal-Shards.png) <br /> Crystal Shard | ![Crystal Shard DMG](bestiary/LA_Crystal-Shard.png) <br /> Crystal Shard |
 | ![Deeler CDi](bestiary/ZA_Deeler.png) <br /> Deeler | ![Beetle DMG](bestiary/LA_Beetle.png) <br /> Beetle |
 | ![Deeler alt CDi](bestiary/ZA_Deeler_2.png) <br /> Deeler (alt) | ![Beetle DMG](bestiary/LA_Beetle.png) <br /> Beetle |
-| ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Battle Bat DMG](bestiary/LA_Battle-Bat.png) <br /> Battle Bat |
+| ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Moth DMG](bestiary/OoS_Moth.png) <br /> Moth |
 | ![Floor Spikes CDi](bestiary/ZA_Floor_Spikes.jpg) <br /> Floor Spikes | ![Floor Spikes DMG](bestiary/LA_Floor-Spikes.png) <br /> Floor Spikes |
 | ![Gibdo CDi](bestiary/ZA_Gibdo.png) <br /> Gibdo | ![Gibdo DMG](bestiary/LA_Gibdo.png) <br /> Gibdo |
 | ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Bloober DMG](bestiary/LA_Bloober.png) <br /> Bloober |
@@ -144,3 +144,5 @@ Dungeon masters guarding a celestial sign.
 | Locassin | 2 (1 heart) | 5 |
 | Crystal Shard | 1 (half heart) | n/a |
 | Vapora | 3 (1.5 heart) (projectile 1) | 7 |
+| Baboon Head | 2 (1 heart) | 3 |
+| Dragonfly | 1 (half heart) | 2 |
