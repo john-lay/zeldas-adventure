@@ -64,7 +64,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Wallmaster CDi](bestiary/ZA_Wallmaster.png) <br /> Wallmaster | ![Wallmaster DMG](bestiary/OoA-Wallmaster.png) <br /> Wallmaster |
 | ![Wizzrobe CDi](bestiary/ZA_Wizzrobe.png) <br /> Wizzrobe | ![Wizzrobe DMG](bestiary/LA_Wizzrobe.png) <br /> Wizzrobe |
 | ![Vire CDi](bestiary/ZA_Vire.png) <br /> Vire | ![Vire DMG](bestiary/LA-Vire-mini.png) <br /> Vire |
-| ![Volta CDi](bestiary/ZA_Volta.png) <br /> Volta | ![Pairodd DMG](bestiary/LA_Pairodd.png) <br /> Pairodd |
+| ![Volta CDi](bestiary/ZA_Volta.png) <br /> Volta | ![Arm Mimic DMG](bestiary/LA_Arm-Mimic.png) <br /> Arm Mimic |
 | ![Zol CDi](bestiary/ZA_Red-Zol.png) <br /> Zol | ![Buzz Blob DMG](bestiary/LA_Buzz-Blob.png) <br /> Buzz Blob |
 | ![Stingray CDi](bestiary/ZA_Stingray.png) <br /> Stingray | ![Water Tektite DMG](bestiary/LA_Water-Tektite.png) <br /> Water Tektite |
 
@@ -146,3 +146,4 @@ Dungeon masters guarding a celestial sign.
 | Vapora | 3 (1.5 heart) (projectile 1) | 7 |
 | Baboon Head | 2 (1 heart) | 3 |
 | Dragonfly | 1 (half heart) | 2 |
+| Volta | 2 (1 heart) | 3 |
