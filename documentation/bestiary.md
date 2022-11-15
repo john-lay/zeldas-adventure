@@ -22,7 +22,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Crystal Shard CDi](bestiary/ZA_Crystal-Shards.png) <br /> Crystal Shard | ![Crystal Shard DMG](bestiary/LA_Crystal-Shard.png) <br /> Crystal Shard |
 | ![Deeler CDi](bestiary/ZA_Deeler.png) <br /> Deeler | ![Beetle DMG](bestiary/LA_Beetle.png) <br /> Beetle |
 | ![Deeler alt CDi](bestiary/ZA_Deeler_2.png) <br /> Deeler (alt) | ![Beetle DMG](bestiary/LA_Beetle.png) <br /> Beetle |
-| ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Battle Bat DMG](bestiary/LA_Battle-Bat.png) <br /> Battle Bat |
+| ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Moth DMG](bestiary/OoS_Moth.png) <br /> Moth |
 | ![Floor Spikes CDi](bestiary/ZA_Floor_Spikes.jpg) <br /> Floor Spikes | ![Floor Spikes DMG](bestiary/LA_Floor-Spikes.png) <br /> Floor Spikes |
 | ![Gibdo CDi](bestiary/ZA_Gibdo.png) <br /> Gibdo | ![Gibdo DMG](bestiary/LA_Gibdo.png) <br /> Gibdo |
 | ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Bloober DMG](bestiary/LA_Bloober.png) <br /> Bloober |
@@ -64,7 +64,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Wallmaster CDi](bestiary/ZA_Wallmaster.png) <br /> Wallmaster | ![Wallmaster DMG](bestiary/OoA-Wallmaster.png) <br /> Wallmaster |
 | ![Wizzrobe CDi](bestiary/ZA_Wizzrobe.png) <br /> Wizzrobe | ![Wizzrobe DMG](bestiary/LA_Wizzrobe.png) <br /> Wizzrobe |
 | ![Vire CDi](bestiary/ZA_Vire.png) <br /> Vire | ![Vire DMG](bestiary/LA-Vire-mini.png) <br /> Vire |
-| ![Volta CDi](bestiary/ZA_Volta.png) <br /> Volta | ![Pairodd DMG](bestiary/LA_Pairodd.png) <br /> Pairodd |
+| ![Volta CDi](bestiary/ZA_Volta.png) <br /> Volta | ![Arm Mimic DMG](bestiary/LA_Arm-Mimic.png) <br /> Arm Mimic |
 | ![Zol CDi](bestiary/ZA_Red-Zol.png) <br /> Zol | ![Buzz Blob DMG](bestiary/LA_Buzz-Blob.png) <br /> Buzz Blob |
 | ![Stingray CDi](bestiary/ZA_Stingray.png) <br /> Stingray | ![Water Tektite DMG](bestiary/LA_Water-Tektite.png) <br /> Water Tektite |
 
@@ -97,7 +97,7 @@ Dungeon masters guarding a celestial sign.
 
 ## Notes on enemy attack/defence
 
-### Zelda with 3 hearts
+### Zelda with no shrines completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
@@ -121,7 +121,7 @@ Dungeon masters guarding a celestial sign.
 | cave zola (grey) | 2 (1 heart) | 6 |
 | molluska | 2 (1 heart) | 4 |
 
-### Zelda with 4 hearts
+### Zelda with 1 shrine completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
@@ -132,3 +132,18 @@ Dungeon masters guarding a celestial sign.
 | Pols Voice | 2 (1 heart) | 4 (with Noise spell) |
 | Wizzrobe | 2 (1 heart) | 4 (with Dagger spell) |
 | Eyesoar | 1 (half heart) | 2 |
+
+### Zelda with 2 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Lowder | 2 (1 heart) | 3 |
+| Purple Gull | 2 (1 heart) | 5 |
+| __Air Shrine__ | - | - |
+| Tornado | 2 (1 heart) | 4 (with Calm spell) |
+| Locassin | 2 (1 heart) | 5 |
+| Crystal Shard | 1 (half heart) | n/a |
+| Vapora | 3 (1.5 heart) (projectile 1) | 7 |
+| Baboon Head | 2 (1 heart) | 3 |
+| Dragonfly | 1 (half heart) | 2 |
+| Volta | 2 (1 heart) | 3 |

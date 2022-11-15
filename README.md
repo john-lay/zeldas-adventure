@@ -277,6 +277,23 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
+* `$26$: Variable 026` Air Shrine Flags - `word`.
+  * (Flag 1 is the Air Shrine Map)
+  * (Flag 2 is the Air Shrine Compass)
+  * (Flag 3 represents Zelda has defeated the 1st Vapora)
+  * (Flag 4 represents Zelda has defeated the 2nd Vapora)
+  * (Flag 5 represents Zelda has restored the bridge)
+  * (Flag 6 represents Zelda has defeated Aviana)
+  * (Flag 7 represents Zelda has collected the heart piece)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
 ~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
 
 ## Animated tiles guide
