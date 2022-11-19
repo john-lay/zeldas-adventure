@@ -147,3 +147,10 @@ Dungeon masters guarding a celestial sign.
 | Baboon Head | 2 (1 heart) | 3 |
 | Dragonfly | 1 (half heart) | 2 |
 | Volta | 2 (1 heart) | 3 |
+
+### Zelda with 3 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| __Air Shrine__ | - | - |
+| Gibdo | 4 (2 heart) | 10 |
