@@ -155,3 +155,4 @@ Dungeon masters guarding a celestial sign.
 | __Air Shrine__ | - | - |
 | Gibdo | 4 (2 heart) | 10 |
 | Spike Block | 2 (1 heart) | n/a |
+| Jack | 2 (1 heart) | n/a |
