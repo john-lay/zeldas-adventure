@@ -24,7 +24,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Moth DMG](bestiary/OoS_Moth.png) <br /> Moth |
 | ![Floor Spikes CDi](bestiary/ZA_Floor_Spikes.jpg) <br /> Floor Spikes | ![Floor Spikes DMG](bestiary/LA_Floor-Spikes.png) <br /> Floor Spikes |
 | ![Gibdo CDi](bestiary/ZA_Gibdo.png) <br /> Gibdo | ![Gibdo DMG](bestiary/LA_Gibdo.png) <br /> Gibdo |
-| ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Bloober DMG](bestiary/LA_Bloober.png) <br /> Bloober |
+| ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Calamareye DMG](bestiary/OoS_Calamareye.png) <br /> Calamareye |
 | ![Goriya CDi](bestiary/ZA_Goriya.png) <br /> Goriya | ![Goriya Brother DMG](bestiary/OoS-Goriya-Brother.png) <br /> Goriya Brother |
 | ![Iron Knuckle CDi](bestiary/ZA_Iron-Knuckle.png) <br /> Iron Knuckle | ![Darknut DMG](bestiary/LA_Darknut.png) <br /> Darknut |
 | ![Jack CDi](bestiary/ZA_Jack.png) <br /> Jack | ![Anti-Fairy DMG](bestiary/LA_Anti-Fairy.png) <br /> Anti-Fairy |
