@@ -4,7 +4,6 @@ A list of enemies from Zelda's Adventure mapped to their counterparts from the 3
 ## Notes on duplicates
 - There are 2 varieties of **Deeler** in the CDi version, both are represented by the Gameboy **Beetle**
 - There are 2 varieties of **Crockorock** in the CDi version, both are represented by the Gameboy **Sand Crab**
-- The **Dragonfly** and **Loccasin** are similar enemies in the CDi version, they are represented by the Gameboy **Battle Bat** (The boss in the Eagle tower's familiar)
 - There are 3 varieties of **Zola**'s (Zoras) in the CDi version, all represented by the **Zora**
 - There is a pink bird called the **Moby** and a grey **Romraven** in the CDi version, they are represented by the Gameboy **Crow**
 - There is a purple and turquoise variety of the **Seagull** in the CDi version, the Gameboy **Dacto** represents them
