@@ -4,7 +4,6 @@ A list of enemies from Zelda's Adventure mapped to their counterparts from the 3
 ## Notes on duplicates
 - There are 2 varieties of **Deeler** in the CDi version, both are represented by the Gameboy **Beetle**
 - There are 2 varieties of **Crockorock** in the CDi version, both are represented by the Gameboy **Sand Crab**
-- The **Dragonfly** and **Loccasin** are similar enemies in the CDi version, they are represented by the Gameboy **Battle Bat** (The boss in the Eagle tower's familiar)
 - There are 3 varieties of **Zola**'s (Zoras) in the CDi version, all represented by the **Zora**
 - There is a pink bird called the **Moby** and a grey **Romraven** in the CDi version, they are represented by the Gameboy **Crow**
 - There is a purple and turquoise variety of the **Seagull** in the CDi version, the Gameboy **Dacto** represents them
@@ -25,7 +24,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Dragonfly CDi](bestiary/ZA_Dragonfly.png) <br /> Dragonfly | ![Moth DMG](bestiary/OoS_Moth.png) <br /> Moth |
 | ![Floor Spikes CDi](bestiary/ZA_Floor_Spikes.jpg) <br /> Floor Spikes | ![Floor Spikes DMG](bestiary/LA_Floor-Spikes.png) <br /> Floor Spikes |
 | ![Gibdo CDi](bestiary/ZA_Gibdo.png) <br /> Gibdo | ![Gibdo DMG](bestiary/LA_Gibdo.png) <br /> Gibdo |
-| ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Bloober DMG](bestiary/LA_Bloober.png) <br /> Bloober |
+| ![Giant Squid CDi](bestiary/ZA_Giant-Squid.png) <br /> Giant Squid | ![Calamareye DMG](bestiary/OoS_Calamareye.png) <br /> Calamareye |
 | ![Goriya CDi](bestiary/ZA_Goriya.png) <br /> Goriya | ![Goriya Brother DMG](bestiary/OoS-Goriya-Brother.png) <br /> Goriya Brother |
 | ![Iron Knuckle CDi](bestiary/ZA_Iron-Knuckle.png) <br /> Iron Knuckle | ![Darknut DMG](bestiary/LA_Darknut.png) <br /> Darknut |
 | ![Jack CDi](bestiary/ZA_Jack.png) <br /> Jack | ![Anti-Fairy DMG](bestiary/LA_Anti-Fairy.png) <br /> Anti-Fairy |
@@ -147,3 +146,12 @@ Dungeon masters guarding a celestial sign.
 | Baboon Head | 2 (1 heart) | 3 |
 | Dragonfly | 1 (half heart) | 2 |
 | Volta | 2 (1 heart) | 3 |
+
+### Zelda with 3 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| __Air Shrine__ | - | - |
+| Gibdo | 4 (2 heart) | 10 |
+| Spike Block | 2 (1 heart) | n/a |
+| Jack | 2 (1 heart) | n/a |
