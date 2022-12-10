@@ -156,6 +156,12 @@ Dungeon masters guarding a celestial sign.
 | Spike Block | 2 (1 heart) | n/a |
 | Jack | 2 (1 heart) | n/a |
 
+### Zelda with 4 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Lanmola | 3 (1.5 heart) | 4 |
+
 crockarock 
 attack 3 (1.5 hearts)
 def 3 (after strength shrine) 7 w/o
