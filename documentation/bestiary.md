@@ -161,6 +161,7 @@ Dungeon masters guarding a celestial sign.
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
 | Lanmola | 3 (1.5 heart) | 4 |
+| Teal Gull | 2 (1 heart) | 8 |
 
 crockarock 
 attack 3 (1.5 hearts)
