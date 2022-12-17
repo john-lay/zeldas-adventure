@@ -317,16 +317,16 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 
 There are 9 different animated tiles which use a different key in the HUD to identify them.
 
-- A scene with sea tiles will have sea tile 0 followed by sea tile 1
-- A scene with crashing wave will have wave tile 0, wave tile 1, sea tile 0 and sea tile 1
-- A scene with river tiles will have river tile 0
-- A scene with sea tiles and river tiles will have sea tile 1, sea tile 0 and river tile 0
-- A scene with lake tiles will have lake tile 0
-- A scene with lake tiles and river tiles will have lake tile 1 and river tile 0
-- A scene with lava tiles will have lava tile 0 followed by lava tile 1
-- A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
-- A scene with torch tiles will have torch tile 0
-- A scene with torch tiles and lamp tiles will have torch tile 3, lamp tile 0 and lamp tile 1
+- A scene with __sea__ tiles will have sea tile 0 followed by sea tile 1
+- A scene with __crashing wave__ will have wave tile 0, wave tile 1, sea tile 0 and sea tile 1
+- A scene with __river__ tiles will have river tile 0
+- A scene with __sea__ tiles and __river__ tiles will have sea tile 1, sea tile 0 and river tile 0
+- A scene with __lake__ tiles will have lake tile 0
+- A scene with __lake__ tiles and __river__ tiles will have lake tile 1 and river tile 0
+- A scene with __lava__ tiles will have lava tile 0 followed by lava tile 1
+- A scene with __lamp__ tiles will have lamp tile 0 followed by lamp tile 1
+- A scene with __torch__ tiles will have torch tile 0
+- A scene with __torch__ tiles and __lamp__ tiles will have torch tile 3, lamp tile 0 and lamp tile 1
 
 ## Collision Guide
 
