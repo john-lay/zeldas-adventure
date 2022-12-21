@@ -314,7 +314,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$28$: Variable 028` Water Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
-  * (Flag 3 is ???)
+  * (Flag 3 represents Zelda has used the plank)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)
