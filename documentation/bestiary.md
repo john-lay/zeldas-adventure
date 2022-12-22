@@ -111,7 +111,7 @@ Dungeon masters guarding a celestial sign.
 | Tektite | 1 (half heart) | 2 |
 | __Earth Shrine__ | - | - |
 | Keese | 1 (half heart) | 3 |
-| Sardak | 2 (1 heart) | 4 |
+| Sardak | 2 (1 heart) | 4 (with Jade Ring spell) |
 | __Wimbich / Torian__ | - | - |
 | bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 heart) | 9 |
@@ -165,6 +165,8 @@ Dungeon masters guarding a celestial sign.
 | __Water Shrine__ | - | - |
 | Spear | 1 (0.5 heart) | n/a |
 | Zol (buzz-blob) | 2 (1 heart) | 8 |
+| Kelpie | 3 (1.5 heart) | 4 (with Turquoise Ring) |
+| octorok | 2 (1 heart) | 4 |
 
 crockarock 
 attack 3 (1.5 hearts)
