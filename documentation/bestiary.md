@@ -167,6 +167,7 @@ Dungeon masters guarding a celestial sign.
 | Zol (buzz-blob) | 2 (1 heart) | 8 |
 | Kelpie | 3 (1.5 heart) | 4 (with Turquoise Ring) |
 | octorok | 2 (1 heart) | 4 |
+| (giant) Squid | 1 (half heart) | 3 |
 
 crockarock 
 attack 3 (1.5 hearts)
