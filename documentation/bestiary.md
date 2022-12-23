@@ -168,6 +168,8 @@ Dungeon masters guarding a celestial sign.
 | Kelpie | 3 (1.5 heart) | 4 (with Turquoise Ring) |
 | octorok | 2 (1 heart) | 4 |
 | (giant) Squid | 1 (half heart) | 3 |
+| Agwanda | 4 (2 heart) | 11 |
+| Agwanda Projectile | 3 (1.5 heart) | n/a |
 
 crockarock 
 attack 3 (1.5 hearts)
