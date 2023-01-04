@@ -151,20 +151,20 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 9 represents Zelda has spoken to the White Steed Lodgekeep)
   * (Flag 10 represents Zelda has collected the Torian forest heart container)
   * (Flag 11 represents Zelda has spoken to Lonlyn in Verna)
-  * (Flag 12 is ???)
-  * (Flag 13 is ???)
-  * (Flag 14 is ???)
+  * (Flag 12 represents Zelda has collected the Canvula forest heart container)
+  * (Flag 13 represents Zelda has collected the South Port heart container)
+  * (Flag 14 indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
 * `$12$: Variable 012` Zelda PosX - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
 * `$13$: Variable 013` Zelda PosY - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
 * `$14$: Variable 014` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
-    * (0 represents null/no position)
+    * (0 represents Zelda's position should be restored by GB Studio's last known position of Zelda. i.e. When the scene is popped off the stack)
     * (1 represents Zelda exitted at the __top__ of the screen)
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
-    * (5 represents Zelda's screen position is explicitly managed)
+    * (5 represents Zelda's screen position is explicitly set)
 * `$15$: Variable 015` Attack Power - `number`. (Zelda's attack power)
 * `$16$: Variable 016` Spell Cost - `number`. (Cost of the equipped spell)
 ```
@@ -193,9 +193,9 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 2 represents the enemy dropping a heart)
   * (Flag 3 represent the enemy dropped a rupee or a heart)
   * (Flag 4 represents Zelda has spoken to a fairy)
-  * (Flag 5 is ???)
-  * (Flag 6 is ???)
-  * (Flag 7 is ???)
+  * (Flag 5 represents Zelda has used the Vial of Wind in Seacoast Inn)
+  * (Flag 6 represents Zelda has paid the ferryman in Seacoast Inn)
+  * (Flag 7 represents Zelda has defeated the Sea Monster)
   * (Flag 8 is ???)
   * (Flag 9 is ???)
   * (Flag 10 is ???)
@@ -311,22 +311,71 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-~~* `$22$: Variable 022` Is Sailing - `bool`. (Indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)~~
-
+* `$28$: Variable 028` Water Shrine Flags - `word`.
+  * (Flag 1 is the Destiny Shrine Map)
+  * (Flag 2 is the Destiny Shrine Compass)
+  * (Flag 3 represents Zelda has used the plank)
+  * (Flag 4 represents Zelda has defeated the first (South) Kelpie)
+  * (Flag 5 represents Zelda has defeated the second (North) Kelpie)
+  * (Flag 6 represents Zelda has defeated Agwanda)
+  * (Flag 7 represents Zelda has collected the heart piece)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$29$: Variable 029` Strength Shrine Flags - `word`.
+  * (Flag 1 is the Strength Shrine Map)
+  * (Flag 2 is the Strength Shrine Compass)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$29$: Variable 029` Fire Shrine Flags - `word`.
+  * (Flag 1 is the Fire Shrine Map)
+  * (Flag 2 is the Fire Shrine Compass)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
 ## Animated tiles guide
 
 There are 9 different animated tiles which use a different key in the HUD to identify them.
 
-- A scene with sea tiles will have sea tile 0 followed by sea tile 1
-- A scene with crashing wave will have wave tile 0, wave tile 1, sea tile 0 and sea tile 1
-- A scene with river tiles will have river tile 0
-- A scene with sea tiles and river tiles will have sea tile 1, sea tile 0 and river tile 0
-- A scene with lake tiles will have lake tile 0
-- A scene with lake tiles and river tiles will have lake tile 1 and river tile 0
-- A scene with lava tiles will have lava tile 0 followed by lava tile 1
-- A scene with lamp tiles will have lamp tile 0 followed by lamp tile 1
-- A scene with torch tiles will have torch tile 0
-- A scene with torch tiles and lamp tiles will have torch tile 3, lamp tile 0 and lamp tile 1
+- A scene with __sea__ tiles will have sea tile 0 followed by sea tile 1
+- A scene with __crashing wave__ will have wave tile 0, wave tile 1, sea tile 0 and sea tile 1
+- A scene with __river__ tiles will have river tile 0
+- A scene with __sea__ tiles and __river__ tiles will have sea tile 1, sea tile 0 and river tile 0
+- A scene with __lake__ tiles will have lake tile 0
+- A scene with __lake__ tiles and __river__ tiles will have lake tile 1 and river tile 0
+- A scene with __lava__ tiles will have lava tile 0 followed by lava tile 1
+- A scene with __lamp__ tiles will have lamp tile 0 followed by lamp tile 1
+- A scene with __torch__ tiles will have torch tile 0
+- A scene with __torch__ tiles and __lamp__ tiles will have torch tile 3, lamp tile 0 and lamp tile 1
 
 ## Collision Guide
 

@@ -111,7 +111,7 @@ Dungeon masters guarding a celestial sign.
 | Tektite | 1 (half heart) | 2 |
 | __Earth Shrine__ | - | - |
 | Keese | 1 (half heart) | 3 |
-| Sardak | 2 (1 heart) | 4 |
+| Sardak | 2 (1 heart) | 4 (with Jade Ring spell) |
 | __Wimbich / Torian__ | - | - |
 | bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 heart) | 9 |
@@ -155,3 +155,22 @@ Dungeon masters guarding a celestial sign.
 | Gibdo | 4 (2 heart) | 10 |
 | Spike Block | 2 (1 heart) | n/a |
 | Jack | 2 (1 heart) | n/a |
+
+### Zelda with 4 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Lanmola | 3 (1.5 heart) | 4 |
+| Teal Gull | 2 (1 heart) | 8 |
+| __Water Shrine__ | - | - |
+| Spear | 1 (0.5 heart) | n/a |
+| Zol (buzz-blob) | 2 (1 heart) | 8 |
+| Kelpie | 3 (1.5 heart) | 4 (with Turquoise Ring) |
+| octorok | 2 (1 heart) | 4 |
+| (giant) Squid | 1 (half heart) | 3 |
+| Agwanda | 4 (2 heart) | 11 |
+| Agwanda Projectile | 3 (1.5 heart) | n/a |
+
+crockarock 
+attack 3 (1.5 hearts)
+def 3 (after strength shrine) 7 w/o
