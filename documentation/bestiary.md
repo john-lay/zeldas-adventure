@@ -138,6 +138,7 @@ Dungeon masters guarding a celestial sign.
 | :---: | :----------------------: | :--------------------: |
 | Lowder | 2 (1 heart) | 3 |
 | Purple Gull | 2 (1 heart) | 5 |
+| Alligaroo | 3 (1.5 hearts) | 5 |
 | __Air Shrine__ | - | - |
 | Tornado | 2 (1 heart) | 4 (with Calm spell) |
 | Locassin | 2 (1 heart) | 5 |
@@ -163,13 +164,19 @@ Dungeon masters guarding a celestial sign.
 | Lanmola | 3 (1.5 heart) | 4 |
 | Teal Gull | 2 (1 heart) | 8 |
 | __Water Shrine__ | - | - |
-| Spear | 1 (0.5 heart) | n/a |
+| Spear | 1 (half heart) | n/a |
 | Zol (buzz-blob) | 2 (1 heart) | 8 |
 | Kelpie | 3 (1.5 heart) | 4 (with Turquoise Ring) |
 | octorok | 2 (1 heart) | 4 |
 | (giant) Squid | 1 (half heart) | 3 |
 | Agwanda | 4 (2 heart) | 11 |
 | Agwanda Projectile | 3 (1.5 heart) | n/a |
+
+### Zelda with 5 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Alligaroo | 1 (half heart) | 3 |
 
 crockarock 
 attack 3 (1.5 hearts)
