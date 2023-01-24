@@ -331,7 +331,7 @@ A listing of variables and their types in re-usable components (Actors/Scenes)
 * `$29$: Variable 029` Strength Shrine Flags - `word`.
   * (Flag 1 is the Strength Shrine Map)
   * (Flag 2 is the Strength Shrine Compass)
-  * (Flag 3 is ???)
+  * (Flag 3 represents Zelda has spoken to the thirsty child)
   * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)
