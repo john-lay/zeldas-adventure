@@ -180,6 +180,7 @@ Dungeon masters guarding a celestial sign.
 | Gnome (Pig Warrior) | 3 (1.5 hearts) | 3 |
 | __Strength Shrine__ | - | - |
 | Red Knight | 3 (1.5 hearts) | 4 (with Joust) |
+| Iron Knuckle | 2 (1 heart) | 8 |
 
 crockarock 
 attack 3 (1.5 hearts)
