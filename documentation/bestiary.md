@@ -178,6 +178,8 @@ Dungeon masters guarding a celestial sign.
 | :---: | :----------------------: | :--------------------: |
 | Alligaroo | 1 (half heart) | 3 |
 | Gnome (Pig Warrior) | 3 (1.5 hearts) | 3 |
+| __Strength Shrine__ | - | - |
+| Red Knight | 3 (1.5 hearts) | 4 (with Joust) |
 
 crockarock 
 attack 3 (1.5 hearts)
