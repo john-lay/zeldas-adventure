@@ -181,6 +181,7 @@ Dungeon masters guarding a celestial sign.
 | __Strength Shrine__ | - | - |
 | Red Knight | 3 (1.5 hearts) | 4 (with Joust) |
 | Iron Knuckle | 2 (1 heart) | 8 |
+| Ursore | 4 (2 hearts) | 22 |
 
 crockarock 
 attack 3 (1.5 hearts)
