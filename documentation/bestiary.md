@@ -185,6 +185,15 @@ Dungeon masters guarding a celestial sign.
 | Iron Knuckle | 2 (1 heart) | 8 |
 | Ursore | 4 (2 hearts) | 22 |
 
-crockarock 
-attack 3 (1.5 hearts)
-def 3 (after strength shrine) 7 w/o
+
+### Zelda with 6 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Skoras | 3 (1.5 heart) | 7 |
+| Skoras Projectile | 4 (2 hearts) | n/a |
+| __Fire Shrine__ | - | - |
+| Blacksmith | 4 (2 heart) | 6 |
+| Blacksmith Spear | 4 (2 heart) | n/a |
+| Crockarock | 4 (2 heart) | 6 |
+| Crockarock Projectile | 1 (half heart) | n/a |
