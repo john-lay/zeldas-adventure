@@ -197,3 +197,4 @@ Dungeon masters guarding a celestial sign.
 | Blacksmith Spear | 4 (2 heart) | n/a |
 | Crockarock | 4 (2 heart) | 6 |
 | Crockarock Projectile | 1 (half heart) | n/a |
+| Kannis | 5 (2.5 hearts) | 4 |
