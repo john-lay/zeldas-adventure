@@ -202,3 +202,4 @@ Dungeon masters guarding a celestial sign.
 | Bollas Projectile | 5 (2.5 hearts) | n/a |
 | Maxus | 3 (1.5 hearts) | 4 (with Gold Necklace) |
 | Maxus Projectile | 4 (2 hearts) | n/a |
+| Warbane | 3 (1.5 hearts) | 13 |
