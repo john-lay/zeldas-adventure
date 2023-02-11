@@ -198,3 +198,7 @@ Dungeon masters guarding a celestial sign.
 | Crockarock | 4 (2 heart) | 6 |
 | Crockarock Projectile | 1 (half heart) | n/a |
 | Kannis | 5 (2.5 hearts) | 4 |
+| Bollas | 4 (2 heart) | 3 |
+| Bollas Projectile | 5 (2.5 hearts) | n/a |
+| Maxus | 3 (1.5 hearts) | 4 (with Gold Necklace) |
+| Maxus Projectile | 4 (2 hearts) | n/a |
