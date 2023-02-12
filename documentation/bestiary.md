@@ -178,11 +178,28 @@ Dungeon masters guarding a celestial sign.
 | :---: | :----------------------: | :--------------------: |
 | Alligaroo | 1 (half heart) | 3 |
 | Gnome (Pig Warrior) | 3 (1.5 hearts) | 3 |
+| Cactus | 2 (1 heart) | n/a |
+| Cactus Projectile | 1 (half heart) | n/a |
 | __Strength Shrine__ | - | - |
 | Red Knight | 3 (1.5 hearts) | 4 (with Joust) |
 | Iron Knuckle | 2 (1 heart) | 8 |
 | Ursore | 4 (2 hearts) | 22 |
 
-crockarock 
-attack 3 (1.5 hearts)
-def 3 (after strength shrine) 7 w/o
+
+### Zelda with 6 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| Skoras | 3 (1.5 heart) | 7 |
+| Skoras Projectile | 4 (2 hearts) | n/a |
+| __Fire Shrine__ | - | - |
+| Blacksmith | 4 (2 heart) | 6 |
+| Blacksmith Spear | 4 (2 heart) | n/a |
+| Crockarock | 4 (2 heart) | 6 |
+| Crockarock Projectile | 1 (half heart) | n/a |
+| Kannis | 5 (2.5 hearts) | 4 |
+| Bollas | 4 (2 heart) | 3 |
+| Bollas Projectile | 5 (2.5 hearts) | n/a |
+| Maxus | 3 (1.5 hearts) | 4 (with Gold Necklace) |
+| Maxus Projectile | 4 (2 hearts) | n/a |
+| Warbane | 3 (1.5 hearts) | 13 |

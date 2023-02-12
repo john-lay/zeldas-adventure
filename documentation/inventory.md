@@ -23,8 +23,8 @@ A list of weapons (spells) and treasures (items) from Zelda's Adventure and the 
 | Feather | LA - Roc's Feather |
 | :---------: | :---------: |
 | Firestorm | LA - Flame block cave route to turtle rock |
-| Hammer | LttP - Magic Hammer |
-| Jade Amulet | LttP - Magic Hammer |
+| Hammer | LttP - Magic Hammer (OoS Subrosian Smithy also has a hammer) |
+| Jade Amulet | Palette swap of Gold Necklace |
 | Jade Ring | OoS - Magic Ring |
 | Joust | Original pixel art |
 | Noise | LA - Inspired by the library book |
