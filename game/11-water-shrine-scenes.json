@@ -3245,7 +3245,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "c1fde264-db5a-428c-b96f-d0cf85a830c9"
                 },
@@ -3281,7 +3282,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "b81d21a0-56d8-4d6f-92c4-3f343e7a2263"
@@ -3727,7 +3728,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "$self$",
-                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef"
+                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef",
+                        "__collapse": true
                     },
                     "id": "e12b75ac-5d87-44c9-bb1a-0a2a95e96a2e"
                 },
@@ -3741,7 +3743,8 @@
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
-                        "clamp": true
+                        "clamp": true,
+                        "__collapse": true
                     },
                     "id": "62625298-70f9-4bc9-b129-8beb12b6bd23"
                 },
@@ -5989,76 +5992,62 @@
             "id": "03cf0b04-e5ee-47ef-b01f-a6d7d8e1c521"
         },
         {
-            "command": "EVENT_SET_VALUE",
+            "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "026e284d-97ce-4a4c-811b-35184d421977"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "2a2db35f-b606-4ea8-8443-efd4132b0a4e"
-        },
-        {
-            "command": "EVENT_IF_VALUE",
-            "args": {
-                "variable": "13",
-                "operator": "==",
-                "comparator": 2,
-                "__collapseElse": true,
-                "__disableElse": true
+                "variable": "28",
+                "flag": 7,
+                "__collapseElse": false
             },
             "children": {
                 "true": [
                     {
-                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "command": "EVENT_COMMENT",
                         "args": {
-                            "variable": "28",
-                            "flag": 5,
-                            "__collapseElse": false
+                            "text": "Agwanda has given her speech",
+                            "__collapse": true
                         },
-                        "children": {
-                            "true": [
-                                {
-                                    "command": "EVENT_COMMENT",
-                                    "args": {
-                                        "text": "Agwanda defeated",
-                                        "__collapse": true
-                                    },
-                                    "id": "8c25552b-d1a9-404e-bee2-eb2e6b520942"
-                                }
-                            ],
-                            "false": [
-                                {
-                                    "command": "EVENT_TEXT",
-                                    "args": {
-                                        "text": [
-                                            "I am Agwanda, and this\nis my realm! I control\nthe Waters of Life and",
-                                            "Renewal. I will dry up\neven your tears, little\none!"
-                                        ],
-                                        "avatarId": ""
-                                    },
-                                    "id": "977999b9-08f8-49f7-94b1-52686088f4e3"
-                                }
-                            ]
-                        },
-                        "id": "e7cdd2a1-d347-45ea-83e7-a4629c780569"
+                        "id": "8c25552b-d1a9-404e-bee2-eb2e6b520942"
                     }
                 ],
-                "false": []
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "I am Agwanda, and this\nis my realm! I control\nthe Waters of Life and",
+                                "Renewal. I will dry up\neven your tears, little\none!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "977999b9-08f8-49f7-94b1-52686088f4e3"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "28",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": true,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": false,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "927b7eb6-da8c-4e3a-83fa-f30887a08bef"
+                    }
+                ]
             },
-            "id": "365d2988-bee9-488a-87c0-34c191913e87"
+            "id": "e7cdd2a1-d347-45ea-83e7-a4629c780569"
         }
     ],
     "playerHit1Script": [],
@@ -6790,28 +6779,6 @@
                 "__collapse": true
             },
             "id": "7402e756-81d1-4b73-bc2d-c0070502228f"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "fa0cd5b7-c51b-4cb3-b12c-cf87eacd0c82"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "8aaa149e-4450-4d3b-9970-3782f43c4e79"
         }
     ],
     "playerHit1Script": [],
@@ -7514,28 +7481,6 @@
                 "__collapse": true
             },
             "id": "41a9031c-661e-4855-9151-97bee9fbdb31"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "336c5c7c-087e-4268-ab8c-8419e8ec31b2"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "268badb0-8ee5-4dbe-bc97-ec723d243520"
         }
     ],
     "playerHit1Script": [],
@@ -7935,7 +7880,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "a725498c-4efb-40d0-ab89-0926091ec8d4"
                 },
@@ -7971,7 +7917,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "69f26d47-fe58-43fd-833a-8f3c1afa023e"
@@ -8810,17 +8756,6 @@
                 "__collapse": true
             },
             "id": "d7dead3e-f187-427f-b6a2-15458a486b1e"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "3de03784-450d-4f54-93dc-7614380e9950"
         }
     ],
     "playerHit1Script": [],
@@ -9466,17 +9401,6 @@
                 "__collapse": true
             },
             "id": "007e18cf-e931-4c31-85cd-ddc220b876be"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "d7ddfaae-ba95-4ce4-a08a-207281811a97"
         }
     ],
     "playerHit1Script": [],
@@ -9876,7 +9800,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "1bf76759-393a-4603-9b6b-6336c48c0862"
                 },
@@ -9912,7 +9837,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "5beb5ad0-ae04-4e49-8904-78a152b85fa4"
@@ -10553,31 +10478,10 @@
             "id": "8935a776-fc86-4a6e-b818-94c7438252ff"
         },
         {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "c8ac67ba-87e4-4ad7-a7eb-94c6a9494f23"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "d7ebfb49-1833-48da-9bfe-f840553eb5d8"
-        },
-        {
             "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
                 "variable": "28",
-                "flag": 3,
+                "flag": 8,
                 "__collapseElse": false,
                 "__disableElse": false,
                 "__collapse": false
@@ -10587,7 +10491,7 @@
                     {
                         "command": "EVENT_COMMENT",
                         "args": {
-                            "text": "1st Kelpie defeated",
+                            "text": "1st Kelpie has given her speech",
                             "__collapse": true
                         },
                         "id": "92438bde-25ec-4860-9274-250002314c4d"
@@ -10595,31 +10499,39 @@
                 ],
                 "false": [
                     {
-                        "command": "EVENT_IF_VALUE",
+                        "command": "EVENT_TEXT",
                         "args": {
-                            "variable": "13",
-                            "operator": "==",
-                            "comparator": 2,
-                            "__collapseElse": true,
-                            "__disableElse": true
-                        },
-                        "children": {
-                            "true": [
-                                {
-                                    "command": "EVENT_TEXT",
-                                    "args": {
-                                        "text": [
-                                            "I am the North Kelpie!\nIt is my honor to fight",
-                                            "you for my mistress,\nthe great Agwanda!"
-                                        ],
-                                        "avatarId": ""
-                                    },
-                                    "id": "817a92d8-8818-4d5f-a93b-934dbedd2421"
-                                }
+                            "text": [
+                                "I am the North Kelpie!\nIt is my honor to fight",
+                                "you for my mistress,\nthe great Agwanda!"
                             ],
-                            "false": []
+                            "avatarId": ""
                         },
-                        "id": "d8094de6-3423-4a59-9e7b-97d17e9c6c9c"
+                        "id": "817a92d8-8818-4d5f-a93b-934dbedd2421"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "L0",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": true,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": false,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "a1f4c86d-4cf5-4703-ab1b-17b31bde5522"
                     }
                 ]
             },
@@ -11023,7 +10935,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "ed56c408-55b9-4bcb-945f-6be47816ac55"
                 },
@@ -11059,7 +10972,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "dda890bd-8eac-4e7d-8260-44933a84c6d3"
@@ -12742,76 +12655,63 @@
             "id": "a91901fd-0003-4819-8411-e73b5f2f3a9a"
         },
         {
-            "command": "EVENT_SET_VALUE",
+            "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "8cb82005-f7bb-47c3-9a6a-5b15647ea374"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "43e9c02f-d8e3-4b8b-9739-84d35261a8f7"
-        },
-        {
-            "command": "EVENT_IF_VALUE",
-            "args": {
-                "variable": "12",
-                "operator": "==",
-                "comparator": 1,
-                "__collapseElse": true,
-                "__disableElse": true
+                "variable": "28",
+                "flag": 9,
+                "__collapseElse": false
             },
             "children": {
                 "true": [
                     {
-                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "command": "EVENT_COMMENT",
                         "args": {
-                            "variable": "28",
-                            "flag": 5,
-                            "__collapseElse": false
+                            "text": "Agwanda has given her speech",
+                            "__collapse": true
                         },
-                        "children": {
-                            "true": [
-                                {
-                                    "command": "EVENT_COMMENT",
-                                    "args": {
-                                        "text": "Agwanda defeated",
-                                        "__collapse": true
-                                    },
-                                    "id": "f2a2286f-059a-4690-aa42-57baa9156697"
-                                }
-                            ],
-                            "false": [
-                                {
-                                    "command": "EVENT_TEXT",
-                                    "args": {
-                                        "text": [
-                                            "I am Agwanda. I dam up\nthe streams. I draw the\nwater underground.",
-                                            "I gather up even the\ndroplets of dew and\ndeny them to my",
-                                            "enemies. You are\ntrespassing here!"
-                                        ],
-                                        "avatarId": ""
-                                    },
-                                    "id": "317fef29-8ef2-4cb2-9cda-bdce9a220eaf"
-                                }
-                            ]
-                        },
-                        "id": "918721fc-569f-4fde-a007-7149aaffe8dd"
+                        "id": "f2a2286f-059a-4690-aa42-57baa9156697"
                     }
                 ],
-                "false": []
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "I am Agwanda. I dam up\nthe streams. I draw the\nwater underground.",
+                                "I gather up even the\ndroplets of dew and\ndeny them to my",
+                                "enemies. You are\ntrespassing here!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "317fef29-8ef2-4cb2-9cda-bdce9a220eaf"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "28",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": true,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": false,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "2d688d67-43dd-4346-9609-b67cc44f9253"
+                    }
+                ]
             },
-            "id": "f127dbfb-5464-4627-a31c-646802794907"
+            "id": "918721fc-569f-4fde-a007-7149aaffe8dd"
         }
     ],
     "playerHit1Script": [],
@@ -13211,7 +13111,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "a4e1b9b2-540d-45f5-9d00-0ba7fd870c3c"
                 },
@@ -13247,7 +13148,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "03ed6148-6e27-40bb-a824-418bcbe898f9"
@@ -13716,17 +13617,6 @@
         {
             "command": "EVENT_SET_VALUE",
             "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "fec09cea-7929-4815-b25e-a0d8bd9af1f8"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
                 "variable": "L1",
                 "value": {
                     "type": "number",
@@ -14162,7 +14052,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "7b637449-19ba-4cf9-8874-ee4a30c84c60"
                 },
@@ -14198,7 +14089,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "5b3a6735-ae6f-4440-adad-0f54318bd5f1"
@@ -14663,17 +14554,6 @@
                 "__collapse": true
             },
             "id": "9aa2f1cc-3a25-42ba-8dc4-fd956fd0440a"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "95227524-d70d-4af8-87bc-3f214392b869"
         },
         {
             "command": "EVENT_SET_VALUE",
@@ -15359,17 +15239,6 @@
                 "__collapse": true
             },
             "id": "0e7e0866-acb1-4108-a980-0ef327883be4"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "c481f7ec-02d7-430e-be76-d28cf16cffa7"
         }
     ],
     "playerHit1Script": [],
@@ -15769,7 +15638,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "b6896f3b-0034-47f9-969f-8cd283dee401"
                 },
@@ -15805,7 +15675,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "e6c97c2e-a1f9-4a9e-ac7b-db9342afd689"
@@ -16446,31 +16316,10 @@
             "id": "74dd759a-79aa-497c-a3ae-e1eeec07da8b"
         },
         {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "4804d0ee-a768-47d5-b217-a33b7ac8da1e"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "95f3d6c4-31b5-480f-a97f-1a0e71ea3d28"
-        },
-        {
             "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
                 "variable": "28",
-                "flag": 4,
+                "flag": 10,
                 "__collapseElse": false,
                 "__disableElse": false,
                 "__collapse": false
@@ -16480,7 +16329,7 @@
                     {
                         "command": "EVENT_COMMENT",
                         "args": {
-                            "text": "2nd Kelpie defeated",
+                            "text": "2nd Kelpie has given her speech",
                             "__collapse": true
                         },
                         "id": "b5d99fed-3308-4de9-a5b2-78316ee98d5d"
@@ -16488,30 +16337,38 @@
                 ],
                 "false": [
                     {
-                        "command": "EVENT_IF_VALUE",
+                        "command": "EVENT_TEXT",
                         "args": {
-                            "variable": "13",
-                            "operator": "==",
-                            "comparator": 2,
-                            "__collapseElse": true,
-                            "__disableElse": true
-                        },
-                        "children": {
-                            "true": [
-                                {
-                                    "command": "EVENT_TEXT",
-                                    "args": {
-                                        "text": [
-                                            "I am the South Kelpie,\nguardian of the whirl-\npool that lies beyond!"
-                                        ],
-                                        "avatarId": ""
-                                    },
-                                    "id": "b4389a70-58ad-4da4-ba03-56cdb41cb08d"
-                                }
+                            "text": [
+                                "I am the South Kelpie,\nguardian of the whirl-\npool that lies beyond!"
                             ],
-                            "false": []
+                            "avatarId": ""
                         },
-                        "id": "acdeca53-7c2c-466c-9aa2-12495178b633"
+                        "id": "b4389a70-58ad-4da4-ba03-56cdb41cb08d"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "28",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": true,
+                            "flag12": false,
+                            "flag13": false,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "cd2b331e-2282-4ad5-b5ef-0fcda45cfb80"
                     }
                 ]
             },
@@ -19028,7 +18885,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "6ead2a3f-0c2c-4fbe-b438-441c20d1bccd"
                 },
@@ -19064,7 +18922,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "bb9bdba4-0a6a-4b9a-bb01-bde81067c8a6"
@@ -19716,27 +19574,6 @@
                 "__collapse": true
             },
             "id": "d482bdbf-8501-46ed-86ba-29ccf4a79cd3"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "d7ea11dd-c3f9-4f17-be34-fe242b217f84"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "0454b165-3f53-4614-a87f-a6a75ac6e3c0"
         },
         {
             "command": "EVENT_SET_VALUE",
@@ -20709,18 +20546,6 @@
         {
             "command": "EVENT_SET_VALUE",
             "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "550b5acf-3a93-4677-af01-c60521988f33"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
                 "variable": "19",
                 "value": {
                     "type": "number",
@@ -20743,64 +20568,62 @@
             "id": "a5821460-99b7-40c2-8e94-04154c16dde0"
         },
         {
-            "command": "EVENT_ACTOR_GET_POSITION",
+            "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "bc1dc886-8dd5-454e-8d28-e0a835cac637"
-        },
-        {
-            "command": "EVENT_IF_VALUE",
-            "args": {
-                "variable": "13",
-                "operator": "==",
-                "comparator": 16,
-                "__collapseElse": true,
-                "__disableElse": true
+                "variable": "28",
+                "flag": 11,
+                "__collapseElse": false
             },
             "children": {
                 "true": [
                     {
-                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "command": "EVENT_COMMENT",
                         "args": {
-                            "variable": "28",
-                            "flag": 5,
-                            "__collapseElse": false
+                            "text": "Agwanda has given her speech",
+                            "__collapse": true
                         },
-                        "children": {
-                            "true": [
-                                {
-                                    "command": "EVENT_COMMENT",
-                                    "args": {
-                                        "text": "Agwanda defeated",
-                                        "__collapse": true
-                                    },
-                                    "id": "b9db61f9-d1c8-4aa9-a053-030c76075300"
-                                }
-                            ],
-                            "false": [
-                                {
-                                    "command": "EVENT_TEXT",
-                                    "args": {
-                                        "text": [
-                                            "I know you've come to\nsteal the Water of Life! \nYou shall not have it",
-                                            "while I have substance\nto fill my form. Begone!"
-                                        ],
-                                        "avatarId": ""
-                                    },
-                                    "id": "710a4b92-c77d-4be5-98ad-e1b119002868"
-                                }
-                            ]
-                        },
-                        "id": "2e128a9f-2681-4bfa-9e49-c9ba07c0bba0"
+                        "id": "b9db61f9-d1c8-4aa9-a053-030c76075300"
                     }
                 ],
-                "false": []
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "I know you've come to\nsteal the Water of Life! \nYou shall not have it",
+                                "while I have substance\nto fill my form. Begone!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "710a4b92-c77d-4be5-98ad-e1b119002868"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "28",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": true,
+                            "flag13": false,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "8a766028-1d3f-49ab-9406-463e1e1d2b5c"
+                    }
+                ]
             },
-            "id": "fb80df0b-9c92-4599-91b1-44ecd930ceb4"
+            "id": "2e128a9f-2681-4bfa-9e49-c9ba07c0bba0"
         }
     ],
     "playerHit1Script": [],
@@ -21200,7 +21023,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "50300a6b-54fb-4de3-8442-8dbd7832ba23"
                 },
@@ -21236,7 +21060,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "16c04c27-7258-4057-a780-7dfbf161a980"
@@ -21328,7 +21152,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "$self$",
-                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef"
+                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef",
+                        "__collapse": true
                     },
                     "id": "1c7a78c4-e892-4b50-a896-1565cd47f1e6"
                 },
@@ -21342,7 +21167,8 @@
                         "value": "0",
                         "minValue": "0",
                         "maxValue": "32767",
-                        "clamp": true
+                        "clamp": true,
+                        "__collapse": true
                     },
                     "id": "d129dcf1-aecb-4f47-8b3b-8efc2acdfb84"
                 },
@@ -22553,17 +22379,6 @@
                 "__collapse": true
             },
             "id": "f14ab2eb-3de4-4a0d-8c8c-f4d35530b314"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "b2744255-e357-4185-9327-f7c44e709e2e"
         }
     ],
     "playerHit1Script": [],
@@ -23454,18 +23269,6 @@
                 "__collapse": true
             },
             "id": "7aa334b3-0c2a-4166-ad5e-dce262df87d7"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "c114aa28-7163-4f7b-93e8-23e8dc05dc06"
         }
     ],
     "playerHit1Script": [],
@@ -25010,18 +24813,6 @@
         {
             "command": "EVENT_SET_VALUE",
             "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "d9bbdddb-40ef-4dd2-a31b-28ffb80836a8"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
                 "variable": "19",
                 "value": {
                     "type": "number",
@@ -25044,15 +24835,62 @@
             "id": "b2c909e3-1ee1-4f4f-9dc0-9b4f94bf986a"
         },
         {
-            "command": "EVENT_TEXT",
+            "command": "EVENT_IF_FLAGS_COMPARE",
             "args": {
-                "text": [
-                    "I'm the East Kelpie!\nI bar the way to my",
-                    "mistress, the\nwonderful Agwanda!"
-                ],
-                "avatarId": ""
+                "variable": "28",
+                "flag": 12,
+                "__collapseElse": false
             },
-            "id": "91708fb5-8c03-4ead-8089-7e3d79ac2b81"
+            "children": {
+                "true": [
+                    {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                            "text": "Kelpie has given her speech",
+                            "__collapse": true
+                        },
+                        "id": "ffe65ce0-8d09-4f69-b2ab-f081cee9ce69"
+                    }
+                ],
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "I'm the East Kelpie!\nI bar the way to my",
+                                "mistress, the\nwonderful Agwanda!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "91708fb5-8c03-4ead-8089-7e3d79ac2b81"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "28",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": true,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "3cff6191-0acc-47d0-9a72-24dc23d8e0ba"
+                    }
+                ]
+            },
+            "id": "7d0d7fe7-06ea-43a6-a398-62cc94b2f61e"
         }
     ],
     "playerHit1Script": [],
@@ -25808,18 +25646,6 @@
                 "__collapse": true
             },
             "id": "54f8e9f3-c052-44f7-8344-8a615da954c2"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "d2548cb9-703d-4c29-8114-b7d090ffc381"
         },
         {
             "command": "EVENT_SET_VALUE",
@@ -26581,18 +26407,6 @@
                 "__collapse": true
             },
             "id": "d18f6ec5-58e8-468e-8fd9-37225240d96c"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                },
-                "__collapse": true
-            },
-            "id": "62c31c21-54eb-4a2e-8a38-383906ea2d81"
         },
         {
             "command": "EVENT_SET_VALUE",
@@ -27439,27 +27253,6 @@
                 "__collapse": true
             },
             "id": "3c52934b-7f3c-4140-91a3-9be33f2d0274"
-        },
-        {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-                "variable": "21",
-                "value": {
-                    "type": "number",
-                    "value": 0
-                }
-            },
-            "id": "46faa3c3-f816-47ae-8add-ac42c2006a2f"
-        },
-        {
-            "command": "EVENT_ACTOR_GET_POSITION",
-            "args": {
-                "actorId": "$self$",
-                "vectorX": "12",
-                "vectorY": "13",
-                "__collapse": true
-            },
-            "id": "58ef4098-d370-4de5-93fb-8a99f809a4a3"
         },
         {
             "command": "EVENT_SET_VALUE",
@@ -30909,22 +30702,6 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "You have overcome\ngreat trials, but evil\nstill looms over Tolemac,",
-                            "Zelda. Stay true to\nyour journey, for it\nwill bring you closer to",
-                            "young Link, who lies\ncaptive to Ganon. I\nhear tell of a vast",
-                            "fortress of strength\nand power. Go forward\nbravely, and you will",
-                            "be victorious."
-                        ],
-                        "avatarId": "",
-                        "__collapse": true,
-                        "__comment": true
-                    },
-                    "id": "10f3a6cb-7f7a-4b6a-ba29-e2067d1d633e"
-                },
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
                             "You have overcome\ngreat trials, but evil\nstill looms over Tolemac.",
                             "Stay true to your \njourney, for it will bring\nyou closer to young",
                             "Link, who lies captive to\nGanon. I hear tell of a\nvast fortress of ",
@@ -30953,9 +30730,35 @@
                         "flag13": false,
                         "flag14": false,
                         "flag15": false,
-                        "flag16": false
+                        "flag16": false,
+                        "__collapse": true
                     },
                     "id": "e78bfc16-0f74-416d-b16f-32613a8a747a"
+                },
+                {
+                    "command": "EVENT_ADD_FLAGS",
+                    "args": {
+                        "variable": "28",
+                        "flag1": false,
+                        "flag2": false,
+                        "flag3": false,
+                        "flag4": false,
+                        "flag5": false,
+                        "flag6": false,
+                        "flag7": false,
+                        "flag8": false,
+                        "flag9": false,
+                        "flag10": false,
+                        "flag11": false,
+                        "flag12": false,
+                        "flag13": false,
+                        "flag14": true,
+                        "flag15": false,
+                        "flag16": false,
+                        "__collapse": true,
+                        "__label": "Celestial sign collected"
+                    },
+                    "id": "d4fdffd3-9aaa-4f3f-a05d-64d1c7fd288f"
                 },
                 {
                     "command": "EVENT_ACTOR_DEACTIVATE",
@@ -31007,7 +30810,30 @@
                     "id": "9192236a-61e0-42e7-a037-faad42f30e07"
                 }
             ],
-            "startScript": [],
+            "startScript": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "28",
+                        "flag": 13,
+                        "__collapseElse": true,
+                        "__disableElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_ACTOR_DEACTIVATE",
+                                "args": {
+                                    "actorId": "$self$"
+                                },
+                                "id": "b6f073c8-abe5-40be-a0d5-791ce155bcf3"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "f7339608-399a-433f-98ea-7d4532751887"
+                }
+            ],
             "updateScript": [],
             "hit1Script": [],
             "hit2Script": [],
