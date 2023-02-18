@@ -208,3 +208,13 @@ Dungeon masters guarding a celestial sign.
 | Maxus | 3 (1.5 hearts) | 4 (with Gold Necklace) |
 | Maxus Projectile | 4 (2 hearts) | n/a |
 | Warbane | 3 (1.5 hearts) | 13 |
+
+### Zelda with 7 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| __Ganon's Gauntlet / Boss Rush__ | - | - |
+| Llort | 4 (2 hearts) | 3 |
+| Llort Projectile | 4 (2 hearts) | n/a |
+| Pasquinade | 1 (half heart) | 3 |
+| Pasquinade Projectile | 4 (2 hearts) | n/a |
