@@ -2216,7 +2216,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "0a37504c-5017-4190-a4a6-d535c2f8a0ee"
                 },
@@ -2252,7 +2253,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "1314a8c1-1c6a-43fb-a1fb-5deabd7a7967"
@@ -2749,6 +2750,63 @@
                 "__collapse": true
             },
             "id": "9b4de22c-87c3-465d-a86c-04c95549586d"
+        },
+        {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+                "variable": "30",
+                "flag": 12,
+                "__collapseElse": false
+            },
+            "children": {
+                "true": [
+                    {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                            "text": "Blacksmith has given his speech",
+                            "__collapse": true
+                        },
+                        "id": "a38e9d2d-3945-464e-beb0-2f58449c0b7b"
+                    }
+                ],
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "Begone! I, Blacksmith,\nhave my work to do -\nno time for intruders!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "bb9a82b1-0f6c-4337-97b1-5c6df5df094d"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "30",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": true,
+                            "flag14": false,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "999c2ee3-9886-4067-95fe-1775da5618bc"
+                    }
+                ]
+            },
+            "id": "5c4dd1f9-5b72-4889-9145-bd7e6f448e91"
         }
     ],
     "playerHit1Script": [],
@@ -3148,7 +3206,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "661edb71-be46-465f-b08e-56a0e4581026"
                 },
@@ -3184,7 +3243,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "66dff31e-065a-415b-81b0-5a91873bce59"
@@ -3793,6 +3852,64 @@
                 }
             },
             "id": "15d802c2-91e5-48e3-bc4e-22c8e8158e7d"
+        },
+        {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+                "variable": "30",
+                "flag": 13,
+                "__collapseElse": false
+            },
+            "children": {
+                "true": [
+                    {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                            "text": "Blacksmith has given his speech",
+                            "__collapse": true
+                        },
+                        "id": "0a8390d5-e64e-42ba-9a8e-52ae15ae2670"
+                    }
+                ],
+                "false": [
+                    {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                            "text": [
+                                "Feel the tip of my\nspears and tell me they\nare the finest in",
+                                "Tolemac!"
+                            ],
+                            "avatarId": ""
+                        },
+                        "id": "44ad6c7e-66f5-41ef-aa6d-812478b9453b"
+                    },
+                    {
+                        "command": "EVENT_ADD_FLAGS",
+                        "args": {
+                            "variable": "30",
+                            "flag1": false,
+                            "flag2": false,
+                            "flag3": false,
+                            "flag4": false,
+                            "flag5": false,
+                            "flag6": false,
+                            "flag7": false,
+                            "flag8": false,
+                            "flag9": false,
+                            "flag10": false,
+                            "flag11": false,
+                            "flag12": false,
+                            "flag13": false,
+                            "flag14": true,
+                            "flag15": false,
+                            "flag16": false,
+                            "__collapse": true
+                        },
+                        "id": "fa378e0d-3001-40f7-930b-d73cb56a865b"
+                    }
+                ]
+            },
+            "id": "33939d13-3fcf-450c-8b85-b8c5dde85c15"
         }
     ],
     "playerHit1Script": [],
@@ -4369,7 +4486,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "c54dd4b0-c651-4df7-b345-f9c6ae9c108a"
@@ -8468,7 +8585,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "c7d67577-6e06-40e0-a64c-2142e7021361"
@@ -9997,7 +10114,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "39edede7-3812-4023-a290-0902b123d7ff"
@@ -10891,7 +11008,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "52bbcbcb-62d3-4a17-840b-f17e381ead96"
@@ -16235,7 +16352,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "c2b00e0f-0af5-48f2-97e0-f399184663dd"
                 },
@@ -16271,7 +16389,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "e1f02b1d-169d-4306-922e-e01ddcd3577c"
@@ -17238,7 +17356,8 @@
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
                         "actorId": "player",
-                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a"
+                        "emoteId": "6b6854b5-d179-4591-b766-28a743510a3a",
+                        "__collapse": true
                     },
                     "id": "d2e5fa75-b77b-43d8-8455-0151893b1c13"
                 },
@@ -17274,7 +17393,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "b1afe474-36a7-4cfa-b08b-83af162b2e57"
@@ -18278,7 +18397,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "1cc1cc5c-e664-44e6-b3f5-544ad96afc0a"
@@ -20069,7 +20188,7 @@
                 {
                     "command": "EVENT_ACTOR_HIDE",
                     "args": {
-                        "actorId": "7a1b9f6c-8438-4118-8747-2e602dbbea8b",
+                        "actorId": "$self$",
                         "__comment": false
                     },
                     "id": "83e2fbcb-e6f8-44fd-a232-a63529f18b34"
@@ -22451,6 +22570,15 @@
                         "id": "f32d9f8d-6101-4fb1-9ae1-a22bfe70fded"
                     },
                     {
+                        "command": "EVENT_ACTOR_EMOTE",
+                        "args": {
+                            "actorId": "926642af-0153-42c4-b285-84fa4efa551d",
+                            "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef",
+                            "__collapse": true
+                        },
+                        "id": "e00ddc95-a11e-4faa-a288-387b7440ab4a"
+                    },
+                    {
                         "command": "EVENT_ACTOR_DEACTIVATE",
                         "args": {
                             "actorId": "926642af-0153-42c4-b285-84fa4efa551d",
@@ -23763,6 +23891,39 @@
                 }
             },
             "id": "3ab54b73-326c-4c4b-be24-980412a9619a"
+        },
+        {
+            "command": "EVENT_GROUP",
+            "args": {
+                "__label": "Resume at boss map position"
+            },
+            "children": {
+                "true": [
+                    {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                            "variable": "19",
+                            "value": {
+                                "type": "number",
+                                "value": 12
+                            }
+                        },
+                        "id": "b74d4424-87cb-4c8a-b298-bcf4ed0b5382"
+                    },
+                    {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                            "variable": "20",
+                            "value": {
+                                "type": "number",
+                                "value": 6
+                            }
+                        },
+                        "id": "0bb6c600-7ac9-44ba-8550-650503329386"
+                    }
+                ]
+            },
+            "id": "4aa1420d-7874-44f6-aeb1-ba4702a25bd0"
         }
     ],
     "playerHit1Script": [],
@@ -25811,6 +25972,31 @@
                     "id": "cf0b6330-44c3-486b-94e8-f15557a6d347"
                 },
                 {
+                    "command": "EVENT_ADD_FLAGS",
+                    "args": {
+                        "variable": "30",
+                        "flag1": false,
+                        "flag2": false,
+                        "flag3": false,
+                        "flag4": false,
+                        "flag5": false,
+                        "flag6": false,
+                        "flag7": false,
+                        "flag8": false,
+                        "flag9": false,
+                        "flag10": false,
+                        "flag11": false,
+                        "flag12": false,
+                        "flag13": false,
+                        "flag14": false,
+                        "flag15": true,
+                        "flag16": false,
+                        "__label": "Celestial sign collected",
+                        "__collapse": true
+                    },
+                    "id": "1c0c43d7-8a9a-41ec-bdcb-2b4996b17dc8"
+                },
+                {
                     "command": "EVENT_ACTOR_DEACTIVATE",
                     "args": {
                         "actorId": "$self$",
@@ -25984,7 +26170,29 @@
                     "id": "6ba7cfec-7cdc-4be9-80ef-c0a1e5b6d84a"
                 }
             ],
-            "startScript": [],
+            "startScript": [
+                {
+                    "command": "EVENT_IF_FLAGS_COMPARE",
+                    "args": {
+                        "variable": "30",
+                        "flag": 14,
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_ACTOR_DEACTIVATE",
+                                "args": {
+                                    "actorId": "$self$"
+                                },
+                                "id": "17a26bba-95e1-4504-9149-315483859dde"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "6387f256-74b6-45da-bb11-cce10a13c119"
+                }
+            ],
             "updateScript": [],
             "hit1Script": [],
             "hit2Script": [],
