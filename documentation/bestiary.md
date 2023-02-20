@@ -225,3 +225,5 @@ Dungeon masters guarding a celestial sign.
 | Agwanda | 4 (2 hearts) | 4 |
 | Agwanda Projectile | 5 (2.5 hearts) | n/a |
 | Warbane | 5 (2.5 hearts) | 5 |
+| Ganon | 4 (2 hearts) | 15 |
+| Ganon Projectile | 6 (3 hearts) | n/a |
