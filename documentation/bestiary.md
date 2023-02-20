@@ -158,10 +158,11 @@ Dungeon masters guarding a celestial sign.
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
-| __Air Shrine__ | - | - |
+| __Destiny Shrine__ | - | - |
 | Gibdo | 4 (2 hearts) | 10 |
 | Spike Block | 2 (1 heart) | n/a |
 | Jack | 2 (1 heart) | n/a |
+| Malmort | 2 (1 heart) | 8 |
 
 ### Zelda with 4 shrines completed
 
@@ -218,3 +219,9 @@ Dungeon masters guarding a celestial sign.
 | Llort Projectile | 4 (2 hearts) | n/a |
 | Pasquinade | 1 (half heart) | 3 |
 | Pasquinade Projectile | 4 (2 hearts) | n/a |
+| Aviana | 3 (1.5 hearts) | 1 (with Feather spell) |
+| Malmort | 4 (2 hearts) | 1 |
+| Dragonfly | n/a | 1 |
+| Agwanda | 4 (2 hearts) | 4 |
+| Agwanda Projectile | 5 (2.5 hearts) | n/a |
+| Warbane | 5 (2.5 hearts) | 5 |
