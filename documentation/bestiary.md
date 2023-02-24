@@ -112,6 +112,8 @@ Dungeon masters guarding a celestial sign.
 | __Earth Shrine__ | - | - |
 | Keese | 1 (half heart) | 3 |
 | Sardak | 2 (1 heart) | 4 (with Jade Ring spell) |
+| Llort | 2 (1 heart) | 10 |
+| Llort Projectile | 2 (1 heart) | n/a |
 | __Wimbich / Torian__ | - | - |
 | bago-bago | 2 (1 heart) | 3 |
 | octorok | 4 (2 hearts) | 9 |
@@ -131,6 +133,8 @@ Dungeon masters guarding a celestial sign.
 | Pols Voice | 2 (1 heart) | 4 (with Noise spell) |
 | Wizzrobe | 2 (1 heart) | 4 (with Dagger spell) |
 | Eyesoar | 1 (half heart) | 2 |
+| Pasquinade | 2 (1 heart) | 9 |
+| Pasquinade Projectile | 2 (1 heart) | n/a |
 
 ### Zelda with 2 shrines completed
 
@@ -143,19 +147,22 @@ Dungeon masters guarding a celestial sign.
 | Tornado | 2 (1 heart) | 4 (with Calm spell) |
 | Locassin | 2 (1 heart) | 5 |
 | Crystal Shard | 1 (half heart) | n/a |
-| Vapora | 3 (1.5 hearts) (projectile 1) | 7 |
+| Vapora | 3 (1.5 hearts) | 7 |
+| Vapora Projectile | 1 (half heart) | n/a |
 | Baboon Head | 2 (1 heart) | 3 |
 | Dragonfly | 1 (half heart) | 2 |
 | Volta | 2 (1 heart) | 3 |
+| Aviana | 2 (1 heart) | 11 (with Feather spell) |
 
 ### Zelda with 3 shrines completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
 | :---: | :----------------------: | :--------------------: |
-| __Air Shrine__ | - | - |
+| __Destiny Shrine__ | - | - |
 | Gibdo | 4 (2 hearts) | 10 |
 | Spike Block | 2 (1 heart) | n/a |
 | Jack | 2 (1 heart) | n/a |
+| Malmort | 2 (1 heart) | 8 |
 
 ### Zelda with 4 shrines completed
 
@@ -185,7 +192,6 @@ Dungeon masters guarding a celestial sign.
 | Iron Knuckle | 2 (1 heart) | 8 |
 | Ursore | 4 (2 hearts) | 22 |
 
-
 ### Zelda with 6 shrines completed
 
 | Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
@@ -203,3 +209,21 @@ Dungeon masters guarding a celestial sign.
 | Maxus | 3 (1.5 hearts) | 4 (with Gold Necklace) |
 | Maxus Projectile | 4 (2 hearts) | n/a |
 | Warbane | 3 (1.5 hearts) | 13 |
+
+### Zelda with 7 shrines completed
+
+| Enemy | Attack (damage to Zelda) | Defense (hits to kill) |
+| :---: | :----------------------: | :--------------------: |
+| __Ganon's Gauntlet / Boss Rush__ | - | - |
+| Llort | 4 (2 hearts) | 3 |
+| Llort Projectile | 4 (2 hearts) | n/a |
+| Pasquinade | 1 (half heart) | 3 |
+| Pasquinade Projectile | 4 (2 hearts) | n/a |
+| Aviana | 3 (1.5 hearts) | 1 (with Feather spell) |
+| Malmort | 4 (2 hearts) | 1 |
+| Dragonfly | n/a | 1 |
+| Agwanda | 4 (2 hearts) | 4 |
+| Agwanda Projectile | 5 (2.5 hearts) | n/a |
+| Warbane | 5 (2.5 hearts) | 5 |
+| Ganon | 4 (2 hearts) | 15 |
+| Ganon Projectile | 6 (3 hearts) | n/a |
