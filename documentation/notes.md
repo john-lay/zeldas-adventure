@@ -53,7 +53,7 @@ todo
 [x] world map compass warp set map x+y
 [x] debug feature: salt cellar or magic shield clear all actors from screen
 [\] consider new debug flag that once set implements alt. logic for crashing rooms. Instead of enemy counter. Just one defeat opens door.
-[ ] slow roar stick down
+[\] slow roar stick down
 [x] world map not showing marker
 
 shrine review
