@@ -1,0 +1,1 @@
+type *.json > scenes.txt
