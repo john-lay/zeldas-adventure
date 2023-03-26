@@ -467,11 +467,11 @@ Now that the 2 problematic spells have been identified: __boomerang__ and __pyro
 
 A list of features missing from the GB port which are present in the original.
 
-[ ] Colour!
-[ ] Missing slippery floor mechanics
-[ ] Magic shield doesn't protect against projectiles
-[ ] Damage scaling isn't in effect when Zelda powers up
-[ ] Enemies should stay defeated for a few screens
-[ ] Flying/jumping enemies should have a shadow
-[ ] Enemy/boss reset on pause
-[ ] Missing sound FX
+- Colour!
+- Missing slippery floor mechanics
+- Magic shield doesn't protect against projectiles
+- Damage scaling isn't in effect when Zelda powers up
+- Enemies should stay defeated for a few screens
+- Flying/jumping enemies should have a shadow
+- Enemy/boss reset on pause
+- Missing sound FX

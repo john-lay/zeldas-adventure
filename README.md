@@ -14,3 +14,10 @@ If you want to play the game, the ROM can be downloaded from [here](https://gith
 
 If you want to build or edit the game you will need to build the modified copy of GB Studio (The game was built with a fork of version `3.0.3`), which can be downloaded from [here](https://github.com/john-lay/gb-studio/releases).
 The scenes are build using [Tiled](https://www.mapeditor.org/) and can be found in `/assets/tilemaps` and tilesets are taken from [Link's awakening disassembly project](https://github.com/zladx/LADX-Disassembly/tree/master/src/gfx).
+
+## Documentation
+A detailed list of items, enemies and GB Studio technical notes can be found in the [documentation](/documentation/) folder of the project.
+- [bestiary](/documentation/bestiary.md)
+- [cast](/documentation/cast.md)
+- [inventory](/documentation/inventory.md)
+- [technical notes](/documentation/technical%20notes.md)
