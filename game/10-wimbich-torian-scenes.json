@@ -21094,28 +21094,28 @@
         0,
         15,
         0,
-        0,
-        0,
-        15,
-        15,
-        15,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         15,
         15,
         15,
         15,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        15,
+        0,
+        0,
         0,
         0,
         0,
@@ -21614,7 +21614,7 @@
             "hit2Script": [],
             "hit3Script": [],
             "id": "5b6b26e3-35bc-4a2c-89ae-1eff0832efed",
-            "x": 5,
+            "x": 7,
             "y": 13
         },
         {
@@ -21793,187 +21793,38 @@
             "hit2Script": [],
             "hit3Script": [],
             "id": "d2706481-a76f-4440-bf71-a7e7a74bcb72",
-            "x": 9,
+            "x": 12,
             "y": 11
         },
         {
-            "name": "Zol",
+            "name": "Owl",
             "frame": 0,
             "animate": false,
-            "spriteSheetId": "b4c9e22b-c06e-4716-b6aa-334b98e771fe",
+            "spriteSheetId": "a9e3858a-ed79-447c-968e-9a842f21ed2f",
             "direction": "down",
             "moveSpeed": 1,
-            "animSpeed": 15,
+            "animSpeed": 255,
             "paletteId": "",
             "isPinned": false,
-            "collisionGroup": "1",
             "symbol": "actor_78",
             "script": [
                 {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "a1da245a-fe24-4154-a7d8-5aa79166da0a",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "L0"
-                        },
-                        "$variable[V1]$": {
-                            "type": "variable",
-                            "value": "1"
-                        },
-                        "$variable[V2]$": {
-                            "type": "variable",
-                            "value": "L1"
-                        }
-                    },
-                    "id": "328accf6-4ca6-4f96-a869-c153eb67e471"
-                }
-            ],
-            "startScript": [
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "L1",
-                        "value": {
-                            "type": "number",
-                            "value": 1
-                        }
-                    },
-                    "id": "f910803d-b76e-4046-b64f-73df72eb94b7"
-                },
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "L2",
-                        "value": {
-                            "type": "number",
-                            "value": 2
-                        }
-                    },
-                    "id": "2d77449f-5d86-48a5-92b1-73bd9a8d8c34"
-                }
-            ],
-            "updateScript": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "74ca3145-22fa-44bb-895d-d2f77e34c488",
-                        "$actor[0]$": "72e34116-9a52-489e-a483-3491d4389d7f"
-                    },
-                    "id": "dba8ac8c-507c-4989-9413-4a4871e7a3b4"
-                }
-            ],
-            "hit1Script": [
-                {
                     "command": "EVENT_ACTOR_EMOTE",
                     "args": {
-                        "actorId": "$self$",
-                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef"
+                        "actorId": "player",
+                        "emoteId": "5e9472fc-33f4-410b-9384-07aadcf80fa9"
                     },
-                    "id": "f3f5677b-872e-4eb3-ab3d-d75d2b5f250d"
-                },
-                {
-                    "command": "EVENT_VARIABLE_MATH",
-                    "args": {
-                        "vectorX": "L2",
-                        "operation": "sub",
-                        "other": "var",
-                        "vectorY": "15",
-                        "value": "0",
-                        "minValue": "0",
-                        "maxValue": "32767",
-                        "clamp": true
-                    },
-                    "id": "216ee4e7-10fb-4904-ad7a-bf158c4b1107"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "L2",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": true,
-                        "__disableElse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_COMMENT",
-                                "args": {
-                                    "text": "Should be possible to use enemy position to set collectable position",
-                                    "__collapse": true
-                                },
-                                "id": "b68b4cb4-a3d4-42b4-9ece-0ab7a30b59f6"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_GET_POSITION",
-                                "args": {
-                                    "actorId": "$self$",
-                                    "vectorX": "L3",
-                                    "vectorY": "L4",
-                                    "__comment": false,
-                                    "__collapse": true
-                                },
-                                "id": "e9476ee9-8c5d-4dec-8708-a8f4bc092092"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_SET_POSITION",
-                                "args": {
-                                    "actorId": "14189dee-b2e2-47c0-a6de-eccb4ae68d6e",
-                                    "x": {
-                                        "type": "variable",
-                                        "value": "L3"
-                                    },
-                                    "y": {
-                                        "type": "variable",
-                                        "value": "L4"
-                                    },
-                                    "__comment": false,
-                                    "__collapse": false
-                                },
-                                "id": "b8e89c97-a4a9-497b-9fa6-70fe72b91c26"
-                            },
-                            {
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "0b4bdeb0-8106-4037-ad4e-ce4e5880a63d",
-                                    "$actor[0]$": "14189dee-b2e2-47c0-a6de-eccb4ae68d6e",
-                                    "$actor[1]$": "72e34116-9a52-489e-a483-3491d4389d7f",
-                                    "$variable[2]$": "L3",
-                                    "$variable[3]$": "L4",
-                                    "__comment": false,
-                                    "__collapse": false,
-                                    "$variable[V0]$": {
-                                        "type": "variable",
-                                        "value": "17"
-                                    },
-                                    "$variable[V1]$": {
-                                        "type": "variable",
-                                        "value": "L5"
-                                    }
-                                },
-                                "id": "dcd572c4-4677-4995-93a8-740894bd97c6"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_DEACTIVATE",
-                                "args": {
-                                    "actorId": "$self$",
-                                    "__comment": false,
-                                    "__collapse": true
-                                },
-                                "id": "a40f972f-8226-4bad-9cb4-cd7a62abd948"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "b3abe0c7-37b7-48d4-9d08-9393cee8f66f"
+                    "id": "1ccb2ff6-9dfb-4a1a-8ed7-8a0238084ef4"
                 }
             ],
+            "startScript": [],
+            "updateScript": [],
+            "hit1Script": [],
             "hit2Script": [],
             "hit3Script": [],
             "id": "d39767b3-10d9-4a60-94cc-1817bdfa683a",
-            "x": 13,
-            "y": 12
+            "x": 10,
+            "y": 5
         }
     ],
     "triggers": [
@@ -53992,200 +53843,6 @@
             "id": "9884b812-5cbc-4ac5-93c2-bd939af77930",
             "x": 13,
             "y": 13
-        },
-        {
-            "name": "Bago-Bago",
-            "frame": 0,
-            "animate": false,
-            "spriteSheetId": "1a830a34-096a-4cd1-9f04-e1fd51fdbd4b",
-            "direction": "down",
-            "moveSpeed": 1,
-            "animSpeed": 255,
-            "paletteId": "",
-            "isPinned": false,
-            "collisionGroup": "1",
-            "symbol": "actor_378",
-            "script": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "a1da245a-fe24-4154-a7d8-5aa79166da0a",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "L0"
-                        },
-                        "$variable[V1]$": {
-                            "type": "variable",
-                            "value": "1"
-                        },
-                        "$variable[V2]$": {
-                            "type": "variable",
-                            "value": "L1"
-                        }
-                    },
-                    "id": "34eaebb6-8bcc-4a4a-a4b6-da06c80522a7"
-                }
-            ],
-            "startScript": [
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "L1",
-                        "value": {
-                            "type": "number",
-                            "value": 2
-                        }
-                    },
-                    "id": "ea6ad356-7c77-4ec2-b505-ae66ca54f48c"
-                },
-                {
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "L2",
-                        "value": {
-                            "type": "number",
-                            "value": 3
-                        }
-                    },
-                    "id": "52590895-37de-4571-a811-7c42f18d8a0a"
-                },
-                {
-                    "command": "EVENT_SET_FALSE",
-                    "args": {
-                        "variable": "L0"
-                    },
-                    "id": "c1564bdc-0012-4223-b2be-543562ddd3f7"
-                }
-            ],
-            "updateScript": [
-                {
-                    "command": "EVENT_CALL_CUSTOM_EVENT",
-                    "args": {
-                        "customEventId": "709fcd94-06c2-4d73-8f4c-5d694ee79b7e",
-                        "$variable[2]$": "L5",
-                        "$variable[V0]$": {
-                            "type": "variable",
-                            "value": "L3"
-                        },
-                        "$variable[V1]$": {
-                            "type": "variable",
-                            "value": "L4"
-                        }
-                    },
-                    "id": "e2823ce5-a0ca-4478-b3bb-88404521cb9c"
-                }
-            ],
-            "hit1Script": [
-                {
-                    "command": "EVENT_ACTOR_EMOTE",
-                    "args": {
-                        "actorId": "$self$",
-                        "emoteId": "7834fc5a-93c7-47ad-a2ce-3e65f0c13eef"
-                    },
-                    "id": "020f4e4c-cc59-4ea7-9d7e-50d41da4a5f3"
-                },
-                {
-                    "command": "EVENT_VARIABLE_MATH",
-                    "args": {
-                        "vectorX": "L2",
-                        "operation": "sub",
-                        "other": "var",
-                        "vectorY": "15",
-                        "value": "0",
-                        "minValue": "0",
-                        "maxValue": "32767",
-                        "clamp": true
-                    },
-                    "id": "bcdeba79-f6f6-47e1-a4af-b9b3a3c1a779"
-                },
-                {
-                    "command": "EVENT_IF_VALUE",
-                    "args": {
-                        "variable": "L2",
-                        "operator": "==",
-                        "comparator": "0",
-                        "__collapseElse": true,
-                        "__disableElse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_COMMENT",
-                                "args": {
-                                    "text": "Should be possible to use enemy position to set collectable position",
-                                    "__collapse": true
-                                },
-                                "id": "81cee554-f83a-42a9-95e0-8e8e0f91f6f0"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_GET_POSITION",
-                                "args": {
-                                    "actorId": "$self$",
-                                    "vectorX": "L3",
-                                    "vectorY": "L4",
-                                    "__comment": false,
-                                    "__collapse": true
-                                },
-                                "id": "09cf6a58-26b3-422a-9b9c-8cb8ffb1865b"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_SET_POSITION",
-                                "args": {
-                                    "actorId": "c7d417ed-e728-467d-87c2-151d39d667c4",
-                                    "x": {
-                                        "type": "variable",
-                                        "value": "L3"
-                                    },
-                                    "y": {
-                                        "type": "variable",
-                                        "value": "L4"
-                                    },
-                                    "__comment": false,
-                                    "__collapse": false
-                                },
-                                "id": "3ab129f4-c45e-432d-8781-43831f17f2f4"
-                            },
-                            {
-                                "command": "EVENT_CALL_CUSTOM_EVENT",
-                                "args": {
-                                    "customEventId": "0b4bdeb0-8106-4037-ad4e-ce4e5880a63d",
-                                    "$actor[0]$": "c7d417ed-e728-467d-87c2-151d39d667c4",
-                                    "$actor[1]$": "72e34116-9a52-489e-a483-3491d4389d7f",
-                                    "$variable[2]$": "L3",
-                                    "$variable[3]$": "L4",
-                                    "__comment": false,
-                                    "__collapse": false,
-                                    "$variable[V0]$": {
-                                        "type": "variable",
-                                        "value": "17"
-                                    },
-                                    "$variable[V1]$": {
-                                        "type": "variable",
-                                        "value": "L5"
-                                    }
-                                },
-                                "id": "c9f18e94-f9e1-48bb-9cc3-c683642eccf9"
-                            },
-                            {
-                                "command": "EVENT_ACTOR_DEACTIVATE",
-                                "args": {
-                                    "actorId": "$self$",
-                                    "__comment": false,
-                                    "__collapse": true
-                                },
-                                "id": "3d5654c5-ef84-42d6-a932-3e72fabd80a5"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "1b3d7a65-7484-481d-aac1-b27276304d2f"
-                }
-            ],
-            "hit2Script": [],
-            "hit3Script": [],
-            "id": "8a3ae7b8-fa8e-4c99-a1ac-408eb6063fd8",
-            "x": 5,
-            "y": 7
         },
         {
             "name": "Zol",
