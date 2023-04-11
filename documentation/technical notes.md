@@ -224,9 +224,9 @@ A listing of variables used in GB Studio and their types.
   * (Flag 11 represents Zelda has collected the heart piece)
   * (Flag 12 represents Llort has given his third speech)
   * (Flag 13 represents Zelda has collected the celestial sign)
-  * (Flag 14 is ???)
-  * (Flag 15 is ???)
-  * (Flag 16 is ???)
+  * (Flag 14 represents the (first) Red Sardak has given his speech)
+  * (Flag 15 represents the (second) Blue Sardak has given his speech)
+  * (Flag 16 represents the (third) Yellow Sardak has given his speech)
 * `$23$: Variable 023` Zelda Direction - `number`. (Stores Zelda's direction between scenes)
 * `$24$: Variable 024` ZA Engine Flags - `word`.
   * (Flag 1 extend the spell reference sprite search to include region `0x8800`-`0x8FFF`. Causes slow scene load - use with caution!)
