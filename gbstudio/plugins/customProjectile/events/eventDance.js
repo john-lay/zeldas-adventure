@@ -1,7 +1,7 @@
 export const id = "MY_EVENT_DANCE";
 
 export const name = "Actor Dance";
-export const groups = ["My Events"];
+export const groups = ["Zelda's Adventure"];
 
 export const fields = [
   {
