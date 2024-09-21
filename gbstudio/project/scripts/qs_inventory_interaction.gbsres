@@ -1,0 +1,84 @@
+{
+  "_resourceType": "script",
+  "id": "e86d92a4-09a5-461a-8a2b-641701d17747",
+  "name": "QS_inventory_interaction",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Inventory Interaction",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "Scroll Weapon Offset",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "symbol": "script_5",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_INC_VALUE",
+            "args": {
+              "variable": "V1"
+            },
+            "id": "cb1ec750-60dc-42a4-bd7c-c291a878fb95"
+          }
+        ],
+        "false": []
+      },
+      "id": "40451226-fb71-4427-bd1d-b2a0cc4a7f2f"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V1"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_DEC_VALUE",
+            "args": {
+              "variable": "V1"
+            },
+            "id": "127bebab-b6f8-4785-8e04-1417ed520507"
+          }
+        ],
+        "false": []
+      },
+      "id": "047abe89-96b3-4a1a-b1bd-bcbdfd437e42"
+    }
+  ]
+}

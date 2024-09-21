@@ -1,0 +1,105 @@
+{
+  "_resourceType": "trigger",
+  "id": "0f8a2398-ccaf-4a03-a417-a21fc661fa6e",
+  "name": "Weapons Right",
+  "prefabId": "",
+  "x": 16,
+  "y": 16,
+  "symbol": "trigger_6",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "6",
+        "value": {
+          "type": "number",
+          "value": 2
+        },
+        "__comment": true
+      },
+      "id": "0f8a589d-e10e-4ffc-b8d1-06e5064b83e0"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e86d92a4-09a5-461a-8a2b-641701d17747",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "6"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "__comment": true
+      },
+      "id": "14aec0fd-8632-44ec-b244-fa8d4a7af94f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "T0",
+        "value": {
+          "type": "expression",
+          "value": "$03$ - $04$"
+        }
+      },
+      "id": "4cb6870d-1701-4776-bb59-e2cab50cbc83"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "T0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 6
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_INC_VALUE",
+            "args": {
+              "variable": "4"
+            },
+            "id": "60e0a974-05aa-42a0-ae85-a92613e258b7"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "44814647-78b4-46e7-ae14-d0fcb4167d50",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "10"
+              }
+            },
+            "id": "eb43de4a-335b-412e-9681-ac00850eff7b"
+          }
+        ],
+        "false": []
+      },
+      "id": "09d449cf-de5e-430a-b531-7dbb6294554a"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 5
+}

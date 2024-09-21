@@ -1,0 +1,94 @@
+{
+  "_resourceType": "trigger",
+  "id": "fd5ad467-6f87-414d-b3ad-649430fed29b",
+  "name": "Weapons Left",
+  "prefabId": "",
+  "x": 1,
+  "y": 16,
+  "symbol": "trigger_5",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "6",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__comment": true
+      },
+      "id": "031c3bd5-4cf1-4187-b46f-157d23795536"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e86d92a4-09a5-461a-8a2b-641701d17747",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "6"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "__comment": true
+      },
+      "id": "1a544855-51ad-4401-bf61-480b96d532b6"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "4"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_DEC_VALUE",
+            "args": {
+              "variable": "4"
+            },
+            "id": "f46b03e9-541b-4535-b630-9b40807bda3a"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "44814647-78b4-46e7-ae14-d0fcb4167d50",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "10"
+              }
+            },
+            "id": "3384eafc-36aa-4782-a003-8922266be4e9"
+          }
+        ],
+        "false": []
+      },
+      "id": "17ad9a45-d3ff-4d74-a4b0-548db5dd35f8"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}

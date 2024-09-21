@@ -1,0 +1,553 @@
+{
+  "_resourceType": "scene",
+  "id": "993059b2-ae12-4b16-ad8f-465481547ae8",
+  "_index": 4,
+  "name": "Inventory",
+  "backgroundId": "75292967-4ca0-47e6-8cb7-d48e5df55c01",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "POINTNCLICK",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_5",
+  "x": 248,
+  "y": 224,
+  "script": [
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "7",
+        "flag1": true,
+        "flag2": true,
+        "flag3": true,
+        "flag4": true,
+        "flag5": true,
+        "flag6": true,
+        "flag7": true,
+        "flag8": true,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": false,
+        "__collapse": false
+      },
+      "id": "755d7b1b-e774-4bdf-99ff-9ed87e5a4c30"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0fcdf137-b517-46a2-a0dd-3fda8732554d"
+      },
+      "id": "5de31664-0aeb-488a-ab11-a7c9e45d6c7e"
+    },
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "11",
+        "flag1": true,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": false,
+        "__collapse": true
+      },
+      "id": "c00c28df-12e1-426d-8cb9-008f21ffd4e2"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 0,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": true,
+        "__label": "Draw Celestial Sign"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 3
+              },
+              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+              "tileIndex": {
+                "type": "number",
+                "value": 32
+              },
+              "__collapse": false
+            },
+            "id": "3fed18e9-d528-4b31-8880-7fc097c71fcb"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 3
+              },
+              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+              "tileIndex": {
+                "type": "number",
+                "value": 33
+              }
+            },
+            "id": "2c51c1f2-3688-4846-9dea-44e479b1b245"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 4
+              },
+              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+              "tileIndex": {
+                "type": "number",
+                "value": 34
+              }
+            },
+            "id": "719c80ac-7d1e-493e-bef3-6fce782e9628"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 4
+              },
+              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+              "tileIndex": {
+                "type": "number",
+                "value": 35
+              }
+            },
+            "id": "78a4082e-cbc7-4ce1-87d0-a75024515fbb"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 5
+              },
+              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+              "tileIndex": {
+                "type": "number",
+                "value": 36
+              }
+            },
+            "id": "781b9ad2-d297-4c45-af1f-fa63a6c6230b"
+          }
+        ],
+        "false": []
+      },
+      "id": "5ae25d2f-bf2e-47f8-9597-591366b168a0"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": true,
+        "__label": "Draw Keys"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "9",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": true,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "5c9b48e9-3450-41b4-ab2a-e5ce4dff55d3"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8af295e5-1f9a-4a14-a604-a3759b685c4b",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "9"
+              },
+              "__collapse": true
+            },
+            "id": "a8fd798a-9b39-4020-aa8c-1f2044d18810"
+          }
+        ]
+      },
+      "id": "9c9c1401-48fc-4863-b95c-b97afeb20a6d"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d026758d-e0e5-41a0-8182-2cad30255467",
+        "__collapse": true,
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 0
+        },
+        "$variable[V1]$": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "e99b7cc4-5921-4934-9e8e-cda320def0b3"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L0",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": false
+      },
+      "id": "e9304b82-3880-4eea-a38d-6ceb3cbabc71"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$variable[V1]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$variable[V2]$": {
+          "type": "number",
+          "value": 0
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "__collapse": true,
+        "__label": "Draw Weapon - Wand",
+        "__comment": true
+      },
+      "id": "a18582fa-7329-4c27-ab82-5af6fe9825fb"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 2
+        },
+        "$variable[V1]$": {
+          "type": "number",
+          "value": 2
+        },
+        "$variable[V2]$": {
+          "type": "number",
+          "value": 0
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "__collapse": true,
+        "__label": "Draw Weapon - Bow & Arrow",
+        "__comment": true
+      },
+      "id": "4138ef64-4748-465c-bb31-b27ac9eaa807"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
+        "$variable[V0]$": {
+          "type": "number",
+          "value": 1
+        },
+        "$variable[V1]$": {
+          "type": "number",
+          "value": 20
+        },
+        "$variable[V2]$": {
+          "type": "number",
+          "value": 0
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "__collapse": true,
+        "__label": "Draw Treasure - Ladder"
+      },
+      "id": "fb1dbece-70a6-432f-b593-bf7f5e3a5ac0"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "empty slots",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 2
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "f37decf1-93a5-4682-8fd3-6152e15e9eb5"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 3
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "efe935ac-81ef-455c-8ba0-0af638c40693"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 4
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "ecdadc6b-be0a-4843-9766-ddd1499e9e07"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 5
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "21ed5bdd-d839-48b2-bea8-a4a740098075"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 6
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "ffac81f0-7054-4888-90bf-ec255fd8d997"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 9
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "6e2fecf3-573d-4512-a90e-c3a5a75c7397"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 10
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "010e7a55-ba6f-4e02-9c24-cb7ec08e2358"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 11
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "64e6fd9b-e6f2-49a4-b0f1-f6c413a62ddc"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+              "$variable[V0]$": {
+                "type": "number",
+                "value": 12
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "6d512372-cdef-4742-897c-af8ff8d535c8"
+          }
+        ]
+      },
+      "id": "7e96dc60-a746-4ef5-b389-d33691ea6d1b"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "4",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "a92f2a9a-f82d-48d8-9339-9e534fa0d435"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L0",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": false
+      },
+      "id": "bd5ca186-e58f-4414-90a3-1b36aba2c0c2"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "44814647-78b4-46e7-ae14-d0fcb4167d50",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "10"
+        },
+        "__comment": false
+      },
+      "id": "230cb58c-0211-447e-95b3-8fa221e93fc0"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "playerSpriteSheetId": "dcbe2f26-b986-40db-a168-7deb829af984"
+}

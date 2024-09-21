@@ -1,7 +1,4 @@
-const l10n = require("../helpers/l10n").default;
-
-const id = "EVENT_LAUNCH_SPELL_PROJECTILE";
-const name = "Launch Spell Projectile";
+const id = "EVENT_LAUNCH_PROJECTILE1";
 const groups = ["Zelda's Adventure"];
 const subGroups = {
   EVENT_GROUP_ACTOR: "EVENT_GROUP_ACTIONS",
@@ -14,9 +11,9 @@ const fields = [
     defaultValue: "projectile",
     variant: "eventSection",
     values: {
-      projectile: l10n("FIELD_PROJECTILE"),
-      source: l10n("FIELD_SOURCE"),
-      presets: l10n("FIELD_PRESETS"),
+      projectile: "FIELD_PROJECTILE",
+      source: "FIELD_SOURCE",
+      presets: "FIELD_PRESETS",
     },
   },
 
@@ -32,15 +29,15 @@ const fields = [
       {
         key: "spriteSheetId",
         type: "sprite",
-        label: l10n("FIELD_SPRITE_SHEET"),
-        description: l10n("FIELD_SPRITE_SHEET_PROJECTILE_DESC"),
+        label: "FIELD_SPRITE_SHEET",
+        description: "FIELD_SPRITE_SHEET_PROJECTILE_DESC",
         defaultValue: "LAST_SPRITE",
       },
       {
         key: "spriteStateId",
         type: "animationstate",
-        label: l10n("FIELD_ANIMATION_STATE"),
-        description: l10n("FIELD_ANIMATION_STATE_DESC"),
+        label: "FIELD_ANIMATION_STATE",
+        description: "FIELD_ANIMATION_STATE_DESC",
         defaultValue: "",
       },
     ],
@@ -48,8 +45,8 @@ const fields = [
   {
     key: "actorId",
     type: "actor",
-    label: l10n("FIELD_SOURCE"),
-    description: l10n("FIELD_ACTOR_PROJECTILE_SOURCE_DESC"),
+    label: "FIELD_SOURCE",
+    description: "FIELD_ACTOR_PROJECTILE_SOURCE_DESC",
     defaultValue: "$self$",
     conditions: [
       {
@@ -69,8 +66,8 @@ const fields = [
     fields: [
       {
         key: "x",
-        label: l10n("FIELD_OFFSET_X"),
-        description: l10n("FIELD_PROJECTILE_OFFSET_X_DESC"),
+        label: "FIELD_OFFSET_X",
+        description: "FIELD_PROJECTILE_OFFSET_X_DESC",
         type: "number",
         min: -256,
         max: 256,
@@ -79,8 +76,8 @@ const fields = [
       },
       {
         key: "y",
-        label: l10n("FIELD_OFFSET_Y"),
-        description: l10n("FIELD_PROJECTILE_OFFSET_Y_DESC"),
+        label: "FIELD_OFFSET_Y",
+        description: "FIELD_PROJECTILE_OFFSET_Y_DESC",
         type: "number",
         min: -256,
         max: 256,
@@ -99,23 +96,23 @@ const fields = [
     ],
     fields: [
       {
-        label: l10n("FIELD_LAUNCH_AT"),
+        label: "FIELD_LAUNCH_AT",
         key: "directionType",
         type: "select",
         options: [
-          ["direction", l10n("FIELD_FIXED_DIRECTION")],
-          ["actor", l10n("FIELD_ACTOR_DIRECTION")],
-          ["target", l10n("FIELD_ACTOR_TARGET")],
-          ["angle", l10n("FIELD_ANGLE")],
-          ["anglevar", l10n("FIELD_ANGLE_VARIABLE")],
+          ["direction", "FIELD_FIXED_DIRECTION"],
+          ["actor", "FIELD_ACTOR_DIRECTION"],
+          ["target", "FIELD_ACTOR_TARGET"],
+          ["angle", "FIELD_ANGLE"],
+          ["anglevar", "FIELD_ANGLE_VARIABLE"],
         ],
         defaultValue: "direction",
         alignBottom: true,
       },
       {
         key: "otherActorId",
-        label: l10n("FIELD_DIRECTION"),
-        description: l10n("FIELD_PROJECTILE_DIRECTION_DESC"),
+        label: "FIELD_DIRECTION",
+        description: "FIELD_PROJECTILE_DIRECTION_DESC",
         type: "actor",
         defaultValue: "$self$",
         conditions: [
@@ -127,8 +124,8 @@ const fields = [
       },
       {
         key: "direction",
-        label: l10n("FIELD_DIRECTION"),
-        description: l10n("FIELD_PROJECTILE_DIRECTION_DESC"),
+        label: "FIELD_DIRECTION",
+        description: "FIELD_PROJECTILE_DIRECTION_DESC",
         type: "direction",
         defaultValue: "right",
         conditions: [
@@ -140,8 +137,8 @@ const fields = [
       },
       {
         key: "angle",
-        label: l10n("FIELD_ANGLE"),
-        description: l10n("FIELD_PROJECTILE_ANGLE_DESC"),
+        label: "FIELD_ANGLE",
+        description: "FIELD_PROJECTILE_ANGLE_DESC",
         type: "angle",
         defaultValue: 0,
         min: -256,
@@ -155,8 +152,8 @@ const fields = [
       },
       {
         key: "angleVariable",
-        label: l10n("FIELD_ANGLE"),
-        description: l10n("FIELD_PROJECTILE_ANGLE_DESC"),
+        label: "FIELD_ANGLE",
+        description: "FIELD_PROJECTILE_ANGLE_DESC",
         type: "variable",
         defaultValue: "LAST_VARIABLE",
         conditions: [
@@ -168,8 +165,8 @@ const fields = [
       },
       {
         key: "targetActorId",
-        label: l10n("FIELD_TARGET"),
-        description: l10n("FIELD_PROJECTILE_TARGET_DESC"),
+        label: "FIELD_TARGET",
+        description: "FIELD_PROJECTILE_TARGET_DESC",
         type: "actor",
         defaultValue: "$self$",
         conditions: [
@@ -183,8 +180,8 @@ const fields = [
   },
   {
     key: "initialOffset",
-    label: l10n("FIELD_DIRECTION_OFFSET"),
-    description: l10n("FIELD_PROJECTILE_OFFSET_DESC"),
+    label: "FIELD_DIRECTION_OFFSET",
+    description: "FIELD_PROJECTILE_OFFSET_DESC",
     type: "number",
     min: 0,
     max: 256,
@@ -208,8 +205,8 @@ const fields = [
     fields: [
       {
         key: "speed",
-        label: l10n("FIELD_SPEED"),
-        description: l10n("FIELD_SPEED_DESC"),
+        label: "FIELD_SPEED",
+        description: "FIELD_SPEED_DESC",
         type: "moveSpeed",
         allowNone: true,
         defaultValue: 2,
@@ -217,8 +214,8 @@ const fields = [
       },
       {
         key: "animSpeed",
-        label: l10n("FIELD_ANIMATION_SPEED"),
-        description: l10n("FIELD_ANIMATION_SPEED_DESC"),
+        label: "FIELD_ANIMATION_SPEED",
+        description: "FIELD_ANIMATION_SPEED_DESC",
         type: "animSpeed",
         defaultValue: 15,
         width: "50%",
@@ -227,8 +224,8 @@ const fields = [
   },
   {
     key: "lifeTime",
-    label: l10n("FIELD_LIFE_TIME"),
-    description: l10n("FIELD_PROJECTILE_LIFE_TIME_DESC"),
+    label: "FIELD_LIFE_TIME",
+    description: "FIELD_PROJECTILE_LIFE_TIME_DESC",
     type: "number",
     min: 0,
     max: 4,
@@ -254,15 +251,15 @@ const fields = [
     fields: [
       {
         key: "loopAnim",
-        label: l10n("FIELD_LOOP_ANIMATION"),
-        description: l10n("FIELD_LOOP_ANIMATION_DESC"),
+        label: "FIELD_LOOP_ANIMATION",
+        description: "FIELD_LOOP_ANIMATION_DESC",
         type: "checkbox",
         defaultValue: true,
       },
       {
         key: "destroyOnHit",
-        label: l10n("FIELD_DESTROY_ON_HIT"),
-        description: l10n("FIELD_PROJECTILE_DESTROY_ON_HIT_DESC"),
+        label: "FIELD_DESTROY_ON_HIT",
+        description: "FIELD_PROJECTILE_DESTROY_ON_HIT_DESC",
         type: "checkbox",
         defaultValue: true,
       },
@@ -279,8 +276,8 @@ const fields = [
     fields: [
       {
         key: "collisionGroup",
-        label: l10n("FIELD_COLLISION_GROUP"),
-        description: l10n("FIELD_COLLISION_GROUP_DESC"),
+        label: "FIELD_COLLISION_GROUP",
+        description: "FIELD_COLLISION_GROUP_DESC",
         type: "collisionMask",
         width: "50%",
         includePlayer: false,
@@ -288,8 +285,8 @@ const fields = [
       },
       {
         key: "collisionMask",
-        label: l10n("FIELD_COLLIDE_WITH"),
-        description: l10n("FIELD_COLLIDE_WITH_DESC"),
+        label: "FIELD_COLLIDE_WITH",
+        description: "FIELD_COLLIDE_WITH_DESC",
         type: "collisionMask",
         width: "50%",
         includePlayer: true,
@@ -311,7 +308,7 @@ const fields = [
 const userPresetsGroups = [
   {
     id: "projectile",
-    label: l10n("FIELD_PROJECTILE"),
+    label: "FIELD_PROJECTILE",
     fields: [
       "spriteSheetId",
       "spriteStateId",
@@ -327,13 +324,13 @@ const userPresetsGroups = [
   },
   {
     id: "source",
-    label: l10n("FIELD_SOURCE"),
+    label: "FIELD_SOURCE",
     fields: ["actorId", "x", "y"],
     selected: true,
   },
   {
     id: "direction",
-    label: l10n("FIELD_DIRECTION"),
+    label: "FIELD_DIRECTION",
     fields: [
       "directionType",
       "otherActorId",
@@ -445,7 +442,7 @@ const compile = (input, helpers) => {
 
 module.exports = {
   id,
-  description: l10n("EVENT_LAUNCH_PROJECTILE_DESC"),
+  description: "EVENT_LAUNCH_PROJECTILE_DESC",
   groups,
   subGroups,
   fields,
