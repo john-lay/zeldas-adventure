@@ -9,7 +9,53 @@
   "prefabScriptOverrides": {},
   "width": 2,
   "height": 2,
-  "script": [],
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Equip weapon"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L0",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "c9bc9ecb-ef59-479f-bf3b-b71c02713bca"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "aa432661-ef70-4e8d-97c9-2e6e0f55bf63",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L4"
+              }
+            },
+            "id": "e0fdcdf5-a8c8-4107-b25f-496625dd7f4d"
+          }
+        ]
+      },
+      "id": "ed707707-0eda-40e8-a0d5-f9dbde38b5b9"
+    }
+  ],
   "leaveScript": [],
   "_index": 13
 }

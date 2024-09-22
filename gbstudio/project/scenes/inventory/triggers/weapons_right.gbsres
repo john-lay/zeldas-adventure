@@ -11,32 +11,30 @@
   "height": 1,
   "script": [
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_TEXT",
       "args": {
-        "variable": "6",
-        "value": {
-          "type": "number",
-          "value": 2
-        },
+        "text": [
+          "weapons found = $03$\nscroll offset = $04$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
         "__comment": true
       },
-      "id": "0f8a589d-e10e-4ffc-b8d1-06e5064b83e0"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "e86d92a4-09a5-461a-8a2b-641701d17747",
-        "$variable[V0]$": {
-          "type": "variable",
-          "value": "6"
-        },
-        "$variable[V1]$": {
-          "type": "variable",
-          "value": "L0"
-        },
-        "__comment": true
-      },
-      "id": "14aec0fd-8632-44ec-b244-fa8d4a7af94f"
+      "id": "f0847038-0c10-4040-9ac5-8862565f976b"
     },
     {
       "command": "EVENT_SET_VALUE",
@@ -48,6 +46,32 @@
         }
       },
       "id": "4cb6870d-1701-4776-bb59-e2cab50cbc83"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "temp0 = $T0$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__comment": true
+      },
+      "id": "b789bdac-4dbf-4541-9f50-11f52405a388"
     },
     {
       "command": "EVENT_IF",
@@ -89,7 +113,11 @@
               },
               "$variable[V2]$": {
                 "type": "variable",
-                "value": "10"
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
               }
             },
             "id": "eb43de4a-335b-412e-9681-ac00850eff7b"
