@@ -17,205 +17,60 @@
   "y": 224,
   "script": [
     {
-      "command": "EVENT_ADD_FLAGS",
-      "args": {
-        "variable": "7",
-        "flag1": true,
-        "flag2": false,
-        "flag3": true,
-        "flag4": true,
-        "flag5": false,
-        "flag6": false,
-        "flag7": false,
-        "flag8": true,
-        "flag9": true,
-        "flag10": true,
-        "flag11": true,
-        "flag12": true,
-        "flag13": false,
-        "flag14": false,
-        "flag15": false,
-        "flag16": false,
-        "__collapse": false
-      },
-      "id": "755d7b1b-e774-4bdf-99ff-9ed87e5a4c30"
-    },
-    {
-      "command": "EVENT_ADD_FLAGS",
-      "args": {
-        "variable": "8",
-        "flag1": true,
-        "flag2": true,
-        "flag3": true,
-        "flag4": false,
-        "flag5": false,
-        "flag6": false,
-        "flag7": false,
-        "flag8": false,
-        "flag9": false,
-        "flag10": false,
-        "flag11": false,
-        "flag12": false,
-        "flag13": false,
-        "flag14": false,
-        "flag15": false,
-        "flag16": false,
-        "__collapse": false
-      },
-      "id": "8d8f64c5-abad-4e8d-bae3-b4396981cd81"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "0fcdf137-b517-46a2-a0dd-3fda8732554d"
-      },
-      "id": "5de31664-0aeb-488a-ab11-a7c9e45d6c7e"
-    },
-    {
-      "command": "EVENT_ADD_FLAGS",
-      "args": {
-        "variable": "11",
-        "flag1": true,
-        "flag2": false,
-        "flag3": false,
-        "flag4": false,
-        "flag5": false,
-        "flag6": false,
-        "flag7": false,
-        "flag8": false,
-        "flag9": false,
-        "flag10": false,
-        "flag11": false,
-        "flag12": false,
-        "flag13": false,
-        "flag14": false,
-        "flag15": false,
-        "flag16": false,
-        "__collapse": true
-      },
-      "id": "c00c28df-12e1-426d-8cb9-008f21ffd4e2"
-    },
-    {
-      "command": "EVENT_IF_FLAGS_COMPARE",
-      "args": {
-        "variable": "11",
-        "flag": 0,
-        "__collapseElse": true,
-        "__disableElse": true,
-        "__collapse": true,
-        "__label": "Draw Celestial Sign"
-      },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_REPLACE_TILE_XY",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 10
-              },
-              "y": {
-                "type": "number",
-                "value": 3
-              },
-              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
-              "tileIndex": {
-                "type": "number",
-                "value": 32
-              },
-              "__collapse": false
-            },
-            "id": "3fed18e9-d528-4b31-8880-7fc097c71fcb"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 11
-              },
-              "y": {
-                "type": "number",
-                "value": 3
-              },
-              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
-              "tileIndex": {
-                "type": "number",
-                "value": 33
-              }
-            },
-            "id": "2c51c1f2-3688-4846-9dea-44e479b1b245"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 10
-              },
-              "y": {
-                "type": "number",
-                "value": 4
-              },
-              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
-              "tileIndex": {
-                "type": "number",
-                "value": 34
-              }
-            },
-            "id": "719c80ac-7d1e-493e-bef3-6fce782e9628"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 11
-              },
-              "y": {
-                "type": "number",
-                "value": 4
-              },
-              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
-              "tileIndex": {
-                "type": "number",
-                "value": 35
-              }
-            },
-            "id": "78a4082e-cbc7-4ce1-87d0-a75024515fbb"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 10
-              },
-              "y": {
-                "type": "number",
-                "value": 5
-              },
-              "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
-              "tileIndex": {
-                "type": "number",
-                "value": 36
-              }
-            },
-            "id": "781b9ad2-d297-4c45-af1f-fa63a6c6230b"
-          }
-        ],
-        "false": []
-      },
-      "id": "5ae25d2f-bf2e-47f8-9597-591366b168a0"
-    },
-    {
       "command": "EVENT_GROUP",
       "args": {
-        "__collapse": true,
-        "__label": "Draw Keys"
+        "__label": "Debug set up"
       },
       "children": {
         "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "7",
+              "flag1": true,
+              "flag2": false,
+              "flag3": true,
+              "flag4": true,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": true,
+              "flag9": true,
+              "flag10": true,
+              "flag11": true,
+              "flag12": true,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "755d7b1b-e774-4bdf-99ff-9ed87e5a4c30"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "8",
+              "flag1": true,
+              "flag2": true,
+              "flag3": true,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "8d8f64c5-abad-4e8d-bae3-b4396981cd81"
+          },
           {
             "command": "EVENT_ADD_FLAGS",
             "args": {
@@ -241,20 +96,1074 @@
             "id": "5c9b48e9-3450-41b4-ab2a-e5ce4dff55d3"
           },
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_ADD_FLAGS",
             "args": {
-              "customEventId": "8af295e5-1f9a-4a14-a604-a3759b685c4b",
-              "$variable[V0]$": {
-                "type": "variable",
-                "value": "9"
-              },
+              "variable": "11",
+              "flag1": true,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
               "__collapse": true
             },
-            "id": "a8fd798a-9b39-4020-aa8c-1f2044d18810"
+            "id": "c00c28df-12e1-426d-8cb9-008f21ffd4e2"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "af5c9ce5-4da6-446f-afe4-1a4cf6076dd2"
           }
         ]
       },
-      "id": "9c9c1401-48fc-4863-b95c-b97afeb20a6d"
+      "id": "d1ce1f56-df6a-49cb-967e-a6f5398945a8"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0fcdf137-b517-46a2-a0dd-3fda8732554d",
+        "__collapse": true
+      },
+      "id": "5de31664-0aeb-488a-ab11-a7c9e45d6c7e"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Draw Celestial Signs",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 0,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Earth Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 32
+                    },
+                    "__collapse": true
+                  },
+                  "id": "3fed18e9-d528-4b31-8880-7fc097c71fcb"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 33
+                    },
+                    "__collapse": true
+                  },
+                  "id": "2c51c1f2-3688-4846-9dea-44e479b1b245"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 34
+                    },
+                    "__collapse": true
+                  },
+                  "id": "719c80ac-7d1e-493e-bef3-6fce782e9628"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 35
+                    },
+                    "__collapse": true
+                  },
+                  "id": "78a4082e-cbc7-4ce1-87d0-a75024515fbb"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 36
+                    },
+                    "__collapse": true
+                  },
+                  "id": "781b9ad2-d297-4c45-af1f-fa63a6c6230b"
+                }
+              ],
+              "false": []
+            },
+            "id": "5ae25d2f-bf2e-47f8-9597-591366b168a0"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 1,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Illusion Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 38
+                    },
+                    "__collapse": true
+                  },
+                  "id": "b38ac325-23c7-4c6d-acae-2d2216641575"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 39
+                    },
+                    "__collapse": true
+                  },
+                  "id": "4c5611a2-c6c7-45af-afc2-e7e77848411f"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 40
+                    },
+                    "__collapse": true
+                  },
+                  "id": "db1118b3-3ef0-4739-b3c2-87cb4059f2f2"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 41
+                    },
+                    "__collapse": true
+                  },
+                  "id": "20ca4fc3-5666-4521-b131-426513f49129"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 42
+                    },
+                    "__collapse": true
+                  },
+                  "id": "04686504-fddc-4624-9c92-7720e5c06e5c"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 43
+                    },
+                    "__collapse": true
+                  },
+                  "id": "ebba7adb-3f6f-47ff-99b8-e0e72ee10071"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 44
+                    },
+                    "__collapse": true
+                  },
+                  "id": "4d36f94a-98ce-4d8b-ae84-3714a2e3c7f3"
+                }
+              ],
+              "false": []
+            },
+            "id": "c91515be-144c-4e17-b496-2756bdd9ddfe"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 2,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Air Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 46
+                    },
+                    "__collapse": true
+                  },
+                  "id": "2c3ab128-3385-41e1-adf1-b0f0fdbcb360"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 47
+                    },
+                    "__collapse": true
+                  },
+                  "id": "96dde47c-8572-43da-8e42-86b72c74aaa3"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 48
+                    },
+                    "__collapse": true
+                  },
+                  "id": "5257fcc8-788c-422b-ad8c-577a8e85d6ba"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 49
+                    },
+                    "__collapse": true
+                  },
+                  "id": "18b43fda-148f-46ac-ac1c-805c3f8aafdc"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 50
+                    },
+                    "__collapse": true
+                  },
+                  "id": "e4bd2ae5-da8b-4f1a-bc00-135000cceb39"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 51
+                    },
+                    "__collapse": true
+                  },
+                  "id": "159fe6d4-da6a-4a88-9297-258c2745563b"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 11
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 52
+                    },
+                    "__collapse": true
+                  },
+                  "id": "84db6a9e-288e-4ddc-a413-58cbfe099c8b"
+                }
+              ],
+              "false": []
+            },
+            "id": "74571196-fdcd-47ba-8371-0cccd9c6df77"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 3,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Destiny Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 54
+                    },
+                    "__collapse": true
+                  },
+                  "id": "db7ce436-a5d0-4c87-80b0-a16a97c59a22"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 55
+                    },
+                    "__collapse": true
+                  },
+                  "id": "fe1912e4-aa87-4824-8d76-a8f57ffd39c5"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 56
+                    },
+                    "__collapse": true
+                  },
+                  "id": "41616d6e-8845-40a2-b419-365ef9a5a1a3"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 57
+                    },
+                    "__collapse": true
+                  },
+                  "id": "aed21a13-2b97-489e-bd33-0baba6957473"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 58
+                    },
+                    "__collapse": true
+                  },
+                  "id": "e9d95e41-5fe3-4169-87d8-7c0dd24f5b03"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 59
+                    },
+                    "__collapse": true
+                  },
+                  "id": "2224b172-405e-47e1-9861-6bea4549f5ff"
+                }
+              ],
+              "false": []
+            },
+            "id": "ec034cdc-14da-4558-90ef-4f2c71743127"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 4,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Water Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 61
+                    },
+                    "__collapse": true
+                  },
+                  "id": "130833fc-e828-4760-92d5-faa40eecadfa"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 62
+                    },
+                    "__collapse": true
+                  },
+                  "id": "bceb1442-84fa-4cd1-b943-b25b1d627784"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 63
+                    },
+                    "__collapse": true
+                  },
+                  "id": "4b0bfce6-2f61-4560-b729-8d6b83e2c1f6"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 64
+                    },
+                    "__collapse": true
+                  },
+                  "id": "97f5763d-69d1-48a6-b851-2863c41d6fb6"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 65
+                    },
+                    "__collapse": true
+                  },
+                  "id": "81867a07-07dd-4a27-8687-a90102052c0c"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 66
+                    },
+                    "__collapse": true
+                  },
+                  "id": "d25eac9f-61fe-406b-8c78-cdf058b56752"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 67
+                    },
+                    "__collapse": true
+                  },
+                  "id": "ee5f2a76-ff93-425b-86aa-dce16c70e03c"
+                }
+              ],
+              "false": []
+            },
+            "id": "975d3928-637b-4b03-9e2f-5d83859adcc6"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 5,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Strength Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 69
+                    },
+                    "__collapse": true
+                  },
+                  "id": "69d18fba-041e-4f8d-b811-335f1fef8a88"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 70
+                    },
+                    "__collapse": true
+                  },
+                  "id": "751e5834-d6d9-4315-838e-3cccb482a1ca"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 71
+                    },
+                    "__collapse": true
+                  },
+                  "id": "0fa497b6-071a-41ec-b24d-1c40296d5ca4"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 72
+                    },
+                    "__collapse": true
+                  },
+                  "id": "18dd954c-bd1d-40be-a882-f6b6f02e9992"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 73
+                    },
+                    "__collapse": true
+                  },
+                  "id": "1f2412b2-6f39-472e-b8f6-94d62f98a00c"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 74
+                    },
+                    "__collapse": true
+                  },
+                  "id": "fa3f5c2b-2965-4412-ad6c-80b5cfd1c19a"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 75
+                    },
+                    "__collapse": true
+                  },
+                  "id": "ad9dc726-4f59-4f2f-a5ce-3815d7728a42"
+                }
+              ],
+              "false": []
+            },
+            "id": "d79def94-eb34-42a6-9193-834863a88216"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 6,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true,
+              "__label": "Strength Shrine"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 77
+                    },
+                    "__collapse": true
+                  },
+                  "id": "58b57fdf-9133-463b-8acd-16a452a42bac"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 78
+                    },
+                    "__collapse": true
+                  },
+                  "id": "83c8cac2-f8f3-4319-b88c-dbe315633698"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 79
+                    },
+                    "__collapse": true
+                  },
+                  "id": "00daa61c-b05b-434a-8a66-0014cd88e132"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 80
+                    },
+                    "__collapse": true
+                  },
+                  "id": "7bf98f9b-b586-47e2-a772-e319e32cbb07"
+                },
+                {
+                  "command": "EVENT_REPLACE_TILE_XY",
+                  "args": {
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "tilesetId": "ea40e940-044b-4061-9886-266073e86ffa",
+                    "tileIndex": {
+                      "type": "number",
+                      "value": 81
+                    },
+                    "__collapse": true
+                  },
+                  "id": "fa140897-8c51-4415-bca3-bbf50c7ecb1d"
+                }
+              ],
+              "false": []
+            },
+            "id": "1577cf8b-7000-4386-ad78-1ddcb1a83d78"
+          }
+        ]
+      },
+      "id": "769c664f-7017-4617-b55c-4cdf356a72f6"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "8af295e5-1f9a-4a14-a604-a3759b685c4b",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "9"
+        },
+        "__collapse": true
+      },
+      "id": "a8fd798a-9b39-4020-aa8c-1f2044d18810"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -266,8 +1175,8 @@
           "value": 0
         },
         "$variable[V1]$": {
-          "type": "number",
-          "value": 0
+          "type": "variable",
+          "value": "10"
         }
       },
       "id": "e99b7cc4-5921-4934-9e8e-cda320def0b3"
@@ -275,66 +1184,14 @@
     {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "L0",
+        "variable": "4",
         "value": {
           "type": "number",
           "value": 0
         },
-        "__collapse": false
+        "__collapse": true
       },
-      "id": "e9304b82-3880-4eea-a38d-6ceb3cbabc71"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
-        "$variable[V0]$": {
-          "type": "number",
-          "value": 1
-        },
-        "$variable[V1]$": {
-          "type": "number",
-          "value": 1
-        },
-        "$variable[V2]$": {
-          "type": "number",
-          "value": 0
-        },
-        "$variable[V3]$": {
-          "type": "variable",
-          "value": "L0"
-        },
-        "__collapse": true,
-        "__label": "Draw Weapon - Wand",
-        "__comment": true
-      },
-      "id": "a18582fa-7329-4c27-ab82-5af6fe9825fb"
-    },
-    {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
-      "args": {
-        "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
-        "$variable[V0]$": {
-          "type": "number",
-          "value": 2
-        },
-        "$variable[V1]$": {
-          "type": "number",
-          "value": 2
-        },
-        "$variable[V2]$": {
-          "type": "number",
-          "value": 0
-        },
-        "$variable[V3]$": {
-          "type": "variable",
-          "value": "L0"
-        },
-        "__collapse": true,
-        "__label": "Draw Weapon - Bow & Arrow",
-        "__comment": true
-      },
-      "id": "4138ef64-4748-465c-bb31-b27ac9eaa807"
+      "id": "a92f2a9a-f82d-48d8-9339-9e534fa0d435"
     },
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -357,7 +1214,8 @@
           "value": "L0"
         },
         "__collapse": true,
-        "__label": "Draw Treasure - Ladder"
+        "__label": "Draw Treasure - Ladder",
+        "__comment": true
       },
       "id": "fb1dbece-70a6-432f-b593-bf7f5e3a5ac0"
     },
@@ -365,7 +1223,8 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "empty slots",
-        "__collapse": true
+        "__collapse": false,
+        "__comment": true
       },
       "children": {
         "true": [
@@ -527,45 +1386,26 @@
       "id": "7e96dc60-a746-4ef5-b389-d33691ea6d1b"
     },
     {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "4",
-        "value": {
-          "type": "number",
-          "value": 0
-        }
-      },
-      "id": "a92f2a9a-f82d-48d8-9339-9e534fa0d435"
-    },
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "L0",
-        "value": {
-          "type": "number",
-          "value": 0
-        },
-        "__collapse": false
-      },
-      "id": "bd5ca186-e58f-4414-90a3-1b36aba2c0c2"
-    },
-    {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "44814647-78b4-46e7-ae14-d0fcb4167d50",
         "$variable[V0]$": {
           "type": "variable",
-          "value": "L1"
+          "value": "L0"
         },
         "$variable[V1]$": {
           "type": "variable",
-          "value": "L0"
+          "value": "L1"
         },
         "$variable[V2]$": {
           "type": "variable",
-          "value": "10"
+          "value": "L2"
         },
-        "__comment": false
+        "__comment": false,
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L3"
+        }
       },
       "id": "230cb58c-0211-447e-95b3-8fa221e93fc0"
     }
