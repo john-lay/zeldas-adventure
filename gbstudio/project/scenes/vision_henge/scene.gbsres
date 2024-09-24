@@ -17,6 +17,41 @@
   "y": 32,
   "script": [
     {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "2",
+        "value": {
+          "type": "number",
+          "value": 546
+        }
+      },
+      "id": "565581fa-8347-439a-a6ea-e65377a149df"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "2"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L3"
+        },
+        "__collapse": true
+      },
+      "id": "f48c2b4d-ae56-4274-afa7-93bfe8bcef5e"
+    },
+    {
       "command": "EVENT_GBVM_SCRIPT",
       "args": {
         "references": [
@@ -26,7 +61,8 @@
           }
         ],
         "script": "; start of GBVM script; lines starting with ; are comments and are ignored by the compiler\n\n; Use VM_PUSH_CONST to store value we want to be called by START_IDX onto the stack, it can be accessed by the alias .ARG0 in the command.\nVM_PUSH_CONST 11\n\n; call the swap function by passing the START_IDX using .ARG0 alias\n\nVM_REPLACE_TILE_XY 1, 0, ___bank_tileset_hud, _tileset_hud, .ARG0\n; free memory assigned to .ARG0 with VM_POP\n\nVM_POP 1\n\n; end of GBVM script",
-        "__comment": false
+        "__comment": false,
+        "__collapse": true
       },
       "id": "628c7dfe-f186-4f68-9361-0be288bc1626"
     },
@@ -55,7 +91,8 @@
                 "type": "number",
                 "value": 11
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": true
             },
             "id": "575f3732-9c19-4fb6-b9fe-0efdfd08a365"
           },
@@ -75,7 +112,8 @@
                 "type": "number",
                 "value": 0
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": true
             },
             "id": "3f532a11-f111-4a19-96a5-afa63aec840a"
           },
@@ -95,7 +133,8 @@
                 "type": "number",
                 "value": 10
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": true
             },
             "id": "5caa6ce7-e0b4-4409-b656-8fa9fc80230a"
           },
@@ -115,7 +154,8 @@
                 "type": "number",
                 "value": 10
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": true
             },
             "id": "28891daa-883a-4ffa-b6b2-86e8085c4762"
           },
@@ -135,7 +175,8 @@
                 "type": "number",
                 "value": 10
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": true
             },
             "id": "c2b31997-72f5-4992-ad8d-26421d89f8d3"
           },
@@ -528,7 +569,7 @@
     {
       "command": "EVENT_GBVM_SCRIPT",
       "args": {
-        "script": "VM_PROJECTILE_LOAD_TYPE 0, ___bank_sprite_spell_boomerang, _sprite_spell_boomerang",
+        "script": ";VM_PROJECTILE_LOAD_TYPE 0, ___bank_sprite_spell_boomerang, _sprite_spell_boomerang\nVM_PROJECTILE_LOAD_TYPE 0, ___bank_scene_3_projectiles, _sprite_spell_boomerang\n",
         "references": [
           {
             "type": "sprite",
@@ -640,10 +681,31 @@
                     "collisionMask": [
                       "1"
                     ],
-                    "__comment": false,
+                    "__comment": true,
                     "__collapse": true
                   },
                   "id": "7270965d-181d-4b5f-8d67-a5873a43845e"
+                },
+                {
+                  "command": "FO_EVENT_LAUNCH_LOADED_PROJECTILE",
+                  "args": {
+                    "spriteSheetId": "10a318b8-28be-4972-8bfb-c822084e5836",
+                    "slot": 0,
+                    "source": 0,
+                    "scene": "44e405c7-9363-4b2d-bd52-ca0391eda03c",
+                    "actorId": "$self$",
+                    "x": 0,
+                    "y": 0,
+                    "directionType": "direction",
+                    "otherActorId": "$self$",
+                    "direction": "right",
+                    "angle": 0,
+                    "angleVariable": "L0",
+                    "targetActorId": "$self$",
+                    "loopAnim": true,
+                    "destroyOnHit": true
+                  },
+                  "id": "41565220-1c92-456c-9eda-6857bcd4e750"
                 }
               ],
               "false": []
