@@ -68,7 +68,7 @@
               "flag14": true,
               "flag15": true,
               "flag16": true,
-              "__collapse": false
+              "__collapse": true
             },
             "id": "8d8f64c5-abad-4e8d-bae3-b4396981cd81"
           },
@@ -92,7 +92,7 @@
               "flag14": false,
               "flag15": false,
               "flag16": false,
-              "__collapse": false
+              "__collapse": true
             },
             "id": "5c9b48e9-3450-41b4-ab2a-e5ce4dff55d3"
           },
@@ -127,7 +127,8 @@
               "value": {
                 "type": "number",
                 "value": 4
-              }
+              },
+              "__comment": true
             },
             "id": "af5c9ce5-4da6-446f-afe4-1a4cf6076dd2"
           }
@@ -1321,6 +1322,39 @@
         }
       },
       "id": "16b289f8-0d11-4215-b6ae-dc6ae3fdddcc"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "14",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "fe9b008d-1a0e-44ba-ab35-4ba89883acdc"
+          },
+          {
+            "command": "EVENT_SCENE_POP_STATE",
+            "args": {
+              "fadeSpeed": 1
+            },
+            "id": "392c41d7-7544-4cbe-bba3-203fe0c0ec48"
+          }
+        ]
+      },
+      "id": "3e1918bb-89e4-4fec-bc24-d49cda4f7922"
     }
   ],
   "playerHit1Script": [],
