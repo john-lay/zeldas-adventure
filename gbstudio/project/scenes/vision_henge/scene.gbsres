@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "b76c1130-db51-4708-8dba-8f8bd848a56e",
-  "_index": 1,
+  "_index": 0,
   "name": "Vision Henge",
   "backgroundId": "189745ae-5887-4d15-8f5a-02eb8771f0bd",
   "tilesetId": "",
@@ -68,7 +68,8 @@
                 "type": "number",
                 "value": 1
               },
-              "__collapse": true
+              "__collapse": true,
+              "__comment": false
             },
             "id": "b5fa571f-abe9-424f-aed8-2b35ff45343b"
           }
@@ -165,19 +166,12 @@
       "id": "8e0d9edc-6d7a-4163-8ee2-8a8a65ee27eb"
     },
     {
-      "command": "EVENT_GBVM_SCRIPT",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "references": [
-          {
-            "type": "sprite",
-            "id": "901f8e8e-a7e3-4e8b-ad2c-b663f9e71e84"
-          }
-        ],
-        "script": ";reference allows \"Launch Spell Projectile\" to compile\nVM_PUSH_CONST 1 ; .ARG0\nVM_ACTOR_SET_SPRITESHEET .ARG0, ___bank_sprite_spell_calm, _sprite_spell_calm\nVM_POP 1",
-        "__comment": false,
-        "__collapse": false
+        "customEventId": "7edcf8b4-e4ac-4a05-ba49-d511001c9a34",
+        "__comment": false
       },
-      "id": "b848a4d0-ff7c-44ad-a512-79174d452597"
+      "id": "c201236a-db6a-4317-8656-e884f0e8e6a7"
     },
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
@@ -192,54 +186,12 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_IF_ACTOR_DIRECTION",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "direction",
-                "value": "up"
-              },
-              "__collapseElse": true,
-              "__disableElse": true,
-              "__collapse": false,
+              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
               "__comment": false
             },
-            "children": {
-              "true": [
-                {
-                  "command": "EVENT_LAUNCH_PROJECTILE",
-                  "args": {
-                    "__section": "projectile",
-                    "spriteSheetId": "e8b3b2ab-63e8-4e70-8f05-50359dd7da00",
-                    "spriteStateId": "",
-                    "actorId": "$self$",
-                    "x": 0,
-                    "y": 0,
-                    "directionType": "direction",
-                    "otherActorId": "$self$",
-                    "direction": "up",
-                    "angle": 0,
-                    "angleVariable": "L0",
-                    "targetActorId": "$self$",
-                    "initialOffset": 0,
-                    "speed": 2,
-                    "animSpeed": 15,
-                    "lifeTime": 1,
-                    "loopAnim": true,
-                    "destroyOnHit": true,
-                    "collisionGroup": "3",
-                    "collisionMask": [
-                      "1"
-                    ],
-                    "__comment": true,
-                    "__collapse": false
-                  },
-                  "id": "7270965d-181d-4b5f-8d67-a5873a43845e"
-                }
-              ],
-              "false": []
-            },
-            "id": "13cc5975-3551-4d26-b544-36b4d9c89a0d"
+            "id": "cd6833b9-32d9-4409-8b24-28a00aed9d0f"
           }
         ]
       },
@@ -295,5 +247,6 @@
   ],
   "playerHit1Script": [],
   "playerHit2Script": [],
-  "playerHit3Script": []
+  "playerHit3Script": [],
+  "playerSpriteSheetId": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
 }
