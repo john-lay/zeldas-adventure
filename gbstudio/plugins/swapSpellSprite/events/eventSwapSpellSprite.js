@@ -2,6 +2,7 @@ export const id = "ZA_EVENT_SWAP_SPELL_SPRITE";
 export const groups = ["Zelda's Adventure"];
 export const name = "Swap Spell Sprite";
 
+// inspired by https://github.com/tomo666/gb-studio-xv-plugins
 export const fields = [
     {
         type: "group",
