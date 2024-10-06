@@ -3,7 +3,18 @@
   "id": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
   "name": "ZA_attack_spell",
   "description": "",
-  "variables": {},
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Draw Rupee - Count",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "Draw Rupee - Digit",
+      "passByReference": true
+    }
+  },
   "actors": {},
   "symbol": "script_15",
   "script": [
@@ -25,17 +36,6 @@
         "__disableElse": true,
         "__collapse": false,
         "__label": "1. Wand"
-      },
-      "children": {
-        "true": [],
-        "false": []
-      },
-      "id": "2db6b0d9-d4de-4c79-83f3-e83ba9840482"
-    },
-    {
-      "command": "EVENT_GROUP",
-      "args": {
-        "__label": "Launch Projectile in direction"
       },
       "children": {
         "true": [
@@ -78,7 +78,8 @@
                     "collisionMask": [
                       "1",
                       "2"
-                    ]
+                    ],
+                    "__collapse": true
                   },
                   "id": "7f9340e4-418d-4731-8566-354cfc36b84d"
                 }
@@ -231,9 +232,142 @@
             },
             "id": "4b3c1f07-37de-4fca-9e5a-080b7c4f609d"
           }
-        ]
+        ],
+        "false": []
       },
-      "id": "caea8283-35f0-453e-817d-4a9402df663b"
+      "id": "2db6b0d9-d4de-4c79-83f3-e83ba9840482"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "10"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false,
+        "__label": "2. Bow & Arrow"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "16",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "1d4d17d2-43f5-4e0e-9c75-4037dbdf5469"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "gte",
+                "valueA": {
+                  "type": "variable",
+                  "value": "2"
+                },
+                "valueB": {
+                  "type": "variable",
+                  "value": "16"
+                }
+              },
+              "__collapseElse": false,
+              "__label": "Has enough Rupees"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "args": {
+                    "__section": "source",
+                    "spriteSheetId": "e8b3b2ab-63e8-4e70-8f05-50359dd7da00",
+                    "spriteStateId": "",
+                    "actorId": "$self$",
+                    "x": 0,
+                    "y": 0,
+                    "directionType": "actor",
+                    "otherActorId": "$self$",
+                    "direction": "left",
+                    "angle": 0,
+                    "angleVariable": "V0",
+                    "targetActorId": "$self$",
+                    "initialOffset": 0,
+                    "speed": 2,
+                    "animSpeed": 15,
+                    "lifeTime": 1,
+                    "loopAnim": false,
+                    "destroyOnHit": true,
+                    "collisionGroup": "1",
+                    "collisionMask": [
+                      "1",
+                      "2"
+                    ]
+                  },
+                  "id": "88862c09-7112-4c01-9b78-6e3555bb3681"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "2",
+                    "operation": "sub",
+                    "other": "var",
+                    "vectorY": "16",
+                    "value": "0",
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false
+                  },
+                  "id": "5aaa52e8-e686-43f0-940b-18e334033374"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+                    "$variable[V0]$": {
+                      "type": "variable",
+                      "value": "2"
+                    },
+                    "$variable[V1]$": {
+                      "type": "variable",
+                      "value": "V0"
+                    },
+                    "$variable[V2]$": {
+                      "type": "variable",
+                      "value": "V1"
+                    }
+                  },
+                  "id": "600ace02-f6e6-4c79-b185-7e06a6f4fa2b"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_EMOTE",
+                  "args": {
+                    "actorId": "$self$",
+                    "emoteId": "3c769dca-51f3-426c-942f-71c4d3af6202"
+                  },
+                  "id": "3ec3e634-598a-44fc-968a-3350fe15bc37"
+                }
+              ]
+            },
+            "id": "d83eb382-5d9e-40b4-ab18-0a46640b652a"
+          }
+        ],
+        "false": []
+      },
+      "id": "4a31fc30-89fa-44cc-bc4e-ba2a5d95bff4"
     }
   ]
 }
