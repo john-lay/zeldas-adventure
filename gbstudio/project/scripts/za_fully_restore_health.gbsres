@@ -1,0 +1,71 @@
+{
+  "_resourceType": "script",
+  "id": "810970fb-478b-45a3-887f-6d1081f9bb1f",
+  "name": "ZA_fully_restore_health",
+  "description": "Replenishes all available hearts.\n\nIn a scenario with 3 hearts, Zelda's health can have a maximum value of 6:\n6x half hearts = 3 hearts\n\nTo replenish all hearts set the health to max hearts twice\nIn a scenario with 3 hearts and 6 health:\n\n1. health = Max hearts. (Health now 3)\n2. health += max hearts (Health now 6)",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "draw hearts - count",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "draw hearts - start",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "draw hearts - index",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "symbol": "script_5",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "0",
+        "value": {
+          "type": "variable",
+          "value": "1"
+        }
+      },
+      "id": "508141a3-1439-4b43-8b64-d98d676cf750"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "0",
+        "operation": "add",
+        "other": "var",
+        "vectorY": "1",
+        "value": "0",
+        "minValue": "0",
+        "maxValue": "32767",
+        "clamp": false
+      },
+      "id": "37e2285c-8c6e-4a81-b95f-133ea847a6f5"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "V0"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "V1"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "V2"
+        }
+      },
+      "id": "0c30efad-486f-487f-915e-012dd634b9a7"
+    }
+  ]
+}
