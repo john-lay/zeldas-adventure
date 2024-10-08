@@ -128,12 +128,11 @@ A listing of variables used in GB Studio and their types.
 * `$12$: Variable 012` Zelda PosX - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
 * `$13$: Variable 013` Zelda PosY - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
 * `$14$: Variable 014` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
-    * (0 represents Zelda's position should be restored by GB Studio's last known position of Zelda. i.e. When the scene is popped off the stack)
+    * (0 represents Zelda's position should be manually managed)
     * (1 represents Zelda exitted at the __top__ of the screen)
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
-    * (5 represents Zelda's screen position is explicitly set)
 * `$15$: Variable 015` Attack Power - `number`. (Zelda's attack power)
 * `$16$: Variable 016` Spell Cost - `number`. (Cost of the equipped spell)
 ```
