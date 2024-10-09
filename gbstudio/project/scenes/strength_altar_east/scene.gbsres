@@ -52,7 +52,7 @@
                 "type": "variable",
                 "value": "L3"
               },
-              "__collapse": true
+              "__collapse": false
             },
             "id": "15bc1c46-8593-43d7-8727-043c4114b09d"
           },
@@ -76,7 +76,7 @@
                 "type": "variable",
                 "value": "L3"
               },
-              "__collapse": true
+              "__collapse": false
             },
             "id": "d931a45f-fc96-4748-b28b-d4dcb56c8cdc"
           },
@@ -100,11 +100,11 @@
       "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
         "input": [
-          "a"
+          "b"
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -169,10 +169,80 @@
         ]
       },
       "id": "c028e41c-21bd-4642-b9a6-57c8ad5f6611"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Combat"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L3",
+              "value": {
+                "type": "false"
+              },
+              "__collapse": true
+            },
+            "id": "0af1b369-8a72-4888-b1fa-6311a8ff15a8"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L4",
+              "value": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": true
+            },
+            "id": "b2b3d52a-a2d5-4d82-98f3-a0737e6e699f"
+          }
+        ]
+      },
+      "id": "083c449a-3b9a-4ae0-8279-87c707f507f8"
     }
   ],
   "playerHit1Script": [],
   "playerHit2Script": [],
-  "playerHit3Script": [],
+  "playerHit3Script": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "Player hit by enemy projectile",
+        "__collapse": true
+      },
+      "id": "e31a7e44-f812-4baf-a28e-b4c398bf36e2"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L3"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L4"
+        }
+      },
+      "id": "401b3133-c9fc-4827-9a4b-9c213147e8ac"
+    }
+  ],
   "playerSpriteSheetId": "2839a599-9b3d-4c6b-b06b-6a7edfa246fc"
 }

@@ -133,7 +133,7 @@ A listing of variables used in GB Studio and their types.
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
-* `$15$: Variable 015` Attack Power - `number`. (Zelda's attack power)
+* `$15$: Variable 015` Player Attack Power - `number`. (Zelda's attack power)
 * `$16$: Variable 016` Spell Cost - `number`. (Cost of the equipped spell)
 ```
   * (1.  Wand ------------- No cost)
