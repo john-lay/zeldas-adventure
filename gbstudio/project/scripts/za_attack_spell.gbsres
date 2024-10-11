@@ -4186,7 +4186,7 @@
         "__disableElse": true,
         "__collapse": true,
         "__label": "15. Pyros",
-        "__comment": false
+        "__comment": true
       },
       "children": {
         "true": [
@@ -4736,6 +4736,53 @@
         "false": []
       },
       "id": "268c3328-b9a3-4547-a476-0aff78d1cb5a"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "10"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 15
+          }
+        },
+        "__collapseElse": true,
+        "__label": "15. Pyros",
+        "__disableElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "$self$",
+              "emoteId": "70a4ce25-1fe4-4ab1-aee9-21255e70fb76"
+            },
+            "id": "98f7687a-3ff0-4da2-8564-34bfba168e93"
+          },
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "64ddafa6-3f7f-41c7-8827-81bc42c4a4da",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": true,
+              "effect": 1
+            },
+            "id": "5695a5c0-ada4-401b-917c-91b868de892b"
+          }
+        ],
+        "false": []
+      },
+      "id": "a1e7462f-0a4f-455d-8181-893eec2556bc"
     },
     {
       "command": "EVENT_IF",
