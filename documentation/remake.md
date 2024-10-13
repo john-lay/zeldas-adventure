@@ -13,19 +13,23 @@
 - [ ] Add name entry system
   - [ ] Cheat codes https://tcrf.net/Zelda%27s_Adventure
 - [ ] Improve audio
-  - [ ] Sound FXs
+  - [x] Sound FXs
   - [ ] Intro music
   - [ ] Boss music
   - [ ] celestial sign chamber music
   - [ ] ending music
 - [ ] Improve combat
-  - [ ] Enemy hit state
-  - [ ] Zelda hit state
-  - [ ] Enemy death animation
-  - [ ] Enemies respawn immediately
+  - [x] Enemy hit state
+  - [x] Zelda hit state
+  - [x] Enemy death animation
+  - [x] Enemies respawn immediately
   - [ ] Boss hit counter resets on pause
 - [ ] Fix save and resume. When player dies, ensure the restart at the correct location
-- [ ] 
+- [ ] UI + dialogue
+  - [ ] review dialogue frame
+  - [ ] review font
+  - [ ] japanese font
+  
 
 community suggestions
 - intro with dialogue cut scene

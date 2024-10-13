@@ -214,12 +214,12 @@
               "flag8": true,
               "flag9": true,
               "flag10": true,
-              "flag11": true,
-              "flag12": true,
-              "flag13": true,
-              "flag14": true,
-              "flag15": true,
-              "flag16": true,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
               "__collapse": true
             },
             "id": "606096bc-91c8-4bfa-af41-95a1c950de12"
@@ -231,9 +231,56 @@
               "value": {
                 "type": "number",
                 "value": 0
-              }
+              },
+              "__collapse": true
             },
             "id": "4fe535c6-adbe-4148-b363-07a35ff703da"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "17",
+              "flag": 10,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "5d7096db-73a5-4e13-89f5-7d2a9710f275"
+                  },
+                  "id": "e53ffeb5-0f6c-4356-a785-6a42d5d9ba40"
+                }
+              ],
+              "false": []
+            },
+            "id": "38bcac96-691c-46fb-97c8-3b5810e9abb1"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "17",
+              "flag": 11,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "dc316da0-0d10-4c11-80d7-607acc98548b"
+                  },
+                  "id": "2fd9efc4-97e2-4a25-85b2-36afa9fe621b"
+                }
+              ],
+              "false": []
+            },
+            "id": "5917a417-297b-4ac2-986d-0092f19a58f4"
           }
         ]
       },

@@ -194,6 +194,10 @@ A listing of variables used in GB Studio and their types.
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
+* `$23$: Variable 023` Language - `number`.
+    * (0 represents English)
+    * (1 represents French)
+    * (2 represents Japanese)
 * `$23$: Variable 023` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
