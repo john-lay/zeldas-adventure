@@ -1,35 +1,45 @@
 {
   "_resourceType": "script",
-  "id": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
-  "name": "QS_draw_empty_slot",
-  "description": "1-6 for treasures\n7-12 for weapons",
+  "id": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
+  "name": "Quest Status/draw_inventory",
+  "description": "item index\n1-19 for weapons\n20-44 for treasures  ",
   "variables": {
     "V0": {
       "id": "V0",
-      "name": "Slot (1-12)",
+      "name": "Slot (1-6)",
       "passByReference": true
     },
     "V1": {
       "id": "V1",
+      "name": "Item Index (1-44)",
+      "passByReference": true
+    },
+    "V2": {
+      "id": "V2",
+      "name": "Item Tile Index",
+      "passByReference": true
+    },
+    "V3": {
+      "id": "V3",
       "name": "X Tile Index",
       "passByReference": true
     }
   },
   "actors": {},
-  "symbol": "script_1",
+  "symbol": "script_4",
   "script": [
     {
       "command": "EVENT_IF",
       "args": {
         "condition": {
-          "type": "lte",
+          "type": "lt",
           "valueA": {
             "type": "variable",
-            "value": "V0"
+            "value": "V1"
           },
           "valueB": {
             "type": "number",
-            "value": 6
+            "value": 20
           }
         },
         "__collapseElse": false
@@ -39,8 +49,8 @@
           {
             "command": "EVENT_GROUP",
             "args": {
-              "__label": "Draw Treasure",
-              "__collapse": false
+              "__label": "Draw Weapons",
+              "__collapse": true
             },
             "children": {
               "true": [
@@ -54,33 +64,41 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
+                          "variable": "V3",
                           "expression": "($V0$ * 2) + 1"
                         },
-                        "id": "455eafd1-54bf-42ab-8654-d71ef9dea1c8"
+                        "id": "7cdaa746-d14a-4d0f-bc2a-c0261260fc9a"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4)"
+                        },
+                        "id": "5342e4b6-f36e-4aeb-bf9d-a69c48ce6810"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 11
+                            "value": 15
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "1c117182-bddb-4f6d-b1cf-6b533455454d"
+                        "id": "f95e36d0-2e0a-4133-90ff-88507a7842cb"
                       }
                     ]
                   },
-                  "id": "c23ff775-3b58-45d1-95dc-58cca2c303fe"
+                  "id": "ce5fa620-e5c0-4f47-8960-00aa594fc4fc"
                 },
                 {
                   "command": "EVENT_GROUP",
@@ -92,35 +110,43 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
+                          "variable": "V3",
                           "expression": "($V0$ * 2) + 2"
                         },
-                        "id": "735bbf68-a797-4354-9f4c-2bd2316276ba"
+                        "id": "c05d2348-ace2-448a-97a6-08c0444df5e8"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 1"
+                        },
+                        "id": "e67878b0-a387-4337-8fff-61b7caf632fa"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 11
+                            "value": 15
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           },
                           "variable": "V2",
                           "expression": "(($V1$ - 1) * 4) + 1"
                         },
-                        "id": "5159ec49-2ee9-40de-898f-98adadcb70eb"
+                        "id": "55120133-5d21-48dd-8dac-cac3778dd710"
                       }
                     ]
                   },
-                  "id": "2c38aa80-f9a5-49fa-ac86-0a20cfd32c48"
+                  "id": "d5b0431d-005b-4e54-9612-03b0c6f2861e"
                 },
                 {
                   "command": "EVENT_GROUP",
@@ -133,33 +159,41 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
+                          "variable": "V3",
                           "expression": "($V0$ * 2) + 1"
                         },
-                        "id": "9ddf3fc0-fb31-4fdd-ba66-a2f2e20d47ed"
+                        "id": "4fba8fb9-f8fe-4536-8bb4-aea595091641"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 2"
+                        },
+                        "id": "fab7dea6-af10-4b77-83e1-fd8b28ad6b9a"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 12
+                            "value": 16
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "0da04b00-d3e0-479d-93dc-24dc75db2550"
+                        "id": "ff27ea27-29b2-4012-94aa-d4b62c6d5283"
                       }
                     ]
                   },
-                  "id": "b366b84a-043b-42c0-b342-04f646ac761c"
+                  "id": "df8fcc6d-ff94-459d-a73d-f748801d8951"
                 },
                 {
                   "command": "EVENT_GROUP",
@@ -171,126 +205,151 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
+                          "variable": "V3",
                           "expression": "($V0$ * 2) + 2"
                         },
-                        "id": "3c7ff3d9-bc69-42d9-80ec-504bf36045d0"
+                        "id": "8aa92800-5f8e-44cb-b131-785212a919dd"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 3"
+                        },
+                        "id": "81ce0225-112b-46ff-9dee-5e7a4ea81c3c"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 12
+                            "value": 16
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "f2fb3bf6-b516-4f91-a3b1-e53c07bb3372"
+                        "id": "5d853e4c-c2cb-4490-913b-e9408420109c"
                       }
                     ]
                   },
-                  "id": "ab6056d4-97f8-4a61-a016-819b54cd33d8"
+                  "id": "5b3c6f83-dc82-4ab5-9ec9-a2e898d559f6"
                 }
               ]
             },
-            "id": "c3713bd1-54b8-4cc7-b4d2-0b2764de3e66"
+            "id": "41d2ebed-fdab-4a21-a085-923c3d0866b5"
           }
         ],
         "false": [
           {
             "command": "EVENT_GROUP",
             "args": {
-              "__label": "Draw Weapons",
-              "__collapse": false,
-              "__comment": false
+              "__label": "Draw Treasures",
+              "__collapse": true
             },
             "children": {
               "true": [
                 {
                   "command": "EVENT_GROUP",
                   "args": {
-                    "__label": "Top Left"
+                    "__label": "Top Left",
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
-                          "expression": "(($V0$ - 6)* 2) + 1"
+                          "variable": "V3",
+                          "expression": "($V0$ * 2) + 1"
                         },
-                        "id": "f8fbba77-36dd-404e-9c97-458860db3ca7"
+                        "id": "b28031b2-88fa-4651-829c-d2af0fcfa130"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4)"
+                        },
+                        "id": "0b205e3b-5c84-44f3-b20a-e10d25c9a80c"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 15
+                            "value": 11
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "a4548484-5d59-4d2d-a51f-b60dd7bcdb94"
+                        "id": "62b60c33-f689-4195-95de-4235e0414a59"
                       }
                     ]
                   },
-                  "id": "c3ed5e03-f756-4212-819c-2d3c60ca3c9e"
+                  "id": "5ccfee46-2f1b-472e-a542-c27e548d927c"
                 },
                 {
                   "command": "EVENT_GROUP",
                   "args": {
-                    "__label": "Top RIght"
+                    "__label": "Top RIght",
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
-                          "expression": "(($V0$ - 6)* 2) + 2"
+                          "variable": "V3",
+                          "expression": "($V0$ * 2) + 2"
                         },
-                        "id": "b505fb5e-4062-4ab5-bb07-fb95a347fccb"
+                        "id": "54314a86-bc8d-4f19-a555-b427b98b4f33"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 1"
+                        },
+                        "id": "26b49ad0-26ea-47fb-a9fe-6afe11f7452d"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 15
+                            "value": 11
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           },
                           "variable": "V2",
                           "expression": "(($V1$ - 1) * 4) + 1"
                         },
-                        "id": "5d34e5d9-a44c-4a8f-b472-a2e0b105a20d"
+                        "id": "de7f4a27-6441-4826-8e20-6b06772886a7"
                       }
                     ]
                   },
-                  "id": "67a36c01-a8c2-4d2b-b114-1385f8e55420"
+                  "id": "63e3128d-9cf3-4f98-b718-ee0dd35c7d2e"
                 },
                 {
                   "command": "EVENT_GROUP",
@@ -303,33 +362,41 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
-                          "expression": "(($V0$ - 6)* 2) + 1"
+                          "variable": "V3",
+                          "expression": "($V0$ * 2) + 1"
                         },
-                        "id": "8a03cfac-7d52-4a02-88cc-18e08f3e3650"
+                        "id": "81320e8b-e05a-493e-9457-34140189802b"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 2"
+                        },
+                        "id": "6871af01-3b85-4dbf-9cec-8569361ce26d"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 16
+                            "value": 12
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "d92a65ac-8fae-46e5-8805-0aa8f6f57966"
+                        "id": "940d5473-8313-474a-b3ac-8fd4a55d49ef"
                       }
                     ]
                   },
-                  "id": "c00e8938-531a-4903-8c0a-2db6fa96363e"
+                  "id": "7fbd8127-86d0-4ec3-8642-fcd1ffa1d70e"
                 },
                 {
                   "command": "EVENT_GROUP",
@@ -341,41 +408,49 @@
                       {
                         "command": "EVENT_VARIABLE_MATH_EVALUATE",
                         "args": {
-                          "variable": "V1",
-                          "expression": "(($V0$ - 6)* 2) + 2"
+                          "variable": "V3",
+                          "expression": "($V0$ * 2) + 2"
                         },
-                        "id": "892a586c-ad2f-45ab-8cc0-ed5d74648635"
+                        "id": "30a26e4e-9df2-43b5-90bb-4fe8fa09f8f0"
+                      },
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "V2",
+                          "expression": "(($V1$ - 1) * 4) + 3"
+                        },
+                        "id": "2c924ed9-5f8f-42f0-88fb-f5ee157eb919"
                       },
                       {
                         "command": "EVENT_REPLACE_TILE_XY",
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V1"
+                            "value": "V3"
                           },
                           "y": {
                             "type": "number",
-                            "value": 16
+                            "value": 12
                           },
                           "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
                           "tileIndex": {
-                            "type": "number",
-                            "value": 190
+                            "type": "variable",
+                            "value": "V2"
                           }
                         },
-                        "id": "c398ed04-4a35-4c03-802e-917535825f79"
+                        "id": "40ed02f3-d0fa-4bf8-8d82-a097a615fb36"
                       }
                     ]
                   },
-                  "id": "f87453c8-2b25-4dfe-a04d-878ef473804c"
+                  "id": "49528fc4-6f78-4e98-b74d-2af795194035"
                 }
               ]
             },
-            "id": "b2137f97-a4db-4166-937c-4353dc4856ff"
+            "id": "a278546e-38aa-4cd0-81e0-087439d91160"
           }
         ]
       },
-      "id": "95f33f1d-480d-40a6-92cb-75924e7b1ba3"
+      "id": "a816b42a-d5e6-4af8-9d49-51fa149206c2"
     }
   ]
 }

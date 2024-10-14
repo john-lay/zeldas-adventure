@@ -40,3 +40,10 @@ community suggestions
 - monsters react to being hit
 - whe you die the game is corrupt. Can't restart at checkpoint
 - file select
+
+
+additional credits
+==================
+Adventure reforged
+xv plugin inspiration
+french translation
