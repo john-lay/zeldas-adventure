@@ -111,12 +111,26 @@
             "id": "40770300-bbeb-40a3-9629-d19b9158bc62"
           },
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
-              "__collapse": true
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
             },
-            "id": "c029cd42-62c8-4c21-84c6-7994f092b847"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "c959ab58-bbab-4e73-b4be-4812ee98bbab"
+                }
+              ],
+              "false": []
+            },
+            "id": "28675727-4815-467f-8d7d-b94d0a24c45f"
           }
         ]
       },

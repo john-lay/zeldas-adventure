@@ -78,11 +78,26 @@
       "id": "64e02194-9446-41fa-9639-a065c2072beb"
     },
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "command": "EVENT_IF_COLOR_SUPPORTED",
       "args": {
-        "customEventId": "011b368f-796b-423b-ae88-4173cb173ede"
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
       },
-      "id": "78f4f7e5-6e5f-4b45-a927-7f417a875dee"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+              "__collapse": true
+            },
+            "id": "754f177c-9a8d-44c0-aeb3-58e4cd743826"
+          }
+        ],
+        "false": []
+      },
+      "id": "eec0fc47-913a-4815-a2c2-20be80b73cca"
     },
     {
       "command": "EVENT_SWITCH",

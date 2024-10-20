@@ -46,7 +46,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": false
+        "__collapse": true
       },
       "children": {
         "true": [
@@ -111,12 +111,26 @@
             "id": "724a7b90-1009-455b-b57e-4871222a4b3e"
           },
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
-              "__collapse": true
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
             },
-            "id": "28d31301-ff20-45f4-b82d-a13b9808ab3d"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "142903c1-b958-4450-a7a3-885a86242fd3"
+                }
+              ],
+              "false": []
+            },
+            "id": "c5785ad5-6fbd-46eb-8c35-8f2aa3e3ee8d"
           }
         ]
       },

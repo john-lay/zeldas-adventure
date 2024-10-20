@@ -181,12 +181,26 @@
             "id": "9df0df9e-c264-42ec-9a58-a17a1ad066ff"
           },
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
-              "__collapse": true
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
             },
-            "id": "3f0570a4-f62b-43a4-8599-d19201ad06ff"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "3f0570a4-f62b-43a4-8599-d19201ad06ff"
+                }
+              ],
+              "false": []
+            },
+            "id": "733da04d-7168-4196-ae27-f8309b67757e"
           }
         ]
       },
