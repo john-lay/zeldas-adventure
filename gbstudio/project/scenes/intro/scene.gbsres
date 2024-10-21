@@ -39,7 +39,8 @@
           "type": "number",
           "value": 14
         },
-        "speed": 0
+        "speed": 0,
+        "__comment": true
       },
       "id": "c13d809c-e6ea-4db3-bfbe-6e1e55859155"
     },
@@ -47,9 +48,75 @@
       "command": "EVENT_WAIT",
       "args": {
         "time": 0.5,
-        "frames": 30
+        "frames": 30,
+        "__comment": true
       },
       "id": "2b7ea1ed-1dbf-4412-b204-421874758d23"
+    },
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.6,
+        "frames": 30,
+        "__scriptTabs": "end",
+        "__collapse": true,
+        "__label": "Animated Water",
+        "__comment": true
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 12
+              },
+              "y": {
+                "type": "number",
+                "value": 30
+              },
+              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
+              "tileIndex": {
+                "type": "number",
+                "value": 4
+              },
+              "frames": {
+                "type": "number",
+                "value": 4
+              },
+              "variable": "L0"
+            },
+            "id": "aa371bee-1aa1-403d-86de-750a70b5cecc"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 13
+              },
+              "y": {
+                "type": "number",
+                "value": 30
+              },
+              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
+              "tileIndex": {
+                "type": "number",
+                "value": 8
+              },
+              "frames": {
+                "type": "number",
+                "value": 4
+              },
+              "variable": "L1"
+            },
+            "id": "4c08380d-d251-4957-a43d-0beed1dd0aad"
+          }
+        ]
+      },
+      "id": "75c1543c-3dce-4e13-8b2a-47634fc64898"
     },
     {
       "command": "EVENT_CAMERA_MOVE_TO",
@@ -62,7 +129,8 @@
           "type": "number",
           "value": 0
         },
-        "speed": 0.5
+        "speed": 0.5,
+        "__comment": false
       },
       "id": "67478486-5742-42cd-b800-0fdd0bf7e7df"
     },
@@ -87,7 +155,8 @@
           "value": 0
         },
         "direction": "",
-        "fadeSpeed": "2"
+        "fadeSpeed": "2",
+        "__comment": false
       },
       "id": "b83989c3-ea53-419d-a2ff-fd6c0c17baf6"
     }
