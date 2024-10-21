@@ -10,6 +10,7 @@
   - [x] Animated tiles. e.g. water, lava, torches, etc.
   - [x] Snap to grid
 - [x] Collect items when walking over
+- [x] Colour
 - [ ] Add name entry system
   - [ ] Cheat codes https://tcrf.net/Zelda%27s_Adventure
 - [ ] Improve audio
@@ -25,7 +26,7 @@
   - [x] Enemies respawn immediately
   - [ ] Boss hit counter resets on pause
 - [ ] Fix save and resume. When player dies, ensure the restart at the correct location
-- [ ] UI + dialogue
+- [x] UI + dialogue
   - [ ] review dialogue frame
   - [ ] review font
   - [ ] japanese font
