@@ -30,7 +30,8 @@
         "variable": "L1",
         "value": {
           "type": "true"
-        }
+        },
+        "__comment": false
       },
       "id": "fc0a814a-4b77-4f14-bd44-1a120be0f36e"
     },
@@ -146,20 +147,20 @@
               "flag1": true,
               "flag2": true,
               "flag3": true,
-              "flag4": false,
+              "flag4": true,
               "flag5": true,
-              "flag6": false,
-              "flag7": false,
+              "flag6": true,
+              "flag7": true,
               "flag8": true,
-              "flag9": false,
+              "flag9": true,
               "flag10": true,
               "flag11": true,
               "flag12": true,
               "flag13": true,
-              "flag14": false,
-              "flag15": false,
-              "flag16": false,
-              "__collapse": true,
+              "flag14": true,
+              "flag15": true,
+              "flag16": true,
+              "__collapse": false,
               "__comment": false
             },
             "id": "21748645-ebe0-4e27-931a-c9b44f754cca"
@@ -168,22 +169,22 @@
             "command": "EVENT_ADD_FLAGS",
             "args": {
               "variable": "8",
-              "flag1": false,
+              "flag1": true,
               "flag2": true,
               "flag3": true,
               "flag4": true,
               "flag5": true,
-              "flag6": false,
-              "flag7": false,
-              "flag8": false,
-              "flag9": false,
-              "flag10": false,
-              "flag11": false,
-              "flag12": false,
-              "flag13": false,
-              "flag14": false,
-              "flag15": false,
-              "flag16": false,
+              "flag6": true,
+              "flag7": true,
+              "flag8": true,
+              "flag9": true,
+              "flag10": true,
+              "flag11": true,
+              "flag12": true,
+              "flag13": true,
+              "flag14": true,
+              "flag15": true,
+              "flag16": true,
               "__collapse": true,
               "__comment": false
             },
@@ -204,7 +205,7 @@
               "flag9": false,
               "flag10": true,
               "flag11": true,
-              "flag12": false,
+              "flag12": true,
               "flag13": false,
               "flag14": false,
               "flag15": false,
@@ -303,6 +304,17 @@
               "__collapse": true
             },
             "id": "9f5060fc-5673-41c5-b304-18cf2f668f37"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "23",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "b0b76606-5f9f-4baa-84ea-9c9f1e135c3c"
           },
           {
             "id": "3985514b-2f7a-44ce-a67e-e49952a5d8dc",
@@ -732,14 +744,48 @@
             "children": {
               "true": [
                 {
-                  "id": "7bad007e-bbd2-4179-9a5b-3d4b7d79ab35",
-                  "command": "EVENT_CHOICE",
+                  "command": "EVENT_IF",
                   "args": {
-                    "variable": "L0",
-                    "trueText": "New Game",
-                    "falseText": "Continue",
-                    "__collapse": false
-                  }
+                    "condition": {
+                      "type": "eq",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "23"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 1
+                      }
+                    },
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "id": "e51b1d5b-b0fc-4441-afcb-371c29c07df3",
+                        "command": "EVENT_CHOICE",
+                        "args": {
+                          "variable": "L0",
+                          "trueText": "Nouvelle partie",
+                          "falseText": "Continuer",
+                          "__collapse": false
+                        }
+                      }
+                    ],
+                    "false": [
+                      {
+                        "id": "7bad007e-bbd2-4179-9a5b-3d4b7d79ab35",
+                        "command": "EVENT_CHOICE",
+                        "args": {
+                          "variable": "L0",
+                          "trueText": "New Game",
+                          "falseText": "Continue",
+                          "__collapse": false
+                        }
+                      }
+                    ]
+                  },
+                  "id": "0e15f9da-82ec-4279-b4f0-47444eeb0bbb"
                 },
                 {
                   "id": "7d8e2042-1539-4bae-bdd5-6ceda203cb56",
@@ -821,11 +867,36 @@
                           ],
                           "false": [
                             {
-                              "id": "27b23678-1df4-481f-b816-d776bc3743c4",
-                              "command": "EVENT_TEXT",
+                              "command": "EVENT_IF",
                               "args": {
-                                "text": "No Save Data\nFound..."
-                              }
+                                "condition": {
+                                  "type": "eq",
+                                  "valueA": {
+                                    "type": "variable",
+                                    "value": "23"
+                                  },
+                                  "valueB": {
+                                    "type": "number",
+                                    "value": 1
+                                  }
+                                },
+                                "__collapseElse": false
+                              },
+                              "children": {
+                                "true": [],
+                                "false": [
+                                  {
+                                    "id": "27b23678-1df4-481f-b816-d776bc3743c4",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                      "text": [
+                                        "Aucune donnée de\nsauvegarde trouvée..."
+                                      ]
+                                    }
+                                  }
+                                ]
+                              },
+                              "id": "941bec4a-3c74-4ee6-9b22-d3cac8a31dd0"
                             }
                           ]
                         }
