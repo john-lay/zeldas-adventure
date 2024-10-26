@@ -1,0 +1,226 @@
+{
+  "_resourceType": "script",
+  "id": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+  "name": "Combat/save_actor_on_pause",
+  "description": "Save enemy position and direction when the player pauses (opens inventory screen) or opens the mini map",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Enemy1"
+    },
+    "1": {
+      "id": "1",
+      "name": "Enemy2"
+    },
+    "2": {
+      "id": "2",
+      "name": "Enemy3"
+    },
+    "3": {
+      "id": "3",
+      "name": "Enemy4"
+    },
+    "4": {
+      "id": "4",
+      "name": "Enemy5"
+    },
+    "5": {
+      "id": "5",
+      "name": "Collectable"
+    }
+  },
+  "symbol": "script_45",
+  "script": [
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "17",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": true,
+        "__collapse": true
+      },
+      "id": "dd8657ef-ad6e-4911-88d1-ae37230e5c1a"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Enemy1",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "0",
+              "vectorX": "25",
+              "vectorY": "26"
+            },
+            "id": "df48a862-eb32-45fb-bfd3-e3563d84ada0"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "0",
+              "direction": "27"
+            },
+            "id": "4c230e77-ba2c-4028-af6e-a1705ca6f33f"
+          }
+        ]
+      },
+      "id": "208eef7b-0574-4ee0-b7a8-7607f0d4b18a"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Enemy2",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "1",
+              "vectorX": "28",
+              "vectorY": "29"
+            },
+            "id": "96129d62-02ca-401b-9474-60a201b13f98"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "1",
+              "direction": "30"
+            },
+            "id": "9ec7cb0d-622f-4add-a066-b3d5c28e2e1d"
+          }
+        ]
+      },
+      "id": "8867951d-0609-43e1-8619-f9f992023c36"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__collapse": true,
+        "__label": "Enemy3"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "2",
+              "vectorX": "31",
+              "vectorY": "32"
+            },
+            "id": "027bf13b-84d0-4c2b-8349-684f2583b71c"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "2",
+              "direction": "33"
+            },
+            "id": "2f525a3f-58d4-49f4-93ab-c04cc3c0930a"
+          }
+        ]
+      },
+      "id": "d93806c0-d1a6-47d2-a316-1a96769013a1"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Enemy4",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "3",
+              "vectorX": "34",
+              "vectorY": "35"
+            },
+            "id": "3e99cde0-f205-4b5e-a44d-266e7f0a0aea"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "3",
+              "direction": "36"
+            },
+            "id": "c131c760-f0d3-49d2-8f34-1524baf6298e"
+          }
+        ]
+      },
+      "id": "da9f3f4c-49ec-431d-ae39-82ae0b55039c"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Enemy5",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "4",
+              "vectorX": "37",
+              "vectorY": "38"
+            },
+            "id": "4337ae5f-3050-4f72-98de-fd15cdc16c31"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "4",
+              "direction": "39"
+            },
+            "id": "65546e83-9579-410d-b20f-0b5a0024e0d0"
+          }
+        ]
+      },
+      "id": "b59ebda9-0203-4a1a-a172-8cf734ad624c"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Collectable",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "5",
+              "vectorX": "40",
+              "vectorY": "41"
+            },
+            "id": "b40894c4-1457-4dca-adf9-08738f034d3f"
+          }
+        ]
+      },
+      "id": "b6b3016e-5228-4520-8a1f-9548d1f11b23"
+    }
+  ]
+}
