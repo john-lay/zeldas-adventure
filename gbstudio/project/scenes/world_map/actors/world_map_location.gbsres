@@ -1,0 +1,83 @@
+{
+  "_resourceType": "actor",
+  "id": "8482e96a-b9ed-47d5-b99e-950daf266aed",
+  "name": "World Map Location",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f575e429-eee0-4803-a85c-d0a6b4d4428f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_35",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "variable",
+          "value": "19"
+        },
+        "y": {
+          "type": "variable",
+          "value": "20"
+        }
+      },
+      "id": "7858cf2c-a023-4b76-8e4a-97c539af15f8"
+    },
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "When loading the scrolling (larger) world map the indicator would often be invisible. Scrolling out of view (and then back into view) would fix it. This is a more elegant solution."
+      },
+      "id": "5badeb36-1bed-4e25-a81f-3bf3db2356bb"
+    },
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "duration": 0.2,
+        "frames": 30,
+        "units": "time",
+        "__scriptTabs": "end"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "d940b00e-1ac8-47f2-881d-1fbce7d4e3f3"
+          },
+          {
+            "command": "EVENT_ACTOR_ACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "0d3b9f33-7323-445b-a85a-13a9d3c4b09b"
+          },
+          {
+            "command": "EVENT_TIMER_DISABLE",
+            "args": {},
+            "id": "241ff261-333a-4352-8b59-234ce63f3376"
+          }
+        ]
+      },
+      "id": "fdf3c32c-db65-4901-96a3-09f55808b47d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 32,
+  "y": 0,
+  "_index": 0
+}

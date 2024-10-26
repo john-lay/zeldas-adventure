@@ -232,6 +232,8 @@ A listing of variables used in GB Studio and their types.
 * `$39$: Variable 039` Enemy5 Direction - `number`. (Stores the fifth enemies' direction when the player pauses)
 * `$40$: Variable 040` Collectable PosX - `number`. (Stores the collectable's x position when the player pauses)
 * `$41$: Variable 041` Collectable PosY - `number`. (Stores the collectable's y position when the player pauses)
+* `$42$: Variable 042` Minimap PosX - `number`. (Const - initial cursor position x in the world minimap)
+* `$43$: Variable 043` Minimap PosY - `number`. (Const - initial cursor position y in the world minimap)
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
