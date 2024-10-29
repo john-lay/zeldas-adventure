@@ -169,7 +169,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 15 represents enemy 5 has been defeated)
   * (Flag 16 reprents the player has paused the game. Enemy and collectable position needs to be maintained)
 * `$18$: Variable 018` Resume location - `word`.
-  * (Flag 1 represents a Save and Continue operation)
+  * ~~(Flag 1 represents a Save and Continue operation)~~
   * (Flag 2 represents a Save and Quit operation)
   * (Flag 3 represents Zelda should resume at Vision Henge)
   * (Flag 4 represents Zelda should resume in the Earth Shrine)
