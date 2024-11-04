@@ -2,22 +2,22 @@
   "_resourceType": "script",
   "id": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
   "name": "HUD/draw_hearts",
-  "description": "",
+  "description": "Pass parameters by value to mitigate multiple scripts calling the function at the same time which causes the wrong tiles from being updated. Symptoms include more hearts being drawn than the player has.",
   "variables": {
     "V0": {
       "id": "V0",
       "name": "health count",
-      "passByReference": true
+      "passByReference": false
     },
     "V1": {
       "id": "V1",
       "name": "start draw",
-      "passByReference": true
+      "passByReference": false
     },
     "V3": {
       "id": "V3",
       "name": "tile index",
-      "passByReference": true
+      "passByReference": false
     }
   },
   "actors": {},
