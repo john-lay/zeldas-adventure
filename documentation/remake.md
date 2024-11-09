@@ -15,10 +15,11 @@
   - [ ] Cheat codes https://tcrf.net/Zelda%27s_Adventure
 - [ ] Improve audio
   - [x] Sound FXs
-  - [ ] Intro music
-  - [ ] Boss music
-  - [ ] celestial sign chamber music
+  - [x] Intro music
+  - [x] Boss music
+  - [x] celestial sign chamber music
   - [ ] ending music
+  - [ ] town / inside music
 - [ ] Improve combat
   - [x] Enemy hit state
   - [x] Zelda hit state
