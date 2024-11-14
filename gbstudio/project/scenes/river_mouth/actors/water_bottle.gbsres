@@ -65,6 +65,121 @@
       "id": "7782eb9c-e880-4311-8d9f-be91b4f23a90"
     },
     {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "10"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 26
+          }
+        },
+        "__collapseElse": true,
+        "__label": "Has empty bottle equipped",
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "7",
+              "flag": 0,
+              "__collapseElse": false,
+              "__label": "Has Wand"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "10",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "c317f738-9b9e-4235-a01a-e7040f104a81"
+                },
+                {
+                  "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+                  "args": {},
+                  "id": "da30dd0f-687a-4583-aa6c-37378f108cdb"
+                },
+                {
+                  "command": "EVENT_IF_COLOR_SUPPORTED",
+                  "args": {
+                    "__collapseElse": true,
+                    "__disableElse": true,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "args": {
+                          "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                          "__collapse": true
+                        },
+                        "id": "7a3b320a-9dc7-4cec-a6ce-e9f9181a17c9"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "872ee332-0a92-4dc4-b8df-6d1e48f6bec8"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "has wand"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "7796aac6-3bca-4350-83d8-987ab3867aa0"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "10",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "c54e4abb-c465-434e-8eb2-608bd8eaff33"
+                }
+              ]
+            },
+            "id": "8aafe484-b551-4031-9734-fa35813e9957"
+          }
+        ],
+        "false": []
+      },
+      "id": "e0864716-fb65-4d87-9435-d33426ea0589"
+    },
+    {
       "command": "EVENT_ACTOR_DEACTIVATE",
       "args": {
         "actorId": "$self$",
