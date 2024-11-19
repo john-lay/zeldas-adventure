@@ -1,0 +1,354 @@
+{
+  "_resourceType": "script",
+  "id": "c0a73e25-ffae-4443-adbc-ed2cbb13d701",
+  "name": "AI/Leever Movement",
+  "description": "Behaviour of Leever enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Leever"
+    }
+  },
+  "symbol": "script_58",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Surface",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Leever 1/4",
+              "__collapse": true
+            },
+            "id": "0df64f40-88cd-42f1-94b7-b09fe6ffd4c9"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "1beed987-02e1-4680-a9f2-077c80e36b2b"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Leever 1/2",
+              "__collapse": true
+            },
+            "id": "97d912b7-b7ca-45b4-ab0f-3e4c6bf1f3b9"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1d6bdbb2-5ed2-46e8-b407-6f7918cdb483"
+            },
+            "id": "f7ce0459-1a18-4fdb-ab3c-fa9bfc883f3e"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "631825e1-7d28-4f0c-9703-b784ff23dbd9"
+          }
+        ]
+      },
+      "id": "1baa6e4f-143d-480b-8108-325394a71e22"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "seek",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V0",
+              "operation": "set",
+              "other": "rnd",
+              "vectorY": "L0",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": 1,
+              "clamp": false,
+              "__collapse": true
+            },
+            "id": "854be8d0-24c6-4401-a157-b45ddcaeb7a5"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "56170c98-227b-4b86-8fd0-5efc91d25444"
+          },
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "V0",
+              "operator": "==",
+              "comparator": "0",
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Check Horizontal",
+                    "__collapse": true
+                  },
+                  "id": "5239e627-c73d-41ad-acdb-4bb81cc47aeb"
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__disableElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "y": 0,
+                          "moveType": "vertical",
+                          "useCollisions": true,
+                          "__collapse": false
+                        },
+                        "id": "91b2a51e-fc16-4e3c-b2a7-6df8db2da5b9"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": 0,
+                          "moveType": "vertical",
+                          "useCollisions": true,
+                          "__collapse": false
+                        },
+                        "id": "cbce217b-3847-42ec-9a8d-8921702c333d"
+                      }
+                    ]
+                  },
+                  "id": "6eea391b-3cb7-46ff-9393-aafa4f13dd1e"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Check Vertical",
+                    "__collapse": true
+                  },
+                  "id": "81046a69-8fb6-4c67-a829-01f9dae024c3"
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "up",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__disableElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": 0,
+                          "y": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "moveType": "vertical",
+                          "useCollisions": true,
+                          "__collapse": false
+                        },
+                        "id": "745b19b2-7616-40c3-889f-b8e5f74bf3f6"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": 0,
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "moveType": "vertical",
+                          "useCollisions": true,
+                          "__collapse": false
+                        },
+                        "id": "0724b198-c3ce-435f-af2a-62df3d894ece"
+                      }
+                    ]
+                  },
+                  "id": "b450e0f4-ba3b-411c-981c-f384f7e75fa2"
+                }
+              ]
+            },
+            "id": "a5664626-1726-4e0d-9379-4ee51c364793"
+          }
+        ]
+      },
+      "id": "23796012-a438-4b0f-a268-9653d419dd73"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Bury",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "6517aa5f-b370-4496-aad6-2c883a78b58c"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Leever 1/2",
+              "__collapse": true
+            },
+            "id": "eb45c6e3-c56d-4858-818c-b742ed2bdbe1"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "1d6bdbb2-5ed2-46e8-b407-6f7918cdb483",
+              "__comment": true
+            },
+            "id": "5b021aba-ab76-4eee-b1ad-a31c4f521957"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "4551b09b-1c30-409d-b4a5-a0a8c482a506"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Leever 1/4",
+              "__collapse": true
+            },
+            "id": "e45eae7b-84f2-47cc-b3b6-897cb7c066b2"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "8069247c-9b63-48d4-b2ae-593308fddc5d"
+          },
+          {
+            "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "52a9b5db-465a-4239-95ba-8fbd6b086aca"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "bb1c9a38-2eac-4ffc-9bde-276b5f7fde93"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "9f7de9e1-0b0d-4fe8-b256-7943dda59162"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "1f9eb491-e085-4760-9233-0c343bb07801"
+          },
+          {
+            "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "22dd82a3-71a0-4f5b-8968-40c47bc31293"
+          }
+        ]
+      },
+      "id": "bd38806d-f781-4406-920c-90892b613f99"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "d1aaf3d7-6501-44b2-992f-e323d3488e36",
+  "name": "Leever",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "60a9bdf3-773c-484e-bef7-a5eb85c575bf",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L3"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "L4"
+        }
+      },
+      "id": "c0f2b4ea-8380-406c-a555-8cc5cd8288c2",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L4",
+        "value": {
+          "type": "number",
+          "value": 1
+        }
+      },
+      "id": "c9e8d00e-2b1a-4d53-b614-2aa0e343ed1a",
+      "children": {}
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L5",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "4853efc4-0163-40d5-9d8a-f0b6f42f0824",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "c0a73e25-ffae-4443-adbc-ed2cbb13d701",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L0"
+        }
+      },
+      "id": "f1129263-068d-4687-87c9-6d2c3e6d6463",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "L5"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "T0"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "a3c18ef5-67be-4bb8-980b-49271c393c5a",
+        "$actor[2]$": "68a5e054-bb6f-47b2-8664-a9498eb87f38"
+      },
+      "id": "34e8ba49-ef1b-41ca-a406-8ed1d3d8696d",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L5"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "88c21cde-f546-48fb-96fc-43136932fabe",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "781dc157-8af2-427a-82b8-ede9f9276c89"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": []
+}
