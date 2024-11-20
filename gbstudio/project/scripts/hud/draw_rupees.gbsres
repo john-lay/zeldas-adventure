@@ -8,21 +8,45 @@
       "id": "V0",
       "name": "rupees (by val)",
       "passByReference": false
-    },
-    "V1": {
-      "id": "V1",
-      "name": "count",
-      "passByReference": true
-    },
-    "V2": {
-      "id": "V2",
-      "name": "digit",
-      "passByReference": true
     }
   },
   "actors": {},
   "symbol": "script_11",
   "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Reset global varibales",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "50",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "b785cb60-c923-45a9-9206-286a1b58cc76"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "51",
+              "value": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "18f16722-f28d-4730-a3b5-adcbedfbc3fc"
+          }
+        ]
+      },
+      "id": "53e9eb2d-cfd7-4288-8e4a-5cceda0047f8"
+    },
     {
       "command": "EVENT_REPLACE_TILE_XY",
       "args": {
@@ -186,12 +210,12 @@
     {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "V1",
+        "variable": "50",
         "value": {
           "type": "number",
           "value": 1
         },
-        "__collapse": true
+        "__collapse": false
       },
       "id": "e2be82ba-fe19-43e8-8471-8482570d7843"
     },
@@ -216,7 +240,7 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
-              "variable": "V2",
+              "variable": "51",
               "value": {
                 "type": "mod",
                 "valueA": {
@@ -238,7 +262,7 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "V1"
+                  "value": "50"
                 },
                 "valueB": {
                   "type": "number",
@@ -260,7 +284,7 @@
                     },
                     "$variable[V0]$": {
                       "type": "variable",
-                      "value": "V2"
+                      "value": "51"
                     }
                   },
                   "id": "446e037c-0e42-4e7c-8157-ac347c892c76"
@@ -277,7 +301,7 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "V1"
+                  "value": "50"
                 },
                 "valueB": {
                   "type": "number",
@@ -299,7 +323,7 @@
                     },
                     "$variable[V0]$": {
                       "type": "variable",
-                      "value": "V2"
+                      "value": "51"
                     }
                   },
                   "id": "5a1578cf-d06d-4a10-ae63-9a5d182803df"
@@ -316,7 +340,7 @@
                 "type": "eq",
                 "valueA": {
                   "type": "variable",
-                  "value": "V1"
+                  "value": "50"
                 },
                 "valueB": {
                   "type": "number",
@@ -338,7 +362,7 @@
                     },
                     "$variable[V0]$": {
                       "type": "variable",
-                      "value": "V2"
+                      "value": "51"
                     }
                   },
                   "id": "d5387964-cad7-45fc-b373-485cd7c8144e"
@@ -369,7 +393,7 @@
           {
             "command": "EVENT_INC_VALUE",
             "args": {
-              "variable": "V1"
+              "variable": "50"
             },
             "id": "518bd307-7ef6-4781-9d81-14d744d995e0"
           }

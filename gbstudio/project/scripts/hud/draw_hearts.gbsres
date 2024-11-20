@@ -3,42 +3,74 @@
   "id": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
   "name": "HUD/draw_hearts",
   "description": "Pass parameters by value to mitigate multiple scripts calling the function at the same time which causes the wrong tiles from being updated. Symptoms include more hearts being drawn than the player has.",
-  "variables": {
-    "V0": {
-      "id": "V0",
-      "name": "health count",
-      "passByReference": false
-    },
-    "V1": {
-      "id": "V1",
-      "name": "start draw",
-      "passByReference": false
-    },
-    "V3": {
-      "id": "V3",
-      "name": "tile index",
-      "passByReference": false
-    }
-  },
+  "variables": {},
   "actors": {},
   "symbol": "script_13",
   "script": [
     {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Reset global varibales",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "52",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "276ef5f0-a351-4522-846a-f30e6d738414"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "53",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "383e9f2e-62a7-4b9a-8dc2-6bcfc9f59d5f"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "54",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "79d0e88f-f3b5-4777-92bd-7b37578a9333"
+          }
+        ]
+      },
+      "id": "5026a80f-074a-4819-86f2-402772f3ba94"
+    },
+    {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "V0",
+        "variable": "52",
         "value": {
           "type": "variable",
           "value": "0"
         },
-        "__collapse": true
+        "__collapse": false
       },
       "id": "6daa8f43-6ea3-4082-b60b-f7099f365328"
     },
     {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "V1",
+        "variable": "53",
         "value": {
           "type": "sub",
           "valueA": {
@@ -77,7 +109,7 @@
     {
       "command": "EVENT_LOOP_FOR",
       "args": {
-        "variable": "V3",
+        "variable": "54",
         "from": {
           "type": "number",
           "value": 6
@@ -92,7 +124,7 @@
           "type": "number",
           "value": 1
         },
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -103,11 +135,11 @@
                 "type": "lt",
                 "valueA": {
                   "type": "variable",
-                  "value": "V3"
+                  "value": "54"
                 },
                 "valueB": {
                   "type": "variable",
-                  "value": "V1"
+                  "value": "53"
                 }
               },
               "__collapseElse": false,
@@ -120,7 +152,7 @@
                   "args": {
                     "x": {
                       "type": "variable",
-                      "value": "V3"
+                      "value": "54"
                     },
                     "y": {
                       "type": "number",
@@ -143,7 +175,7 @@
                       "type": "gte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "52"
                       },
                       "valueB": {
                         "type": "number",
@@ -160,7 +192,7 @@
                         "args": {
                           "x": {
                             "type": "variable",
-                            "value": "V3"
+                            "value": "54"
                           },
                           "y": {
                             "type": "number",
@@ -177,16 +209,16 @@
                       {
                         "command": "EVENT_DEC_VALUE",
                         "args": {
-                          "variable": "V0",
-                          "__collapse": true
+                          "variable": "52",
+                          "__collapse": false
                         },
                         "id": "f5c881d9-1df5-4cb5-936a-30bf61f8e0fb"
                       },
                       {
                         "command": "EVENT_DEC_VALUE",
                         "args": {
-                          "variable": "V0",
-                          "__collapse": true
+                          "variable": "52",
+                          "__collapse": false
                         },
                         "id": "10d2ca28-9076-422f-8b56-d3779c00f745"
                       }
@@ -199,7 +231,7 @@
                             "type": "eq",
                             "valueA": {
                               "type": "variable",
-                              "value": "V0"
+                              "value": "52"
                             },
                             "valueB": {
                               "type": "number",
@@ -216,7 +248,7 @@
                               "args": {
                                 "x": {
                                   "type": "variable",
-                                  "value": "V3"
+                                  "value": "54"
                                 },
                                 "y": {
                                   "type": "number",
@@ -233,8 +265,8 @@
                             {
                               "command": "EVENT_DEC_VALUE",
                               "args": {
-                                "variable": "V0",
-                                "__collapse": true
+                                "variable": "52",
+                                "__collapse": false
                               },
                               "id": "55eac0c5-f6b7-4ec2-a04d-4e8070557566"
                             }
@@ -245,7 +277,7 @@
                               "args": {
                                 "x": {
                                   "type": "variable",
-                                  "value": "V3"
+                                  "value": "54"
                                 },
                                 "y": {
                                   "type": "number",
@@ -291,7 +323,7 @@
         },
         "__collapseElse": false,
         "__disableElse": false,
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [

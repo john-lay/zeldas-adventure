@@ -240,6 +240,15 @@ A listing of variables used in GB Studio and their types.
 * `$47$: Variable 047` Enemy Type 2 - Defeated OffsetY - `number`. (used in the enemy take damage script to position the defeated enemy animation over enemy actor type 2)
 * `$48$: Variable 048` Enemy Type 2 - Collectable OffsetX - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 2)
 * `$49$: Variable 049` Enemy Type 2 - Collectable OffsetY - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 2)
+* `$50$: Variable 050` Scene L0 - HUD_draw_rupee_count - `number`. (replace local scene variable with global variable)
+* `$51$: Variable 051` Scene L1 - HUD_draw_rupee_digit - `number`. (replace local scene variable with global variable)
+* `$52$: Variable 052` Scene L2 - HUD_draw_hearts_count - `number`. (replace local scene variable with global variable)
+* `$53$: Variable 053` Scene L3 - HUD_draw_hearts_start - `number`. (replace local scene variable with global variable)
+* `$54$: Variable 054` Scene L4 - HUD_draw_hearts_tile_index - `number`. (replace local scene variable with global variable)
+* `$55$: Variable 055` Scene L5 - combat_projectile_has_taken_damage - `number`. (replace local scene variable with global variable)
+* `$56$: Variable 056` Scene L6 - combat_projectile_damage - `number`. (replace local scene variable with global variable)
+* `$57$: Variable 057` Scene L7 - animate_tiles - `number`. (replace local scene variable with global variable)
+
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
