@@ -248,6 +248,23 @@ A listing of variables used in GB Studio and their types.
 * `$55$: Variable 055` Scene L5 - combat_projectile_has_taken_damage - `number`. (replace local scene variable with global variable)
 * `$56$: Variable 056` Scene L6 - combat_projectile_damage - `number`. (replace local scene variable with global variable)
 * `$57$: Variable 057` Scene L7 - animate_tiles - `number`. (replace local scene variable with global variable)
+* `$58$: Variable 058` Enemy Type 1 - Attack - `number`. Attack power of enemy type 1
+* `$59$: Variable 059` Enemy Type 2 - Attack - `number`. Attack power of enemy type 2
+* `$60$: Variable 060` Enemy1 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$61$: Variable 061` Enemy1 Defense - `number`. Defense of enemy
+* `$62$: Variable 062` Enemy1 Random - `number`. Random number (shared between collectable and movement)
+* `$63$: Variable 063` Enemy2 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$64$: Variable 064` Enemy2 Defense - `number`. Defense of enemy
+* `$65$: Variable 065` Enemy2 Random - `number`. Random number (shared between collectable and movement)
+* `$66$: Variable 066` Enemy3 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$67$: Variable 067` Enemy3 Defense - `number`. Defense of enemy
+* `$68$: Variable 068` Enemy3 Random - `number`. Random number (shared between collectable and movement)
+* `$69$: Variable 069` Enemy4 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$70$: Variable 070` Enemy4 Defense - `number`. Defense of enemy
+* `$71$: Variable 071` Enemy4 Random - `number`. Random number (shared between collectable and movement)
+* `$72$: Variable 072` Enemy5 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$73$: Variable 073` Enemy5 Defense - `number`. Defense of enemy
+* `$74$: Variable 074` Enemy5 Random - `number`. Random number (shared between collectable and movement)
 
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
@@ -597,3 +614,14 @@ A list of features missing from the GB port which are present in the original.
 - Flying/jumping enemies should have a shadow
 - Enemy/boss reset on pause
 - Missing sound FX
+
+## Reducing sprite limits
+At this point in time I ran into the following error during compilation:
+
+`Your project contains too many unique variables and will not work as expected. VM_HEAP_SIZE defines the maximum amount of variables allowed 768 but your project contained 820 unique variables.`
+
+After some research, I understood the root cause was the total count (`MAX_GLOBAL_VARS` in build\src\include\data\game_globals.i) combines global and all local variables. To reduce the count, I moved as many local variables to global variables, as possible:
+
+1. I moved the scene init. variables into global variables (50-55) which reduced the total to __690__.
+2. I moved the enemy projectile and animated tiles local scene variables to global variables (56-57), reducing the count to __555__.
+3. Finally I moved all the local enemy actor variables to global variables (58-74, and reusing enemy position variables: globals 25-38), which reduced the total count to __247__.
