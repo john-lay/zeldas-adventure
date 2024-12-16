@@ -3,28 +3,7 @@
   "id": "3a12974d-a2d2-4380-abe1-140a817250cd",
   "name": "Combat/collect_rupee_heart",
   "description": "Allow Zelda to collect a heart or (10) rupees",
-  "variables": {
-    "V0": {
-      "id": "V0",
-      "name": "max_health",
-      "passByReference": true
-    },
-    "V1": {
-      "id": "V1",
-      "name": "draw HUD - local0",
-      "passByReference": true
-    },
-    "V2": {
-      "id": "V2",
-      "name": "draw HUD - local1",
-      "passByReference": true
-    },
-    "V3": {
-      "id": "V3",
-      "name": "draw HUD - local2",
-      "passByReference": true
-    }
-  },
+  "variables": {},
   "actors": {
     "0": {
       "id": "0",
@@ -47,19 +26,19 @@
           {
             "command": "EVENT_SET_VALUE",
             "args": {
-              "variable": "V0",
+              "variable": "75",
               "value": {
                 "type": "variable",
                 "value": "1"
               },
-              "__collapse": true
+              "__collapse": false
             },
             "id": "de47f399-bdf8-43d0-bf35-7121d573a0bc"
           },
           {
             "command": "EVENT_VARIABLE_MATH",
             "args": {
-              "vectorX": "V0",
+              "vectorX": "75",
               "operation": "mul",
               "other": "val",
               "vectorY": "V0",
@@ -67,7 +46,7 @@
               "minValue": "0",
               "maxValue": "32767",
               "clamp": false,
-              "__collapse": true
+              "__collapse": false
             },
             "id": "1c182457-50d7-4297-a4eb-2da8878a18aa"
           },
@@ -82,7 +61,7 @@
                 },
                 "valueB": {
                   "type": "variable",
-                  "value": "V0"
+                  "value": "75"
                 }
               },
               "__collapseElse": true,
@@ -114,7 +93,7 @@
                 },
                 "valueB": {
                   "type": "variable",
-                  "value": "V0"
+                  "value": "75"
                 }
               },
               "__collapseElse": true,
@@ -146,22 +125,9 @@
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
-              "$variable[V0]$": {
-                "type": "variable",
-                "value": "V1"
-              },
-              "$variable[V1]$": {
-                "type": "variable",
-                "value": "V2"
-              },
-              "$variable[V3]$": {
-                "type": "variable",
-                "value": "V3"
-              },
-              "__collapse": false
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09"
             },
-            "id": "2f52a417-bf29-4aa7-8088-5ee80f3ad534"
+            "id": "e9046018-a03d-4930-a000-fb812b538084"
           }
         ],
         "false": []
@@ -243,18 +209,9 @@
               "$variable[V0]$": {
                 "type": "variable",
                 "value": "2"
-              },
-              "$variable[V1]$": {
-                "type": "variable",
-                "value": "V1"
-              },
-              "$variable[V2]$": {
-                "type": "variable",
-                "value": "V2"
-              },
-              "__collapse": false
+              }
             },
-            "id": "1fc5229b-eaba-4b86-93f6-d3093196f38c"
+            "id": "67bb13c4-2239-42e6-a305-d99182c5e14c"
           }
         ],
         "false": []

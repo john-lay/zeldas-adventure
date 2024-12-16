@@ -265,6 +265,7 @@ A listing of variables used in GB Studio and their types.
 * `$72$: Variable 072` Enemy5 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
 * `$73$: Variable 073` Enemy5 Defense - `number`. Defense of enemy
 * `$74$: Variable 074` Enemy5 Random - `number`. Random number (shared between collectable and movement)
+* `$75$: Variable 075` Scene L8 - collect_heart_max_health - `number`. (Replace local scene variable with global variable)
 
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
