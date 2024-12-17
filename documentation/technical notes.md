@@ -266,6 +266,9 @@ A listing of variables used in GB Studio and their types.
 * `$73$: Variable 073` Enemy5 Defense - `number`. Defense of enemy
 * `$74$: Variable 074` Enemy5 Random - `number`. Random number (shared between collectable and movement)
 * `$75$: Variable 075` Scene L8 - collect_heart_max_health - `number`. (Replace local scene variable with global variable)
+* `$76$: Variable 076` QS_draw_inventory_tile_index - `number`. Inventory screen. Used to track tile index
+* `$77$: Variable 077` QS_draw_inventory_x_tile_index - `number`. Inventory screen. X tile index to draw the inventory item
+
 
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
