@@ -268,6 +268,9 @@ A listing of variables used in GB Studio and their types.
 * `$75$: Variable 075` Scene L8 - collect_heart_max_health - `number`. (Replace local scene variable with global variable)
 * `$76$: Variable 076` QS_draw_inventory_tile_index - `number`. Inventory screen. Used to track tile index
 * `$77$: Variable 077` QS_draw_inventory_x_tile_index - `number`. Inventory screen. X tile index to draw the inventory item
+* `$78$: Variable 078` QS_draw_item_slot - `number`. Inventory screen. Used to calculate which slot to draw
+* `$79$: Variable 079` QS_draw_item_found_count - `number`. Inventory screen. Used to track the number of weapons/treasures found
+* `$80$: Variable 080` QS_draw_item_condition - `number`. Inventory screen. Used to calculate if this item has scrolled into view
 
 
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
