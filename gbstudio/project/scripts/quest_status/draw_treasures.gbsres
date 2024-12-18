@@ -3,35 +3,14 @@
   "id": "67de1b27-f7c7-4f73-bb29-6f2bc3455f66",
   "name": "Quest Status/draw_treasures",
   "description": "Draws the treasures in the \"found treasures\" list with respect to the scroll offset",
-  "variables": {
-    "V0": {
-      "id": "V0",
-      "name": "Slot",
-      "passByReference": true
-    },
-    "V1": {
-      "id": "V1",
-      "name": "X Tile Index",
-      "passByReference": true
-    },
-    "V2": {
-      "id": "V2",
-      "name": "Treasures found count",
-      "passByReference": true
-    },
-    "V3": {
-      "id": "V3",
-      "name": "Draw condition",
-      "passByReference": true
-    }
-  },
+  "variables": {},
   "actors": {},
   "symbol": "script_9",
   "script": [
     {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "V0",
+        "variable": "78",
         "value": {
           "type": "number",
           "value": 1
@@ -43,7 +22,7 @@
     {
       "command": "EVENT_SET_VALUE",
       "args": {
-        "variable": "V2",
+        "variable": "79",
         "value": {
           "type": "number",
           "value": 0
@@ -75,7 +54,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "ed051450-a3ec-4b14-b686-65aeb8645325"
@@ -87,7 +66,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -102,19 +81,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "c744faee-8fc7-4a60-923e-d1b67fda39ac"
                       },
@@ -125,7 +104,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -143,28 +122,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 20
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "5cbe7f8c-5a87-4404-a348-e3b1d9ccdf72"
+                              "id": "08428509-f734-4f96-9dae-0c386e9956cd"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "c9540e77-91bf-4fe3-8b98-2ccdf0792b3b"
@@ -199,7 +169,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "d3c442e5-1b9c-4bbc-9902-3c4187b71220"
@@ -211,7 +181,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -226,19 +196,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "909b457f-7468-422a-87b6-6e1c14fe18ff"
                       },
@@ -249,7 +219,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -267,28 +237,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 21
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "0aa86656-98ba-48df-9397-a86e82037f99"
+                              "id": "58d71dd7-67ff-41ad-857c-54f3d3dfad73"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "b0e7b065-353e-4499-8484-3da3b06eebc6"
@@ -323,7 +284,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "fb60d9fd-feaf-444b-9e83-a32dd20e27ee"
@@ -335,7 +296,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -350,19 +311,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "814e19a7-46ac-4461-90ff-78c307e11248"
                       },
@@ -373,7 +334,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -391,28 +352,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 22
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "bea1337e-dbf3-4952-8093-9401e0315c4f"
+                              "id": "5a235ed9-7134-4718-a872-ea01be0c99c3"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "727ad8aa-b4c5-4d3e-b79f-1b321c67d650"
@@ -447,7 +399,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "5e4a5670-14de-4b75-9a4b-a535435153de"
@@ -459,7 +411,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -474,19 +426,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "cbb5f03e-e071-492d-950e-1f8a55ddfcf0"
                       },
@@ -497,7 +449,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -515,28 +467,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 23
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "c6968972-22b8-44cd-aa1f-cb2cd2756030"
+                              "id": "12c7fb12-fec1-4b26-b227-c44c16087305"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "b3178210-4160-4af7-ab3c-98804e59af9b"
@@ -571,7 +514,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "32487788-62b2-454c-94e3-f0b48f7cc788"
@@ -583,7 +526,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -598,19 +541,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "129daa93-19a1-45d7-a131-be978775cbdc"
                       },
@@ -621,7 +564,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -639,28 +582,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 24
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "0404d2fd-2b4f-4788-9590-a4afdc9daf87"
+                              "id": "98e1d019-e2df-48f6-ab75-a699c5b2fb28"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "cc17094f-d663-48f0-afac-82b95d1829a8"
@@ -695,7 +629,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "f3f64dcb-73a5-464a-a06f-81ba3ab84f33"
@@ -707,7 +641,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -722,19 +656,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "da02e1a9-35f0-4a2c-8b2d-c57f127bde14"
                       },
@@ -745,7 +679,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -763,28 +697,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 25
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "ca4ea2da-3a03-43f8-b0be-dc0288dfe767"
+                              "id": "42ef7fba-d5d2-404b-a074-2b17b81a68d9"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "b31beee3-b0af-4aa2-90e6-dc9d9d6b834e"
@@ -819,7 +744,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "024cb136-ad6a-49c7-a68f-1231cce24bbb"
@@ -831,7 +756,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -846,19 +771,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "19283973-d967-4c94-b6b8-e52cb0513e70"
                       },
@@ -869,7 +794,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -887,28 +812,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 26
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "3e282eef-7df7-4d0f-8672-810d8aa0e07f"
+                              "id": "71215268-5df6-436f-8976-00c1d2dc57e6"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "dc46231c-081f-4187-a3b7-e423c251b8dc"
@@ -943,7 +859,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "aa36c987-28f3-466a-b123-c8d1049ba69d"
@@ -955,7 +871,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -970,19 +886,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "6660aff4-ce48-405c-b7b4-4dba5198abf3"
                       },
@@ -993,7 +909,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1011,28 +927,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 27
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "c91ba13d-2a0a-47ab-b47f-74c557d0b151"
+                              "id": "1152dee9-b975-4fd7-97e0-f6c75745f40d"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "87539cc6-46c9-4421-97df-3435381389dd"
@@ -1067,8 +974,8 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
-                    "__collapse": false
+                    "variable": "79",
+                    "__collapse": true
                   },
                   "id": "288381e5-668c-45a6-81a3-f1e9ab3f2a8b"
                 },
@@ -1079,7 +986,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1094,19 +1001,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "a24ef96e-a48e-4e6d-be67-a422a49dea7d"
                       },
@@ -1117,7 +1024,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1135,28 +1042,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 28
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "6c833983-96f3-4773-94ba-40174b995495"
+                              "id": "c98dc5b0-c3bc-46fd-9c46-61480196d0dc"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "860de0d5-808a-44a6-aac2-8f72efd2b725"
@@ -1191,7 +1089,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "8968076b-f0cd-4327-b8e9-4f177ad4f2e2"
@@ -1203,7 +1101,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1218,19 +1116,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "8de600e9-fe45-4a74-830c-85c8dc6f3925"
                       },
@@ -1241,7 +1139,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1259,28 +1157,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 29
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "a5617c71-b458-457b-8418-e4a1f67a2b11"
+                              "id": "3126de05-1f3c-4126-85f9-a0a415296d15"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "3015bece-9c8a-48a0-a547-36af44915356"
@@ -1315,7 +1204,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "679ad53a-e777-47f1-b5f4-b77dd05b41f6"
@@ -1327,7 +1216,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1342,19 +1231,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "3a3a6cc1-7465-4cbf-a1e7-d4258ca81a04"
                       },
@@ -1365,7 +1254,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1383,28 +1272,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 30
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "7e4bcdc7-2a40-4c8d-b89d-640828a2032a"
+                              "id": "e5d3d2e5-cab0-422c-9f2f-42bcb5cd1c8b"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "01f90f1d-12f7-445a-a765-7742f5841132"
@@ -1439,7 +1319,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "4a61fdf1-8f8d-46d8-a531-91b48887c7a9"
@@ -1451,7 +1331,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1466,19 +1346,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "1bd87c40-8bf6-4627-a746-636dfa1f38de"
                       },
@@ -1489,7 +1369,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1507,28 +1387,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 31
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "1062346d-8545-4fc8-ba7f-5b18227a27fb"
+                              "id": "99fe1473-91f0-4306-8734-4ec36b5113f4"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "2493d08c-f2ec-4e0c-8692-33c8490dde8a"
@@ -1563,7 +1434,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "b4767b8f-1a8a-42e1-8551-fb074c75a9fe"
@@ -1575,7 +1446,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1590,19 +1461,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "e0a0635f-03a3-4949-9e96-2e668b0ce6c5"
                       },
@@ -1613,7 +1484,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1631,28 +1502,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 32
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "c373f587-efea-4347-89a4-32535b1c6ca8"
+                              "id": "f0148a37-e35c-4361-a430-a9f0e3c78540"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "424acc74-542d-4a64-a0ac-93a4d5a76926"
@@ -1687,7 +1549,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "f91a6768-b42d-4f3e-b0a4-b3fb5d9f04d7"
@@ -1699,7 +1561,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1714,19 +1576,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "5d9f9c33-c99a-4fcc-9461-f2285b1481df"
                       },
@@ -1737,7 +1599,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1755,28 +1617,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 33
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "fa81f4ea-31ce-40bd-a913-76fe95c71414"
+                              "id": "d17ace57-da34-4fc8-b057-c70f8ff60143"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "b9a3e1aa-27b9-49d7-a206-ea95f6322c6f"
@@ -1811,7 +1664,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "00cefe81-7b1a-4197-bf6c-9a491e8a9058"
@@ -1823,7 +1676,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1838,19 +1691,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "f3cb2f69-fa88-47dd-b4e8-acaa234dd828"
                       },
@@ -1861,7 +1714,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -1879,28 +1732,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 34
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "bfc741d2-e18b-460d-a504-c32392b91519"
+                              "id": "1037d996-c16d-40cd-ac01-da3d0d9dc549"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "36baf469-4103-4373-aff6-9037b5bfdb52"
@@ -1935,7 +1779,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "f25e13bf-d44d-4f06-99da-4d5e23583e90"
@@ -1947,7 +1791,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -1962,19 +1806,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "c1a2281f-f0c1-4379-b943-f246d4bf0b74"
                       },
@@ -1985,7 +1829,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2003,28 +1847,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 35
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "a235a5b8-c883-4824-b3d8-0f7be7a79e04"
+                              "id": "a2508b04-f8f3-4343-b903-cb972e05f68c"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "2bc0810b-1b83-4e16-9cb4-ac2fd8d29bbd"
@@ -2059,7 +1894,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "73efd5cf-a8c1-4702-818f-e5f9138f2250"
@@ -2071,7 +1906,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2086,19 +1921,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "3867a496-9388-4205-a0c4-6298c5983591"
                       },
@@ -2109,7 +1944,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2127,28 +1962,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 36
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "cf49dd25-7b93-4648-839a-b56487a097d2"
+                              "id": "871d9063-2028-48e4-9f41-e9be26ef7bdb"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "810fb46d-1820-442f-bde7-646e23df50ec"
@@ -2183,7 +2009,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "9f931ca1-e172-42b3-a530-c4e6ed1ab204"
@@ -2195,7 +2021,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2210,19 +2036,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "f7e05ca3-3b6b-47c5-86d6-84062299c0be"
                       },
@@ -2233,7 +2059,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2251,28 +2077,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 37
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "ed26cde8-684a-465c-b406-f178bfd7d3b6"
+                              "id": "4b9a5307-3001-4f2c-93d0-1687e91446da"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "450ad0b8-c471-4d34-a48e-160a8f363337"
@@ -2307,7 +2124,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "5de73324-de06-4dfb-9e5f-03e343eec4ec"
@@ -2319,7 +2136,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2334,19 +2151,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "a27b0d34-34ef-4403-80b8-bccdc783f9d2"
                       },
@@ -2357,7 +2174,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2375,28 +2192,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 38
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "00b69c56-99fb-4780-b9e3-b9921471012f"
+                              "id": "b46dbc4c-f49d-4a99-8e1a-352c340178c3"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "3065a0e8-7447-49d1-8037-f867640a6780"
@@ -2431,7 +2239,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "8fa782e7-2adb-4b96-9d41-ddb850e7ccd4"
@@ -2443,7 +2251,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2458,19 +2266,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "a9c47f2f-62c5-436b-9fb5-78c76b98971c"
                       },
@@ -2481,7 +2289,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2499,28 +2307,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 39
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "2413a292-ed19-4a0b-bc0a-161e762a3f29"
+                              "id": "9dd6c8e0-b6af-457a-a1d5-7cc4d796b283"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "6bec7caa-4eaf-4d9f-b984-7e5575b72985"
@@ -2555,7 +2354,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "6649fb81-2800-45e7-8025-b76c07d812ba"
@@ -2567,7 +2366,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2582,19 +2381,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "3c6ba94e-c703-4057-9395-941233e683f9"
                       },
@@ -2605,7 +2404,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2623,28 +2422,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 40
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "bf9c6084-bb22-4297-b962-f665dd493fc0"
+                              "id": "0f962641-2d0b-4ac2-869a-1450883aef2e"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "5252ed70-44ed-4774-8de3-a3d78b6f0e79"
@@ -2679,7 +2469,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "7930ddc3-af82-48da-81bd-6bb30cb63926"
@@ -2691,7 +2481,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2706,19 +2496,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "96bce8a8-1b8f-40ea-bcd0-a3b424bea838"
                       },
@@ -2729,7 +2519,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2747,28 +2537,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 41
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "85ac3fff-1896-499b-a9be-af321cfae109"
+                              "id": "c0c6e661-dbf8-458f-b2a8-164caa8477c3"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "0f33a19e-8004-454c-af44-64b596e6d779"
@@ -2803,7 +2584,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "ae3f07fb-d949-4883-b25a-314814ff83fe"
@@ -2815,7 +2596,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2830,19 +2611,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "8a2262d4-7db4-466b-8b8f-68907ac55c15"
                       },
@@ -2853,7 +2634,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2871,28 +2652,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 42
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "5c0543e4-04ec-445d-ad98-2cd30f83a576"
+                              "id": "ca8ae432-cbe0-404c-b839-d16c3dd4fd1a"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "e8b1727b-d0a6-48ad-b0e0-2b65ac27af0f"
@@ -2927,7 +2699,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "27c03db0-67c6-451c-b5c7-e6df7aeac2d2"
@@ -2939,7 +2711,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -2954,19 +2726,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "8f237a3d-a2d7-4da4-9e0a-a5264cbc50be"
                       },
@@ -2977,7 +2749,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -2995,28 +2767,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 43
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "412b3826-14f4-4ac4-98a6-ca9c19bae821"
+                              "id": "f1b53380-3bd3-4240-b85c-7f5de8c98c4b"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "5f5779ba-0aa8-4b20-8324-b696da2bab0e"
@@ -3051,7 +2814,7 @@
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V2",
+                    "variable": "79",
                     "__collapse": true
                   },
                   "id": "dcf6790c-6ebf-4802-9f0a-4bf2bbfc6f30"
@@ -3063,7 +2826,7 @@
                       "type": "lte",
                       "valueA": {
                         "type": "variable",
-                        "value": "V0"
+                        "value": "78"
                       },
                       "valueB": {
                         "type": "number",
@@ -3078,19 +2841,19 @@
                       {
                         "command": "EVENT_SET_VALUE",
                         "args": {
-                          "variable": "V3",
+                          "variable": "80",
                           "value": {
                             "type": "sub",
                             "valueA": {
                               "type": "variable",
-                              "value": "V2"
+                              "value": "79"
                             },
                             "valueB": {
                               "type": "variable",
                               "value": "6"
                             }
                           },
-                          "__collapse": true
+                          "__collapse": false
                         },
                         "id": "4881622d-afd5-422f-a1fe-18a06d4d0dd4"
                       },
@@ -3101,7 +2864,7 @@
                             "type": "gt",
                             "valueA": {
                               "type": "variable",
-                              "value": "V3"
+                              "value": "80"
                             },
                             "valueB": {
                               "type": "number",
@@ -3119,28 +2882,19 @@
                                 "customEventId": "d38a8c99-30a3-45f3-b9cd-2e622f002677",
                                 "$variable[V0]$": {
                                   "type": "variable",
-                                  "value": "V0"
+                                  "value": "78"
                                 },
                                 "$variable[V1]$": {
                                   "type": "number",
                                   "value": 44
-                                },
-                                "$variable[V2]$": {
-                                  "type": "number",
-                                  "value": 0
-                                },
-                                "$variable[V3]$": {
-                                  "type": "variable",
-                                  "value": "V1"
-                                },
-                                "__collapse": false
+                                }
                               },
-                              "id": "9e95e3a3-4212-4c12-8f96-08db7d4b6dea"
+                              "id": "cb85b8ea-af2f-4917-81f2-29732ea1605a"
                             },
                             {
                               "command": "EVENT_INC_VALUE",
                               "args": {
-                                "variable": "V0",
+                                "variable": "78",
                                 "__collapse": true
                               },
                               "id": "c99c301e-82fc-41ed-889c-f7c025677117"
@@ -3171,7 +2925,7 @@
           "type": "lte",
           "valueA": {
             "type": "variable",
-            "value": "V0"
+            "value": "78"
           },
           "valueB": {
             "type": "number",
@@ -3192,7 +2946,7 @@
                 "type": "lte",
                 "valueA": {
                   "type": "variable",
-                  "value": "V0"
+                  "value": "78"
                 },
                 "valueB": {
                   "type": "number",
@@ -3209,20 +2963,16 @@
                     "customEventId": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
                     "$variable[V0]$": {
                       "type": "variable",
-                      "value": "V0"
-                    },
-                    "$variable[V1]$": {
-                      "type": "variable",
-                      "value": "V1"
+                      "value": "78"
                     }
                   },
-                  "id": "86d9de08-0337-4b70-a766-0bddcb7e651a"
+                  "id": "6c50e31a-e12f-4a23-b5ba-8874768b88dc"
                 },
                 {
                   "command": "EVENT_INC_VALUE",
                   "args": {
-                    "variable": "V0",
-                    "__collapse": true
+                    "variable": "78",
+                    "__collapse": false
                   },
                   "id": "352cf8f7-ad5e-47df-a6cc-46e138a739d6"
                 }
