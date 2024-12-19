@@ -271,6 +271,11 @@ A listing of variables used in GB Studio and their types.
 * `$78$: Variable 078` QS_draw_item_slot - `number`. Inventory screen. Used to calculate which slot to draw
 * `$79$: Variable 079` QS_draw_item_found_count - `number`. Inventory screen. Used to track the number of weapons/treasures found
 * `$80$: Variable 080` QS_draw_item_condition - `number`. Inventory screen. Used to calculate if this item has scrolled into view
+* `$81$: Variable 081` QS_equip_item_slot - `number`. Inventory screen. The slot of the item to equip
+* `$82$: Variable 082` QS_equip_item_identified - `number`. Inventory screen. The found item in the item list
+* `$83$: Variable 083` QS_equip_item_found_count - `number`. Inventory screen. Used to track the number of weapons/treasures found
+* `$84$: Variable 084` QS_equip_item_found_flag - `number`. Inventory screen. Flag to set when item is found in item list
+
 
 
 * `$25$: Variable 025` Earth Shrine Flags - `word`.
