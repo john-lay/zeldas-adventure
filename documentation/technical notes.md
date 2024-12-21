@@ -277,6 +277,7 @@ A listing of variables used in GB Studio and their types.
 * `$84$: Variable 084` QS_equip_item_found_flag - `number`. Inventory screen. Flag to set when item is found in item list
 * `$85$: Variable 085` QS_can_scroll - `number`. Inventory screen. Used to calculate to weapon/treasure offset
 * `$86$: Variable 086` world_map_warp_flag - `number`. World map. Set when the player uses the compass to warp
+* `$87$: Variable 087` Scene has_paid - `bool`. represents Zelda has paid for an item
 
 
 
@@ -640,4 +641,9 @@ After some research, I understood the root cause was the total count (`MAX_GLOBA
 
 1. I moved the scene init. variables into global variables (50-55) which reduced the total to __690__.
 2. I moved the enemy projectile and animated tiles local scene variables to global variables (56-57), reducing the count to __555__.
-3. Finally I moved all the local enemy actor variables to global variables (58-74, and reusing enemy position variables: globals 25-38), which reduced the total count to __247__.
+3. I moved all the local enemy actor variables to global variables (58-74, and reusing enemy position variables: globals 25-38), which reduced the total count to __247__.
+4. I moved the collectable local variables to global variables (75), which reduced the total count to __155__.
+5. I moved the inventory local variables to global variables (76-85), which reduced the total count to __90__.
+6. Finally, I moved the shop owner/seller `has paid` local variable to a global variable (86), which reduced the total count to __87__.
+
+The final few `game_globals.i` from 84-87 are used for debug and menu flags in the title screen and for a single actor who has multiple dialogue options depending on what already's been said.
