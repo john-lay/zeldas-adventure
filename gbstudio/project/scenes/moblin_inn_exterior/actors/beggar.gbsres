@@ -35,9 +35,16 @@
         ],
         "false": [
           {
+            "command": "EVENT_SET_FALSE",
+            "args": {
+              "variable": "87"
+            },
+            "id": "eb3261b5-ffd7-420a-ba9d-0fe4ded338aa"
+          },
+          {
             "command": "EVENT_IF_FALSE",
             "args": {
-              "variable": "L0",
+              "variable": "87",
               "__collapseElse": false,
               "__disableElse": false
             },
@@ -80,7 +87,8 @@
                     "value14": 15,
                     "__collapseCase15": false,
                     "value15": 16,
-                    "__collapseElse": false
+                    "__collapseElse": false,
+                    "__collapse": false
                   },
                   "children": {
                     "true0": [
@@ -93,7 +101,8 @@
                             "nourrir mes enfants\npour un seul repas,\neux qui sont affamés",
                             "et frigorifiés par le\nvent. "
                           ],
-                          "avatarId": ""
+                          "avatarId": "",
+                          "__collapse": true
                         },
                         "id": "f4d381db-89ba-4752-89de-fa5bb5ebe1a0"
                       },
@@ -101,7 +110,7 @@
                         "id": "0102d7f0-9e50-4334-956c-3dc63516cc39",
                         "command": "EVENT_CHOICE",
                         "args": {
-                          "variable": "L0",
+                          "variable": "87",
                           "trueText": "Payer 5 Rubis",
                           "falseText": "Y'a pas moyen!",
                           "__collapse": false
@@ -132,7 +141,8 @@
                             "Wimbich in the north! I\nask only enough for a\nsingle meal for my",
                             "children, who hunger\nand are chilled by the\nwind."
                           ],
-                          "avatarId": ""
+                          "avatarId": "",
+                          "__collapse": true
                         },
                         "id": "35f94161-e317-4555-8b38-e1c38ae6ba24"
                       },
@@ -140,7 +150,7 @@
                         "id": "b339319d-0e5e-47d5-8e0c-c63832fe7e9d",
                         "command": "EVENT_CHOICE",
                         "args": {
-                          "variable": "L0",
+                          "variable": "87",
                           "trueText": "Pay 5 Rupees",
                           "falseText": "No way!",
                           "__collapse": false
@@ -153,9 +163,10 @@
                 {
                   "command": "EVENT_IF_TRUE",
                   "args": {
-                    "variable": "L0",
+                    "variable": "87",
                     "__collapseElse": true,
-                    "__disableElse": true
+                    "__disableElse": true,
+                    "__collapse": false
                   },
                   "children": {
                     "true": [
@@ -241,7 +252,8 @@
                                 "value14": 15,
                                 "__collapseCase15": false,
                                 "value15": 16,
-                                "__collapseElse": false
+                                "__collapseElse": false,
+                                "__collapse": true
                               },
                               "children": {
                                 "true0": [
@@ -334,7 +346,8 @@
                                 "value14": 15,
                                 "__collapseCase15": false,
                                 "value15": 16,
-                                "__collapseElse": false
+                                "__collapseElse": false,
+                                "__collapse": true
                               },
                               "children": {
                                 "true0": [
@@ -382,7 +395,7 @@
                             {
                               "command": "EVENT_SET_FALSE",
                               "args": {
-                                "variable": "L0"
+                                "variable": "87"
                               },
                               "id": "ecdbb775-02a2-4ff0-bbfc-b8241125e59f"
                             }
@@ -412,18 +425,7 @@
       "id": "3a44986f-3c7a-4211-a71f-9180b0a5733f"
     }
   ],
-  "startScript": [
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "L0",
-        "value": {
-          "type": "false"
-        }
-      },
-      "id": "2594dd8a-6a9c-40ea-a0d1-a623634aa23a"
-    }
-  ],
+  "startScript": [],
   "updateScript": [],
   "hit1Script": [],
   "hit2Script": [],
