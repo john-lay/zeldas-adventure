@@ -1,0 +1,73 @@
+{
+  "_resourceType": "trigger",
+  "id": "95540801-a18a-4232-991e-efab103d7956",
+  "name": "",
+  "prefabId": "",
+  "x": 19,
+  "y": 2,
+  "symbol": "trigger_211",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 15,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "97b7d334-ff1e-4e07-9c1d-ae08d3d20cc8"
+      },
+      "id": "898cea31-a3b0-4e06-bad7-e88c66fe07e9"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "100",
+        "flag": 2,
+        "__collapseElse": false,
+        "__label": "Has used ladder"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "c5fdb23b-d368-4232-a65d-d828255366a1",
+              "x": {
+                "type": "number",
+                "value": 1
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "right",
+              "fadeSpeed": "2"
+            },
+            "id": "34235305-2ecd-4c80-a2c7-473a238fee70"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "6d2115ad-4a20-4f34-8428-93bf4fc3ed50",
+              "x": {
+                "type": "number",
+                "value": 1
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "right",
+              "fadeSpeed": "2"
+            },
+            "id": "8f8d85bc-ef5b-4cea-ba03-9eeb7214ca6d"
+          }
+        ]
+      },
+      "id": "62c817b9-f990-4673-8e91-d2114e4d2688"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}
