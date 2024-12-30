@@ -16,11 +16,22 @@
       "id": "09be2e3e-7964-4402-bcaa-ddc3c5b5736f"
     },
     {
-      "command": "EVENT_SCRIPT_LOCK",
+      "command": "EVENT_SET_INPUT_SCRIPT",
       "args": {
-        "__comment": true
+        "input": [
+          "left",
+          "up",
+          "down",
+          "right"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
       },
-      "id": "648072a6-8cd6-49a0-adc0-f43a11899a5d"
+      "children": {
+        "true": []
+      },
+      "id": "273a78fd-6b51-4069-850f-9efd044774f2"
     },
     {
       "command": "EVENT_GROUP",
@@ -5557,6 +5568,28 @@
       "id": "259c1870-8340-464d-bdd8-16f523df23fc"
     },
     {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.1,
+        "frames": 30,
+        "__collapse": true
+      },
+      "id": "c2730e11-b6f5-454b-91d8-fb292f6721ed"
+    },
+    {
+      "command": "EVENT_REMOVE_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "left",
+          "up",
+          "down",
+          "right"
+        ],
+        "__collapse": true
+      },
+      "id": "374a6f84-382a-4d2e-80b0-83d6b8b70ccd"
+    },
+    {
       "command": "EVENT_COMMENT",
       "args": {
         "text": "When counting defeated enemies to reveal items (e.g. compass), this delay prevents spamming a single enemy to reveal said item.",
@@ -5567,18 +5600,11 @@
     {
       "command": "EVENT_WAIT",
       "args": {
-        "time": 0.4,
+        "time": 0.3,
         "frames": 30,
         "__collapse": true
       },
       "id": "36a431c7-81ef-4dfd-adbc-c5d567c3b360"
-    },
-    {
-      "command": "EVENT_SCRIPT_UNLOCK",
-      "args": {
-        "__comment": true
-      },
-      "id": "48db24a1-1d8e-47d0-b309-635ea96b7d1c"
     }
   ]
 }
