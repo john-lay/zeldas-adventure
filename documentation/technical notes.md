@@ -283,7 +283,7 @@ A listing of variables used in GB Studio and their types.
 
 
 
-* `$25$: Variable 025` Earth Shrine Flags - `word`.
+* `$100$: Variable 0100` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
   * (Flag 3 represents Zelda has used the ladder)
