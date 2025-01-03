@@ -1,0 +1,157 @@
+{
+  "_resourceType": "actor",
+  "id": "3546ba9e-819a-4cdd-99e5-2ee7b23506f9",
+  "name": "Chest",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "7e585dc9-5f3f-47af-8602-5edce79fcf75",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_279",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 11,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has the Jade Ring",
+              "__collapse": true
+            },
+            "id": "1fe9aa38-840c-4adc-8f95-57512a71df94"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_ACTOR_AT_POSITION",
+            "args": {
+              "actorId": "player",
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "605ee66a-e022-4489-af4c-13117a704e4d",
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 12
+                    }
+                  },
+                  "id": "0b5d1ea2-ca02-4b6c-8b08-093067d200fa"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "605ee66a-e022-4489-af4c-13117a704e4d",
+                    "x": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 10
+                    }
+                  },
+                  "id": "c6904d83-f30e-4c76-bcb1-1dbe53f8eafb"
+                }
+              ]
+            },
+            "id": "404647d8-f151-42d0-971b-5c34dab02ac5"
+          },
+          {
+            "command": "EVENT_ACTOR_ACTIVATE",
+            "args": {
+              "actorId": "605ee66a-e022-4489-af4c-13117a704e4d"
+            },
+            "id": "bafaf957-5cfd-4a46-b4b8-909e3a62f5be"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "cc8f5742-6577-45f1-8d7e-8e722fcc85a7"
+          }
+        ]
+      },
+      "id": "b45ac895-b3db-46cd-b7c8-ea1f3eb7f98e"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 11,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has the Jade Ring",
+              "__collapse": true
+            },
+            "id": "de9c0a84-de39-4907-aae6-874d0a34f9ce"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "b6d43775-a7ad-42cc-ad1f-9e558309abff"
+          }
+        ],
+        "false": []
+      },
+      "id": "0f5c48a4-6e31-4b68-8869-2cb73efac680"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 10,
+  "y": 12,
+  "_index": 2
+}
