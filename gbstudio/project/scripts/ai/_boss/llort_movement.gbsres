@@ -1,0 +1,1441 @@
+{
+  "_resourceType": "script",
+  "id": "d0c6adc3-d3d7-47cd-b73f-0fc26d7ab75e",
+  "name": "AI/_Boss/Llort Movement",
+  "description": "Behaviour of the Earth Shrine boss.",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Llort"
+    }
+  },
+  "symbol": "script_68",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": -5
+        },
+        "y": 0,
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "6fe5f091-9af5-4539-874a-9546dcd2dd90"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "521001de-d091-45c1-aa92-d12c4130078a"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "d821dc08-1933-4ad1-969a-96aed2fa8718"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "2d773083-3ac4-461b-aa60-99f5a2cfe90b"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "c62e2de1-c9bc-42f1-9adf-1f8d66ac0640"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "ba814844-3ef8-415c-94e3-074093ccbd95"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": false,
+              "__section": "projectile"
+            },
+            "id": "ae30d632-fbf5-44c8-8f98-1bd45a98f506"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "821f2868-574f-4a0d-aa18-ed1e433768e3"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "b97d8ddf-af6f-4ae0-9513-d00f96c34530"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "d038926d-a156-4656-9b78-cb9a9d286e85"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "b36a12b2-12eb-413e-8e02-6d77fcd0487a"
+          }
+        ]
+      },
+      "id": "15224341-93b3-488a-b211-bdfc1fcb281b"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 2
+        },
+        "y": {
+          "type": "number",
+          "value": 5
+        },
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "4a1fe5ef-4de4-4728-ba6f-501a089b2537"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "2ddf3fbd-7167-4334-be37-b18f2d93b619"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "48502c55-50d2-4f7a-99f7-efe1420d9933"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "3170ad55-5a19-40da-bbca-9f8ac8236dd1"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "26fcca29-d35a-42fd-bc3b-cc4a102c3c2e"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "9c36f14b-d28a-461d-b2e4-71c34f4a5443"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "52f14139-fc80-4b70-9e15-59df3deaf1d0"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "98965565-7b33-4ac7-b911-0b1386539638"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "12b132f4-d975-4a95-adf8-a7e549b9383e"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "e60856a6-641e-4445-969a-5cfe2a8fb838"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "ff88e452-aeb6-40d7-a659-0655f30c92ff"
+          }
+        ]
+      },
+      "id": "bfe475a6-665f-41dc-b52d-ea159ac3cf47"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 4
+        },
+        "y": 0,
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "83260cc5-d116-4868-83ab-e549a5c7e628"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "3fd2315c-509f-409e-970e-14856f2db931"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "549b39b1-0f68-4e30-9cef-3b11766377c8"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "00e0484f-333b-4b54-a004-076936870066"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "732a1c6c-8e43-401d-980e-e39e7fb89428"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "fe5b87bb-3762-408c-974b-dbe33366dea9"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "260ccfa2-6a40-4b55-81c0-93755809ad87"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "eeac69ce-fa0b-44ce-b6b1-f72ed018e733"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "11c30084-7d3e-46ae-be05-bf3433aa87a6"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "f368d56d-d68f-4b15-abe7-699169c0acf4"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "dd2bbffc-e819-4dba-9b3f-a4fd776a7c48"
+          }
+        ]
+      },
+      "id": "c0f6d5bb-2d37-405b-ab46-04c648af5da8"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 2
+        },
+        "y": {
+          "type": "number",
+          "value": -5
+        },
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "cf4d69ba-4b3e-4d7d-8948-52103b1ce2cb"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "a61d73f9-4674-43e7-b485-421813af3531"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "4161b930-6c18-43f0-8c90-8ef4038eb84c"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "7507e7cf-0fd1-4a5e-94a0-415d6a46131d"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "f7a12f04-592c-49fa-b73a-16c9a26d1664"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "70d1566b-6dcf-4ed1-85a4-6c1c610be10a"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "79abea6c-71cd-48ab-b218-e9390d1a2437"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "9f88b7d1-66d7-4f69-8f99-fa0d809eca0a"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "765cd1e6-ee13-4f03-8b9f-d1006934c119"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "dc504c6c-d76d-4ea7-9859-fb2a8ddb3724"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "685a325d-2bad-4712-965f-3722a8bff6a5"
+          }
+        ]
+      },
+      "id": "332fe407-e39b-40b0-84e0-97efd3722cd3"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 3
+        },
+        "y": 0,
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "69dc83b1-6931-42cf-8df8-680a4468fff2"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "9452d826-6f09-4f1b-b8eb-cbe7efa81b18"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "6100a4f7-76ce-45c5-bf62-74c859db416b"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "40b78f1f-8fb6-4fa5-95c6-2eaea063239c"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "1d9bd5c2-8da5-4758-9eab-acc877ef76ee"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "4a2df131-5d7c-4101-af93-406c14a4445c"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "e34c1a30-2918-4159-ab37-3f8bdb0662ae"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "c928346b-202e-481b-a227-9a8a18882b93"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "e0e58ff7-a645-4148-aecc-cf27d1d501eb"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "87018c30-37b7-495a-9f91-9373de11c9d1"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "52919f82-d8cf-4815-bf65-45bf3faf0757"
+          }
+        ]
+      },
+      "id": "51c3a8b8-ff1d-4d6c-bca3-8fe9a7164e16"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": -2
+        },
+        "y": {
+          "type": "number",
+          "value": 6
+        },
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "695d02ac-7e4d-4516-ac74-2dcd2fd619ac"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "6e753e9a-e753-41b6-ac6c-3610f18217bf"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "c6f2c7ec-38b8-484e-a42b-35423b7eaeaa"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "71b0caa1-ea04-47cb-af36-050c23dab0a7"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "cdd17b88-5288-4a2b-8f9a-32586b83d3aa"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "bcd2b17c-4211-4210-97b3-7d41ec9d0164"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "72f44765-7d55-4054-8656-b31ae77410e3"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "a8ef8011-ca0a-4eca-8b1f-8498729398d1"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "e7c4ea8b-4728-443a-81dd-88ed6e82122c"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "02eb454e-49fa-47a3-ac3e-d12949cffad6"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "99eb40bf-ec34-4d99-9da0-a7d1db959dec"
+          }
+        ]
+      },
+      "id": "91f08379-cc88-4b32-a3c6-3aa358a115e9"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": -4
+        },
+        "y": 0,
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "2b61b048-f23e-4615-8653-0d010bb3cce8"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "f73029ee-55ac-4869-8cb6-473aaaf8d53b"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "d1512d92-0d86-4111-be7d-ebad5f092522"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "fba6f308-7275-407d-a608-cbf0d9bb7c9a"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "f8c77c5f-99f0-4808-bd9c-f4221c484269"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "7c663273-3d4f-47df-b65d-a501d7c89b64"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "1d583639-0333-4431-bdcf-63d279d55a80"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "1de0b74f-e5f6-425e-87ac-452ec277be84"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "e783e280-941a-4eef-8b1c-b3bc941a0636"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "12649d15-98d6-4ab9-b078-8f588885555d"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "c1d6ef6d-d907-417a-b2ef-a551e28b9353"
+          }
+        ]
+      },
+      "id": "3642119e-a85b-4860-b192-876fe1808352"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": -5
+        },
+        "y": 0,
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "277274e0-1c0a-4a0b-baa8-0c70fe9ef921"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "a2802cbe-7da6-41ab-9510-c0a65a90acd6"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "2bdb403c-a5e1-45c7-8666-dc911d6c97c7"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "d1fdd0fd-637a-4c6f-a181-37049f6116fc"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "0ec35ffa-b7a0-4fe3-b975-c284bc65112c"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "e1f3369d-7011-4468-ae3f-de07629e51e8"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "7714372f-8397-4e5e-9a26-448b76fadaeb"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "a3eb86a8-c2c6-4236-bf41-4130c301a544"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "96cfbd57-354b-481e-a449-bc4c03bba69a"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "e2404297-5f0c-4e96-9e24-10f0c280295e"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "eb507c12-b359-402a-b443-58f54d8059ac"
+          }
+        ]
+      },
+      "id": "42fa730b-3c29-49bf-bff7-34b392a1dc13"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 5
+        },
+        "y": {
+          "type": "number",
+          "value": -6
+        },
+        "moveType": "diagonal",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "65df2a8c-7760-43e5-abd4-9e1100e695bb"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "aebc406a-9d84-41fa-9c3b-5e7165daf5c5"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Attack",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "0e11ae1b-f397-4f85-9e3b-9988a743e949"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Charge",
+              "__collapse": true
+            },
+            "id": "f166fe3c-6b37-4c50-a1a9-aec81b86aeb6"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "1d94664c-259d-4b72-b05a-7aa3261bb4f9"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Boss - Blue Stalfos Attack",
+              "__collapse": true
+            },
+            "id": "620ddca4-e3f3-44b6-95d8-67a2e9d0262a"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 150,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true,
+              "__section": "projectile"
+            },
+            "id": "765afb69-f445-447a-a295-fd8dc45b3aac"
+          },
+          {
+            "command": "EVENT_LAUNCH_PROJECTILE",
+            "args": {
+              "spriteSheetId": "14a6d5c1-b498-4c2b-a07f-109c5b846248",
+              "spriteStateId": "",
+              "actorId": "0",
+              "x": 0,
+              "y": 0,
+              "otherActorId": "$self$",
+              "direction": "down",
+              "angle": 105,
+              "angleVariable": "0",
+              "directionType": "angle",
+              "initialOffset": 0,
+              "speed": 2,
+              "animSpeed": 7,
+              "lifeTime": 1,
+              "collisionGroup": "3",
+              "collisionMask": [
+                "player",
+                "3"
+              ],
+              "__collapse": true
+            },
+            "id": "a67910f3-7d91-4545-92a2-d1359295cdf6"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "e25b1555-83a2-4bc0-9063-e09c83906ef8"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "6def26cf-9d21-4ecc-a2cb-aa04acbb5923"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "a41b7c69-fbb5-4d2c-b0d3-53e7747fc0df"
+          }
+        ]
+      },
+      "id": "d7cef9b5-1e4d-4d47-b264-13b0e099793b"
+    }
+  ]
+}
