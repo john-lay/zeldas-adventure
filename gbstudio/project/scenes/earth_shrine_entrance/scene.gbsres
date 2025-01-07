@@ -36,12 +36,57 @@
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "command": "EVENT_IF",
       "args": {
-        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-        "__collapse": true
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "22"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
       },
-      "id": "0beb05fc-4306-4f95-abb0-b10bc81a4262"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Shrine",
+              "__collapse": true
+            },
+            "id": "f89da95f-76e8-42fd-97d5-78e3121b2eb4"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 3
+              },
+              "__collapse": true
+            },
+            "id": "a7f55bd9-0f50-4877-89e4-1bc7c39a111e"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+              "__collapse": true
+            },
+            "id": "e1ed11f6-97bd-4bc4-8f8d-afcaf8ba3332"
+          }
+        ]
+      },
+      "id": "35ab3b20-8d11-4537-b907-79cec1c45b02"
     },
     {
       "command": "EVENT_GROUP",
