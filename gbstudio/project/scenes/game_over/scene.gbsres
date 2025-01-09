@@ -23,8 +23,22 @@
   "script": [
     {
       "command": "EVENT_MUSIC_STOP",
-      "args": {},
+      "args": {
+        "__collapse": true
+      },
       "id": "16881259-feab-46b8-a0ff-a0293401080b"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "0",
+        "value": {
+          "type": "number",
+          "value": 6
+        },
+        "__collapse": true
+      },
+      "id": "645e2e49-e26d-41a7-8d05-23c2308c66a3"
     },
     {
       "command": "EVENT_SET_VALUE",
@@ -33,34 +47,131 @@
         "value": {
           "type": "number",
           "value": 0
-        }
+        },
+        "__collapse": true,
+        "__comment": false
       },
       "id": "9e01582f-032d-429f-9921-20aef2eb63ae"
     },
     {
       "command": "EVENT_WAIT",
       "args": {
-        "time": 1,
-        "frames": 30
+        "time": 2,
+        "frames": 30,
+        "__collapse": false
       },
       "id": "9425e3ee-6a1f-4871-94a7-d7a62bab6a92"
     },
     {
-      "command": "EVENT_SWITCH_SCENE",
+      "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
-        "sceneId": "348766b2-b280-4042-a990-6a6cc4aa5d59",
-        "x": {
-          "type": "number",
-          "value": 0
-        },
-        "y": {
-          "type": "number",
-          "value": 31
-        },
-        "direction": "",
-        "fadeSpeed": "2"
+        "variable": "18",
+        "flag": 3,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Earth Shrine",
+        "__collapse": true
       },
-      "id": "5bf5c0f9-1778-44b2-8147-9fe76334c16f"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "7deee542-1f9e-4306-b4cb-c7286f8147c5"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "8652cddf-0793-4c89-95dc-c978cc95a6d1",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "60fb735c-095f-4311-af17-fadf9a794998"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "cd3a059d-299e-4af0-b71a-17c7013354a3",
+                    "x": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "606dda9b-7d08-4881-8d89-9001534239ac"
+                }
+              ]
+            },
+            "id": "e5a2453f-edad-462d-915e-109f0b62961a"
+          }
+        ],
+        "false": []
+      },
+      "id": "edd91cc5-5c41-4ede-adc9-0629a547853e"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Vision Henge"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "33d7d664-59bf-4a75-919d-1157e764f8a6"
+            },
+            "id": "afac7c8e-dbb0-4bf3-b2b5-b4a7ff1149a1"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "b76c1130-db51-4708-8dba-8f8bd848a56e",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "direction": "down",
+              "fadeSpeed": "2"
+            },
+            "id": "5bf5c0f9-1778-44b2-8147-9fe76334c16f"
+          }
+        ]
+      },
+      "id": "07f921e6-045f-41d9-91cb-127fc467ca10"
     }
   ],
   "playerHit1Script": [],
