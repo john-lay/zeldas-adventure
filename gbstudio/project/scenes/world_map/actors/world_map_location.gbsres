@@ -28,14 +28,16 @@
         "y": {
           "type": "variable",
           "value": "20"
-        }
+        },
+        "__collapse": true
       },
       "id": "7858cf2c-a023-4b76-8e4a-97c539af15f8"
     },
     {
       "command": "EVENT_COMMENT",
       "args": {
-        "text": "When loading the scrolling (larger) world map the indicator would often be invisible. Scrolling out of view (and then back into view) would fix it. This is a more elegant solution."
+        "text": "When loading the scrolling (larger) world map the indicator would often be invisible. Scrolling out of view (and then back into view) would fix it. This is a more elegant solution.",
+        "__collapse": true
       },
       "id": "5badeb36-1bed-4e25-a81f-3bf3db2356bb"
     },
@@ -45,7 +47,8 @@
         "duration": 0.2,
         "frames": 30,
         "units": "time",
-        "__scriptTabs": "end"
+        "__scriptTabs": "end",
+        "__collapse": true
       },
       "children": {
         "script": [
@@ -71,6 +74,248 @@
         ]
       },
       "id": "fdf3c32c-db65-4901-96a3-09f55808b47d"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Player in Shrine"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 3,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Earth Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 32
+                    },
+                    "__collapse": false
+                  },
+                  "id": "8c66bf84-83ff-4f26-9604-3ee3c69fc4ea"
+                }
+              ],
+              "false": []
+            },
+            "id": "78ad5f61-d25f-4c69-8405-6a4169a6b77d"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 4,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Illusion Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 13
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 8
+                    },
+                    "__collapse": false
+                  },
+                  "id": "5c0bb88c-96a5-45f3-85ca-64bd7b832d7d"
+                }
+              ],
+              "false": []
+            },
+            "id": "8b8060c4-fcf0-475e-ada4-94ecd4c17612"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 5,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Air Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 27
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "__collapse": false
+                  },
+                  "id": "cfc21f09-78ca-425c-aa5c-9c8298368443"
+                }
+              ],
+              "false": []
+            },
+            "id": "acfa25ea-b8e8-4aa3-99f3-fa3139c24f63"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 6,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Destiny Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 20
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "__collapse": false
+                  },
+                  "id": "ee9cab47-2bbc-42c0-ae19-8fb01bc94db2"
+                }
+              ],
+              "false": []
+            },
+            "id": "59699f92-97a6-45c0-96a2-7fb87e4ad702"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 7,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Water Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 19
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 29
+                    },
+                    "__collapse": false
+                  },
+                  "id": "48c54d2d-d93b-4b69-99ed-c7e1e2cd098c"
+                }
+              ],
+              "false": []
+            },
+            "id": "af05a44a-fbdb-4d09-89b2-b43bbcd35513"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 8,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Strength Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 29
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 17
+                    },
+                    "__collapse": false
+                  },
+                  "id": "a658ad9e-53cd-47ff-97f5-7072e7d31913"
+                }
+              ],
+              "false": []
+            },
+            "id": "3bb93b47-b6ed-4cbc-bd1e-34639758c8af"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 9,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__label": "Fire Shrine",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 7
+                    },
+                    "__collapse": false
+                  },
+                  "id": "e28d688d-d045-4300-98ba-82ffa5d48bc0"
+                }
+              ],
+              "false": []
+            },
+            "id": "54d7b740-8ff5-45da-9485-9fae4bfe32c8"
+          }
+        ]
+      },
+      "id": "65d718bb-fde1-4a2c-8c57-4cc6d936e3aa"
     }
   ],
   "updateScript": [],

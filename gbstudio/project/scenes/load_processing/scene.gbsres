@@ -166,9 +166,31 @@
       "children": {
         "true": [
           {
-            "command": "EVENT_MUSIC_STOP",
-            "args": {},
-            "id": "25a5b2b7-e2b2-4bf0-8bff-3bb2f1c2b2ac"
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Change music",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_MUSIC_STOP",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "25a5b2b7-e2b2-4bf0-8bff-3bb2f1c2b2ac"
+                },
+                {
+                  "command": "EVENT_MUSIC_PLAY",
+                  "args": {
+                    "musicId": "33d7d664-59bf-4a75-919d-1157e764f8a6",
+                    "__collapse": false
+                  },
+                  "id": "2b90e68e-fea2-4470-b45c-84281a5a1234"
+                }
+              ]
+            },
+            "id": "ea26a055-cfbc-4689-94b0-f702d7637164"
           },
           {
             "command": "EVENT_GROUP",
@@ -177,13 +199,6 @@
             },
             "children": {
               "true": [
-                {
-                  "command": "EVENT_MUSIC_PLAY",
-                  "args": {
-                    "musicId": "d445d497-7106-4653-a948-70d798a20115"
-                  },
-                  "id": "2b90e68e-fea2-4470-b45c-84281a5a1234"
-                },
                 {
                   "command": "EVENT_SWITCH_SCENE",
                   "args": {
