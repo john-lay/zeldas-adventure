@@ -5572,20 +5572,10 @@
               "__collapseElse": true,
               "__disableElse": true,
               "__label": "35. Life Potion",
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
-                {
-                  "command": "EVENT_ACTOR_EMOTE",
-                  "args": {
-                    "actorId": "$self$",
-                    "emoteId": "edf96d29-9a08-4813-b2d3-46e0996f89f2",
-                    "__collapse": false,
-                    "__comment": true
-                  },
-                  "id": "3b361939-76c5-4991-8e3c-17e7092fadc6"
-                },
                 {
                   "command": "EVENT_CALL_CUSTOM_EVENT",
                   "args": {
@@ -5638,16 +5628,69 @@
                   "id": "84d91244-38d8-40c3-a5fa-e570d7fe7ce3"
                 },
                 {
-                  "command": "EVENT_SET_VALUE",
+                  "command": "EVENT_IF_FLAGS_COMPARE",
                   "args": {
-                    "variable": "10",
-                    "value": {
-                      "type": "number",
-                      "value": 1
-                    },
-                    "__collapse": true
+                    "variable": "7",
+                    "flag": 0,
+                    "__collapseElse": false,
+                    "__label": "Has Wand"
                   },
-                  "id": "17c35a3c-69d2-4cf8-8b3c-c4692007715d"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "10",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          }
+                        },
+                        "id": "b3484c6a-e637-4094-a4b1-c959c6fe8e02"
+                      },
+                      {
+                        "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+                        "args": {},
+                        "id": "56e6adb0-b43e-401a-8051-f7d4756a58f6"
+                      },
+                      {
+                        "command": "EVENT_IF_COLOR_SUPPORTED",
+                        "args": {
+                          "__collapseElse": true,
+                          "__disableElse": true,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                                "__collapse": true
+                              },
+                              "id": "39811426-3033-48c5-888e-d70bb9bcc992"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "5ff7ad95-6081-4fe2-9bef-aeacb9ad7043"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "10",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          }
+                        },
+                        "id": "26b6d6ae-7c34-43e7-8863-b11e06a26783"
+                      }
+                    ]
+                  },
+                  "id": "89a584b3-9db4-49e3-b9f7-085df12fe249"
                 }
               ],
               "false": []
