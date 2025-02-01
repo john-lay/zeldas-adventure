@@ -185,29 +185,260 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
           {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "command": "EVENT_IF",
             "args": {
-              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
-              "__comment": false,
-              "$variable[V0]$": {
-                "type": "variable",
-                "value": "L0"
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "10"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 30
+                }
               },
-              "$variable[V1]$": {
-                "type": "variable",
-                "value": "L1"
-              },
-              "$variable[V2]$": {
-                "type": "variable",
-                "value": "L2"
-              }
+              "__collapseElse": false
             },
-            "id": "fec99941-a7dc-4c33-bb81-5a8c66a27c34"
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Flute Equipped",
+                    "__collapse": true
+                  },
+                  "id": "a7cae8a2-fc20-4820-be05-688f77a05bb4"
+                },
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "7",
+                    "flag": 14,
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                          "text": "Already collected pyros",
+                          "__collapse": true
+                        },
+                        "id": "4ed37af2-2aca-469c-97a6-33f915bd8ed5"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 2,
+                          "__collapseElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_COMMENT",
+                              "args": {
+                                "text": "Already defeated rope",
+                                "__collapse": true
+                              },
+                              "id": "6da4c95d-d660-4748-865e-7884ce455156"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                                "__collapse": true
+                              },
+                              "id": "95c8dff6-63e4-47ed-9665-ce88f9a8c056"
+                            },
+                            {
+                              "command": "EVENT_WAIT",
+                              "args": {
+                                "time": 0.2,
+                                "frames": 30,
+                                "__collapse": false
+                              },
+                              "id": "a3b6f8e4-0c41-456d-8769-c22be64ac67b"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_POSITION",
+                              "args": {
+                                "actorId": "81accfd7-aead-464c-96de-e14576f6d142",
+                                "x": {
+                                  "type": "property",
+                                  "target": "4618fe7b-3bc9-4d67-b176-71d5dff929ab",
+                                  "property": "xpos"
+                                },
+                                "y": {
+                                  "type": "property",
+                                  "target": "4618fe7b-3bc9-4d67-b176-71d5dff929ab",
+                                  "property": "ypos"
+                                },
+                                "__collapse": true
+                              },
+                              "id": "f0ab5bbd-fdac-47c2-abfe-82a581c58ea3",
+                              "children": {}
+                            },
+                            {
+                              "command": "EVENT_GROUP",
+                              "args": {
+                                "__label": "Enemy defeated",
+                                "__collapse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "12bfbebc-78bf-45ff-ba2e-f2a684af9ce0",
+                                      "__collapse": true
+                                    },
+                                    "id": "9a360568-aa03-45a5-8f1b-91366e45d149"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_SET_POSITION",
+                                    "args": {
+                                      "actorId": "85bf1921-8f5c-461b-a98e-94d52036fe89",
+                                      "x": {
+                                        "type": "property",
+                                        "target": "4618fe7b-3bc9-4d67-b176-71d5dff929ab",
+                                        "property": "xpos"
+                                      },
+                                      "y": {
+                                        "type": "property",
+                                        "target": "4618fe7b-3bc9-4d67-b176-71d5dff929ab",
+                                        "property": "ypos"
+                                      },
+                                      "__collapse": true
+                                    },
+                                    "id": "84e2241c-e64d-4bac-8543-6e1eba3a81be",
+                                    "children": {}
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                                    "args": {
+                                      "actorId": "85bf1921-8f5c-461b-a98e-94d52036fe89",
+                                      "x": {
+                                        "type": "variable",
+                                        "value": "42"
+                                      },
+                                      "y": {
+                                        "type": "variable",
+                                        "value": "43"
+                                      },
+                                      "moveType": "horizontal",
+                                      "useCollisions": false,
+                                      "__collapse": true
+                                    },
+                                    "id": "43a76d67-eaef-4390-848d-e07bb02a0b4d",
+                                    "children": {}
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_DEACTIVATE",
+                                    "args": {
+                                      "actorId": "4618fe7b-3bc9-4d67-b176-71d5dff929ab",
+                                      "__collapse": true
+                                    },
+                                    "id": "3e3b8dff-4fa2-4da5-9d35-c1e72d250b5d",
+                                    "children": {}
+                                  },
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "4fe1d520-177f-456a-ae9f-684ce01125d8",
+                                      "$actor[0]$": "85bf1921-8f5c-461b-a98e-94d52036fe89",
+                                      "__collapse": true
+                                    },
+                                    "id": "1e4142ff-7bdc-42cd-a5db-4ee51367f44c"
+                                  }
+                                ]
+                              },
+                              "id": "87fe20c5-2fe9-49b2-a021-72659df35151"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_ACTIVATE",
+                              "args": {
+                                "actorId": "81accfd7-aead-464c-96de-e14576f6d142",
+                                "__collapse": true
+                              },
+                              "id": "c52d5825-19f3-4409-9220-a29defdc0a41"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SHOW",
+                              "args": {
+                                "actorId": "81accfd7-aead-464c-96de-e14576f6d142",
+                                "__collapse": true
+                              },
+                              "id": "1eaf4031-5ef4-45b7-b0ab-b3e228df7564"
+                            },
+                            {
+                              "command": "EVENT_ADD_FLAGS",
+                              "args": {
+                                "variable": "17",
+                                "flag1": false,
+                                "flag2": false,
+                                "flag3": true,
+                                "flag4": false,
+                                "flag5": false,
+                                "flag6": false,
+                                "flag7": false,
+                                "flag8": false,
+                                "flag9": false,
+                                "flag10": false,
+                                "flag11": false,
+                                "flag12": false,
+                                "flag13": false,
+                                "flag14": false,
+                                "flag15": false,
+                                "flag16": false,
+                                "__collapse": true
+                              },
+                              "id": "c67af03f-9950-467e-ba4c-54776a84cf82",
+                              "children": {}
+                            }
+                          ]
+                        },
+                        "id": "0e2c068c-23bc-4f36-8ab6-6a599f546d07"
+                      }
+                    ]
+                  },
+                  "id": "c2364add-c663-482d-ae5a-f8ae9440c9c0"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+                    "__comment": false,
+                    "$variable[V0]$": {
+                      "type": "variable",
+                      "value": "L0"
+                    },
+                    "$variable[V1]$": {
+                      "type": "variable",
+                      "value": "L1"
+                    },
+                    "$variable[V2]$": {
+                      "type": "variable",
+                      "value": "L2"
+                    }
+                  },
+                  "id": "bf698d1c-1b03-481f-a40b-c8b8968f6cb8"
+                }
+              ]
+            },
+            "id": "4a7b0f74-6cc6-4916-9cd5-cfb08209e61f"
           }
         ]
       },
