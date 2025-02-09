@@ -1,0 +1,267 @@
+{
+  "_resourceType": "script",
+  "id": "8ba147e7-7fac-43c9-85ab-b367f6bcb526",
+  "name": "AI/Zora Movement",
+  "description": "Behaviour of Zora enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Zora"
+    }
+  },
+  "symbol": "script_76",
+  "script": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 2,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "d031e79c-30b5-4af1-8933-3c72ead7c179"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "Enemy - Zora Surface",
+        "__collapse": true
+      },
+      "id": "802990a4-3e1a-41b3-93a7-f90389d2c5ee"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.2,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "dd9d3e47-9509-492c-8b5c-d8d5ae56dad8"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "Enemy - Zora Attack",
+        "__collapse": true
+      },
+      "id": "792f5c4d-539f-4c5a-8f0c-9931ef21c4cd"
+    },
+    {
+      "id": "85b48003-f22e-4903-b169-9aaad42c64c3",
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "0",
+        "value": "1",
+        "minValue": "0",
+        "maxValue": 1,
+        "__collapse": true
+      }
+    },
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "V0",
+        "operator": "==",
+        "comparator": "0",
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "up",
+              "otherActorId": "0",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "args": {
+                    "spriteSheetId": "94d3af5d-d2f5-4708-a04b-ab0308f4e205",
+                    "spriteStateId": "",
+                    "actorId": "0",
+                    "x": 0,
+                    "y": 0,
+                    "otherActorId": "$self$",
+                    "direction": "up",
+                    "angle": 0,
+                    "angleVariable": "0",
+                    "directionType": "direction",
+                    "initialOffset": 0,
+                    "speed": 1,
+                    "animSpeed": 7,
+                    "lifeTime": 1.5,
+                    "collisionGroup": "3",
+                    "collisionMask": [
+                      "player",
+                      "3"
+                    ],
+                    "__collapse": false,
+                    "__section": "projectile"
+                  },
+                  "id": "ac16f6fd-aaf6-4475-aa69-2f85885243c7"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "args": {
+                    "spriteSheetId": "94d3af5d-d2f5-4708-a04b-ab0308f4e205",
+                    "spriteStateId": "",
+                    "actorId": "0",
+                    "x": 0,
+                    "y": 0,
+                    "otherActorId": "$self$",
+                    "direction": "down",
+                    "angle": 0,
+                    "angleVariable": "0",
+                    "directionType": "direction",
+                    "initialOffset": 0,
+                    "speed": 1,
+                    "animSpeed": 7,
+                    "lifeTime": 1.5,
+                    "collisionGroup": "3",
+                    "collisionMask": [
+                      "player",
+                      "3"
+                    ],
+                    "__collapse": false,
+                    "__section": "projectile"
+                  },
+                  "id": "1f1224bf-56fa-4dfc-b59e-a1b46dec7ba6"
+                }
+              ]
+            },
+            "id": "b3967d83-6bb1-4d6d-9fa7-c9779f3508ab"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "left",
+              "otherActorId": "0",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "args": {
+                    "spriteSheetId": "94d3af5d-d2f5-4708-a04b-ab0308f4e205",
+                    "spriteStateId": "",
+                    "actorId": "0",
+                    "x": 0,
+                    "y": 0,
+                    "otherActorId": "$self$",
+                    "direction": "left",
+                    "angle": 0,
+                    "angleVariable": "0",
+                    "directionType": "direction",
+                    "initialOffset": 0,
+                    "speed": 1,
+                    "animSpeed": 7,
+                    "lifeTime": 1.5,
+                    "collisionGroup": "3",
+                    "collisionMask": [
+                      "player",
+                      "3"
+                    ],
+                    "__collapse": false
+                  },
+                  "id": "c010630c-62ac-4fb5-993b-6e5ef76ad4b4"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_LAUNCH_PROJECTILE",
+                  "args": {
+                    "spriteSheetId": "94d3af5d-d2f5-4708-a04b-ab0308f4e205",
+                    "spriteStateId": "",
+                    "actorId": "0",
+                    "x": 0,
+                    "y": 0,
+                    "otherActorId": "$self$",
+                    "direction": "right",
+                    "angle": 0,
+                    "angleVariable": "0",
+                    "directionType": "direction",
+                    "initialOffset": 0,
+                    "speed": 1,
+                    "animSpeed": 7,
+                    "lifeTime": 1.5,
+                    "collisionGroup": "3",
+                    "collisionMask": [
+                      "player",
+                      "3"
+                    ],
+                    "__collapse": false
+                  },
+                  "id": "9bb30176-7a5f-43b5-9bda-44b5793ea961"
+                }
+              ]
+            },
+            "id": "8f2bf7f3-0707-40e1-9e55-9a991a0ab017"
+          }
+        ]
+      },
+      "id": "fad3aabd-340d-4130-8ba6-98772a7dde3e"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "a950be8d-b2e1-4c2b-be82-685408f60ac7"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "Enemy - Zora Surface",
+        "__collapse": true
+      },
+      "id": "af6dede0-460c-4071-b575-325f3cc0a26f"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.2,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "68281ddc-d9e2-43c3-a47a-3e215854d718"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "",
+        "__collapse": true
+      },
+      "id": "0e0c88b2-2d01-4fcd-936b-3e4351a2582d"
+    }
+  ]
+}
