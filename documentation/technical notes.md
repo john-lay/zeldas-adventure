@@ -560,6 +560,7 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### NPCs
 - __Pause (...)__
   - Krebb after receiving the dagger spell
+  - Kron the pegleg
   - Lonlyn after giving Zelda rupees
 - __Music (♫)__
   - Yvonne singing
