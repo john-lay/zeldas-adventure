@@ -1,0 +1,328 @@
+{
+  "_resourceType": "script",
+  "id": "d97cd007-83c9-4379-82d4-880171fdab33",
+  "name": "AI/Mad Bomber Movement",
+  "description": "Behaviour of Mad Bomber (Mimic Mole) enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Mad Bomber"
+    }
+  },
+  "symbol": "script_77",
+  "script": [
+    {
+      "id": "d2549ec7-64ea-4608-8828-195d2c033747",
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "__collapse": true,
+        "__comment": false
+      }
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Surface",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber 1/2",
+              "__collapse": true
+            },
+            "id": "81285dfa-01c5-4d05-a5b8-db4cbe9e9ade"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.3,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "f4f66ccc-aacd-415e-8e0d-960a808de8e7"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber Right",
+              "__collapse": true
+            },
+            "id": "273e7f04-40cd-44f4-b262-fd7febeebad9"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.3,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "ed2785de-463f-44b8-b833-0c56853bc300"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber Left",
+              "__collapse": true
+            },
+            "id": "72e68742-e856-49d2-ac95-c3ff6f22223d"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.3,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "60d95146-2999-4e4b-b8ae-c9f8566d33ed"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber Right",
+              "__collapse": true
+            },
+            "id": "8df40624-5cb1-4a2e-bb54-003de0c360b4"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.2,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "fd7cd0d2-0615-4fd6-925a-05ed6912dab8"
+          }
+        ]
+      },
+      "id": "17b68afc-7770-4640-91ec-ee517b751a74"
+    },
+    {
+      "id": "71467567-4ddf-4c2c-a31e-539f138ce61c",
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "0",
+        "value": "1",
+        "minValue": "0",
+        "maxValue": 3,
+        "__collapse": true
+      }
+    },
+    {
+      "id": "db150117-37a9-4240-ac79-97ab1aa717ef",
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "V0",
+        "choices": 4,
+        "__collapseCase0": false,
+        "value0": 0,
+        "__collapseCase1": false,
+        "value1": 1,
+        "__collapseCase2": false,
+        "value2": 2,
+        "__collapseCase3": false,
+        "value3": 3,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true0": [
+          {
+            "id": "3af7a750-b0a3-4fde-a15a-dc107cc93207",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": 2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true1": [
+          {
+            "id": "7d58ae87-e0f8-42b0-a175-d6f3aa4ac89b",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": -2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber Left",
+              "__collapse": true
+            },
+            "id": "45c5166f-94c8-47a1-aad2-75182c8a4fdf"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "317ddf4a-4cf9-4b3a-b593-3f8a7cbf79fd"
+          },
+          {
+            "id": "5280aec8-6bba-417c-84d2-296bd8c9e09b",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": -2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true3": [
+          {
+            "id": "a0cb3467-22da-4d1a-a4b0-d2a3141f36b5",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": []
+      }
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Bury",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.3,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "66b2d7ee-eeec-49f8-8035-dcc20ca9e391"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Mad Bomber 1/2",
+              "__collapse": true
+            },
+            "id": "484567c9-b9b6-481a-8bc3-ff27daaefb01"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.3,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "f87e7edc-9a44-45ee-9f01-e94a12c73495"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "",
+              "__collapse": true
+            },
+            "id": "e4d88df2-d84e-4f3c-a3fc-bc2607956e09"
+          }
+        ]
+      },
+      "id": "137c4377-19cc-499a-a6d0-3c17d1263176"
+    }
+  ]
+}
