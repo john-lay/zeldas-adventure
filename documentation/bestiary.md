@@ -49,7 +49,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Stalfos CDi](bestiary/ZA_Stalfos.png) <br /> Stalfos | ![Stalfos DMG](bestiary/LA_Stalfos.png) <br /> Stalfos |
 | ![Swamp Zola CDi](bestiary/ZA_Swamp-Zola.png) <br /> Swamp Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
 | ![River Zola CDi](bestiary/ZA_Swamp-Zola-2.png) <br /> River Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
-| ![Cave Zola CDi](bestiary/ZA_Rock-Zola.png) <br /> Cave Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
+| ![Cave Zola CDi](bestiary/ZA_Rock-Zola.png) <br /> Cave Zola (Dolomite) | ![Monkey DMG](bestiary/LA_Monkey.png) <br /> Monkey |
 | ![Tektite CDi](bestiary/ZA_Tektite.png) <br /> Tektite | ![Tektite DMG](bestiary/LA_Tektite.png) <br /> Tektite |
 | ![Tektite alt CDi](bestiary/ZA_Tektite-2.png) <br /> Tektite (alt) | ![Tektite DMG](bestiary/LA_Tektite.png) <br /> Tektite |
 | ![Tornado CDi](bestiary/ZA_Tornado.png) <br /> Tornado | ![Gale Seed Effect DMG](bestiary/OoA_Gale-Seed-Effect.png) <br /> Gale Seed Effect |
