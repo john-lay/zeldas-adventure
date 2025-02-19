@@ -278,12 +278,7 @@ A listing of variables used in GB Studio and their types.
 * `$85$: Variable 085` QS_can_scroll - `number`. Inventory screen. Used to calculate to weapon/treasure offset
 * `$86$: Variable 086` world_map_warp_flag - `number`. World map. Set when the player uses the compass to warp
 * `$87$: Variable 087` Scene has_paid - `bool`. represents Zelda has paid for an item
-
-
-
-
-
-* `$100$: Variable 0100` Earth Shrine Flags - `word`.
+* `$100$: Variable 100` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
   * (Flag 3 represents Zelda has used the ladder)
@@ -300,7 +295,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents the (first) Red Sardak has given his speech)
   * (Flag 15 represents the (second) Blue Sardak has given his speech)
   * (Flag 16 represents the (third) Yellow Sardak has given his speech)
-* `$26$: Variable 026` More Earth Shrine Flags - `word`.
+* `$101$: Variable 101` More Earth Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -317,7 +312,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$27$: Variable 027` Illusion Shrine Flags - `word`.
+* `$102$: Variable 102` Illusion Shrine Flags - `word`.
   * (Flag 1 is the Illusion Shrine Map)
   * (Flag 2 is the Illusion Shrine Compass)
   * (Flag 3 represents Zelda has placed the Orb on the pedestal)
@@ -334,7 +329,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$28$: Variable 028` More Illusion Shrine Flags - `word`.
+* `$103$: Variable 103` More Illusion Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -351,7 +346,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$29$: Variable 029` Air Shrine Flags - `word`.
+* `$104$: Variable 104` Air Shrine Flags - `word`.
   * (Flag 1 is the Air Shrine Map)
   * (Flag 2 is the Air Shrine Compass)
   * (Flag 3 represents Zelda has defeated the 1st Vapora)
@@ -368,7 +363,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$30$: Variable 030` More Air Shrine Flags - `word`.
+* `$105$: Variable 105` More Air Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -385,7 +380,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$31$: Variable 031` Destiny Shrine Flags - `word`.
+* `$106$: Variable 106` Destiny Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
   * (Flag 3 represents Zelda has activated a switch)
@@ -402,7 +397,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$32$: Variable 032` More Destiny Shrine Flags - `word`.
+* `$107$: Variable 107` More Destiny Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -419,7 +414,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$33$: Variable 033` Water Shrine Flags - `word`.
+* `$108$: Variable 108` Water Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
   * (Flag 3 represents Zelda has used the plank)
@@ -436,7 +431,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents Zelda has collected the celestial sign)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$34$: Variable 034` More Water Shrine Flags - `word`.
+* `$109$: Variable 109` More Water Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -453,7 +448,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$35$: Variable 035` Strength Shrine Flags - `word`.
+* `$110$: Variable 110` Strength Shrine Flags - `word`.
   * (Flag 1 is the Strength Shrine Map)
   * (Flag 2 is the Strength Shrine Compass)
   * (Flag 3 represents Zelda has spoken to the thirsty child)
@@ -470,7 +465,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents Zelda has collected the heart piece)
   * (Flag 15 represents Ursore has given his first speech)
   * (Flag 16 represents the red knight has given his speech)
-* `$36$: Variable 036` More Strength Shrine Flags - `word`.
+* `$111$: Variable 111` More Strength Shrine Flags - `word`.
   * (Flag 1 represents Ursore has given his second speech)
   * (Flag 2 represents the blue knight has given his speech)
   * (Flag 3 represents the green knight has given his speech)
@@ -487,7 +482,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$37$: Variable 037` Fire Shrine Flags - `word`.
+* `$112$: Variable 112` Fire Shrine Flags - `word`.
   * (Flag 1 is the Fire Shrine Map)
   * (Flag 2 is the Fire Shrine Compass)
   * (Flag 3 represents Zelda has unlocked the first door)
@@ -504,7 +499,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents the second blacksmith has given his speech)
   * (Flag 15 represents Zelda has collected the celestial sign)
   * (Flag 16 is ???)
-* `$38$: Variable 038` More Fire Shrine Flags - `word`.
+* `$113$: Variable 113` More Fire Shrine Flags - `word`.
   * (Flag 1 is ???)
   * (Flag 2 is ???)
   * (Flag 3 is ???)
@@ -521,6 +516,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
+
 ## Animated tiles guide
 
 There are 9 different animated tiles which use a different key in the HUD to identify them.

@@ -1,0 +1,335 @@
+{
+  "_resourceType": "script",
+  "id": "e1a39e67-eb8e-448c-8017-5c22778c7383",
+  "name": "AI/Stalfos Movement",
+  "description": "Behaviour of Stalfos enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Stalfos"
+    }
+  },
+  "symbol": "script_80",
+  "script": [
+    {
+      "id": "dc1448b9-610f-4a35-8bba-c242097f4a57",
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.6,
+        "__collapse": true
+      }
+    },
+    {
+      "id": "4c243414-71e9-4b62-8151-e8800144a75d",
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "0",
+        "value": "1",
+        "minValue": "0",
+        "maxValue": 5,
+        "__collapse": true
+      }
+    },
+    {
+      "id": "552632b6-a280-418c-8166-4a560166e4c2",
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "V0",
+        "choices": 4,
+        "__collapseCase0": false,
+        "value0": 0,
+        "__collapseCase1": false,
+        "value1": 1,
+        "__collapseCase2": false,
+        "value2": 2,
+        "__collapseCase3": false,
+        "value3": 3,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "id": "ee045589-00ab-4095-9d37-1b2a0198c8ba",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": 2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true1": [
+          {
+            "id": "125b3b75-a20c-4af6-9b01-2eded9714002",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": -2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true2": [
+          {
+            "id": "782907ec-28f8-4023-9c58-4d6d41784bef",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": -2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true3": [
+          {
+            "id": "08d16870-bf05-426c-b173-f6a437acfded",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": true
+            }
+          }
+        ],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Enemy - Stalfos Attack"
+            },
+            "id": "af6b0bcd-e51a-43a6-b06f-929aacfd0cc1"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "18faa738-a0c1-4f7a-b076-94519be2c65a"
+            },
+            "id": "0e571f94-9d6c-46ab-aa13-88abe0464535"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": -2
+              },
+              "moveType": "vertical",
+              "useCollisions": true
+            },
+            "id": "ae073819-1e26-42bc-8b64-fe3d43401771"
+          },
+          {
+            "id": "e12995fa-b107-4aec-bb82-d16f844ed2b4",
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.4,
+              "__collapse": false
+            }
+          },
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "up",
+              "otherActorId": "0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -3
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true
+                        },
+                        "id": "0aeb8ad3-2638-43d6-a641-2b4854699e94"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -3
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true
+                        },
+                        "id": "1e967519-fe17-444a-a45a-26ab36c1e289"
+                      }
+                    ]
+                  },
+                  "id": "8e13cd31-8ffc-4950-84b2-50909162e94d"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true
+                        },
+                        "id": "8dd12562-05f0-45ba-bc51-897eb8e3ffa7"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true
+                        },
+                        "id": "7795d520-2324-4399-a552-52967dce0cb8"
+                      }
+                    ]
+                  },
+                  "id": "e1b3663c-ad39-49b3-86c7-859ff4f53420"
+                }
+              ]
+            },
+            "id": "251b526b-12f0-4a41-a370-54d50b840e78"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": ""
+            },
+            "id": "3021907e-2b42-4c90-b49f-b325d377cac4"
+          }
+        ]
+      }
+    }
+  ]
+}
