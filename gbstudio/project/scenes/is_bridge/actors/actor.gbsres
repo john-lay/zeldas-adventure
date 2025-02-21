@@ -1,0 +1,137 @@
+{
+  "_resourceType": "actor",
+  "id": "8abd134d-19e5-4828-8621-2caf84d3914b",
+  "name": "",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "714db32c-fe83-485f-97d9-7f9c0313489f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "3",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_670",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Return Zelda to Entrance"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e7bd46a8-b50a-4d56-a4ad-77aa505dc670",
+              "__collapse": true
+            },
+            "id": "a117e97f-f03e-4430-ac64-1ae6e891e11e"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "e4ab5c5a-7631-475f-91d3-22a07adf9f77"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "8c717dc1-dd0a-46d9-85ba-916cda088482",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 13
+              },
+              "direction": "down",
+              "fadeSpeed": "2",
+              "__collapse": false
+            },
+            "id": "7d46d222-76f2-4bc6-a68d-04f63b068114"
+          }
+        ]
+      },
+      "id": "9f752eee-2e07-43f3-a6e2-904baa9f308c"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.5,
+        "frames": 0,
+        "units": "frames"
+      },
+      "id": "1f8651a9-3df3-4fed-8366-4c9fe035a5f8"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "b5a08b65-78b9-4591-b0f0-108e9e9ec43a"
+    },
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "3d425028-947f-4d40-b00a-347f79c1b6ab"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "frames": 80,
+        "units": "frames"
+      },
+      "id": "07baf94b-2583-4565-ad40-3b61dfc06e11"
+    },
+    {
+      "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "9a528d25-e0d9-4597-a43d-e1c1055cb994"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "83b2cd65-3653-41b4-8f25-ac70ae082489"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "frames": 140,
+        "units": "frames"
+      },
+      "id": "bb24a579-9c85-4161-a8f8-ddaf7a73f1b0"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 4,
+  "y": 9,
+  "_index": 1
+}
