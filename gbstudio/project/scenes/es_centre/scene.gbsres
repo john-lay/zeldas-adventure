@@ -288,6 +288,80 @@
               }
             },
             "id": "9a7b4003-52d6-4b28-9342-8f1e99a39ad2"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Enable map",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "100",
+                    "flag": 0,
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                          "text": "Already has map",
+                          "__collapse": true
+                        },
+                        "id": "38488ad6-9a20-4052-91b0-cc279cc76595",
+                        "children": {}
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 10,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_FLAGS_COMPARE",
+                              "args": {
+                                "variable": "17",
+                                "flag": 11,
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                    "args": {
+                                      "actorId": "c2630eed-276f-4c67-b4c8-924bf848ae4a"
+                                    },
+                                    "id": "d2362bb1-3aac-44dd-b0f2-b25830c87f5f",
+                                    "children": {}
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "413eb8ed-fef0-4ee5-9737-7f85fbde0528"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "b80ff35d-8be6-4924-bc34-69a556992e1b"
+                      }
+                    ]
+                  },
+                  "id": "5deba743-aeff-40ab-a5a4-566ed954ea89"
+                }
+              ]
+            },
+            "id": "c243e4ad-941a-43f3-85bc-2bdb4a1c8947"
           }
         ]
       },

@@ -151,36 +151,63 @@
             "children": {}
           },
           {
-            "command": "EVENT_IF_FLAGS_COMPARE",
+            "command": "EVENT_GROUP",
             "args": {
-              "variable": "102",
-              "flag": 0,
-              "__collapseElse": false,
-              "__disableElse": false,
-              "__collapse": false
+              "__label": "Enable map",
+              "__collapse": true
             },
             "children": {
               "true": [
                 {
-                  "command": "EVENT_COMMENT",
+                  "command": "EVENT_IF_FLAGS_COMPARE",
                   "args": {
-                    "text": "Map already collected",
-                    "__collapse": true
+                    "variable": "17",
+                    "flag": 10,
+                    "__collapseElse": true,
+                    "__disableElse": true
                   },
-                  "id": "b2a07e9d-b16b-4f64-a92a-48537959afb4"
-                }
-              ],
-              "false": [
-                {
-                  "command": "EVENT_ACTOR_ACTIVATE",
-                  "args": {
-                    "actorId": "092c804e-f5a3-4e0f-a949-639d6fe4799a"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "102",
+                          "flag": 0,
+                          "__collapseElse": false,
+                          "__disableElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_COMMENT",
+                              "args": {
+                                "text": "Map already collected",
+                                "__collapse": true
+                              },
+                              "id": "71152f79-cb18-4fac-8cf0-2a192e28995c"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_ACTIVATE",
+                              "args": {
+                                "actorId": "092c804e-f5a3-4e0f-a949-639d6fe4799a"
+                              },
+                              "id": "7abac4d0-f13b-4d0e-a0c3-b7fc5e9ab715"
+                            }
+                          ]
+                        },
+                        "id": "7246c1bf-ba2e-4305-bf65-6d0ff6b394d2"
+                      }
+                    ],
+                    "false": []
                   },
-                  "id": "9c1843f6-6001-46eb-9cbe-01d761e07e77"
+                  "id": "9e3411cc-04c8-4e05-a6df-9ed8df5fca81"
                 }
               ]
             },
-            "id": "f60474ad-ffbb-4a2d-9967-0fb5164514d6"
+            "id": "765420f0-0755-4914-890e-2ea404b861bb"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",

@@ -36,19 +36,12 @@
         ],
         "false": [
           {
-            "command": "EVENT_IF_ACTOR_AT_POSITION",
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
             "args": {
               "actorId": "player",
-              "x": {
-                "type": "number",
-                "value": 10
-              },
-              "y": {
-                "type": "number",
-                "value": 10
-              },
-              "__collapseElse": false,
-              "__collapse": false
+              "operation": "up",
+              "otherActorId": "$self$",
+              "__collapseElse": false
             },
             "children": {
               "true": [
@@ -86,7 +79,7 @@
                 }
               ]
             },
-            "id": "404647d8-f151-42d0-971b-5c34dab02ac5"
+            "id": "507d2921-e57f-40bb-bcd4-a1f3b57aacc4"
           },
           {
             "command": "EVENT_ACTOR_ACTIVATE",

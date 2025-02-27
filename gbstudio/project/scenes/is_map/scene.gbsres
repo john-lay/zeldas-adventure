@@ -292,7 +292,8 @@
           {
             "command": "EVENT_GROUP",
             "args": {
-              "__label": "Open Doors"
+              "__label": "Open Doors",
+              "__collapse": true
             },
             "children": {
               "true": [
@@ -334,51 +335,63 @@
             "id": "2d1dd4a4-acff-4346-8078-f86cf5107c81"
           },
           {
-            "command": "EVENT_IF_FLAGS_COMPARE",
+            "command": "EVENT_GROUP",
             "args": {
-              "variable": "17",
-              "flag": 10,
-              "__collapseElse": true,
-              "__disableElse": true
+              "__label": "Enable map",
+              "__collapse": true
             },
             "children": {
               "true": [
                 {
                   "command": "EVENT_IF_FLAGS_COMPARE",
                   "args": {
-                    "variable": "102",
-                    "flag": 0,
-                    "__collapseElse": false,
-                    "__disableElse": false,
-                    "__collapse": false
+                    "variable": "17",
+                    "flag": 10,
+                    "__collapseElse": true,
+                    "__disableElse": true
                   },
                   "children": {
                     "true": [
                       {
-                        "command": "EVENT_COMMENT",
+                        "command": "EVENT_IF_FLAGS_COMPARE",
                         "args": {
-                          "text": "Map already collected",
-                          "__collapse": true
+                          "variable": "102",
+                          "flag": 0,
+                          "__collapseElse": false,
+                          "__disableElse": false,
+                          "__collapse": false
                         },
-                        "id": "737237da-8056-49e0-a9dd-74e4ffb17362"
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_COMMENT",
+                              "args": {
+                                "text": "Map already collected",
+                                "__collapse": true
+                              },
+                              "id": "737237da-8056-49e0-a9dd-74e4ffb17362"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_ACTIVATE",
+                              "args": {
+                                "actorId": "092c804e-f5a3-4e0f-a949-639d6fe4799a"
+                              },
+                              "id": "44e80369-5a12-42b6-85a7-c539a0dc8011"
+                            }
+                          ]
+                        },
+                        "id": "2ce17b25-a9f1-43da-aac5-bf0b894feca9"
                       }
                     ],
-                    "false": [
-                      {
-                        "command": "EVENT_ACTOR_ACTIVATE",
-                        "args": {
-                          "actorId": "092c804e-f5a3-4e0f-a949-639d6fe4799a"
-                        },
-                        "id": "44e80369-5a12-42b6-85a7-c539a0dc8011"
-                      }
-                    ]
+                    "false": []
                   },
-                  "id": "2ce17b25-a9f1-43da-aac5-bf0b894feca9"
+                  "id": "e58ecee8-e119-4bd6-b345-4e4d404bb8a7"
                 }
-              ],
-              "false": []
+              ]
             },
-            "id": "e58ecee8-e119-4bd6-b345-4e4d404bb8a7"
+            "id": "b928847b-9136-404d-9115-ac247221811c"
           }
         ]
       },

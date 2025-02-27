@@ -288,6 +288,95 @@
               }
             },
             "id": "ba29226d-d42e-43d1-8256-9c98a3c8501c"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Enable compass",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "100",
+                    "flag": 1,
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                          "text": "Already has compass",
+                          "__collapse": true
+                        },
+                        "id": "09260195-ea39-48f1-9c91-9fceccce769b",
+                        "children": {}
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 10,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_FLAGS_COMPARE",
+                              "args": {
+                                "variable": "17",
+                                "flag": 11,
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF_FLAGS_COMPARE",
+                                    "args": {
+                                      "variable": "17",
+                                      "flag": 12,
+                                      "__collapseElse": true,
+                                      "__disableElse": true
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_ACTOR_ACTIVATE",
+                                          "args": {
+                                            "actorId": "3455fdf1-eb9a-4a5e-8dde-08ba528bfd26"
+                                          },
+                                          "id": "8eae8bdb-d383-403b-a55a-76d0be0a694f",
+                                          "children": {}
+                                        }
+                                      ],
+                                      "false": []
+                                    },
+                                    "id": "8cc1d9e8-cc48-4f74-9d26-321b950d9e9b"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "f1d980b1-dde3-4578-9136-9a76ad8aad6f"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "573eb3e8-70a6-4115-8a56-ae6bfc0ef101"
+                      }
+                    ]
+                  },
+                  "id": "abe4539c-d57a-40be-98a0-aecfec2adb21"
+                }
+              ]
+            },
+            "id": "852bb072-253e-4ac7-833d-e3bd79b8f264"
           }
         ]
       },
