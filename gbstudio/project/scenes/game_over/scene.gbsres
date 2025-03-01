@@ -139,6 +139,83 @@
       "id": "edd91cc5-5c41-4ede-adc9-0629a547853e"
     },
     {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 4,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Illusion Shrine",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "503ccb00-1910-4cc7-8003-0af037984a60"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "8652cddf-0793-4c89-95dc-c978cc95a6d1",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": true
+                  },
+                  "id": "92c17ab2-3c6b-463a-87d4-000d185bcb53"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "8c717dc1-dd0a-46d9-85ba-916cda088482",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "direction": "up",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "f2325f72-1d4e-41d5-a1f0-a91013f34fdb"
+                }
+              ]
+            },
+            "id": "e244cf58-91b8-4c12-ac87-3404886671b2"
+          }
+        ],
+        "false": []
+      },
+      "id": "9ebe0d13-5ace-47f3-9f0d-e017639db46a"
+    },
+    {
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Vision Henge"
