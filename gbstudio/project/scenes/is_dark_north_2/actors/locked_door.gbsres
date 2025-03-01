@@ -1,0 +1,152 @@
+{
+  "_resourceType": "actor",
+  "id": "76fea790-27d4-4c04-9dae-851b24c0fd91",
+  "name": "Locked Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "aece7b4d-4fc4-4144-a659-3b77def3c77f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_49",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "9",
+        "flag": 12,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has a key",
+              "__collapse": true
+            },
+            "id": "535656db-53f8-4459-886f-ecc099293e06"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "5437dd1a-7304-4d1a-ad5c-bfdf60de61e9"
+          },
+          {
+            "command": "EVENT_CLEAR_FLAGS",
+            "args": {
+              "variable": "9",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": true,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "6cb4b84a-c9bf-4684-aefd-60650f82c341"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "102",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": true,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "425957a3-69a8-4bd8-9b0e-6a104b96c350"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "47b81611-14d6-426e-9347-273ce49672e7"
+            },
+            "id": "6dd6ee93-4f28-4bd4-98f8-2012320d1478"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+            },
+            "id": "0a5c5c84-e48b-40af-b5f7-d4dcbce3c26c"
+          }
+        ]
+      },
+      "id": "49bf060c-8a28-460c-88e4-1b0c31dc9a66"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "102",
+        "flag": 6,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Unlocked the second door",
+              "__collapse": true
+            },
+            "id": "58c1c07a-980c-4d58-bd6b-50f6143659a4"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "024a7004-f5ce-4434-a384-3249ca0f1b4b"
+          }
+        ],
+        "false": []
+      },
+      "id": "50cc8b77-d57d-48fb-b3ec-45b34cda1b5d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 18,
+  "y": 9,
+  "_index": 7
+}

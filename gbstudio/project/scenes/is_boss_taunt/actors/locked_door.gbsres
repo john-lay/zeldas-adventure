@@ -1,0 +1,152 @@
+{
+  "_resourceType": "actor",
+  "id": "1300cbc8-4fe2-48d4-9bab-462d7792aed0",
+  "name": "Locked Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "aece7b4d-4fc4-4144-a659-3b77def3c77f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_4",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "9",
+        "flag": 12,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has a key",
+              "__collapse": true
+            },
+            "id": "4bbab9b2-e057-4135-a3c6-be924796fa09"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "ae35bfcd-bb53-489d-8899-89794a297cdf"
+          },
+          {
+            "command": "EVENT_CLEAR_FLAGS",
+            "args": {
+              "variable": "9",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": true,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "1cbc0682-e64d-4797-b66c-edac7c4e9ab4"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "102",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": true,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "afa266a7-6b69-4689-9720-0f6cf3a68aac"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "d89e8001-c143-406f-920e-b0b8d3233f55"
+            },
+            "id": "3d8bc879-4bb3-444c-91c4-80e65395fbff"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+            },
+            "id": "81f71202-b2da-43a7-919f-a66a0c5f879b"
+          }
+        ]
+      },
+      "id": "d24edf1e-4728-4b96-b32c-687060ee570f"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "102",
+        "flag": 3,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Unlocked the first door",
+              "__collapse": true
+            },
+            "id": "64ab0efd-daeb-44e2-a902-9e9d54d32d5a"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "61825b90-97e1-4f1d-b803-407e0cffd1c5"
+          }
+        ],
+        "false": []
+      },
+      "id": "600ab4f8-8fba-4dcd-82b5-044c21b71515"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 18,
+  "y": 12,
+  "_index": 2
+}

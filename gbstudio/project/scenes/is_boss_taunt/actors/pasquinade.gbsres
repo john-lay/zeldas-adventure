@@ -1,0 +1,59 @@
+{
+  "_resourceType": "actor",
+  "id": "c2534056-b7d8-4b8c-8a1f-ad1460b5276e",
+  "name": "Pasquinade",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6f205d6a-3247-4112-a4de-370f3682fe2d",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_3",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "102",
+        "flag": 4,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Pasquinade has given his speech",
+              "__collapse": true
+            },
+            "id": "ac9f1204-0e5a-45f1-a173-e8cfd1abbb22"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": false
+            },
+            "id": "d05b4850-5f91-4c61-ae57-2a0fa99ee4ed"
+          }
+        ],
+        "false": []
+      },
+      "id": "452dc833-8463-4a94-a415-ccc919a92fb8"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 12,
+  "_index": 1
+}

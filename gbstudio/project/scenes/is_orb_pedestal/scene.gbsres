@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "ca744060-c098-4bf9-82d1-4e9eab8e20cf",
-  "_index": 169,
+  "_index": 98,
   "name": "IS Orb Pedestal",
   "backgroundId": "6e043348-8d90-4eaa-9e97-45f0180bfc15",
   "tilesetId": "",
@@ -245,6 +245,76 @@
                     "customEventId": "5565f34c-08be-47b5-92b8-6b5f97f0ef0f"
                   },
                   "id": "84e12cad-7b73-48ae-b0fb-5e6a9a6f85d8"
+                },
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "7",
+                    "flag": 0,
+                    "__collapseElse": false,
+                    "__label": "Has Wand",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "10",
+                          "value": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": true
+                        },
+                        "id": "2b072b4a-a281-4b06-a0e7-03e52ea3ef99"
+                      },
+                      {
+                        "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+                        "args": {
+                          "__collapse": true
+                        },
+                        "id": "5fe4b73e-a859-4b02-895d-c1ffbf038462"
+                      },
+                      {
+                        "command": "EVENT_IF_COLOR_SUPPORTED",
+                        "args": {
+                          "__collapseElse": true,
+                          "__disableElse": true,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                                "__collapse": true
+                              },
+                              "id": "deb21eb5-41b3-4e87-8199-c5b3b59a48e2"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "4228b429-524f-4679-b0ba-318addf99a0f"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "10",
+                          "value": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "__collapse": true
+                        },
+                        "id": "f5fc6eef-e7b3-45d1-82f2-4824c119f7fb"
+                      }
+                    ]
+                  },
+                  "id": "8f42959f-5074-4ee2-9b8f-5b749c66d901"
                 }
               ],
               "false": [
@@ -397,7 +467,7 @@
             "command": "EVENT_GROUP",
             "args": {
               "__label": "Open Doors",
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
