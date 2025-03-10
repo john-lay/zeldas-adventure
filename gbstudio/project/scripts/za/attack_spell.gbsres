@@ -5448,75 +5448,62 @@
                       {
                         "command": "EVENT_COMMENT",
                         "args": {
-                          "text": "Do nothing, logic used to check if Zelda's in a shrine."
+                          "text": "Do nothing, logic used to check if Zelda's in a shrine.",
+                          "__collapse": true
                         },
                         "id": "1e53f6b5-ac36-4202-9d1d-6538bf8f77ff"
                       }
                     ],
                     "false": [
                       {
-                        "command": "EVENT_COMMENT",
+                        "command": "EVENT_IF_FLAGS_COMPARE",
                         "args": {
-                          "text": "Inside a shrine. Set exit screen to 0 to ensure Zelda warps to the correct tile at the shrine entrance."
-                        },
-                        "id": "eb6dcd9e-ba5f-4786-bffc-bb51a812fd66"
-                      },
-                      {
-                        "command": "EVENT_SET_VALUE",
-                        "args": {
-                          "variable": "22",
-                          "value": {
-                            "type": "number",
-                            "value": 0
-                          },
+                          "variable": "18",
+                          "flag": 3,
+                          "__collapseElse": true,
+                          "__disableElse": true,
                           "__collapse": true
                         },
-                        "id": "8b71e929-6e5d-443d-a9e0-ba76ed784e47"
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "b1caed05-0d48-44f4-9e44-549aa87a4186"
+                              },
+                              "id": "10ff6d26-0178-4d78-b187-cc3ff565d2c6"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "751edcbc-8b07-4211-a0c8-cedaa909953c"
                       },
                       {
-                        "command": "EVENT_CALL_CUSTOM_EVENT",
+                        "command": "EVENT_IF_FLAGS_COMPARE",
                         "args": {
-                          "customEventId": "e7cf337b-66c7-4914-9643-2c4394098ed8"
+                          "variable": "18",
+                          "flag": 4,
+                          "__collapseElse": true,
+                          "__disableElse": true,
+                          "__collapse": true
                         },
-                        "id": "c025484e-3bc6-431d-95de-a6f73044dc93"
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "f14529e6-8eaf-486e-bc6b-e7041a2fd3d8"
+                              },
+                              "id": "732e7e2a-6998-4654-9515-19a63e133856"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "e4d9315d-8cb4-4182-b066-5279141e9a5b"
                       }
                     ]
                   },
                   "id": "2847867e-be75-4505-b5d3-49cd351aea59"
-                },
-                {
-                  "command": "EVENT_IF_FLAGS_COMPARE",
-                  "args": {
-                    "variable": "18",
-                    "flag": 3,
-                    "__collapseElse": true,
-                    "__disableElse": true,
-                    "__label": "Earth Shrine",
-                    "__collapse": true
-                  },
-                  "children": {
-                    "true": [
-                      {
-                        "command": "EVENT_SWITCH_SCENE",
-                        "args": {
-                          "sceneId": "cd3a059d-299e-4af0-b71a-17c7013354a3",
-                          "x": {
-                            "type": "number",
-                            "value": 6
-                          },
-                          "y": {
-                            "type": "number",
-                            "value": 3
-                          },
-                          "direction": "down",
-                          "fadeSpeed": "2"
-                        },
-                        "id": "f8506450-db73-4c5c-b055-f81492b51238"
-                      }
-                    ],
-                    "false": []
-                  },
-                  "id": "d0da8dd2-d9b0-4686-8c72-978a78a73459"
                 }
               ],
               "false": []
