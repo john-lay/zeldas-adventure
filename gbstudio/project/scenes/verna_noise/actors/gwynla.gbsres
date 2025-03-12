@@ -1,0 +1,204 @@
+{
+  "_resourceType": "actor",
+  "id": "d20a24bf-16ac-412e-9962-1cbc67b22bdb",
+  "name": "Gwynla",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "26154d2c-a4af-4f30-b130-db603ead545b",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_18",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 13,
+        "__collapseElse": false,
+        "__comment": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Already has noise",
+              "__collapse": true
+            },
+            "id": "32da35fa-0dfe-48d4-86d3-ccc830b4decc"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba",
+              "__collapse": true
+            },
+            "id": "8e4085f2-14ec-4172-868a-542800b36b08"
+          },
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "$self$",
+              "emoteId": "d508e529-57eb-458b-9782-66f318243c32",
+              "__collapse": true
+            },
+            "id": "a137d542-c899-4c55-b412-d4b1a803cd2d"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 1,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Vous avez l'air\nfatiguée, ma lady. J'ai\nquelque chose que vous",
+                      "pourriez peut-être\nutiliser. Il crée du\nbruit! Utilisez-le quand",
+                      "vous en avez besoin."
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "95dfcd52-10ac-4a62-9d50-f73aece0e28b"
+                }
+              ],
+              "true1": [],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You look tired, my lady.\nI have something you \nmay be able to use.",
+                      "It creates a noise!\nUse it when you must."
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "09aecb5d-dfc0-43e1-9e2c-8fcb31a72609"
+                }
+              ]
+            },
+            "id": "a67482b2-3684-4859-bf62-7259328c7ac3"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+              "__collapse": true
+            },
+            "id": "a08b15ab-aa05-4e86-8091-33cc5fea751d"
+          },
+          {
+            "command": "EVENT_ACTOR_ACTIVATE",
+            "args": {
+              "actorId": "40a41662-0b26-4d7a-b97a-f209e1a6c6f4"
+            },
+            "id": "6cb5e573-81b7-4c93-8215-639448d60c04"
+          }
+        ]
+      },
+      "id": "3bffdcc0-d170-46ac-b435-0d230ab35857"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 13,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has collected the Noise spell",
+              "__collapse": true
+            },
+            "id": "b87abbea-a166-43dc-b485-85ff58e0a129"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "0ace68c3-f8cd-436f-8e9d-d6c9fda1c5dd"
+          }
+        ],
+        "false": []
+      },
+      "id": "5c9a9b39-2327-49a4-8a15-39083b615600"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 12,
+  "y": 12,
+  "_index": 3
+}
