@@ -294,23 +294,65 @@ void setEquippedSpellSprite(SCRIPT_CTX * THIS) BANKED {
     UBYTE sprite_offset = actor->base_tile;
 
     UBYTE equipped = *(uint8_t*)VM_REF_TO_PTR(FN_ARG1);
-    if (equipped == 1) set_sprite_data(sprite_offset, 12, spellWand);
-    if (equipped == 2) set_sprite_data(sprite_offset, 12, spellArrow);
-    if (equipped == 3) set_sprite_data(sprite_offset, 12, spellBroadsword);
-    if (equipped == 4) set_sprite_data(sprite_offset, 12, spellCalm);
-    if (equipped == 5) set_sprite_data(sprite_offset, 12, spellFeather);
-    if (equipped == 6) set_sprite_data(sprite_offset, 12, spellRingsOfFire);
-    if (equipped == 7) set_sprite_data(sprite_offset, 12, spellFirestorm);
-    if (equipped == 8) set_sprite_data(sprite_offset, 12, spellGoldNecklace);
-    if (equipped == 9) set_sprite_data(sprite_offset, 12, spellHammer);
-    if (equipped == 10) set_sprite_data(sprite_offset, 12, spellJadeAmulet);
-    if (equipped == 11) set_sprite_data(sprite_offset, 12, spellJoust);
-    if (equipped == 12) set_sprite_data(sprite_offset, 12, spellJadeRing);
-    if (equipped == 13) set_sprite_data(sprite_offset, 12, spellDagger);
-    if (equipped == 14) set_sprite_data(sprite_offset, 12, spellNoise);
-    if (equipped == 15) set_sprite_data(sprite_offset, 12, spellPyros);
-    if (equipped == 16) set_sprite_data(sprite_offset, 12, spellRoarStick);
-    if (equipped == 17) set_sprite_data(sprite_offset, 12, spellAxe);
-    if (equipped == 18) set_sprite_data(sprite_offset, 12, spellTurquoiseRing);
-    if (equipped == 19) set_sprite_data(sprite_offset, 12, spellBoomerang);
+    switch (equipped) {
+        case 1:
+            set_sprite_data(sprite_offset, 12, spellWand);
+            break;
+        case 2:
+            set_sprite_data(sprite_offset, 12, spellArrow);
+            break;
+        case 3:
+            set_sprite_data(sprite_offset, 12, spellBroadsword);
+            break;
+        case 4:
+            set_sprite_data(sprite_offset, 12, spellCalm);
+            break;
+        case 5:
+            set_sprite_data(sprite_offset, 12, spellFeather);
+            break;
+        case 6:
+            set_sprite_data(sprite_offset, 12, spellRingsOfFire);
+            break;
+        case 7:
+            set_sprite_data(sprite_offset, 12, spellFirestorm);
+            break;
+        case 8:
+            set_sprite_data(sprite_offset, 12, spellGoldNecklace);
+            break;
+        case 9:
+            set_sprite_data(sprite_offset, 12, spellHammer);
+            break;
+        case 10:
+            set_sprite_data(sprite_offset, 12, spellJadeAmulet);
+            break;
+        case 11:
+            set_sprite_data(sprite_offset, 12, spellJoust);
+            break;
+        case 12:
+            set_sprite_data(sprite_offset, 12, spellJadeRing);
+            break;
+        case 13:
+            set_sprite_data(sprite_offset, 12, spellDagger);
+            break;
+        case 14:
+            set_sprite_data(sprite_offset, 12, spellNoise);
+            break;
+        case 15:
+            set_sprite_data(sprite_offset, 12, spellPyros);
+            break;
+        case 16:
+            set_sprite_data(sprite_offset, 12, spellRoarStick);
+            break;
+        case 17:
+            set_sprite_data(sprite_offset, 12, spellAxe);
+            break;
+        case 18:
+            set_sprite_data(sprite_offset, 12, spellTurquoiseRing);
+            break;
+        case 19:
+            set_sprite_data(sprite_offset, 12, spellBoomerang);
+            break;
+        default:
+            // valid case for nothing equipped
+    }
 }
