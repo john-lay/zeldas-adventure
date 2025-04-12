@@ -9,7 +9,7 @@
   "height": 18,
   "type": "ADVENTURE",
   "paletteIds": [
-    "0969f1fc-3c4e-46f1-a1a3-9f58570a8805",
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
     "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
     "39d900a4-f4c3-4780-98ff-fa274f670332",
     "19616d52-952b-459f-a25b-9a2f0dd11295",
@@ -36,10 +36,50 @@
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "22"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "variable",
+                "value": "12"
+              },
+              "y": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "9119d169-f1a6-4ef5-aa9a-62d4721aefc7"
+          }
+        ],
+        "false": []
+      },
+      "id": "0528f2ce-0d2b-4b0a-a600-bb805f41400b"
+    },
+    {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
         "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-        "__collapse": true
+        "__collapse": false,
+        "__comment": true
       },
       "id": "d1aa80af-bcb3-4855-bbfa-a99db28973e2"
     },
