@@ -1,17 +1,20 @@
 {
-  "_resourceType": "actorPrefab",
-  "id": "19ff4f77-1fa1-48f3-8b4f-abca2b3b307f",
-  "name": "Patra",
+  "_resourceType": "actor",
+  "id": "1e2e294f-f4f9-4c09-b06a-72a7b3ea918e",
+  "name": "Vapora",
   "frame": 0,
   "animate": false,
-  "spriteSheetId": "10014083-ad79-442d-98b7-872cf69795ea",
-  "moveSpeed": 1,
-  "animSpeed": 15,
+  "spriteSheetId": "5f8d92c0-1c99-4f53-bb14-fa933f2c9e58",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 63,
   "paletteId": "",
+  "isPinned": false,
   "persistent": false,
   "collisionGroup": "1",
   "prefabScriptOverrides": {},
-  "_index": 2,
+  "symbol": "actor_145",
   "script": [
     {
       "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -38,7 +41,7 @@
           "value": "58"
         }
       },
-      "id": "a2eec2d5-14f2-45e9-9760-57704c4abe40",
+      "id": "bbbac2be-5a6a-409f-8b1b-8853b5c12a53",
       "children": {}
     }
   ],
@@ -49,41 +52,47 @@
         "variable": "61",
         "value": {
           "type": "number",
-          "value": 2
+          "value": 7
         }
       },
-      "id": "453095ce-6498-4d22-9b63-c1e1d851d195",
+      "id": "eab56ce0-9412-496c-a2a4-65a7d1202d0a",
       "children": {}
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "104",
+        "flag": 2,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "0eb0fa5a-853e-4bff-9505-918e19852375"
+          }
+        ],
+        "false": []
+      },
+      "id": "5b73a144-8e2b-4af2-a60f-0b3afe25d967"
     }
   ],
   "updateScript": [
     {
-      "command": "EVENT_ACTOR_GET_POSITION",
-      "args": {
-        "actorId": "$self$",
-        "vectorX": "28",
-        "vectorY": "29"
-      },
-      "id": "3e967dc3-2cb8-407a-91b4-301f1f2f7ac5"
-    },
-    {
       "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "customEventId": "a2af508b-8d7d-4441-996c-07bf8b450440",
+        "customEventId": "e0816661-3348-4b69-a8dd-485854cc5e3f",
         "$variable[V0]$": {
           "type": "variable",
           "value": "62"
-        },
-        "$variable[V1]$": {
-          "type": "variable",
-          "value": "25"
-        },
-        "$variable[V2]$": {
-          "type": "variable",
-          "value": "26"
         }
       },
-      "id": "69a653c8-01d6-4e24-98af-65fcbc68d4ca",
+      "id": "2094143c-45f6-4199-8680-14074815d507",
       "children": {}
     }
   ],
@@ -117,11 +126,11 @@
           "type": "variable",
           "value": "43"
         },
-        "$actor[1]$": "a3001302-dffb-4b24-b463-5dd73f6a02ed",
-        "$actor[2]$": "542f549a-36f4-4080-88d8-edebcddbd92f",
+        "$actor[1]$": "0924f618-7064-4f19-a66f-0369d53af448",
+        "$actor[2]$": "67371f08-f823-47c3-a92f-bd4c3d5472df",
         "$actor[0]$": "$self$"
       },
-      "id": "23113ac7-ba28-4346-899d-41d379fde7a4",
+      "id": "1118a327-7f5d-4fbc-8713-e04b60c43618",
       "children": {}
     },
     {
@@ -165,15 +174,41 @@
               "flag15": false,
               "flag16": false
             },
-            "id": "fe155c5c-d4fd-43c3-834f-ee061edf41ab",
+            "id": "3c734e82-c6ec-44bf-974f-17dea8b3eb5f",
             "children": {}
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "104",
+              "flag1": false,
+              "flag2": false,
+              "flag3": true,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "413348b5-3628-4155-ad7b-d7616104df9c"
           }
         ],
         "false": []
       },
-      "id": "5ab0e295-bfb3-447f-a3db-783acf7222ff"
+      "id": "b14adc5c-130b-44e3-8ff2-4db4aca08722"
     }
   ],
   "hit2Script": [],
-  "hit3Script": []
+  "hit3Script": [],
+  "x": 9,
+  "y": 10,
+  "_index": 3
 }
