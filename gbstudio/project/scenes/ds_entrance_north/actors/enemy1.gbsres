@@ -1,0 +1,237 @@
+{
+  "_resourceType": "actor",
+  "id": "52fb38a2-24f8-43ca-8010-d624c86513c4",
+  "name": "enemy1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "15d9582a-7a0b-45c2-8ed3-fe57fd1ccef5",
+  "prefabId": "35b67f17-3151-4647-a8d0-3e02aba079b3",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 31,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {
+    "0a79e162-3dc0-461b-916f-59d3e3d5dde3": {
+      "id": "0a79e162-3dc0-461b-916f-59d3e3d5dde3",
+      "args": {
+        "$actor[1]$": "deea4d2f-0ac2-440b-b8ba-1c3902e6d9dc",
+        "$actor[2]$": "7dd92cc8-f2e9-455b-b43c-861b8b8829bd"
+      }
+    }
+  },
+  "symbol": "actor_279",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "d2a7f4cf-18fe-4589-95f0-8f6e7e6f0e35",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "10",
+        "operator": "==",
+        "comparator": 10,
+        "__collapseElse": false,
+        "__label": "Jade Amulet Equipped"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "61",
+              "value": {
+                "type": "number",
+                "value": 5
+              },
+              "__collapse": false
+            },
+            "id": "9787924c-66e5-4b96-97b1-1f9201b87cf9",
+            "children": {}
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "10",
+              "operator": "==",
+              "comparator": 18,
+              "__collapseElse": false,
+              "__label": "Turquoise Ring Equipped"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "__collapse": false
+                  },
+                  "id": "93c0c576-7bc7-44c4-ba7e-f53a67b31314",
+                  "children": {}
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "__collapse": false
+                  },
+                  "id": "0ca59b9e-90ca-44c3-ad2a-6e1ab095d4b3",
+                  "children": {}
+                }
+              ]
+            },
+            "id": "f3751c36-9fcf-4c3f-aac5-15f705cb516b"
+          }
+        ]
+      },
+      "id": "f63b7084-9a06-4880-ab41-b0ae853b8d50"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e0816661-3348-4b69-a8dd-485854cc5e3f",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        }
+      },
+      "id": "7862b3cc-54ae-499a-a360-2e3a1d9f5f3d",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "beb9df1d-48fe-4436-ada3-a644dd74f8d0",
+        "$actor[2]$": "004c2464-62c0-4d4a-8380-4434ec89b6bf",
+        "$actor[0]$": "$self$"
+      },
+      "id": "9e3aa20e-cc33-411d-9c8e-e78e9760e6ca",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "a2e83a87-bcc4-4e2b-b466-7eda3a17fa43",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "adc4a3ac-ab46-4156-b01f-0179b87ee7b4"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 7,
+  "_index": 3
+}

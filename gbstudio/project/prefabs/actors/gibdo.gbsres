@@ -1,0 +1,223 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "35b67f17-3151-4647-a8d0-3e02aba079b3",
+  "name": "Gibdo",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "15d9582a-7a0b-45c2-8ed3-fe57fd1ccef5",
+  "moveSpeed": 1,
+  "animSpeed": 31,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "c1216f98-d9ec-4b28-81e8-16381a1add03",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "10",
+        "operator": "==",
+        "comparator": 10,
+        "__collapseElse": false,
+        "__label": "Jade Amulet Equipped"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "61",
+              "value": {
+                "type": "number",
+                "value": 5
+              },
+              "__collapse": false
+            },
+            "id": "dd495308-0281-4e7e-a52f-34d1c5059eca",
+            "children": {}
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "10",
+              "operator": "==",
+              "comparator": 18,
+              "__collapseElse": false,
+              "__label": "Turquoise Ring Equipped"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "__collapse": false
+                  },
+                  "id": "b52a7883-f1db-4022-8ad2-e8cd15193977",
+                  "children": {}
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "__collapse": false
+                  },
+                  "id": "b4497912-e3bb-4b30-8fac-8f5025d2a745",
+                  "children": {}
+                }
+              ]
+            },
+            "id": "6de7e7d2-1e50-4793-bfbd-404be61b5a7e"
+          }
+        ]
+      },
+      "id": "e9af2cd3-4c25-4c84-ab4c-d05124bb6513"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e0816661-3348-4b69-a8dd-485854cc5e3f",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        }
+      },
+      "id": "9c829c35-9a2c-460d-8121-1e021d57c7f5",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "beb9df1d-48fe-4436-ada3-a644dd74f8d0",
+        "$actor[2]$": "004c2464-62c0-4d4a-8380-4434ec89b6bf",
+        "$actor[0]$": "$self$"
+      },
+      "id": "0a79e162-3dc0-461b-916f-59d3e3d5dde3",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "cd55ccff-d5a7-4dd2-8fcf-8ad5debf810a",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "677111c0-6d6a-4a37-8729-2a98bf8d49cc"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": []
+}
