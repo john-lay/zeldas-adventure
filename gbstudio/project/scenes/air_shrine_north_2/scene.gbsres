@@ -1,9 +1,9 @@
 {
   "_resourceType": "scene",
-  "id": "47f368de-830c-445a-87f3-0772cd1de01e",
-  "_index": 132,
-  "name": "Air Shrine Entrance",
-  "backgroundId": "25ee5247-b5b6-41f6-9663-92526bb529a5",
+  "id": "e199bf6d-f639-4784-9fe4-a470ca9bf316",
+  "_index": 161,
+  "name": "Air Shrine North 2",
+  "backgroundId": "e56dcb63-2e11-443c-8338-00f4f74b2cd6",
   "tilesetId": "",
   "width": 20,
   "height": 18,
@@ -13,8 +13,8 @@
     "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
     "39d900a4-f4c3-4780-98ff-fa274f670332",
     "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "f229b5cc-93a3-40a1-86d9-b47b427c6301",
     "000998fb-33a5-417e-b2cf-8f2def7baa72",
-    "5f36a26d-2bfc-4ede-8f91-ddcf3f69c972",
     "",
     "default-ui"
   ],
@@ -22,71 +22,26 @@
     "77762eab-8ff3-40a7-896a-31630623ff57",
     "05949994-d76a-41b8-bd52-834e367e6e50",
     "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
     "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
     "9a6093f8-2c39-4efa-a4ec-edd1daf35e7d",
-    "",
-    "",
+    "486ce5de-25c4-4f95-8f7f-a5641613461d",
     "5810d571-6df9-46a0-b890-905bf3be1dfe"
   ],
-  "collisions": "0035+0f!0013+0f!0013+0f!0013+0f3+0014+0f!008+0f4+007+0f2+007+0f!002+0f!009+0f!006+0f!002+0f!009+0f!006+0f4+009+0f!0013+0f!0013+0f!0013+0f!002+0f!0010+0f!002+0f!0010+0f!003+0f2+00e+0f!0015+",
+  "collisions": "002b+0f4+00a+0f!003+0f2+00e+0f!0012+0f!0013+0f!0013+0f!0012+0f!0013+0f!0013+0f!0013+0f!005+0f3+00b+0f!007+0f!00b+0f!008+0f!00a+0f!005+0f4+00a+0f!0013+0f!0013+0f!0018+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_35",
+  "symbol": "scene_65",
   "x": 4480,
-  "y": 1568,
+  "y": 1184,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
         "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_COMMENT",
-            "args": {
-              "text": "Completed Shrine or used compass to warp",
-              "__collapse": true
-            },
-            "id": "bbcfe20a-9f79-408f-9492-9cae594f9e4e"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 3
-              },
-              "__collapse": true
-            },
-            "id": "a8bba792-21cc-4ef9-9f9e-b229258873f2"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "7e49e818-039a-4ab8-9a89-95826bec0021"
-          }
-        ]
-      },
-      "id": "4bbfdb37-17bd-4ed7-9ab3-ddb2bbd6aec8"
+      "id": "0892214d-a4fd-4a75-b8f3-7830059e48f9"
     },
     {
       "command": "EVENT_GROUP",
@@ -118,7 +73,7 @@
               },
               "__collapse": true
             },
-            "id": "723c2829-757a-4ea6-9454-ac49c898887b"
+            "id": "c5bffe46-fdbb-40e9-8a63-b2ea9bffb5e0"
           },
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
@@ -142,7 +97,7 @@
               },
               "__collapse": true
             },
-            "id": "e06a3f11-7371-409e-a9e1-29877e2c2f20"
+            "id": "86ba73b9-c90b-45b4-881f-cf9478e10637"
           },
           {
             "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
@@ -154,14 +109,14 @@
               "__comment": false,
               "__collapse": true
             },
-            "id": "4e707c2d-b343-4e10-8fc7-ab7d94994e88"
+            "id": "b41521d4-8b6a-41ba-8d74-5f4fc9ae3d3c"
           },
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
               "__collapseElse": true,
               "__disableElse": true,
-              "__collapse": true
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -171,16 +126,16 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "8308fe13-e542-4b4c-a50d-fc827b7967ee"
+                  "id": "09747ed3-f9b9-4764-b55a-8e288139af41"
                 }
               ],
               "false": []
             },
-            "id": "c547a50b-15c6-4e36-8b80-36dbd9352f37"
+            "id": "acd18a6d-7784-4ef0-b2bb-27b327674617"
           }
         ]
       },
-      "id": "7b6c6f2c-e5ef-4844-8f2f-74ab71d57958"
+      "id": "b430fd9b-6392-42f0-8218-49efe88e021f"
     },
     {
       "command": "EVENT_SET_TIMER_SCRIPT",
@@ -190,7 +145,7 @@
         "frames": 30,
         "__scriptTabs": "end",
         "__collapse": false,
-        "__label": "Animated Fire + Water"
+        "__label": "Animated Water"
       },
       "children": {
         "script": [
@@ -199,59 +154,11 @@
             "args": {
               "x": {
                 "type": "number",
-                "value": 0
+                "value": 18
               },
               "y": {
-                "type": "number",
-                "value": 16
-              },
-              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
-              "tileIndex": {
-                "type": "number",
-                "value": 14
-              },
-              "frames": {
                 "type": "number",
                 "value": 6
-              },
-              "variable": "56"
-            },
-            "id": "e7bb2ce8-eeda-448b-b989-e29ece3e77e6"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 1
-              },
-              "y": {
-                "type": "number",
-                "value": 16
-              },
-              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
-              "tileIndex": {
-                "type": "number",
-                "value": 20
-              },
-              "frames": {
-                "type": "number",
-                "value": 6
-              },
-              "variable": "55"
-            },
-            "id": "76d80d90-07aa-4cd1-af06-a3d18515bac0"
-          },
-          {
-            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
-            "args": {
-              "x": {
-                "type": "number",
-                "value": 16
-              },
-              "y": {
-                "type": "number",
-                "value": 1
               },
               "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
               "tileIndex": {
@@ -264,18 +171,18 @@
               },
               "variable": "57"
             },
-            "id": "fecb10d2-3926-4ee6-a02f-0470977a657b"
+            "id": "d3755327-697d-4f98-86b2-2664abc2a281"
           },
           {
             "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
             "args": {
               "x": {
                 "type": "number",
-                "value": 15
+                "value": 19
               },
               "y": {
                 "type": "number",
-                "value": 1
+                "value": 6
               },
               "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
               "tileIndex": {
@@ -286,13 +193,13 @@
                 "type": "number",
                 "value": 4
               },
-              "variable": "75"
+              "variable": "56"
             },
-            "id": "60b8307a-5cbb-4d86-a866-1a8e0321a0aa"
+            "id": "1453e7cb-fdb0-4837-9831-b26d20471d15"
           }
         ]
       },
-      "id": "a12ac7ff-8f47-45b0-a5aa-87f182ac0ff9"
+      "id": "b9f510b8-2e7e-4fc0-b4d3-85cae4901b98"
     },
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
@@ -324,11 +231,11 @@
                 "value": "L2"
               }
             },
-            "id": "69167876-63cb-428f-9763-4566e8843ad3"
+            "id": "5dab54c4-7147-4f3b-82ef-0f11f0a07bda"
           }
         ]
       },
-      "id": "b3426fee-baf5-4352-a9f5-899ddc058cd0"
+      "id": "25271889-82d3-4ab2-af2c-92b98bf6ad76"
     },
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
@@ -338,20 +245,33 @@
         ],
         "override": true,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "a59abde4-308e-4310-a1da-4e52e62ba9e0",
+              "$actor[1]$": "5889a39a-497d-4abc-87d7-64654d5a00eb",
+              "$actor[2]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[3]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[4]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[5]$": "d47ecbe4-4cd7-468e-a7a1-ab841cf5b0ce"
+            },
+            "id": "bdeb0084-be95-4517-ad98-897feccff401"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
               "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
             },
-            "id": "e17ba548-3f90-4bcb-88ec-513afa82db1c"
+            "id": "2ce65dea-d9b3-461d-8b4f-003ef93970fe"
           }
         ]
       },
-      "id": "00ef6299-655d-44af-9071-cbb4bbc72a30"
+      "id": "fd9bc34c-948e-4eb1-8a99-2816bc3dea16"
     },
     {
       "command": "EVENT_SET_INPUT_SCRIPT",
@@ -361,107 +281,81 @@
         ],
         "override": false,
         "__scriptTabs": "press",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
           {
             "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "a59abde4-308e-4310-a1da-4e52e62ba9e0",
+              "$actor[1]$": "5889a39a-497d-4abc-87d7-64654d5a00eb",
+              "$actor[2]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[3]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[4]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[5]$": "d47ecbe4-4cd7-468e-a7a1-ab841cf5b0ce"
+            },
+            "id": "a9b063e9-ef1b-46e8-bb56-eadb614d7fa7"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
               "customEventId": "11dc352f-8faa-463b-97fa-9240e73a0db7"
             },
-            "id": "d6aebe96-6379-4903-a76e-65c6e16d7bd7"
+            "id": "5f263a37-10ac-4ae4-96dc-1f5cdfd32678"
           }
         ]
       },
-      "id": "90ca9463-eaaa-4866-8c96-337072f7dea9"
+      "id": "1212b9e9-9d49-4d4f-b1b5-fd1ddb508a72"
     },
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_GROUP",
       "args": {
-        "variable": "19",
-        "value": {
-          "type": "number",
-          "value": 27
-        },
-        "__collapse": true
-      },
-      "id": "a92457f4-5b69-4f2c-8ebf-7e14138bc707"
-    },
-    {
-      "command": "EVENT_SET_VALUE",
-      "args": {
-        "variable": "20",
-        "value": {
-          "type": "number",
-          "value": 5
-        },
-        "__collapse": true
-      },
-      "id": "575e2c89-9fa6-4f11-a69f-1f5908334851"
-    },
-    {
-      "command": "EVENT_IF_FLAGS_COMPARE",
-      "args": {
-        "variable": "18",
-        "flag": 2,
-        "__collapseElse": false,
+        "__label": "Combat",
         "__collapse": false
       },
       "children": {
         "true": [
           {
-            "command": "EVENT_COMMENT",
+            "command": "EVENT_SET_VALUE",
             "args": {
-              "text": "If Zelda's resume location is set to Vision Henge.\nThen she entered this screen from the world map. Otherwise she exited the shrine."
+              "variable": "58",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
             },
-            "id": "45b11790-4c68-4939-a7d1-41205a229940"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_SET_FLAGS",
-            "args": {
-              "variable": "18",
-              "flag1": false,
-              "flag2": false,
-              "flag3": true,
-              "flag4": false,
-              "flag5": false,
-              "flag6": false,
-              "flag7": false,
-              "flag8": false,
-              "flag9": false,
-              "flag10": false,
-              "flag11": false,
-              "flag12": false,
-              "flag13": false,
-              "flag14": false,
-              "flag15": false,
-              "flag16": false,
-              "__collapse": true
-            },
-            "id": "453c6d92-bdfc-4e3c-8d4f-172f5d34f159"
+            "id": "3b31246c-932e-43c0-bcac-922d92bebd65",
+            "children": {}
           },
           {
-            "command": "EVENT_MUSIC_STOP",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "__collapse": true
+              "customEventId": "154cfce4-919a-4c61-80be-4b53949794e2",
+              "$actor[0]$": "a59abde4-308e-4310-a1da-4e52e62ba9e0",
+              "$actor[1]$": "5889a39a-497d-4abc-87d7-64654d5a00eb",
+              "$actor[2]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[3]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[4]$": "3bb78db8-8567-4749-bd11-37472e356f4a",
+              "$actor[5]$": "d47ecbe4-4cd7-468e-a7a1-ab841cf5b0ce"
             },
-            "id": "c93e7f75-9081-468b-86f8-f2b8f237860d"
+            "id": "250d008d-20cd-41f0-a8c1-45e697566b2c"
           },
           {
-            "command": "EVENT_MUSIC_PLAY",
+            "command": "EVENT_SET_VALUE",
             "args": {
-              "musicId": "33d7d664-59bf-4a75-919d-1157e764f8a6",
-              "loop": true,
-              "__collapse": false
+              "variable": "43",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
             },
-            "id": "c67791e2-d65d-4e27-ae0c-afb70dd07b61"
+            "id": "f4cd6663-b556-4526-b08d-ade6d8a41a83"
           }
         ]
       },
-      "id": "e6b2f619-d806-4fd2-a8ea-8ead16f98b9b"
+      "id": "c540a479-ec7d-4485-9c68-fee7aea3b395"
     }
   ],
   "playerHit1Script": [],
