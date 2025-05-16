@@ -1,0 +1,371 @@
+{
+  "_resourceType": "actor",
+  "id": "d5083bf7-12e2-4d70-bded-6eec3dba329b",
+  "name": "enemy1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "15d9582a-7a0b-45c2-8ed3-fe57fd1ccef5",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 31,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_304",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "3b65cf34-dc56-4f70-8dda-01d1faf93828",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "10",
+        "operator": "==",
+        "comparator": 10,
+        "__collapseElse": false,
+        "__label": "Jade Amulet Equipped"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "61",
+              "value": {
+                "type": "number",
+                "value": 5
+              },
+              "__collapse": false
+            },
+            "id": "da1eb1bd-7cef-4cbe-8286-b626c53316dd",
+            "children": {}
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "10",
+              "operator": "==",
+              "comparator": 18,
+              "__collapseElse": false,
+              "__label": "Turquoise Ring Equipped"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "__collapse": false
+                  },
+                  "id": "99b5ac9c-6d36-41ce-a50c-ac4cbe71596b",
+                  "children": {}
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "61",
+                    "value": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "__collapse": false
+                  },
+                  "id": "6acfc1af-59bb-4e64-b06a-e2369697249b",
+                  "children": {}
+                }
+              ]
+            },
+            "id": "b2737756-2e06-4372-8efa-3f2b194ce176"
+          }
+        ]
+      },
+      "id": "2264894f-572e-4e84-acc9-a62ff1a9b4de"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e0816661-3348-4b69-a8dd-485854cc5e3f",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        }
+      },
+      "id": "66f5e3ef-c24b-4d0a-b1a1-eeab2b9feef8",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "90a6e9cb-062c-425a-a857-a855773fa6ee",
+        "$actor[2]$": "21e96818-7790-4540-a788-01011172d792",
+        "$actor[0]$": "$self$"
+      },
+      "id": "a77c29ad-2033-43a2-8b1b-5097de58a6ac",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "b4cc551e-1bdb-439c-b5d6-40fed9e4c347",
+            "children": {}
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Enable compass",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "106",
+                    "flag": 1,
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_COMMENT",
+                        "args": {
+                          "text": "Already has compass",
+                          "__collapse": true
+                        },
+                        "id": "d172b442-e6de-4182-a59a-4e6bb019bda5",
+                        "children": {}
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 10,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_FLAGS_COMPARE",
+                              "args": {
+                                "variable": "17",
+                                "flag": 11,
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_CALL_CUSTOM_EVENT",
+                                    "args": {
+                                      "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                                      "__collapse": true
+                                    },
+                                    "id": "1709b426-42f7-4d94-ba17-1b6a41ed50a9"
+                                  },
+                                  {
+                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                    "args": {
+                                      "actorId": "8e30bc0e-5e2d-422a-88af-e1d653eb186f",
+                                      "__collapse": true
+                                    },
+                                    "id": "587835ee-5d2d-4a92-8041-f890c9520142",
+                                    "children": {}
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "d43fec2d-0c34-4ac2-8ab6-cc8a7e63d578"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "e6020f71-2b37-4b44-bf19-4bbb12620e88"
+                      }
+                    ]
+                  },
+                  "id": "d0e1b552-285a-4789-94fd-67dbacf4d20b"
+                }
+              ]
+            },
+            "id": "0d41fa5c-d9e0-409b-80ab-9f13a6c3b4a4"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Deactivate spikes",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "17",
+                    "flag": 10,
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 11,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "7cdd7a6f-fcd4-4b47-a47c-f9e6d2fb29fc",
+                                "__collapse": true
+                              },
+                              "id": "be3a8e26-aa9b-4247-a158-ecb28217f1cd"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_DEACTIVATE",
+                              "args": {
+                                "actorId": "706bccc4-7c24-4dea-ac16-33c39c219e85",
+                                "__collapse": true
+                              },
+                              "id": "dfabda97-aa88-4aaf-8deb-1bd4f1465acd"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "f8c6d03d-d013-4677-926e-b1649be38fa9"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "165c8faf-49db-4f4d-8444-fc60028d43d4"
+                }
+              ]
+            },
+            "id": "0df13963-55df-4eb2-9a1e-ec2c6860442e"
+          }
+        ],
+        "false": []
+      },
+      "id": "a819a451-2e3a-49c8-9aaf-f0ff75cfff43"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 12,
+  "_index": 3
+}
