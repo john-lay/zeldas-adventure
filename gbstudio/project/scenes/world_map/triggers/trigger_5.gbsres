@@ -1,11 +1,11 @@
 {
   "_resourceType": "trigger",
-  "id": "da57405c-dc1a-4ff4-8148-eeeac96db821",
+  "id": "1b59f0f1-7c44-4a4b-b72f-73ee4fc3ee6e",
   "name": "",
   "prefabId": "",
-  "x": 8,
-  "y": 32,
-  "symbol": "trigger_37",
+  "x": 19,
+  "y": 29,
+  "symbol": "trigger_38",
   "prefabScriptOverrides": {},
   "width": 1,
   "height": 1,
@@ -16,7 +16,7 @@
         "customEventId": "52de343a-a175-46cb-b68b-e225c548ae02",
         "__collapse": true
       },
-      "id": "781c8f5d-f7ad-4f83-8f67-36380de121c8"
+      "id": "34d8b7ac-c87a-47fc-b3d7-4bc511f8e323"
     },
     {
       "command": "EVENT_SWITCH",
@@ -64,7 +64,7 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "1. Sanctuaire de la\nTerre"
+                "5. Sanctuaire de l'Eau"
               ],
               "__section": "text",
               "avatarId": "",
@@ -83,7 +83,7 @@
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30
             },
-            "id": "802e136e-9ecf-4c3a-b12d-8958ceb29e51"
+            "id": "df63c92d-8602-41f5-b8c9-f5b72e3c4ca3"
           }
         ],
         "true1": [],
@@ -106,7 +106,7 @@
             "command": "EVENT_TEXT",
             "args": {
               "text": [
-                "1. Earth Shrine"
+                "5. Water Shrine"
               ],
               "__section": "text",
               "avatarId": "",
@@ -125,20 +125,20 @@
               "closeDelayTime": 0.5,
               "closeDelayFrames": 30
             },
-            "id": "e7cd70cf-481c-407e-9879-e40074981694"
+            "id": "27b9abbb-30da-4ff4-8769-f30e637467af"
           }
         ]
       },
-      "id": "ca94e4f6-445b-4f3a-aad8-a77677d2bdee"
+      "id": "3bdd238b-5699-4772-b5d4-a0cbfd5d9b69"
     },
     {
       "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
-        "variable": "100",
+        "variable": "27",
         "flag": 1,
         "__collapseElse": true,
         "__disableElse": true,
-        "__collapse": false
+        "__comment": true
       },
       "children": {
         "true": [
@@ -187,7 +187,7 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "Utilise la boussole du\nSanctuaire de la Terre\npour te téléporter ici?"
+                      "Utilise la boussole du\nSanctuaire de l'Eau\npour te téléporter ici?"
                     ],
                     "__section": "text",
                     "avatarId": "",
@@ -206,7 +206,7 @@
                     "closeDelayTime": 0.5,
                     "closeDelayFrames": 30
                   },
-                  "id": "690067c3-023d-48b7-a401-8744eb5bd9ce"
+                  "id": "0eddd693-c928-4621-903e-fe58ca6fe93c"
                 }
               ],
               "true1": [],
@@ -229,15 +229,15 @@
                   "command": "EVENT_TEXT",
                   "args": {
                     "text": [
-                      "Use the Earth Shrine \ncompass to warp here?"
+                      "Use the Water Shrine \ncompass to warp here?"
                     ],
                     "avatarId": ""
                   },
-                  "id": "05128119-4464-4449-9ea2-e36af2888451"
+                  "id": "ae506747-78ea-480a-bf39-018cdf77729e"
                 }
               ]
             },
-            "id": "147b6647-49ff-4be9-838c-7c35406a1573"
+            "id": "6d105ddf-175c-459b-8166-03d244c8476a"
           },
           {
             "command": "EVENT_SWITCH",
@@ -281,12 +281,12 @@
             "children": {
               "true0": [
                 {
-                  "id": "1b083de9-cec2-4163-adac-5a845e5aee7a",
+                  "id": "26d1f387-4cf8-4b9d-b8a0-63efed58993b",
                   "command": "EVENT_CHOICE",
                   "args": {
                     "variable": "86",
-                    "trueText": "Reviens!",
-                    "falseText": "Reste ici",
+                    "trueText": "Warp!",
+                    "falseText": "Stay Here",
                     "__collapse": false
                   }
                 }
@@ -308,21 +308,21 @@
               "true15": [],
               "false": [
                 {
-                  "id": "b241acb1-9de4-42ef-bfb9-3f0c39b186b2",
+                  "id": "5800e406-c842-488b-a67c-71cc5c20e3ce",
                   "command": "EVENT_CHOICE",
                   "args": {
                     "variable": "86",
-                    "trueText": "Warp!",
-                    "falseText": "Stay Here",
+                    "trueText": "Reviens!",
+                    "falseText": "Reste ici",
                     "__collapse": false
                   }
                 }
               ]
             },
-            "id": "9f0b24db-81e7-4834-a476-fda0a4ff96f4"
+            "id": "c42cc262-d056-40d0-b4f7-f708f7405877"
           },
           {
-            "id": "0ded6a0c-cecd-4a07-9b43-ebb5a6edc298",
+            "id": "0cb66b2f-23a9-411f-85c3-972dc05ff54b",
             "command": "EVENT_IF_TRUE",
             "args": {
               "variable": "86",
@@ -334,37 +334,17 @@
             "children": {
               "true": [
                 {
-                  "command": "EVENT_SET_VALUE",
-                  "args": {
-                    "variable": "22",
-                    "value": {
-                      "type": "number",
-                      "value": 0
-                    },
-                    "__collapse": true
-                  },
-                  "id": "b8cc23cc-e80a-4f66-8483-aa679101d592"
-                },
-                {
-                  "command": "EVENT_CALL_CUSTOM_EVENT",
-                  "args": {
-                    "customEventId": "e7cf337b-66c7-4914-9643-2c4394098ed8",
-                    "__collapse": true
-                  },
-                  "id": "e149bd2c-61bc-44cb-ad53-a3a9a5d93d2a"
-                },
-                {
-                  "id": "6aef82ce-1907-41a0-be92-89a2ffdce364",
+                  "id": "ff4cc0a9-f95a-4182-b0c8-2899eef862de",
                   "command": "EVENT_SWITCH_SCENE",
                   "args": {
-                    "sceneId": "2f9134b3-be1c-4f69-8aa9-ab51c649e0d9",
+                    "sceneId": "b1047ede-bb3f-4651-af05-dbd104e3837f",
                     "x": {
                       "type": "number",
-                      "value": 9
+                      "value": 4
                     },
                     "y": {
                       "type": "number",
-                      "value": 7
+                      "value": 15
                     },
                     "direction": "down",
                     "fadeSpeed": "2",
@@ -378,7 +358,7 @@
         ],
         "false": []
       },
-      "id": "2a7832c4-caed-4b51-81fe-f01d5911e964"
+      "id": "c6342fdf-eb93-46d2-81f7-79a6832b0822"
     }
   ],
   "leaveScript": [],

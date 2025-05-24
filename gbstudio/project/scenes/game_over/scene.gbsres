@@ -197,6 +197,140 @@
       "id": "9ebe0d13-5ace-47f3-9f0d-e017639db46a"
     },
     {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 5,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Air Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "a06e9ea4-3e0a-43b7-b937-e82e87d5b488"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "f5b224d0-01a3-4e48-a971-15ef1df706e5",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "9dca90e3-3169-4c79-8ec4-497240d73ca3"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "358f3368-0be6-47de-a21b-25f2728a2be9"
+                  },
+                  "id": "7d80e18b-d244-4010-b324-66f9454fdd84"
+                }
+              ]
+            },
+            "id": "2908a0d7-e9bd-49df-b14a-5933c77607a7"
+          }
+        ],
+        "false": []
+      },
+      "id": "b4cf0521-9f57-469f-a2da-67fd85686e5e"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 6,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Destiny Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "30986ab7-1d0d-4d31-8f18-a2e7b4cdfc78"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "4fd2f2d6-ab89-4154-898d-0f503d1a232f",
+                    "x": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "47daa88c-fe77-4f77-8f02-3d5e25f393fa"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "033093f4-b05c-4ad0-82e5-2447fd308df0"
+                  },
+                  "id": "f5f925b0-d3ae-4749-ba91-d0bb651df75f"
+                }
+              ]
+            },
+            "id": "66b324b2-f988-422f-927b-c03d13070377"
+          }
+        ],
+        "false": []
+      },
+      "id": "890482b2-9bb5-4bfd-94da-30d70324cbd1"
+    },
+    {
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Vision Henge",
