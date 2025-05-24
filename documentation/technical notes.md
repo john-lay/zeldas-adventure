@@ -383,7 +383,7 @@ A listing of variables used in GB Studio and their types.
 * `$106$: Variable 106` Destiny Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
-  * (Flag 3 represents Zelda has activated a switch)
+  * ~~(Flag 3 represents Zelda has activated a switch)~~
   * (Flag 4 represents Malmord has given her third speech)
   * (Flag 5 represents Zelda has defeated Malmord)
   * (Flag 6 represents Zelda has collected the heart piece)
