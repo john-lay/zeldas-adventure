@@ -18,14 +18,31 @@
   "script": [],
   "startScript": [
     {
-      "command": "EVENT_SET_VALUE",
+      "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
-        "variable": "87",
-        "value": {
-          "type": "false"
-        }
+        "variable": "17",
+        "flag": 10,
+        "__collapseElse": true,
+        "__disableElse": true
       },
-      "id": "1fed0c89-2979-4402-b8a8-c3020bb16f42"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": true
+            },
+            "id": "01177d04-2444-4cc1-80ae-2a42d350f2af"
+          }
+        ],
+        "false": []
+      },
+      "id": "46a3c27d-b6fd-4f5c-b493-e35ac978112d"
     }
   ],
   "updateScript": [],
@@ -39,12 +56,10 @@
       "id": "3f01fa28-0c8b-41fd-9190-a562fd057516"
     },
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
-        "condition": {
-          "type": "variable",
-          "value": "87"
-        },
+        "variable": "17",
+        "flag": 10,
         "__collapseElse": false
       },
       "children": {
@@ -94,15 +109,28 @@
             "id": "64c2cad9-f70c-4a4d-afb8-d004f4cb3942"
           },
           {
-            "command": "EVENT_SET_VALUE",
+            "command": "EVENT_CLEAR_FLAGS",
             "args": {
-              "variable": "87",
-              "value": {
-                "type": "false"
-              },
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": true,
+              "flag13": true,
+              "flag14": true,
+              "flag15": false,
+              "flag16": false,
               "__collapse": true
             },
-            "id": "b87dafbd-4022-4573-a776-b2e4812a7424"
+            "id": "779afb99-13e3-49cb-966f-e3fb77a1710a"
           }
         ],
         "false": [
@@ -151,19 +179,31 @@
             "id": "dd9febb8-c8b6-44f8-a631-1e2c9d4c9a16"
           },
           {
-            "command": "EVENT_SET_VALUE",
+            "command": "EVENT_ADD_FLAGS",
             "args": {
-              "variable": "87",
-              "value": {
-                "type": "true"
-              },
-              "__collapse": true
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": true,
+              "flag13": true,
+              "flag14": true,
+              "flag15": false,
+              "flag16": false
             },
-            "id": "9ab23981-33c8-474d-8263-40861cf0bfc2"
+            "id": "4b7453fe-13a6-4422-9e90-e243ca12c638"
           }
         ]
       },
-      "id": "2fcf6228-8110-40b7-a55e-77c697b87e2e"
+      "id": "bbf3dcbb-2ed2-4078-8629-24c9804cd9a8"
     }
   ],
   "hit2Script": [],
