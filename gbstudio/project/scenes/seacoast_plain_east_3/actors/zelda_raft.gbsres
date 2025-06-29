@@ -1,0 +1,96 @@
+{
+  "_resourceType": "actor",
+  "id": "736a8616-d162-4e9e-9e87-6dcebac38a81",
+  "name": "Zelda raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "293bd966-b2ff-4f86-b85d-8f6b97548b39",
+  "prefabId": "",
+  "direction": "right",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_169",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__label": "Zelda's Sailing"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "31d0a9c2-cc23-4921-bcc1-975b99581362"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "efa180d6-208c-4dc9-a35a-51e79d2ca844"
+          }
+        ]
+      },
+      "id": "cca7a0bb-961a-4116-8b58-8a7cd8363c43"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 18
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": false
+      },
+      "id": "9afd95d6-bb0c-4180-b77b-3ca14760572a"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "97b7d334-ff1e-4e07-9c1d-ae08d3d20cc8"
+      },
+      "id": "310ec25b-aae3-4b16-9e96-1be52010cd84"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "d022c1e4-ca5f-488f-bdc2-c2bd38a5948d",
+        "x": 0,
+        "y": 0,
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "3446a55b-bb66-434f-a6cf-4dbb4a43f044"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 0,
+  "y": 10,
+  "_index": 1
+}
