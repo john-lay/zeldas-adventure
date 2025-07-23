@@ -1,0 +1,157 @@
+{
+  "_resourceType": "actor",
+  "id": "79aedec4-e218-40ad-a67b-cf3066d32142",
+  "name": "raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ec78aec8-c422-46c5-9b00-ad5b69eedecb",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_262",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Zelda's sailing"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "11",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": true,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "1611d9db-3c06-4bc3-84af-6ac5e804c62d"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "player",
+              "__collapse": true
+            },
+            "id": "d8ff47fc-e6b3-4ffe-a095-c4ee4fcdaef5"
+          },
+          {
+            "command": "EVENT_ACTOR_ACTIVATE",
+            "args": {
+              "actorId": "a7ffd1ed-763a-44ca-94ed-13a4b7c32f71",
+              "__collapse": true
+            },
+            "id": "9a9486dd-329b-4491-b7fb-e7d877955446"
+          },
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "left",
+                "up",
+                "down",
+                "right"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": true
+            },
+            "children": {
+              "true": []
+            },
+            "id": "b4865d7e-ee2b-418b-831d-689feb01f398"
+          },
+          {
+            "command": "EVENT_REMOVE_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "b"
+              ],
+              "__collapse": true
+            },
+            "id": "1276956d-a20d-468c-875c-2d5ec82b3d14"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+              "__collapse": true
+            },
+            "id": "7f6cdcba-a508-4cba-b3b9-1a18cea05f20"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "2b308f48-348b-4e53-b722-5e5477eeb6ae"
+          }
+        ]
+      },
+      "id": "a95d448c-32d4-4d7d-802b-34c8cdbc2d0d"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "10",
+        "operator": "==",
+        "comparator": 39,
+        "__collapseElse": false,
+        "__label": "",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Raft equipped",
+              "__collapse": true
+            },
+            "id": "37ed53e3-b6d6-4dbe-9caa-716c79fc6d6e"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "491fabe8-9a43-41be-aaa2-ed47c9216602"
+          }
+        ]
+      },
+      "id": "f826b965-097c-4760-bd92-dd0b5fa91d3c"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 10,
+  "_index": 2
+}

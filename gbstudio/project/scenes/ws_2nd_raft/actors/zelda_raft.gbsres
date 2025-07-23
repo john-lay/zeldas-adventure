@@ -1,0 +1,123 @@
+{
+  "_resourceType": "actor",
+  "id": "a7ffd1ed-763a-44ca-94ed-13a4b7c32f71",
+  "name": "Zelda raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "293bd966-b2ff-4f86-b85d-8f6b97548b39",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_261",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__label": "Zelda's Sailing"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "90b6f220-9ccb-4923-8d10-1156222c2ed6"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "53addb2b-be1e-43c3-a5cd-d648f85e19c1"
+          }
+        ]
+      },
+      "id": "8dc27b6a-efb2-41d3-9138-5708bef8e7a2"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 12
+        },
+        "y": 0,
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "31d8711f-2ab4-4f6e-af74-d05888503f49"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 18
+        },
+        "y": {
+          "type": "number",
+          "value": 10
+        },
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "97b7d334-ff1e-4e07-9c1d-ae08d3d20cc8",
+              "__collapse": true
+            },
+            "id": "1e39b6f2-3461-4fab-8b5d-dc0e7cf523dc"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "e9c960aa-c376-4ab2-9429-f928835596ec",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "right",
+              "fadeSpeed": "2",
+              "__collapse": false
+            },
+            "id": "20ed12cd-8236-4b80-aa1d-98cdee3849cb"
+          }
+        ],
+        "false": []
+      },
+      "id": "f3ce523c-fed1-4108-a884-8e63fc3491ae"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 10,
+  "_index": 1
+}
