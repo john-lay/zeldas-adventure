@@ -1,0 +1,120 @@
+{
+  "_resourceType": "actor",
+  "id": "72cbb49e-76ac-4357-a54f-6095f8b7d0cc",
+  "name": "Zelda raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "293bd966-b2ff-4f86-b85d-8f6b97548b39",
+  "prefabId": "",
+  "direction": "up",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_375",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__label": "Zelda's Sailing"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "87007ebd-ca6e-4b9d-80cd-5c1300504193"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "14780206-2373-4261-b98f-5e9127af1055"
+          }
+        ]
+      },
+      "id": "8d1d7855-1ae8-4ce4-b09c-c3bf82a8dcf0"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": -11
+        },
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": false
+      },
+      "id": "45f49731-e623-4913-89d3-7e42f3f1acea"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": -8
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": false
+      },
+      "id": "dcd6d6b9-a023-48f4-ae0f-26e3d1db0802"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4355c871-86cb-42d6-a7e7-7b714c6fb6d6"
+      },
+      "id": "b591caed-e6f6-43f1-8eb3-03b0b60f319c"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "7726944c-d320-4295-b2c2-0056c070063f",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "e5541745-6516-4a4e-8320-7ffcc2401010"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 17,
+  "_index": 1
+}
