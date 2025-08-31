@@ -1,0 +1,67 @@
+{
+  "_resourceType": "actor",
+  "id": "961bd4b8-f772-4571-93d0-afba1dbf9c18",
+  "name": "spikes 2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_604",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "83e362dd-dddd-49d0-9967-9bda615930c0"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "110",
+        "flag": 8,
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Switch flipped in room above",
+              "__collapse": true
+            },
+            "id": "20cf556b-80aa-4fa4-a52a-b3c42051e78a"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "7fe6c4b8-0df5-4e99-906c-3011ed0cffdd"
+          }
+        ]
+      },
+      "id": "c10e85c3-b33a-4e7c-af0e-f19072639158"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 12,
+  "y": 6,
+  "_index": 4
+}
