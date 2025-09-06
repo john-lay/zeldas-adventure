@@ -1,0 +1,160 @@
+{
+  "_resourceType": "actor",
+  "id": "c4bce69a-8b19-474a-92fa-323d136d0dce",
+  "name": "Block 2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "51529a4a-1e35-43d7-b10c-6fe9950be714",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_627",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "87",
+        "value": {
+          "type": "false"
+        },
+        "__collapse": true
+      },
+      "id": "7ae15ce2-e3e7-4bda-a13b-82c081017c89"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "player",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "87",
+              "value": {
+                "type": "true"
+              },
+              "__collapse": true
+            },
+            "id": "460bfe1f-d07c-4583-a94b-c12bcf81ca93"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_ACTOR_AT_POSITION",
+            "args": {
+              "actorId": "player",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 7
+              },
+              "__collapseElse": false,
+              "__disableElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "87",
+                    "value": {
+                      "type": "true"
+                    },
+                    "__collapse": true
+                  },
+                  "id": "d886ca8c-5225-4429-b4a1-0064c2afa80c"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba",
+                    "__collapse": true
+                  },
+                  "id": "cc47b311-3458-476b-9ef3-dc3fcef72ec5"
+                }
+              ]
+            },
+            "id": "7c295fb4-5078-41f7-9a66-272ab8d2d3b1"
+          }
+        ]
+      },
+      "id": "a0095f5b-8832-46ec-906d-2a6d447044db"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "variable",
+          "value": "87"
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "01c53c25-39b0-4252-818b-9afab244138b",
+              "__collapse": true
+            },
+            "id": "ace1a8f5-c296-4cd8-887c-9daa3ac864e9"
+          },
+          {
+            "command": "EVENT_ACTOR_PUSH",
+            "args": {
+              "continue": false,
+              "__collapse": true
+            },
+            "id": "a9f28900-0d24-4ad5-aceb-8c02bd783e64"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "87",
+              "value": {
+                "type": "false"
+              },
+              "__collapse": true
+            },
+            "id": "5a52a13a-5801-4ac0-9859-0c3c149d71f7"
+          }
+        ],
+        "false": []
+      },
+      "id": "9a79a903-5b04-46b0-9846-f2fe8d6a0b97"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 8,
+  "y": 8,
+  "_index": 6
+}
