@@ -1,0 +1,175 @@
+{
+  "_resourceType": "actor",
+  "id": "491688f8-af16-4f9b-b00e-e048628a36c2",
+  "name": "Heart Container",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "79d0d556-492a-4e33-aa4b-8cbf5b7857fb",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_680",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Heart Container"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_INC_VALUE",
+            "args": {
+              "variable": "1",
+              "__collapse": true
+            },
+            "id": "5f9e41bf-64e4-4654-b88c-62e5006f93e8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "f4efa418-5537-4db0-a893-6a300e14bcfb",
+              "__collapse": true
+            },
+            "id": "583bd6d0-eaee-4fd3-bbfa-603a53c34978"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "810970fb-478b-45a3-887f-6d1081f9bb1f",
+              "__collapse": true
+            },
+            "id": "8f58842f-f22a-4948-81d0-3881ae56aade"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "110",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": true,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "dfddc429-3a5f-4808-93fa-8cc45c674a9f"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "87b9e74b-9759-4b7b-ada9-7e61f72ac481"
+          }
+        ]
+      },
+      "id": "9d3717ac-c717-481d-8bc2-58943938e195"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "110",
+        "flag": 12,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Ursore defeated",
+              "__collapse": true
+            },
+            "id": "77884502-77e2-43b3-9a12-0dc0e1d91d0e"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "110",
+              "flag": 13,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Has collected Heart container",
+                    "__collapse": true
+                  },
+                  "id": "39522b74-d56e-44c8-9f4d-b8eefce43629"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "11a88caa-fb97-488e-9ace-7a79b619eeae"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Player has left room without collecting the heart container. Make it available if they change their mind.",
+                    "__collapse": false
+                  },
+                  "id": "3cdd9083-a067-4a60-b462-9f2d35c32370"
+                },
+                {
+                  "command": "EVENT_ACTOR_ACTIVATE",
+                  "args": {
+                    "actorId": "$self$"
+                  },
+                  "id": "b3f0c91d-8f70-4b7f-a29c-cbf05f1308bb"
+                }
+              ]
+            },
+            "id": "549e5aa9-9ed7-476b-bc6d-7dfe6fae1dad"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "8359ffeb-5d82-4229-9561-e3be7b7fb636"
+          }
+        ]
+      },
+      "id": "aae4c2f0-63ae-477b-a0bf-0398446db93e"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 9,
+  "_index": 5
+}
