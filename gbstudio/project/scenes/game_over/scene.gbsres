@@ -331,6 +331,140 @@
       "id": "890482b2-9bb5-4bfd-94da-30d70324cbd1"
     },
     {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 7,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Water Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "1ea3fe11-0364-4fe5-92c8-d2e3b09be6a3"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "f8a68d3a-6097-4f1e-b774-26ac4868d0e2",
+                    "x": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "7c1b77d6-890a-444a-8a2e-31ffeb575804"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "ca2bf1ee-4b2c-48d5-8680-773b22a783c1"
+                  },
+                  "id": "ab621d0c-8a7b-4b2d-a0bc-31ff71ce421e"
+                }
+              ]
+            },
+            "id": "ba731f31-cc0c-4549-8d31-dee2109eb804"
+          }
+        ],
+        "false": []
+      },
+      "id": "45d525e5-0e5a-4882-92dc-5e3aaadb8a6a"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 8,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Strength Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "ad0d91ec-7673-4498-a10d-13cdd7647523"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "ba42d1bd-b2ef-4f37-8f73-2083d0dc3e90",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "942e2cec-9433-47bf-a34a-d37b4f7b584a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e5f25f46-8ee4-4cdd-87a0-3e778d8a8335"
+                  },
+                  "id": "5031d80d-0f04-49a5-926d-14c22d951379"
+                }
+              ]
+            },
+            "id": "865e0fa1-e0ac-467e-bc4d-a9caf1701f66"
+          }
+        ],
+        "false": []
+      },
+      "id": "4d765d5a-12f7-447e-a974-ffe36a00e7f7"
+    },
+    {
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Vision Henge",
