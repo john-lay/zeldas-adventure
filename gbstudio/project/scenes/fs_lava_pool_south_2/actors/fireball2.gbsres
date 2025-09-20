@@ -1,0 +1,111 @@
+{
+  "_resourceType": "actor",
+  "id": "7643a5b9-3b35-4e30-ad21-53a83cd18565",
+  "name": "Fireball2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "94d3af5d-d2f5-4708-a04b-ab0308f4e205",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_145",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "63"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "fbd3e5cc-ae96-46d4-b678-3cfb4c072bfa",
+      "children": {}
+    }
+  ],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 3
+        },
+        "y": {
+          "type": "number",
+          "value": 17
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 16
+              },
+              "y": {
+                "type": "number",
+                "value": 4
+              }
+            },
+            "id": "8e9a9cf9-942d-43b0-aba5-65de3fe201fb"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": -1
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "moveType": "diagonal",
+              "useCollisions": false
+            },
+            "id": "1bb4603d-92dc-4fb4-9f10-74b9d9a50964"
+          }
+        ]
+      },
+      "id": "f21e66c9-9d78-4056-ac6a-cec6455942f8"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 16,
+  "y": 4,
+  "_index": 4
+}
