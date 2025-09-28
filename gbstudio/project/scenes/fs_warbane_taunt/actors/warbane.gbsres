@@ -1,0 +1,58 @@
+{
+  "_resourceType": "actor",
+  "id": "ef2c88f8-8b68-4a72-9b54-5b71bae0a972",
+  "name": "Warbane",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6de8809a-bd36-4ed2-973b-f9dd4c7930f1",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_195",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "112",
+        "flag": 7,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Warbane has given his speech",
+              "__collapse": true
+            },
+            "id": "92458751-9d67-43b0-bff1-73d54ec48f95"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "86057e57-798f-4eb5-9d2f-1aa822d844ac"
+          }
+        ],
+        "false": []
+      },
+      "id": "9639e993-c253-48c6-9bf3-49ff4b14aa05"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 10,
+  "_index": 1
+}

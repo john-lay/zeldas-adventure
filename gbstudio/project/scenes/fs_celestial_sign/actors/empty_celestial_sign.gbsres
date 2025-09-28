@@ -1,0 +1,87 @@
+{
+  "_resourceType": "actor",
+  "id": "f4f1b52b-7f91-4234-86ed-2e215bf36a2e",
+  "name": "Empty Celestial Sign",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "aece7b4d-4fc4-4144-a659-3b77def3c77f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_219",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba"
+      },
+      "id": "cf6d4ae4-64c3-44e7-ae9f-18bad31a37ab"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "ae9c526d-f33b-45ca-a4ab-cc5b2f29648f",
+        "$actor[0]$": "2f7a3d71-cf79-435f-9101-b9848e932711",
+        "$actor[1]$": "8bf62e1b-57f7-4431-8a84-2fc11b88b74f"
+      },
+      "id": "21c53f86-886e-473c-815d-eb5b52ddb321"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": true
+      },
+      "id": "27e1b66e-ddf7-4889-a241-8e6e70561827"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "112",
+        "flag": 14,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Celestial sign collected. Allow player to enter boss rush",
+              "__collapse": true
+            },
+            "id": "b7cbc249-1cf2-42ab-b6ad-a68facfcbb39"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "6c3518e2-2906-4bf5-978e-24edecd175a0"
+          }
+        ]
+      },
+      "id": "4c89ef83-b84c-4028-b9ca-94edfb87992a"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 7,
+  "y": 6,
+  "_index": 4
+}

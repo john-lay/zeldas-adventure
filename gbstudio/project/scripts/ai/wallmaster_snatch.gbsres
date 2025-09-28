@@ -1,0 +1,132 @@
+{
+  "_resourceType": "script",
+  "id": "ae9c526d-f33b-45ca-a4ab-cc5b2f29648f",
+  "name": "AI/Wallmaster Snatch",
+  "description": "Grab Zelda as she collects the final celestial sign and send her to face Ganon's gauntlet.",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Wallmaster Shadow"
+    },
+    "1": {
+      "id": "1",
+      "name": "Wallmaster"
+    }
+  },
+  "symbol": "script_123",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "player",
+        "x": 0,
+        "y": {
+          "type": "number",
+          "value": 1
+        },
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "665b3896-974f-4d53-85ad-3472e000f02b"
+    },
+    {
+      "command": "EVENT_ACTOR_ACTIVATE",
+      "args": {
+        "actorId": "0",
+        "__collapse": true
+      },
+      "id": "9e1cae5c-6ab7-486f-a3ae-b3b0ba56bdee"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "81d29fc1-b630-41d6-b729-db97033a30ff"
+    },
+    {
+      "command": "EVENT_ACTOR_SHOW",
+      "args": {
+        "actorId": "1",
+        "__collapse": true
+      },
+      "id": "dbe4c0bb-3431-485c-9bc3-e0ad6653999e"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "1",
+        "x": 0,
+        "y": {
+          "type": "number",
+          "value": 7
+        },
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "54f15d05-2414-484c-a847-cf994dbcaa47"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "1",
+        "spriteStateId": "Enemy - Wallmaster Grab",
+        "__collapse": true
+      },
+      "id": "75e91fbf-d78e-4c97-8f0d-fae9c812b0ae"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "0",
+        "__collapse": true
+      },
+      "id": "352dce78-082f-45e2-a80a-8d7e9751a707"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "player",
+        "__collapse": true
+      },
+      "id": "a0f68c44-a966-46aa-8b0f-441f7684c86d"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "5d5704da-27e2-43d1-bc10-31efd812e7e9",
+        "__collapse": true
+      },
+      "id": "0c556411-9fce-45b3-8dc7-1277ffb8d3bf"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "down"
+        },
+        "__collapse": true
+      },
+      "id": "e280ebe4-cf14-4a64-b59f-3475e5f8c36a"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 1,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "2a959d00-9351-4b9c-ab2e-2d9477a25413"
+    }
+  ]
+}

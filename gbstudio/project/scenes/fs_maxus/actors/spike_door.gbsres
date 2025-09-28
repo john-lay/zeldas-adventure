@@ -1,0 +1,66 @@
+{
+  "_resourceType": "actor",
+  "id": "b676ecbf-a262-4708-bf1f-58b8c2e8c870",
+  "name": "Spike door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_206",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "ec18178f-4b8d-44db-a0fb-770f1473d014"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "112",
+        "flag": 8,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Maxus defeated",
+              "__collapse": true
+            },
+            "id": "a8b2f62a-f8c9-4a49-87c6-2045ee4003da"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "e65f6b39-3b0d-43cf-ad66-0cfb2284ecc3"
+          }
+        ],
+        "false": []
+      },
+      "id": "305d2ee6-5ab6-4d0e-88d5-0590fb0a61e5"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 1,
+  "y": 9,
+  "_index": 4
+}
