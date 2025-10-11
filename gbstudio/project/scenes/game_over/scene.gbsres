@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "8bb1a67f-50b9-4a17-915b-6c2f2410f126",
-  "_index": 7,
+  "_index": 6,
   "name": "Game Over",
   "backgroundId": "06b6f9eb-0721-4bd3-bf05-7d34d00c357e",
   "tilesetId": "",
@@ -465,10 +465,77 @@
       "id": "4d765d5a-12f7-447e-a974-ffe36a00e7f7"
     },
     {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 9,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Fire Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "936cd7dc-11a1-4d61-b3fd-58a16b5b713d"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "46f8677d-7365-4260-b1bb-3efcfc427fdd",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "e57c8893-b69b-429d-8ad6-f47169b7723a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "9557fcc0-7a14-4f0e-8377-882f7fb8a8e4"
+                  },
+                  "id": "e6af335b-add8-4f1f-ae98-09521086ae3e"
+                }
+              ]
+            },
+            "id": "2bf5d338-cc39-49a8-9d0e-818eb29dd765"
+          }
+        ],
+        "false": []
+      },
+      "id": "9bc7aca2-9a6a-4a8c-98f9-316af10f0fb0"
+    },
+    {
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Vision Henge",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -480,21 +547,11 @@
             "id": "afac7c8e-dbb0-4bf3-b2b5-b4a7ff1149a1"
           },
           {
-            "command": "EVENT_SWITCH_SCENE",
+            "command": "EVENT_CALL_CUSTOM_EVENT",
             "args": {
-              "sceneId": "b76c1130-db51-4708-8dba-8f8bd848a56e",
-              "x": {
-                "type": "number",
-                "value": 9
-              },
-              "y": {
-                "type": "number",
-                "value": 10
-              },
-              "direction": "down",
-              "fadeSpeed": "2"
+              "customEventId": "93c8317b-4d6e-4079-85de-818140f70027"
             },
-            "id": "5bf5c0f9-1778-44b2-8147-9fe76334c16f"
+            "id": "afc877bb-9f4e-413d-8476-44720e08da9e"
           }
         ]
       },

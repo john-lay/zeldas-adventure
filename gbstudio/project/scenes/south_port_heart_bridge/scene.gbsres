@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "48ded8bb-0b41-4ebd-ba32-2be965f760f7",
-  "_index": 91,
+  "_index": 199,
   "name": "South Port Heart Bridge",
   "backgroundId": "a08ddb7a-466a-4da5-921e-b43b72a8e35c",
   "tilesetId": "",
@@ -30,83 +30,18 @@
   ],
   "collisions": "0036+0f4+00f+0f!004+0f!002+0f2+00a+0f!004+0f!00!0f!002+0f!009+0f!004+0f!00!0f!002+0f!00a+0f2+002+0f!00!0f!002+0f!00b+0f!002+0f!00!0f!002+0f!00b+0f!002+0f!00!0f!002+0fd+002+0f!00!0f!0011+0f!00!0f!0011+0f!002+0f2+002+0fd+004+0f!002+0f!0010+0f!002+0f!0010+0f!002+0f!0010+0f!002+0f!0022+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_92",
+  "symbol": "scene_123",
   "x": 2368,
   "y": 5216,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
-        "__collapse": false
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "12"
-              },
-              "y": {
-                "type": "variable",
-                "value": "13"
-              },
-              "__collapse": true
-            },
-            "id": "88acf064-fe6b-48d1-9515-ff38d01d8957"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_DIRECTION",
-            "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "variable",
-                "value": "14"
-              },
-              "__collapse": true
-            },
-            "id": "fc69eabf-ff4e-4e99-97dd-6a1d965d2e23"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 1
-              },
-              "__collapse": true
-            },
-            "id": "5393f547-b901-43f4-9d30-ed572791c704"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "9417d7d0-afa1-40b8-9bb0-f0c71f0a2b95"
-          }
-        ]
-      },
-      "id": "a032535a-ac9f-4f8c-a681-dad6297296d8"
+      "id": "9417d7d0-afa1-40b8-9bb0-f0c71f0a2b95"
     },
     {
       "command": "EVENT_GROUP",

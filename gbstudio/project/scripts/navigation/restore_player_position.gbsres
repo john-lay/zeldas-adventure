@@ -11,7 +11,7 @@
       "command": "EVENT_SWITCH",
       "args": {
         "variable": "22",
-        "choices": 4,
+        "choices": 5,
         "__collapseCase0": false,
         "value0": 1,
         "__collapseCase1": false,
@@ -116,7 +116,55 @@
             "id": "1ea01c48-5321-411f-86f7-1161b8420e92"
           }
         ],
-        "true4": [],
+        "true4": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "a bridge appeared or the player used a candle",
+              "__collapse": true
+            },
+            "id": "39d7ea95-5a06-48be-8561-0df0645c6f95"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "variable",
+                "value": "12"
+              },
+              "y": {
+                "type": "variable",
+                "value": "13"
+              }
+            },
+            "id": "c3f09a36-046a-47a6-b07d-90828ed4d0e7"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": {
+                "type": "variable",
+                "value": "14"
+              },
+              "__collapse": true
+            },
+            "id": "d601f607-f7ae-42ff-9f54-a4d6dc77c7ae"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": true
+            },
+            "id": "8759b521-5f3f-4644-944a-60644a70e9ac"
+          }
+        ],
         "true5": [],
         "true6": [],
         "true7": [],

@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "c5fdb23b-d368-4232-a65d-d828255366a1",
-  "_index": 116,
+  "_index": 119,
   "name": "ES Chasm Ladder",
   "backgroundId": "3bd0200f-3b3d-4f09-9262-6423334690bd",
   "tilesetId": "",
@@ -30,83 +30,18 @@
   ],
   "collisions": "0078+0f8+004+0f7+009+0f!002+0f!0010+0f!002+0f!0010+0f4+0038+0f4+0010+0f!002+0f!0010+0f!002+0f!009+0f7+004+0f7+0029+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_64",
-  "x": 1312,
-  "y": 6944,
+  "symbol": "scene_6",
+  "x": 1136,
+  "y": 7336,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
         "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "12"
-              },
-              "y": {
-                "type": "variable",
-                "value": "13"
-              },
-              "__collapse": true
-            },
-            "id": "3e18baf9-adc3-45be-bbcf-3848f525fc79"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_DIRECTION",
-            "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "variable",
-                "value": "14"
-              },
-              "__collapse": true
-            },
-            "id": "6e01d2be-cdab-4e92-b034-391e1bbd90d8"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 2
-              },
-              "__collapse": true
-            },
-            "id": "9635a99a-5d77-44f7-ae02-68fb3698f799"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "9e6479c6-0334-41aa-897c-c1a4f6af3012"
-          }
-        ]
-      },
-      "id": "4e61baee-5b34-47bd-9e7b-19b5786055a2"
+      "id": "9e6479c6-0334-41aa-897c-c1a4f6af3012"
     },
     {
       "command": "EVENT_GROUP",

@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "27cfd259-fe1b-4f19-8342-440e08d052d5",
-  "_index": 97,
+  "_index": 113,
   "name": "IS Dark With Candle",
   "backgroundId": "0c259413-73a6-4d2a-8c63-96a071c6d58d",
   "tilesetId": "",
@@ -36,77 +36,12 @@
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
-        "__collapse": false
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "12"
-              },
-              "y": {
-                "type": "variable",
-                "value": "13"
-              },
-              "__collapse": true
-            },
-            "id": "de9608f2-a264-4a2e-afbf-16404ed44e42"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_DIRECTION",
-            "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "variable",
-                "value": "14"
-              },
-              "__collapse": true
-            },
-            "id": "2a73c059-b55d-4ccd-96ec-502ef6cd661b"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 2
-              },
-              "__collapse": true
-            },
-            "id": "fa29fde1-172d-4b2f-8730-1df8085d6807"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "1d872f06-6025-463a-8004-56e554f0bf53"
-          }
-        ]
-      },
-      "id": "e6899d23-7caa-46bd-9634-7a9e72c721f5"
+      "id": "1d872f06-6025-463a-8004-56e554f0bf53"
     },
     {
       "command": "EVENT_GROUP",

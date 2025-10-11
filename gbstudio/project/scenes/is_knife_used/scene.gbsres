@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "19d49468-5fb2-4dc0-b1d9-06ca5e99f7ae",
-  "_index": 81,
+  "_index": 164,
   "name": "IS Knife Used",
   "backgroundId": "f3c7a7e6-f261-462d-a963-df4695a63c92",
   "tilesetId": "",
@@ -30,83 +30,18 @@
   ],
   "collisions": "0054+0fc+007+0f!00c+0f!005+0f2+00c+0f2+003+0f!0010+0f!002+0f!0010+0f!002a+0f!0010+0f!002+0f!0010+0f!002+0f!0010+0f!002+0f!0010+0f!002+0f!0010+0f!003+0f10+0016+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_6",
+  "symbol": "scene_50",
   "x": 2368,
   "y": 608,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
-        "__collapse": false
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "12"
-              },
-              "y": {
-                "type": "variable",
-                "value": "13"
-              },
-              "__collapse": true
-            },
-            "id": "40877f6a-917f-4364-b9fa-21768ab292c4"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_DIRECTION",
-            "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "variable",
-                "value": "14"
-              },
-              "__collapse": true
-            },
-            "id": "ec9eb643-3fcb-4d50-9c9d-0adbbc65cc1f"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 2
-              },
-              "__collapse": true
-            },
-            "id": "8d3140ed-b206-4c79-9193-c13043e2a76e"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "8b7fcbcc-6355-44c6-adf3-78953dcf2932"
-          }
-        ]
-      },
-      "id": "7dfcfbf3-c82d-484a-9bd9-bc53ae6eb9f5"
+      "id": "8b7fcbcc-6355-44c6-adf3-78953dcf2932"
     },
     {
       "command": "EVENT_GROUP",

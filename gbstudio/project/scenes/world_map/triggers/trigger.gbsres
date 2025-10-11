@@ -282,12 +282,12 @@
             "children": {
               "true0": [
                 {
-                  "id": "4a633938-3b55-430e-bd48-ddc654e088b7",
+                  "id": "c7ace653-869d-4826-ac1f-cae4821190d7",
                   "command": "EVENT_CHOICE",
                   "args": {
                     "variable": "86",
-                    "trueText": "Warp!",
-                    "falseText": "Stay Here",
+                    "trueText": "Reviens!",
+                    "falseText": "Reste ici",
                     "__collapse": false
                   }
                 }
@@ -309,12 +309,12 @@
               "true15": [],
               "false": [
                 {
-                  "id": "c7ace653-869d-4826-ac1f-cae4821190d7",
+                  "id": "4a633938-3b55-430e-bd48-ddc654e088b7",
                   "command": "EVENT_CHOICE",
                   "args": {
                     "variable": "86",
-                    "trueText": "Reviens!",
-                    "falseText": "Reste ici",
+                    "trueText": "Warp!",
+                    "falseText": "Stay Here",
                     "__collapse": false
                   }
                 }
@@ -335,22 +335,31 @@
             "children": {
               "true": [
                 {
-                  "id": "46467a20-06b0-4672-b40d-34f9cf437303",
-                  "command": "EVENT_SWITCH_SCENE",
+                  "command": "EVENT_SET_VALUE",
                   "args": {
-                    "sceneId": "e4981bbe-76e4-49db-81a5-c0f72e3a81bf",
-                    "x": {
+                    "variable": "22",
+                    "value": {
                       "type": "number",
-                      "value": 16
+                      "value": 0
                     },
-                    "y": {
-                      "type": "number",
-                      "value": 11
-                    },
-                    "direction": "down",
-                    "fadeSpeed": "2",
-                    "__comment": false
-                  }
+                    "__collapse": true
+                  },
+                  "id": "a387916a-4a0a-4d12-b0a4-decd75be891f"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e7cf337b-66c7-4914-9643-2c4394098ed8",
+                    "__collapse": true
+                  },
+                  "id": "d05d50b1-f067-418c-b2c7-369c6ea57ecb"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "abb63437-c48b-44a3-98ec-6256e95d6be8"
+                  },
+                  "id": "598cf571-38fa-49db-abb7-1d965f07ec88"
                 }
               ],
               "false": []

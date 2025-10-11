@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "e40221f1-06e6-404a-ab0e-cc12435733ef",
-  "_index": 150,
+  "_index": 346,
   "name": "ES Candle With",
   "backgroundId": "bd53d1be-8099-46f8-ac89-659a3e458c70",
   "tilesetId": "",
@@ -30,83 +30,18 @@
   ],
   "collisions": "002a+0f4+002+0f2+003+0f!002+0f!004+0f!004+0f2+002+0f!002+0f!002+0f!004+0f!004+0f2+002+0f!002+0f!002+0f!004+0f!002+0f2+00!0f!002+0f!002+0f!002+0f!004+0f!002+0f!00!0f2+002+0f!002+0f!002+0f!004+0f!002+0f2+004+0f!002+0f!002+0f!007+0f2+002+0f2+003+0f!002+0f!007+0f2+002+0f!00!0f4+002+0f!004+0f!002+0f2+002+0f2+006+0f!004+0f!006+0f2+006+0f!004+0f!006+0f2+002+0f2+002+0f!005+0f4+002+0f2+002+0f2+002+0f!008+0f!006+0f2+002+0f!008+0f!006+0f2+002+0f!009+0f6+002+0f2+0018+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_80",
-  "x": 1840,
-  "y": 6368,
+  "symbol": "scene_346",
+  "x": 1664,
+  "y": 6760,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_IF",
+      "command": "EVENT_CALL_CUSTOM_EVENT",
       "args": {
-        "condition": {
-          "type": "eq",
-          "valueA": {
-            "type": "variable",
-            "value": "22"
-          },
-          "valueB": {
-            "type": "number",
-            "value": 0
-          }
-        },
-        "__collapseElse": false,
-        "__collapse": false
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
       },
-      "children": {
-        "true": [
-          {
-            "command": "EVENT_ACTOR_SET_POSITION",
-            "args": {
-              "actorId": "$self$",
-              "x": {
-                "type": "variable",
-                "value": "12"
-              },
-              "y": {
-                "type": "variable",
-                "value": "13"
-              },
-              "__collapse": true
-            },
-            "id": "3536bf72-b8a5-48b3-8085-9b7e2f71160b"
-          },
-          {
-            "command": "EVENT_ACTOR_SET_DIRECTION",
-            "args": {
-              "actorId": "$self$",
-              "direction": {
-                "type": "variable",
-                "value": "14"
-              },
-              "__collapse": true
-            },
-            "id": "4d34535a-1e64-46ab-982f-a1064884ab58"
-          },
-          {
-            "command": "EVENT_SET_VALUE",
-            "args": {
-              "variable": "22",
-              "value": {
-                "type": "number",
-                "value": 2
-              },
-              "__collapse": true
-            },
-            "id": "2a70c198-b57b-4731-ac83-653d451da188"
-          }
-        ],
-        "false": [
-          {
-            "command": "EVENT_CALL_CUSTOM_EVENT",
-            "args": {
-              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-              "__collapse": true
-            },
-            "id": "064f5550-36fb-43c9-b61d-7ab25c7d15b2"
-          }
-        ]
-      },
-      "id": "186f432b-8591-498a-9e0c-532c5f08785b"
+      "id": "064f5550-36fb-43c9-b61d-7ab25c7d15b2"
     },
     {
       "command": "EVENT_GROUP",

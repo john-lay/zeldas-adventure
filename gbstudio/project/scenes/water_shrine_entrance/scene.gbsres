@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "8673ccf6-efbc-4e86-b770-864431463a44",
-  "_index": 108,
+  "_index": 123,
   "name": "Water Shrine Entrance",
   "backgroundId": "af8c2896-e1e1-4d9b-b2b9-80dd50794c63",
   "tilesetId": "",
@@ -36,12 +36,57 @@
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
   "script": [
     {
-      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "command": "EVENT_IF",
       "args": {
-        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
-        "__collapse": true
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "22"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
       },
-      "id": "9b495f3d-f1b1-4540-a86f-c907497298f6"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Shrine or used compass to warp",
+              "__collapse": true
+            },
+            "id": "6bc8ac71-cb06-49aa-81c3-43fa0236c157"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 3
+              },
+              "__collapse": true
+            },
+            "id": "32830516-1495-4e63-95cd-ffebf4b3eb1a"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+              "__collapse": true
+            },
+            "id": "02044683-78e3-4ad0-9927-0231ac03b008"
+          }
+        ]
+      },
+      "id": "814472bc-a98f-47e3-a48d-62fb731a15b2"
     },
     {
       "command": "EVENT_GROUP",
@@ -144,7 +189,7 @@
         "duration": 0.6,
         "frames": 30,
         "__scriptTabs": "end",
-        "__collapse": true,
+        "__collapse": false,
         "__label": "Animated Sea + waterfall"
       },
       "children": {
