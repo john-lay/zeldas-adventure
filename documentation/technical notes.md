@@ -189,11 +189,12 @@ A listing of variables used in GB Studio and their types.
 * `$20$: Variable 020` Map PosY - `number`. (Stores the player's dungeon position. Shows which dungeon room the player is in on the minimap)
 * `$21$: Variable 021` Boss Hit Counter - `number`. (Indicates the number of times the boss in this scene has been hit)
 * `$22$: Variable 022` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
-    * (0 represents Zelda's position should be manually managed)
+    * (0 represents player opened the inventory or map)
     * (1 represents Zelda exitted at the __top__ of the screen)
     * (2 represents Zelda exitted at the __right__ side of the screen)
     * (3 represents Zelda exitted at the __bottom__ of the screen)
     * (4 represents Zelda exitted at the __left__ side of the screen)
+    * (5 represents Zelda's moved from a shadow scene bridge/no candle)
 * `$23$: Variable 023` Language - `number`.
     * (0 represents English)
     * (1 represents French)
@@ -278,6 +279,10 @@ A listing of variables used in GB Studio and their types.
 * `$85$: Variable 085` QS_can_scroll - `number`. Inventory screen. Used to calculate to weapon/treasure offset
 * `$86$: Variable 086` world_map_warp_flag - `number`. World map. Set when the player uses the compass to warp
 * `$87$: Variable 087` Scene has_paid - `bool`. represents Zelda has paid for an item
+* `$88$: Variable 088` Scene L7 - animate_tiles2 - `number`. (replace local scene variable with global variable)
+* `$89$: Variable 089` Scene L7 - animate_tiles3 - `number`. (replace local scene variable with global variable)
+* `$90$: Variable 090` Scene L7 - animate_tiles4 - `number`. (replace local scene variable with global variable)
+* `$91$: Variable 091` Menu Choice - `number`. represents player's menu choice
 * `$100$: Variable 100` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)

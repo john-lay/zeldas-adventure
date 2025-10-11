@@ -1,0 +1,109 @@
+{
+  "_resourceType": "script",
+  "id": "e8b31f05-b716-4ed3-ae29-09e77b68147b",
+  "name": "Dungeon/Activate Ganon's Avatar",
+  "description": "Activate fairy after boss defeated",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Boss"
+    },
+    "1": {
+      "id": "1",
+      "name": "Ganon's Avatar"
+    }
+  },
+  "symbol": "script_125",
+  "script": [
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start",
+          "select"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "disable pause so we can reset the boss hit counter",
+              "__collapse": true
+            },
+            "id": "e2ef43af-1d92-4a2b-b681-3206d64aa907"
+          }
+        ]
+      },
+      "id": "9346773e-669a-46d7-b6c4-11ec11ad9a2c"
+    },
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "0",
+        "vectorX": "25",
+        "vectorY": "26"
+      },
+      "id": "601c1c89-0826-420f-80b0-915c932139da"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_POSITION",
+      "args": {
+        "actorId": "1",
+        "x": {
+          "type": "variable",
+          "value": "25"
+        },
+        "y": {
+          "type": "variable",
+          "value": "26"
+        }
+      },
+      "id": "c24dfccc-9a27-4fbe-9cd4-1ce32b1d68d7"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "5d5704da-27e2-43d1-bc10-31efd812e7e9"
+      },
+      "id": "8212df96-96ab-4aa9-9ef8-de6a87ec7a53"
+    },
+    {
+      "command": "EVENT_ACTOR_ACTIVATE",
+      "args": {
+        "actorId": "1"
+      },
+      "id": "d5ca2f8a-134a-499a-84c7-99182cefe4fe"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "0"
+      },
+      "id": "86ef7462-a0c1-4bfc-a822-7b2135e46056"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 3,
+        "frames": 30
+      },
+      "id": "5cd55625-5351-4401-94df-80654e59f315"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "4696c830-26ef-4aca-a811-b5ce82694190"
+    }
+  ]
+}
