@@ -18,11 +18,35 @@
   "script": [],
   "startScript": [
     {
-      "command": "EVENT_ACTOR_DEACTIVATE",
+      "command": "EVENT_IF_FLAGS_COMPARE",
       "args": {
-        "actorId": "$self$"
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__label": "Zelda's Sailing",
+        "__disableElse": true
       },
-      "id": "b45d963d-5ef9-4975-9ea2-917ce2526ee1"
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "519b5673-ed9b-4ef2-9a90-a9546670a10a"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "bc6b6448-124c-4185-96af-fb126340e97c"
+          }
+        ],
+        "false": []
+      },
+      "id": "24568e17-36d1-403f-bfe0-f29ffba9e91c"
     }
   ],
   "updateScript": [],
