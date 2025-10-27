@@ -311,7 +311,8 @@
         "actorId": "player",
         "operation": "down",
         "otherActorId": "$self$",
-        "__collapseElse": false
+        "__collapseElse": false,
+        "__comment": true
       },
       "children": {
         "true": [
@@ -343,6 +344,53 @@
         ]
       },
       "id": "7e693d67-53a0-402b-900f-4c9be7867af5"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gte",
+          "valueA": {
+            "type": "variable",
+            "value": "13"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 10
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Do nothing, Zelda's entering from Vendross",
+              "__collapse": true
+            },
+            "id": "9d4dfc52-433a-44e5-9a1e-6f9741a8b9fd"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 16
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              }
+            },
+            "id": "a9b319f7-b4e0-42dd-9a26-d4f61848f38b"
+          }
+        ]
+      },
+      "id": "9fd75f8a-4a98-482b-b8dd-b723d9206609"
     }
   ],
   "updateScript": [],

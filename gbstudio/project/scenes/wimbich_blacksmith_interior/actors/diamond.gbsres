@@ -65,6 +65,76 @@
       "id": "0383b112-dfb6-4d3f-a49a-e7d23fd78f8a"
     },
     {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 0,
+        "__collapseElse": false,
+        "__label": "Has Wand",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": true
+            },
+            "id": "95438390-5a4d-49ef-918c-6648d84d3cd8"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "__collapse": true
+            },
+            "id": "6d83ad9d-c5e0-46a7-8e65-1b08ab1eae72"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "00e55ae1-759d-4f26-9acc-3e7e037ccbe0"
+                }
+              ],
+              "false": []
+            },
+            "id": "22a7b294-f4f5-415b-855d-487ab6e04c7f"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "12fc1203-de4d-460a-90e2-28fc6a89cf92"
+          }
+        ]
+      },
+      "id": "f1237b6c-c38f-4cde-92de-fbf65b3627d2"
+    },
+    {
       "command": "EVENT_ACTOR_DEACTIVATE",
       "args": {
         "actorId": "$self$",
