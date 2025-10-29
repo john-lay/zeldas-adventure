@@ -309,23 +309,14 @@
       "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
       "args": {
         "actorId": "player",
-        "operation": "down",
+        "operation": "up",
         "otherActorId": "$self$",
         "__collapseElse": false,
-        "__comment": true
+        "__comment": true,
+        "__disableElse": true
       },
       "children": {
         "true": [
-          {
-            "command": "EVENT_COMMENT",
-            "args": {
-              "text": "Do nothing, Zelda's entering from Vendross",
-              "__collapse": true
-            },
-            "id": "a2e7e992-af9f-44ee-a58c-2bd7d699ab39"
-          }
-        ],
-        "false": [
           {
             "command": "EVENT_ACTOR_SET_POSITION",
             "args": {
@@ -341,7 +332,8 @@
             },
             "id": "50499abf-0948-4a62-957e-7aed3dd2f702"
           }
-        ]
+        ],
+        "false": []
       },
       "id": "7e693d67-53a0-402b-900f-4c9be7867af5"
     },
@@ -359,7 +351,8 @@
             "value": 10
           }
         },
-        "__collapseElse": false
+        "__collapseElse": false,
+        "__comment": true
       },
       "children": {
         "true": [
@@ -393,7 +386,63 @@
       "id": "9fd75f8a-4a98-482b-b8dd-b723d9206609"
     }
   ],
-  "updateScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 16
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__comment": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "down",
+              "otherActorId": "$self$",
+              "__collapseElse": false,
+              "__comment": false,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 16
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 11
+                    }
+                  },
+                  "id": "a356ada7-3663-4001-9cba-4aadcb05ddb7"
+                }
+              ],
+              "false": []
+            },
+            "id": "b4147b6a-d9ab-45ab-aa5c-c025dde4bd30"
+          }
+        ],
+        "false": []
+      },
+      "id": "126b01e3-53ba-4c41-bee5-92a06d39bcc1"
+    }
+  ],
   "hit1Script": [],
   "hit2Script": [],
   "hit3Script": [],
