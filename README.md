@@ -1,18 +1,16 @@
 # Zelda's Adventure
 
-A port of Zelda's Adventure for the Philips CD-i to the Gameboy.
+A port of Zelda's Adventure for the Philips CD-i to the Gameboy Color.
 
-![intro](intro.gif)
+![intro](intro-dx.gif)
 
-The culmination of DMG Adventure [part I](https://github.com/john-lay/dmg-adventure), [part II](https://github.com/john-lay/dmg-adventure-ii), [part III](https://github.com/john-lay/dmg-adventure-iii) and [za engine](https://github.com/john-lay/za-engine)
-
-Created with a [fork](https://github.com/john-lay/gb-studio) of [GB Studio](https://www.gbstudio.dev/)
+Created with [GB Studio](https://www.gbstudio.dev/)
 
 ## Installation
 
 If you want to play the game, the ROM can be downloaded from [here](https://github.com/john-lay/zeldas-adventure/releases)
 
-If you want to build or edit the game you will need to build the modified copy of GB Studio (The game was built with a fork of version `3.0.3`), which can be downloaded from [here](https://github.com/john-lay/gb-studio/releases).
+If you want to build or edit the game you will need version 4.x of GB Studio.
 The scenes are build using [Tiled](https://www.mapeditor.org/) and can be found in `/assets/tilemaps` and tilesets are taken from [Link's awakening disassembly project](https://github.com/zladx/LADX-Disassembly/tree/master/src/gfx).
 
 ## Documentation
@@ -46,5 +44,8 @@ Zelda's Adventure wiki
 - [Zelda Fandom Character reference](https://zelda.fandom.com/wiki/Characters_in_Zelda%27s_Adventure)
 - [Zelda Fandom Map reference](https://zelda.fandom.com/wiki/Category:Zelda%27s_Adventure_Maps)
 
-### Special thanks to the whole GB Studio team and Beatscribe for providing the music
+GB Studio Plugin
+- [Shin's Adventure Reforged](https://github.com/shin-gamedev/gbs-plugins) (used)
+- [Tomo's XV Sprite Tile Replacer](https://github.com/tomo666/gb-studio-xv-plugins) (inspired)
 
+### Special thanks to the whole GB Studio team and Beatscribe for providing the music
