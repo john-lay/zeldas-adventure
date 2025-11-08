@@ -1,0 +1,440 @@
+{
+  "_resourceType": "script",
+  "id": "7c96d9cf-148b-4a76-a9c9-13ae7ad36df6",
+  "name": "AI/Bird Movement",
+  "description": "Behaviour of Crow and Dacto enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Bird"
+    }
+  },
+  "symbol": "script_54",
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "V0",
+        "value": "0",
+        "minValue": "0",
+        "maxValue": 1,
+        "clamp": false,
+        "__collapse": true
+      },
+      "id": "9eedb000-0f4d-449f-805a-d1767551f84f"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "10f4b797-585f-409f-8a1e-bff98bb4c6a4"
+          }
+        ],
+        "false": []
+      },
+      "id": "6bf6cea9-88ff-44eb-b6b1-e671cbeb4d84"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Take Off",
+        "__collapse": true,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 7,
+              "__collapse": true
+            },
+            "id": "0acd3df5-dd88-45fc-af40-1f111f4fcf68"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "bfe8ca8b-c033-4616-9b66-416ac6fb827e"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": -1
+              },
+              "moveType": "vertical",
+              "useCollisions": false,
+              "__collapse": false
+            },
+            "id": "608fcc0c-e480-49b8-a33a-63c95740a103"
+          },
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "left",
+              "otherActorId": "0",
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Flying",
+                    "__collapse": false
+                  },
+                  "id": "b3f7991c-fb69-4288-97fb-c0d7ba8e7a39"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Bird Flying Right",
+                    "__collapse": false
+                  },
+                  "id": "89eb222a-a42e-49f1-a253-668573ff73aa"
+                }
+              ]
+            },
+            "id": "86b73e7d-826b-4ef5-83b5-81ec89d785ac"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "8fc9fe0a-7b39-45f7-8ca0-bb15e0d6e150"
+          }
+        ]
+      },
+      "id": "7b8282f9-abe6-4b8b-8a8d-80286835894c"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Seek",
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "d1cf9e52-eee3-47d5-96c9-49e9f5d3d2fa"
+            },
+            "id": "899bea0c-c676-4849-8d34-34d91f61be39"
+          },
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "down",
+              "otherActorId": "0",
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__disableElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "0",
+                          "spriteStateId": "Enemy - Flying",
+                          "__collapse": true
+                        },
+                        "id": "7cd9f0c9-129c-4833-850e-6a04df3f285f"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": false,
+                          "__collapse": false
+                        },
+                        "id": "7189f65e-1c77-416c-84ed-3f6af9c80c5e"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "0",
+                          "spriteStateId": "Enemy - Bird Flying Right",
+                          "__collapse": true
+                        },
+                        "id": "33284acb-1c40-4d4f-aa25-d9a9c8a8581b"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": false,
+                          "__collapse": false
+                        },
+                        "id": "8fdc04a7-6023-4553-816e-765d4ac1aabe"
+                      }
+                    ]
+                  },
+                  "id": "65864913-ddcd-45d0-8fb3-27182b67bb49"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__disableElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "0",
+                          "spriteStateId": "Enemy - Flying",
+                          "__collapse": true
+                        },
+                        "id": "744f9fb5-76b8-4d32-a042-6a6ce1f20771"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": false,
+                          "__collapse": false
+                        },
+                        "id": "f985c465-464b-4255-92b4-92527574ef1d"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_SET_STATE",
+                        "args": {
+                          "actorId": "0",
+                          "spriteStateId": "Enemy - Bird Flying Right",
+                          "__collapse": true
+                        },
+                        "id": "32f1bc1e-adef-40e6-8231-d33fee671a26"
+                      },
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -4
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": false,
+                          "__collapse": false
+                        },
+                        "id": "5f7e5769-ea6d-4af8-8807-73a85dfdee21"
+                      }
+                    ]
+                  },
+                  "id": "6f1eeac4-5fee-46da-948b-9c5aa4790849"
+                }
+              ]
+            },
+            "id": "422269cf-36aa-44f8-ba5b-6e257086f9de"
+          }
+        ]
+      },
+      "id": "9a2f15ee-a263-4102-9fad-28503085f42b"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Land",
+        "__collapse": true,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "64baa925-3570-4ec4-9d8f-773c1510421f"
+          },
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "left",
+              "otherActorId": "0",
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "",
+                    "__collapse": false
+                  },
+                  "id": "b67a69bd-0ca8-46a4-9c69-01c187d13101"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Bird Right",
+                    "__collapse": false
+                  },
+                  "id": "a27afa88-0707-4ecf-8c96-fb99ccedb6f1"
+                }
+              ]
+            },
+            "id": "0dd82918-61bb-4fca-ad31-b1e5bc9e9c21"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "moveType": "vertical",
+              "useCollisions": false,
+              "__collapse": false
+            },
+            "id": "964af7d0-16ea-4688-beee-c3459a638a8e"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+            "args": {
+              "actorId": "0",
+              "speed": 15,
+              "__collapse": true
+            },
+            "id": "3033ba22-dc24-48bd-8641-9aed966e33fc"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 1.5,
+              "frames": 30,
+              "units": "time",
+              "__collapse": true
+            },
+            "id": "c7ce3f21-8f21-47f1-9454-6ebddcfc96b5"
+          }
+        ]
+      },
+      "id": "0cdc7967-3fb6-405a-aeaf-b56486dcae30"
+    }
+  ]
+}

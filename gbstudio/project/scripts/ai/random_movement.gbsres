@@ -1,0 +1,178 @@
+{
+  "_resourceType": "script",
+  "id": "e0816661-3348-4b69-a8dd-485854cc5e3f",
+  "name": "AI/Random Movement",
+  "description": "Generic random movement. Behaviour of multiple enemies, explicitly:\nOverworld: (giant) Squid, Beetle, Spiny Beetle, Moblin, Alligaroo\nEarth Shrine: Sardak\nIllusion Shrine: Iron Mask\nAir Shrine: Tornado, Vapora, Arm Mimic\nDestiny Shrine: Gibdo\nWater Shrine: Buzz Blob, Kelpie, Water Tektite, Turtle",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Enemy"
+    }
+  },
+  "symbol": "script_57",
+  "script": [
+    {
+      "id": "36257013-2b83-41c5-a208-c3779b7015a1",
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "__collapse": true,
+        "__comment": false
+      }
+    },
+    {
+      "id": "f46623bc-afdd-4655-b419-afc2086c0a93",
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "0",
+        "value": "1",
+        "minValue": "0",
+        "maxValue": 4,
+        "__collapse": true
+      }
+    },
+    {
+      "id": "9767308f-4d4e-4f53-875d-8580e90ef921",
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "V0",
+        "choices": 4,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true0": [
+          {
+            "id": "a13560b9-63c0-436d-9258-337b26992f83",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": 2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": false
+            }
+          }
+        ],
+        "true1": [
+          {
+            "id": "5986f980-a9ee-452a-b2e1-bfb06bb3f2eb",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": 0,
+              "y": {
+                "type": "number",
+                "value": -2
+              },
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": false
+            }
+          }
+        ],
+        "true2": [
+          {
+            "id": "8bb8d44a-d502-49b4-8b3f-b268e29d1f82",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": -2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": false
+            }
+          }
+        ],
+        "true3": [
+          {
+            "id": "ab3fb6df-f3b3-4d9c-8ccf-ae697ccd334f",
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "0",
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": 0,
+              "useCollisions": true,
+              "verticalFirst": false,
+              "__collapse": false
+            }
+          }
+        ],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "id": "d6ba394c-6480-4f5e-ab9b-c430ad5b79a3",
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.4
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "5f033fc1-9789-4b18-a0ff-78b9ecad1490",
+  "name": "Tektite",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "dca27373-c6ea-4aaa-92c5-d3055fb4e8dd",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "c3e52ca3-9517-41b7-8d89-82ad8eec865a",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "09e37d92-6e74-4020-ba50-5bba0f61e830",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0a805702-9dca-445f-87a5-a70a05ef5db2",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        }
+      },
+      "id": "025da929-f396-4da8-b00c-c3b6758e3d40",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "e682c24d-a1c7-4b9b-bdf9-f81ffc95d7a3",
+        "$actor[2]$": "e71a94e1-45cd-478c-af64-d0439b50e184",
+        "$actor[0]$": "$self$"
+      },
+      "id": "739b1e6a-01b1-4f51-8834-bce330bab9a4",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "5193abe2-532c-4bf6-9c41-2a41057fea63",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "81bcb187-d220-42fc-8ca2-c9e2f39ef10e"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": []
+}

@@ -1,0 +1,260 @@
+{
+  "_resourceType": "actor",
+  "id": "bdab8858-db22-4150-92d5-d1f784743f9a",
+  "name": "Blacksmith",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "3ad9c233-9f38-46be-a85b-61789f833a67",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1008",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "52e91538-5fa7-409d-81c3-f17f6570882f",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 6
+        }
+      },
+      "id": "3bdff9dd-37e7-4fbe-bcc9-760af66f2d77",
+      "children": {}
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Multiply defense for Zelda's strength boost"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "61",
+              "operation": "mul",
+              "other": "val",
+              "vectorY": "L0",
+              "value": 2,
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false
+            },
+            "id": "7c4ea0c4-8704-4895-9013-9e53f4184c07"
+          }
+        ]
+      },
+      "id": "ed51bb8b-592a-4ec8-917e-8ec7d40d8dae"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d8594f78-954c-48f0-963b-e44fed1f774c",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        }
+      },
+      "id": "685836ea-2425-4087-a134-e2d15c063510",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "0dd3f7a9-71eb-4d52-b176-17efb9ceb67e",
+        "$actor[2]$": "06e4613c-c9c0-4c6a-a06a-ecee8d68a4c4",
+        "$actor[0]$": "$self$"
+      },
+      "id": "6cecbfca-3f05-41d2-a410-8f657af6d7b8",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "e79a6107-c7bb-4da8-b042-cc8da1820433",
+            "children": {}
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Enable compass",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "17",
+                    "flag": 10,
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "112",
+                          "flag": 1,
+                          "__collapseElse": false,
+                          "__disableElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_COMMENT",
+                              "args": {
+                                "text": "Compass already collected",
+                                "__collapse": true
+                              },
+                              "id": "0d892bd1-2ad2-4f0c-89aa-00a4ceb37466"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                                "__collapse": true
+                              },
+                              "id": "f085762e-961b-4356-b55e-f68b527205c8"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_ACTIVATE",
+                              "args": {
+                                "actorId": "88cbfdb6-48a4-425e-ac15-9d85e2797a1c"
+                              },
+                              "id": "db4bdf01-02a2-44ec-b9f9-56721eb9bcdb"
+                            }
+                          ]
+                        },
+                        "id": "085c135f-b5f6-4891-a3a2-fc5f4899502b"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "1f78b3df-5d42-454d-bb3e-0612f07dbb6b"
+                }
+              ]
+            },
+            "id": "0d93ca2d-f45e-416d-921a-42ca872c7b76"
+          }
+        ],
+        "false": []
+      },
+      "id": "2136bd12-2468-4a00-a5e5-3ea9a8fef339"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 12,
+  "_index": 3
+}

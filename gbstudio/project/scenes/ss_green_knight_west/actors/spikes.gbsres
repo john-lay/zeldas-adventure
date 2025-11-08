@@ -1,0 +1,90 @@
+{
+  "_resourceType": "actor",
+  "id": "d48c062d-745f-4c2f-9150-852515dd9c73",
+  "name": "spikes",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1919",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "572392c9-8e66-4744-9b3f-ae5de547f02c"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "110",
+        "flag": 9,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Blue knight defeated",
+              "__collapse": true
+            },
+            "id": "91274011-8af6-4cda-86bc-e72c63745dd3"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "110",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Green knight defeated",
+                    "__collapse": true
+                  },
+                  "id": "83332085-7f61-4e34-8f43-e2c5c3ed6b9e"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "$self$",
+                    "__collapse": true
+                  },
+                  "id": "d3f509a4-5280-455a-9aac-a695398869f8"
+                }
+              ],
+              "false": []
+            },
+            "id": "22e29276-95a0-4751-8726-fab9ebb1db61"
+          }
+        ],
+        "false": []
+      },
+      "id": "6eb6216e-80d9-47d0-8815-dee4f4b25a69"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 4,
+  "_index": 1
+}

@@ -1,0 +1,119 @@
+{
+  "_resourceType": "script",
+  "id": "5565f34c-08be-47b5-92b8-6b5f97f0ef0f",
+  "name": "Dungeon/Open Doors - IS Orb Pedestal",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_89",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "7cdd7a6f-fcd4-4b47-a47c-f9e6d2fb29fc",
+        "__collapse": true
+      },
+      "id": "38bc6535-0976-476f-924e-0cfded374657"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "East Door",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "64676e82-db8b-4d81-81ef-6e9d69e307ac"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 19
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": true
+            },
+            "id": "e312976c-cc8f-4c1d-8922-dbac4a6fc950"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": true
+            },
+            "id": "74cfead3-24a3-4b5a-b894-3d01073b18b7"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 19
+              },
+              "y": {
+                "type": "number",
+                "value": 10
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 3
+              },
+              "__collapse": true
+            },
+            "id": "60094c20-0ed5-4768-966c-a85552f8d751"
+          }
+        ]
+      },
+      "id": "283be1ab-0c57-4501-9c9f-e4b6f73a6e69"
+    },
+    {
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "solid_ladders",
+        "__collapse": false
+      },
+      "id": "eae97aeb-f7ac-411f-a414-0363ba34d818"
+    }
+  ]
+}

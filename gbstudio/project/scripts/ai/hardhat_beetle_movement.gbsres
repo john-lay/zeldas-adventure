@@ -1,0 +1,340 @@
+{
+  "_resourceType": "script",
+  "id": "d1546d0f-633d-43d5-9da0-4240ee937231",
+  "name": "AI/Hardhat Beetle Movement",
+  "description": "Behaviour of Hardhat Beetle enemy",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Hardhat Beetle"
+    }
+  },
+  "symbol": "script_99",
+  "script": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.2,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "4f8e2ed1-c34b-40d0-a93a-b906ec782aa2"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "",
+        "__collapse": true
+      },
+      "id": "6d9164a5-d932-474d-9463-d758fa4a9c6e"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+      "args": {
+        "actorId": "player",
+        "operation": "up",
+        "otherActorId": "0",
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "left",
+              "otherActorId": "0",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "moveType": "diagonal",
+                    "useCollisions": true,
+                    "__label": "",
+                    "__collapse": true
+                  },
+                  "id": "c18f4755-41a4-4a9e-af54-0b1e7bffcc66"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "right",
+                    "otherActorId": "0",
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true,
+                          "__label": "",
+                          "__collapse": true
+                        },
+                        "id": "b82f4f1b-d5e8-4485-8c13-31d0798989be"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": 0,
+                          "y": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "moveType": "vertical",
+                          "useCollisions": true,
+                          "__label": "",
+                          "__collapse": true
+                        },
+                        "id": "2bcf5e60-4321-42a1-9360-1901f17c5b18"
+                      }
+                    ]
+                  },
+                  "id": "16946970-69cd-47fc-becb-9ec8be80a368"
+                }
+              ]
+            },
+            "id": "94b9e405-9307-4340-b339-4b92fb7407d3"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "down",
+              "otherActorId": "0",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "moveType": "diagonal",
+                          "useCollisions": true,
+                          "__label": "",
+                          "__collapse": true
+                        },
+                        "id": "4c389f30-d1dc-4cda-a23a-dbd1a0a3860c"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "right",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true,
+                                "__label": "",
+                                "__collapse": true
+                              },
+                              "id": "2e69a9cf-1f8e-41fb-a764-26d46488608f"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": 0,
+                                "y": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "moveType": "vertical",
+                                "useCollisions": true,
+                                "__label": "",
+                                "__collapse": true
+                              },
+                              "id": "d9a0bd8e-9e5f-48dc-a777-9b3b92b36cee"
+                            }
+                          ]
+                        },
+                        "id": "1fcfaeed-5c3c-4c4c-a4cb-3e2e95fdafca"
+                      }
+                    ]
+                  },
+                  "id": "176366eb-fbb2-4568-b277-be3eb1a25526"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "left",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                        "args": {
+                          "actorId": "0",
+                          "x": {
+                            "type": "number",
+                            "value": -1
+                          },
+                          "y": 0,
+                          "moveType": "horizontal",
+                          "useCollisions": true,
+                          "__label": "",
+                          "__collapse": true
+                        },
+                        "id": "ddd0a7a7-6139-4487-a99e-5849cb0c654e"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "right",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false,
+                          "__disableElse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 1
+                                },
+                                "y": 0,
+                                "moveType": "horizontal",
+                                "useCollisions": true,
+                                "__label": "",
+                                "__collapse": true
+                              },
+                              "id": "434a6460-fb2e-47cf-b5c9-61e0e4b5cebb"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_COMMENT",
+                              "args": {
+                                "text": "Zelda's position + enemies position match.",
+                                "__collapse": true
+                              },
+                              "id": "bb6eb2a4-574f-4fa8-a87c-e8b575083a7b"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_PUSH",
+                              "args": {
+                                "continue": false,
+                                "__comment": true
+                              },
+                              "id": "7196900b-04ea-4bfd-b449-f32f78702e4f"
+                            },
+                            {
+                              "command": "EVENT_ACTOR_SET_STATE",
+                              "args": {
+                                "actorId": "0",
+                                "spriteStateId": "Enemy - Hardhat Beetle Squash"
+                              },
+                              "id": "f56d33ed-0deb-4520-93da-3288bdc4d751"
+                            },
+                            {
+                              "command": "EVENT_CALL_CUSTOM_EVENT",
+                              "args": {
+                                "customEventId": "01c53c25-39b0-4252-818b-9afab244138b",
+                                "__collapse": true
+                              },
+                              "id": "f570eb4d-ac69-4a91-87b4-f458656bcf69"
+                            }
+                          ]
+                        },
+                        "id": "a68140a8-d691-402b-a646-fa2c1e98d952"
+                      }
+                    ]
+                  },
+                  "id": "986c8804-01e2-4fa0-a5d3-734e5f79279c"
+                }
+              ]
+            },
+            "id": "3ca6de81-1c39-487b-a079-35b16d790b11"
+          }
+        ]
+      },
+      "id": "840b8e8b-8af2-4a14-a451-b1f8148e2694"
+    }
+  ]
+}

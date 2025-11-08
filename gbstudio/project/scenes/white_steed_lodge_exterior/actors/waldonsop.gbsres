@@ -1,0 +1,284 @@
+{
+  "_resourceType": "actor",
+  "id": "f206a2c8-5bfc-41a1-9dff-f62747b75692",
+  "name": "Waldonsop",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6918396d-ca64-442b-8d41-1282889df9e8",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1603",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 4,
+        "__collapseElse": false,
+        "__comment": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Already has feather",
+              "__collapse": true
+            },
+            "id": "a905747f-2ee6-4bdf-a52a-966edc8cd481"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba",
+              "__collapse": true
+            },
+            "id": "315d5781-c737-4e44-a4df-e34f6478ec37"
+          },
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "$self$",
+              "emoteId": "d508e529-57eb-458b-9782-66f318243c32",
+              "__collapse": false
+            },
+            "id": "92e9226c-b1d2-4a8c-9693-57e92ac719a2"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "11",
+              "flag": 8,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Has spoken to lodgekeeper",
+                    "__collapse": true
+                  },
+                  "id": "dbb4c6ae-95a2-4134-86c4-84f36eb516fd"
+                },
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "23",
+                    "choices": 1,
+                    "__collapseCase0": false,
+                    "value0": 1,
+                    "__collapseCase1": false,
+                    "value1": 2,
+                    "__collapseCase2": false,
+                    "value2": 3,
+                    "__collapseCase3": false,
+                    "value3": 4,
+                    "__collapseCase4": false,
+                    "value4": 5,
+                    "__collapseCase5": false,
+                    "value5": 6,
+                    "__collapseCase6": false,
+                    "value6": 7,
+                    "__collapseCase7": false,
+                    "value7": 8,
+                    "__collapseCase8": false,
+                    "value8": 9,
+                    "__collapseCase9": false,
+                    "value9": 10,
+                    "__collapseCase10": false,
+                    "value10": 11,
+                    "__collapseCase11": false,
+                    "value11": 12,
+                    "__collapseCase12": false,
+                    "value12": 13,
+                    "__collapseCase13": false,
+                    "value13": 14,
+                    "__collapseCase14": false,
+                    "value14": 15,
+                    "__collapseCase15": false,
+                    "value15": 16,
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "J'aimerais vous offrir\nune plume, en signe de\nmon affection.",
+                            "Cela vous emmènera\nvers de nouveaux\nsommets! "
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "d8d9cba2-53aa-4b30-80e9-22fdbd159636"
+                      }
+                    ],
+                    "true1": [],
+                    "true2": [],
+                    "true3": [],
+                    "true4": [],
+                    "true5": [],
+                    "true6": [],
+                    "true7": [],
+                    "true8": [],
+                    "true9": [],
+                    "true10": [],
+                    "true11": [],
+                    "true12": [],
+                    "true13": [],
+                    "true14": [],
+                    "true15": [],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "I would like to give you\na feather, as a sign of\nmy affection.",
+                            "This will take you to \nnew heights!"
+                          ],
+                          "avatarId": "",
+                          "__collapse": false
+                        },
+                        "id": "95cd26e4-18db-4820-bdd0-5ee113412639"
+                      }
+                    ]
+                  },
+                  "id": "c7f09592-4217-4ca0-a9e8-13e0aafa5a06"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                    "__collapse": true
+                  },
+                  "id": "557503eb-98cf-4d78-a34b-fc1af75d6748"
+                },
+                {
+                  "command": "EVENT_ACTOR_ACTIVATE",
+                  "args": {
+                    "actorId": "91f8931d-0a1d-4d18-b8ba-6bbcbc772661",
+                    "__collapse": true
+                  },
+                  "id": "1f3a0d3d-4cf0-41c1-86e3-4153798d71e9"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "23",
+                    "choices": 1,
+                    "__collapseCase0": false,
+                    "value0": 1,
+                    "__collapseCase1": false,
+                    "value1": 2,
+                    "__collapseCase2": false,
+                    "value2": 3,
+                    "__collapseCase3": false,
+                    "value3": 4,
+                    "__collapseCase4": false,
+                    "value4": 5,
+                    "__collapseCase5": false,
+                    "value5": 6,
+                    "__collapseCase6": false,
+                    "value6": 7,
+                    "__collapseCase7": false,
+                    "value7": 8,
+                    "__collapseCase8": false,
+                    "value8": 9,
+                    "__collapseCase9": false,
+                    "value9": 10,
+                    "__collapseCase10": false,
+                    "value10": 11,
+                    "__collapseCase11": false,
+                    "value11": 12,
+                    "__collapseCase12": false,
+                    "value12": 13,
+                    "__collapseCase13": false,
+                    "value13": 14,
+                    "__collapseCase14": false,
+                    "value14": 15,
+                    "__collapseCase15": false,
+                    "value15": 16,
+                    "__collapseElse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Bonjour, dame. Une\npersonne noble comme\nvous à pied, vraiment?",
+                            "Si c'est du repos que\nvous cherchez, vous\nne trouverez point de",
+                            "confort dans ce\nrepaire de voleurs,\nje vous le dis.",
+                            "Soyez prudente si vous\nentrez, ma lady!\nCertaines personnes ",
+                            "dans ces régions vous\nvoleraient au moindre\nregard. Soyez-en sûr."
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "3dbe22bb-d69f-4390-a924-00a848a01b25"
+                      }
+                    ],
+                    "true1": [],
+                    "true2": [],
+                    "true3": [],
+                    "true4": [],
+                    "true5": [],
+                    "true6": [],
+                    "true7": [],
+                    "true8": [],
+                    "true9": [],
+                    "true10": [],
+                    "true11": [],
+                    "true12": [],
+                    "true13": [],
+                    "true14": [],
+                    "true15": [],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Good morn, lady. A noble\nperson such as your-\nself on foot, then?",
+                            "If it's rest you seek,\nyou'll get precious\nlittle comfort in this",
+                            "thieves' den, I'll tell\nyou. Be careful if you\ngo inside, mi'lady! Some",
+                            "people in these parts\nwould rob you same as\nlook at you, they would."
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "a7c2b37d-348b-4e73-b115-5fc0def9786c"
+                      }
+                    ]
+                  },
+                  "id": "94e33d83-82a1-45fc-909a-0efc4ff3c5f3"
+                }
+              ]
+            },
+            "id": "5b939728-0445-4af9-8142-dcdf293bdb48"
+          }
+        ]
+      },
+      "id": "23ea699a-7e31-45e7-99db-0eac60d12635"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 4,
+  "y": 10,
+  "_index": 2
+}

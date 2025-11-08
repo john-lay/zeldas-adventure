@@ -1,0 +1,171 @@
+{
+  "_resourceType": "actor",
+  "id": "549a58af-862d-407d-9f41-11546fce68c1",
+  "name": "Red Boots",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "7bd7c549-697e-4c24-a191-cfb27dd41cc8",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1402",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+        "__collapse": true
+      },
+      "id": "c1a82be2-8b8e-41be-8e1d-d23aa665d128"
+    },
+    {
+      "id": "e1c033d9-9f44-4b29-8bf8-79f237c7f91e",
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "9",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": true,
+        "__collapse": true,
+        "flag13": false,
+        "flag11": false
+      }
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 1,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Tu as obtenu le trésor\ndes Bottes Rouges!\nTu peux désormais",
+                "traverser la rivière\nd'Andor!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            },
+            "id": "319aff99-b118-4d58-884a-ce2d8af617bf"
+          }
+        ],
+        "true1": [],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You've got the Red \nBoots treasure!",
+                "You can now cross\nthe Andor River!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            },
+            "id": "97f86bd1-e6ca-45c9-879f-aff071cb7847"
+          }
+        ]
+      },
+      "id": "ee952631-b666-47cd-b44c-b8905679f30f"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "eab78130-8507-4a83-9c30-e601ee6042f6"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "9",
+        "flag": 7,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "4618ffaa-2fd7-4b75-a2dd-8955692ccbec"
+          }
+        ],
+        "false": []
+      },
+      "id": "d91c84ba-b290-4509-8736-d5eb9852d881"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 14,
+  "y": 10,
+  "_index": 5
+}

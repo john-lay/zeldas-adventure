@@ -1,0 +1,481 @@
+{
+  "_resourceType": "script",
+  "id": "0a805702-9dca-445f-87a5-a70a05ef5db2",
+  "name": "AI/Tektike Movement",
+  "description": "Behaviour of Tektite enemy",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Tektite"
+    }
+  },
+  "symbol": "script_60",
+  "script": [
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "V0",
+        "operation": "set",
+        "other": "rnd",
+        "vectorY": "V0",
+        "value": "0",
+        "minValue": "0",
+        "maxValue": 1,
+        "clamp": false,
+        "__collapse": true
+      },
+      "id": "2e5761de-afb5-4f66-b121-6f55b99b6f1c"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {},
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "b5227eee-576c-481f-95ec-643e3773d795"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Crouch",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "db80f99c-9f4b-4f79-be77-f2eadbf22a9e"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "90974f79-e3f4-45ac-992c-8a8c07cf64c5"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Jump",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "b6888b69-8d62-4025-9264-1691c609ec4d"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "18faa738-a0c1-4f7a-b076-94519be2c65a",
+                    "__collapse": true
+                  },
+                  "id": "bacece6c-b1fc-4f74-a0b1-8059e734ce9b"
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "up",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "left",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "d9aa3192-5a31-44b8-91d0-92ebb7fa2ef1"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "a4b600dd-d3bd-4178-bca8-412977022c7f"
+                            }
+                          ]
+                        },
+                        "id": "6213ccb2-9229-4aa5-b610-daf8610c4f52"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "left",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "bdf886b3-fa61-40b3-9063-90066aa255dd"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "258746a4-362b-4b21-83a0-afe7d8d7a140"
+                            }
+                          ]
+                        },
+                        "id": "fe5d243a-dd28-4f41-8679-12b7f031c765"
+                      }
+                    ]
+                  },
+                  "id": "8f34fceb-119b-4a2e-af08-ccf63d2814a1"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Crouch",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "c8e8a677-c916-4050-a6a9-e1fa3449dec0"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.8,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "8a045d4f-085e-48fb-bc2c-0a51d10e0998"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "6a14148d-b4da-4a0a-afda-2cdb2f624905"
+                }
+              ]
+            },
+            "id": "287392f1-e28f-4937-ab36-bf270e0f41c5"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {},
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "100c065a-25fb-4a02-9185-311b46168938"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Jump",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "2998c91b-485b-4a47-b7cf-9291aaad7732"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "18faa738-a0c1-4f7a-b076-94519be2c65a",
+                    "__collapse": true
+                  },
+                  "id": "5463e60b-68ef-4f53-9310-d4e2a0dba6db"
+                },
+                {
+                  "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                  "args": {
+                    "actorId": "player",
+                    "operation": "up",
+                    "otherActorId": "0",
+                    "__collapseElse": false,
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "left",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "5a4d41d4-cd72-46e9-93ec-82aea7367730"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "18f6dba7-aea8-4f41-b46c-0c6ae77abd09"
+                            }
+                          ]
+                        },
+                        "id": "7a9fef85-df34-4cec-be2f-11b865053c34"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+                        "args": {
+                          "actorId": "player",
+                          "operation": "left",
+                          "otherActorId": "0",
+                          "__collapseElse": false,
+                          "__collapse": false
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": -4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "2536695e-d703-4e4f-b0f9-1b8af2d4284d"
+                            }
+                          ],
+                          "false": [
+                            {
+                              "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                              "args": {
+                                "actorId": "0",
+                                "x": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "y": {
+                                  "type": "number",
+                                  "value": 4
+                                },
+                                "moveType": "diagonal",
+                                "useCollisions": true
+                              },
+                              "id": "1360eb72-46e7-4183-ac4e-28f6b674f962"
+                            }
+                          ]
+                        },
+                        "id": "e3ad2703-2e58-4dbf-9ab3-786e57862949"
+                      }
+                    ]
+                  },
+                  "id": "f914815d-e732-4f89-a2d5-0f36809d22d3"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Crouch",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "bfef09ad-c4fc-4337-a026-6a3f3ea5d8aa"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.8,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "7d2b8797-b902-4d6a-a5fe-e63510f7e135"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "0d704ee9-b00f-4c8f-9c80-47301fa36126"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "3341acb2-a057-4055-bf5c-da06b332abd0"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Tektite Crouch",
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "3fa2854e-0f97-416c-bbab-84d70b9d56af"
+                }
+              ]
+            },
+            "id": "bf2fd23a-eaee-4b77-a283-6adfbd3eb037"
+          }
+        ]
+      },
+      "id": "7be8d0a1-42df-46cc-bec3-bd41a73ad39b"
+    }
+  ]
+}

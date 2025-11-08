@@ -1,0 +1,77 @@
+{
+  "_resourceType": "script",
+  "id": "cf9a4dca-20bd-452f-a273-dcfe0b02194d",
+  "name": "Dungeon/Begin Boss Rush",
+  "description": "Transition from fire shrine to Ganon's Gauntlet",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_124",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "21",
+        "value": {
+          "type": "number",
+          "value": 6
+        },
+        "__collapse": true
+      },
+      "id": "400f463f-abe9-49a8-af42-b63596347b9f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": true
+      },
+      "id": "bd447f56-54f9-400d-9438-569f103a8e04"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Change Music",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_STOP",
+            "args": {},
+            "id": "144afb92-56eb-4318-bd0d-64104e9be51b"
+          },
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "74782a2c-f455-4380-8728-e86009891b9b"
+            },
+            "id": "6b6183f5-a3e6-48bf-bb88-716cf81e7326"
+          }
+        ]
+      },
+      "id": "d6428355-eeb2-4ed3-8948-c60cd8094f17"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "3d9d83cd-cf4d-4d13-b9b8-e35b3af10b1d",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 13
+        },
+        "direction": "down",
+        "fadeSpeed": "2",
+        "__collapse": false
+      },
+      "id": "bdcfb58c-36e2-4ddb-8f09-3a5979fc56cd"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "_resourceType": "trigger",
+  "id": "3f9f34d6-0ecb-4508-ae32-7a495727de9a",
+  "name": "",
+  "prefabId": "",
+  "_index": 0,
+  "symbol": "trigger_632",
+  "x": 13,
+  "y": 6,
+  "width": 2,
+  "height": 1,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 5,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Strength Shrine",
+              "__collapse": false
+            },
+            "id": "82b03e95-4a75-4eb4-9ecc-0752580a3067"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "fb4b3038-56f1-4f74-b76c-55420ee3dee6"
+            },
+            "id": "949d02c9-8d18-4ac5-8bb8-283cb1087c3c"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "733cb8dd-52e1-4491-acc1-6b198dfb5763",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 16
+              },
+              "direction": "up",
+              "fadeSpeed": "2"
+            },
+            "id": "a1e90d22-3d5e-4e2a-8326-8358b82d6168"
+          }
+        ],
+        "false": []
+      },
+      "id": "02ba612b-3ec4-42ab-882b-c4f864ab4de8"
+    }
+  ],
+  "leaveScript": []
+}

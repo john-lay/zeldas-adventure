@@ -1,0 +1,178 @@
+{
+  "_resourceType": "script",
+  "id": "da9e6929-6fef-47ae-bb80-1958fc27e202",
+  "name": "Navigation/move_west",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_18",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "12",
+        "vectorY": "13"
+      },
+      "id": "3991a286-22af-4520-8f79-6ba58c0d83b0"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 4
+        }
+      },
+      "id": "a40c71ef-6273-4d24-bad0-e85cd2f69608"
+    },
+    {
+      "command": "EVENT_DEC_VALUE",
+      "args": {
+        "variable": "19"
+      },
+      "id": "e3914aa7-dbbe-48fb-a623-c6230fd6b020"
+    },
+    {
+      "command": "EVENT_CLEAR_FLAGS",
+      "args": {
+        "variable": "17",
+        "flag1": true,
+        "flag2": true,
+        "flag3": true,
+        "flag4": true,
+        "flag5": true,
+        "flag6": true,
+        "flag7": true,
+        "flag8": true,
+        "flag9": true,
+        "flag10": true,
+        "flag11": true,
+        "flag12": true,
+        "flag13": true,
+        "flag14": true,
+        "flag15": true,
+        "flag16": true,
+        "__collapse": true
+      },
+      "id": "25651f94-884d-4d86-a64a-8ee4f037b4a7"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Reset enemy offsets",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "42",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "76996920-f9eb-4a2e-8e10-13a1cc091023"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "43",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "c4a21390-963c-4db4-9b52-6cf12f68e5d3"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "44",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "720ca24e-750d-4f5d-927a-10381616176d"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "1457aa2c-8780-4b62-932f-c14186e4ebb9"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "46",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "2a7bc159-13b2-4162-abf3-6146f35ca179"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "47",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "129a9d7e-0c81-4dce-a217-3d89bf277484"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "48",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "00be588f-b8d4-4868-a2a0-9f7bd878a5e4"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "49",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "c08e3929-340e-4cf6-bcfd-da32f9766fe4"
+          }
+        ]
+      },
+      "id": "476d09fb-08d0-4692-90c8-458350a910cb"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "fcbc1a5e-5321-4187-946f-3db9667e1b45",
+        "__collapse": true
+      },
+      "id": "14bb82de-4798-4d20-8990-db9865f1ed1c"
+    }
+  ]
+}

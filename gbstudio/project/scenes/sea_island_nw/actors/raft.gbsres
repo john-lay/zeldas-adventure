@@ -1,0 +1,289 @@
+{
+  "_resourceType": "actor",
+  "id": "83bcb212-c0e6-4d12-9ecd-72b6b466e546",
+  "name": "raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "ec78aec8-c422-46c5-9b00-ad5b69eedecb",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_824",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "87",
+        "value": {
+          "type": "false"
+        },
+        "__collapse": true
+      },
+      "id": "eef2fdec-66ea-4fd3-8b2c-96cc3281afa6"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 1,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Souhaitez-vous\nretourner au\nSeacoast Inn?"
+              ],
+              "avatarId": ""
+            },
+            "id": "4aca99f9-0171-44d6-8465-281c8d597e51"
+          }
+        ],
+        "true1": [],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Would you like to sail\nback to the Seacoast\nInn?"
+              ],
+              "avatarId": ""
+            },
+            "id": "7bff9f04-2329-4a0c-997d-cf03db11a8b5"
+          }
+        ]
+      },
+      "id": "9341b8d4-a44c-426c-ace7-5a182b8212ba"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 1,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": true
+      },
+      "children": {
+        "true0": [
+          {
+            "id": "2ed4361d-1399-4431-8cc7-7a251c418a6a",
+            "command": "EVENT_CHOICE",
+            "args": {
+              "variable": "87",
+              "trueText": "Retour en bateau",
+              "falseText": "Y'a pas moyen!",
+              "__collapse": false
+            }
+          }
+        ],
+        "true1": [],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "id": "91db1a75-7553-4365-a9c5-0b3428a887b8",
+            "command": "EVENT_CHOICE",
+            "args": {
+              "variable": "87",
+              "trueText": "Sail back",
+              "falseText": "No way!",
+              "__collapse": false
+            }
+          }
+        ]
+      },
+      "id": "8de0e1e4-09df-4671-8cc2-894b5be8c7f1"
+    },
+    {
+      "id": "584c4e1c-3e60-48b9-a75a-c9b556426576",
+      "command": "EVENT_IF_TRUE",
+      "args": {
+        "variable": "87",
+        "__collapseElse": false,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "b48a3933-7a35-434d-98e6-925e932cefd8"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e7cf337b-66c7-4914-9643-2c4394098ed8",
+              "__collapse": true
+            },
+            "id": "ae83906c-bfd9-4041-abd0-1efb2c43163d"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "043ebfe5-ac6b-447a-93da-8f20be74e95a",
+              "x": {
+                "type": "number",
+                "value": 10
+              },
+              "y": {
+                "type": "number",
+                "value": 13
+              },
+              "direction": "down",
+              "fadeSpeed": "2"
+            },
+            "id": "d9d1e939-48e7-4fab-8458-5cb920b930a7"
+          }
+        ],
+        "false": []
+      }
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "d0456ae5-f12a-4f9c-899f-b8aad070f0ea"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "807ebf56-452f-4efe-b85e-333b0966db7f"
+          }
+        ],
+        "false": []
+      },
+      "id": "d084b66c-7026-4900-a3be-7b6fcff2cfe9"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 17,
+  "y": 11,
+  "_index": 2
+}

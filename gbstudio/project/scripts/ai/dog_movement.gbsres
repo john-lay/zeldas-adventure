@@ -1,0 +1,94 @@
+{
+  "_resourceType": "script",
+  "id": "7d6e64e7-d7ef-489f-b8d7-a7ac51a72bfd",
+  "name": "AI/Dog Movement",
+  "description": "Behaviour of Dog NPC",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Dog"
+    }
+  },
+  "symbol": "script_73",
+  "script": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "65bbde00-8643-44c5-9742-edde4a422577"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "",
+        "__collapse": true
+      },
+      "id": "1cc7b45c-7d1d-4029-9ed3-b471b2dfe196"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": 4
+        },
+        "y": 0,
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "32786d74-bab2-495d-96e6-a1d758e1d8c4"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.4,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "686345dc-266d-44b5-8b24-319f932fd48e"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "0",
+        "spriteStateId": "NPC - Dog Left",
+        "__collapse": true
+      },
+      "id": "1eb68b12-1fc0-4aca-bcd6-ee25afd715df"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.1,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "ce14ff94-0ef1-4578-bba5-92698366f37b"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "0",
+        "x": {
+          "type": "number",
+          "value": -4
+        },
+        "y": 0,
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "7dbac6d5-fac4-4f2e-be11-9f0400a1dffe"
+    }
+  ]
+}

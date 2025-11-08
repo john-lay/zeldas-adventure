@@ -1,0 +1,67 @@
+{
+  "_resourceType": "actor",
+  "id": "56243b37-4bd7-4047-a5a9-0a03caa47d3b",
+  "name": "North spikes 2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1794",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "4ba9e23b-1d7d-40af-83aa-c2fb0707c33f"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "17",
+        "flag": 12,
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Switch flipped in room",
+              "__collapse": true
+            },
+            "id": "d75e340c-37f7-4be2-9c1c-fbb199da0272"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "5b9c2723-770a-4441-bfff-43395adc6093"
+          }
+        ]
+      },
+      "id": "c41aa891-63df-4bb5-a66a-761b1901669b"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 3,
+  "_index": 3
+}

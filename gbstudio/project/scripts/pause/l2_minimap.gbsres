@@ -1,0 +1,55 @@
+{
+  "_resourceType": "script",
+  "id": "9a9ead49-b0f4-4967-baef-8d5b664d2192",
+  "name": "Pause/L2 minimap",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_79",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "102",
+        "flag": 0,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "6fc0d193-7758-45cb-9b21-28be8ca175e2"
+            },
+            "id": "717aa4f0-4107-4953-8dee-4e6af4058971"
+          },
+          {
+            "command": "EVENT_SCENE_PUSH_STATE",
+            "args": {},
+            "id": "a66e178e-c54a-45f0-8499-31daa3a23487"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "c2d64671-54e0-4df8-abc5-f9484e7497e4",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": "2"
+            },
+            "id": "f416fcb5-4c79-4743-8625-a113bbc1a8c6"
+          }
+        ],
+        "false": []
+      },
+      "id": "98e96f68-56a5-4834-ba5e-8ebfddb6855a"
+    }
+  ]
+}

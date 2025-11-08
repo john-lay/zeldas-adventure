@@ -1,0 +1,83 @@
+{
+  "_resourceType": "script",
+  "id": "8af295e5-1f9a-4a14-a604-a3759b685c4b",
+  "name": "Quest Status/draw_keys",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_3",
+  "script": [
+    {
+      "command": "EVENT_REPLACE_TILE_XY",
+      "args": {
+        "x": {
+          "type": "number",
+          "value": 17
+        },
+        "y": {
+          "type": "number",
+          "value": 11
+        },
+        "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+        "tileIndex": {
+          "type": "number",
+          "value": 180
+        }
+      },
+      "id": "bfec4f05-14c9-48b8-9df5-5a2a77769adb"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "9",
+        "flag": 12,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+              "tileIndex": {
+                "type": "number",
+                "value": 181
+              }
+            },
+            "id": "25e84af4-5146-4409-858e-42e834508417"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+              "tileIndex": {
+                "type": "number",
+                "value": 180
+              }
+            },
+            "id": "adb46f8e-e553-43d2-ba32-9dc3a410627d"
+          }
+        ]
+      },
+      "id": "5d9b935d-9cf8-4340-a8e6-b6b24340c55a"
+    }
+  ]
+}

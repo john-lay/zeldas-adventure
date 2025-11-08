@@ -4,7 +4,7 @@ A list of enemies from Zelda's Adventure mapped to their counterparts from the 3
 ## Notes on duplicates
 - There are 2 varieties of **Deeler** in the CDi version, both are represented by the Gameboy **Beetle**
 - There are 2 varieties of **Crockorock** in the CDi version, both are represented by the Gameboy **Sand Crab**
-- There are 3 varieties of **Zola**'s (Zoras) in the CDi version, all represented by the **Zora**
+- There are 3 varieties of **Zola**'s (Zoras) in the CDi version, the swamp and river varieties are represented by the **Zora** and the stone variety is represented by the **Monkey**
 - There is a pink bird called the **Moby** and a grey **Romraven** in the CDi version, they are represented by the Gameboy **Crow**
 - There is a purple and turquoise variety of the **Seagull** in the CDi version, the Gameboy **Dacto** represents them
 
@@ -49,7 +49,7 @@ Regular enemies found in the overworld and dungeons.
 | ![Stalfos CDi](bestiary/ZA_Stalfos.png) <br /> Stalfos | ![Stalfos DMG](bestiary/LA_Stalfos.png) <br /> Stalfos |
 | ![Swamp Zola CDi](bestiary/ZA_Swamp-Zola.png) <br /> Swamp Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
 | ![River Zola CDi](bestiary/ZA_Swamp-Zola-2.png) <br /> River Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
-| ![Cave Zola CDi](bestiary/ZA_Rock-Zola.png) <br /> Cave Zola | ![Zora DMG](bestiary/LA_Zora.png) <br /> Zora |
+| ![Cave Zola CDi](bestiary/ZA_Rock-Zola.png) <br /> Cave Zola (Dolomite) | ![Monkey DMG](bestiary/LA_Monkey.png) <br /> Monkey |
 | ![Tektite CDi](bestiary/ZA_Tektite.png) <br /> Tektite | ![Tektite DMG](bestiary/LA_Tektite.png) <br /> Tektite |
 | ![Tektite alt CDi](bestiary/ZA_Tektite-2.png) <br /> Tektite (alt) | ![Tektite DMG](bestiary/LA_Tektite.png) <br /> Tektite |
 | ![Tornado CDi](bestiary/ZA_Tornado.png) <br /> Tornado | ![Gale Seed Effect DMG](bestiary/OoA_Gale-Seed-Effect.png) <br /> Gale Seed Effect |

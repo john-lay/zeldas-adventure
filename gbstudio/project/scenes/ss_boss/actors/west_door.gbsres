@@ -1,0 +1,81 @@
+{
+  "_resourceType": "actor",
+  "id": "bb053a51-d107-4a01-9dc0-573da583de8f",
+  "name": "West Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f2396966-ea94-468d-afaa-98c4b775fcf4",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1425",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "1d967cd0-6f0b-40f7-bc6c-158e30ba28b1"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "110",
+        "flag": 12,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Ursore defeated",
+              "__collapse": true
+            },
+            "id": "a11cd0a9-1fa0-43f1-ba3e-90e46000ffb7"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "97562285-6860-44e4-bfe4-7b8cb72417d2"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "fe629884-4a30-47dd-ac8d-fccda6799047"
+          }
+        ]
+      },
+      "id": "3fca7138-7494-444a-9f14-20ede2dd5d4d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 0,
+  "y": 9,
+  "_index": 3
+}
