@@ -1,0 +1,165 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "57ad9858-b033-4317-aec0-a94cc6974331",
+  "name": "Bago-Bago",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c21cbccf-6df1-4340-abb0-aca676301066",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "81d3f15c-c2b5-48ad-be5e-9db7236a3de3",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "e25cf8df-cb78-4f41-936a-49feccf608db",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "ee92ffa9-0366-47a5-9fd5-ae7010d25115",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "25"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "26"
+        }
+      },
+      "id": "dc1ad5e9-3b27-4695-ba94-669d51c138aa",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "f2ee3817-a16c-4ea2-8fc9-69c891a38cec",
+        "$actor[2]$": "b0e948ae-cf04-44f0-9ed4-20734c703e56"
+      },
+      "id": "752e3ccb-6f66-4923-bc29-ec2c1c5cbad9",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "b57ae058-9f95-4d93-8ca8-ef818460a052",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "368b1416-4685-4d8c-8ac0-82739783ca36"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": []
+}

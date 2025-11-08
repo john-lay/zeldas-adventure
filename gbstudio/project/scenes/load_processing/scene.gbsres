@@ -1,0 +1,232 @@
+{
+  "_resourceType": "scene",
+  "id": "9f7e9281-03ff-4f2c-b136-d157c63ba6c8",
+  "_index": 10,
+  "name": "Load Processing",
+  "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "TOPDOWN",
+  "paletteIds": [
+    "067f5134-5f20-4f48-9c60-446848b5b3c2"
+  ],
+  "spritePaletteIds": [],
+  "collisions": "",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_15",
+  "x": 440,
+  "y": 416,
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Arrived from the save & quit screen"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 0,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false,
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CLEAR_FLAGS",
+                  "args": {
+                    "variable": "18",
+                    "flag1": true,
+                    "flag2": false,
+                    "flag3": false,
+                    "flag4": false,
+                    "flag5": false,
+                    "flag6": false,
+                    "flag7": false,
+                    "flag8": false,
+                    "flag9": false,
+                    "flag10": false,
+                    "flag11": false,
+                    "flag12": false,
+                    "flag13": false,
+                    "flag14": false,
+                    "flag15": false,
+                    "flag16": false
+                  },
+                  "id": "1f478a1f-eb54-4b60-829a-de1eb5c7beaf"
+                },
+                {
+                  "command": "EVENT_SAVE_DATA",
+                  "args": {
+                    "saveSlot": 0,
+                    "__scriptTabs": "save"
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SCENE_POP_STATE",
+                        "args": {
+                          "fadeSpeed": "2"
+                        },
+                        "id": "e0e3cb2c-5b5f-42cd-b323-a52ed55383f7"
+                      }
+                    ],
+                    "load": []
+                  },
+                  "id": "06499b88-816c-48d6-8375-508bf94ef5e2"
+                }
+              ],
+              "false": []
+            },
+            "id": "954febe5-a18c-43b9-b4cf-4c5369beefae"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 1,
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CLEAR_FLAGS",
+                  "args": {
+                    "variable": "18",
+                    "flag1": false,
+                    "flag2": true,
+                    "flag3": false,
+                    "flag4": false,
+                    "flag5": false,
+                    "flag6": false,
+                    "flag7": false,
+                    "flag8": false,
+                    "flag9": false,
+                    "flag10": false,
+                    "flag11": false,
+                    "flag12": false,
+                    "flag13": false,
+                    "flag14": false,
+                    "flag15": false,
+                    "flag16": false
+                  },
+                  "id": "7ae19369-095e-4f42-bb87-0cee645fefae"
+                },
+                {
+                  "command": "EVENT_SAVE_DATA",
+                  "args": {
+                    "saveSlot": 0,
+                    "__scriptTabs": "save"
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_SWITCH_SCENE",
+                        "args": {
+                          "sceneId": "348766b2-b280-4042-a990-6a6cc4aa5d59",
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 31
+                          },
+                          "direction": "",
+                          "fadeSpeed": "2"
+                        },
+                        "id": "d1486b99-3750-4220-9d88-d1cc0d510da3"
+                      }
+                    ],
+                    "load": []
+                  },
+                  "id": "f09e4d88-2613-476d-a018-0fceb1a85b20"
+                }
+              ],
+              "false": []
+            },
+            "id": "d1d6783c-2529-4b74-9172-0dd914dde2b4"
+          }
+        ]
+      },
+      "id": "15b0280b-2b04-4a03-be34-adbd7155832b"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Arrived from load game event"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Change music",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_MUSIC_STOP",
+                  "args": {
+                    "__collapse": true
+                  },
+                  "id": "25a5b2b7-e2b2-4bf0-8bff-3bb2f1c2b2ac"
+                },
+                {
+                  "command": "EVENT_MUSIC_PLAY",
+                  "args": {
+                    "musicId": "33d7d664-59bf-4a75-919d-1157e764f8a6",
+                    "__collapse": false
+                  },
+                  "id": "2b90e68e-fea2-4470-b45c-84281a5a1234"
+                }
+              ]
+            },
+            "id": "ea26a055-cfbc-4689-94b0-f702d7637164"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Resume from Vision Henge"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "22",
+                    "value": {
+                      "type": "number",
+                      "value": 0
+                    }
+                  },
+                  "id": "ff8865d9-1b75-49e1-b913-14649566c948"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "93c8317b-4d6e-4079-85de-818140f70027"
+                  },
+                  "id": "7a288505-5fc9-44b6-be00-6699094bb004"
+                }
+              ]
+            },
+            "id": "58c9d2e4-5cd6-4b22-8ac2-92402874aab7"
+          }
+        ]
+      },
+      "id": "be985c41-4a26-4d59-a29a-3ef111d7f1ad"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

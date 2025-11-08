@@ -1,0 +1,203 @@
+{
+  "_resourceType": "actor",
+  "id": "c6cbbe7b-fe4b-4337-b2cb-e52ccd6931ba",
+  "name": "enemy5",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "dca27373-c6ea-4aaa-92c5-d3055fb4e8dd",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_821",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "72"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "f2241fb4-b1f3-4d48-88da-a83b1a636e88",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "73",
+        "value": {
+          "type": "number",
+          "value": 2
+        }
+      },
+      "id": "732a95f7-76e1-4ece-87d1-6a16960edfde",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "17",
+        "flag": 10,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Prime enemy defeated. Children should spawn",
+              "__collapse": true
+            },
+            "id": "2a815444-b0d0-4e2e-ae70-6db4c31667de",
+            "children": {}
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "87ea621b-1b59-46f1-94d6-bc1803745106",
+            "children": {}
+          }
+        ]
+      },
+      "id": "9dd945ff-4ba6-4899-9e83-e1dcdf14cfe2"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0a805702-9dca-445f-87a5-a70a05ef5db2",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "74"
+        }
+      },
+      "id": "b219f242-8fa8-404d-a330-19cbe3f54c67",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "73"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "74"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "1f56a2dc-98a4-4a53-af43-88953f3096ea",
+        "$actor[2]$": "3d423525-cae9-438c-b8c8-f824e0c61dd4",
+        "$actor[0]$": "$self$"
+      },
+      "id": "b5868489-db9a-4dbf-9c5d-d01a1f705170",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "73"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": true,
+              "flag16": false
+            },
+            "id": "ec39f661-9fb7-4ef0-a7cf-f246b23ff3be",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "58f6a09a-1ab3-4d0b-b47e-c93c0374c371"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 9,
+  "_index": 7
+}

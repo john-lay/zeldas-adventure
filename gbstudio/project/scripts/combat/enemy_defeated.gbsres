@@ -1,0 +1,136 @@
+{
+  "_resourceType": "script",
+  "id": "4fe1d520-177f-456a-ae9f-684ce01125d8",
+  "name": "Combat/enemy_defeated",
+  "description": "Play enemy defeated animation",
+  "variables": {},
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "enemy_defeated"
+    }
+  },
+  "symbol": "script_20",
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Enemy defeated animation"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "0",
+              "frame": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": true
+            },
+            "id": "0a5ba891-ab4d-4116-9a5d-17067d8022b7"
+          },
+          {
+            "command": "EVENT_ACTOR_ACTIVATE",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "7e1a4282-429a-4dd2-974f-fff121fce552"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "0",
+              "__collapse": true,
+              "__comment": false
+            },
+            "id": "007d5a0c-a640-433f-8928-9f58a2706649"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "c29421e2-ca82-47a9-a721-84e619063ed9"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "0",
+              "frame": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": true
+            },
+            "id": "416ad658-1b2d-4f38-8a52-e1d5d1886510"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "2fd0f33d-77e0-4ef4-9433-b09e979fa4bb"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "0",
+              "frame": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": true
+            },
+            "id": "8e653f63-3e00-4872-86e0-de95006f3e16"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "d9794d53-a5cb-4cb7-b33f-3fd4ef6f770b"
+          },
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "0",
+              "frame": {
+                "type": "number",
+                "value": 3
+              },
+              "__collapse": true
+            },
+            "id": "b7e34e8b-2ec1-4bf1-92fd-c15392954dc6"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "6d8616c0-2544-434c-b3e1-c640fc5c2af6"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "0",
+              "__collapse": true
+            },
+            "id": "9b3678cc-2603-4f4b-9eb1-9ad243d3ff7c"
+          }
+        ]
+      },
+      "id": "f416b8d5-458d-4e7e-b985-ec78ddd11c8b"
+    }
+  ]
+}

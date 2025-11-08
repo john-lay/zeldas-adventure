@@ -1,0 +1,72 @@
+{
+  "_resourceType": "scene",
+  "id": "54960cf2-56b4-4616-a3f9-fbe3545c248d",
+  "_index": 8,
+  "name": "World Map",
+  "backgroundId": "28c61619-0ff5-4f4a-a9b1-d3c7434625a2",
+  "tilesetId": "",
+  "width": 34,
+  "height": 34,
+  "type": "POINTNCLICK",
+  "paletteIds": [
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "538edd31-9308-4374-a889-73a90dc6ae87",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "1ed4c5df-28e4-457a-ab94-3e2b6d4958c7",
+    "f229b5cc-93a3-40a1-86d9-b47b427c6301",
+    "fdf67b3a-8a7f-4c12-870c-82dfc4c2e4c0",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d"
+  ],
+  "spritePaletteIds": [],
+  "collisions": "00484+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_13",
+  "x": 440,
+  "y": 32,
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        }
+      },
+      "id": "4936e520-f838-4136-bb8e-7d8eb8e62003"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b",
+          "select"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "6fc0d193-7758-45cb-9b21-28be8ca175e2"
+            },
+            "id": "2fb3a79c-88f6-4130-a219-a4e29f007e79"
+          },
+          {
+            "command": "EVENT_SCENE_POP_STATE",
+            "args": {
+              "fadeSpeed": "2"
+            },
+            "id": "bd72e10d-5b62-4b3d-b462-550e7f7853d3"
+          }
+        ]
+      },
+      "id": "1e4d359b-7aea-4ead-9b64-dc2df5a2abd5"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

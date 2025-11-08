@@ -1,0 +1,384 @@
+{
+  "_resourceType": "script",
+  "id": "c9a04ca0-d87c-4c4a-a0fa-42d74684d285",
+  "name": "Quest Status/draw_empty_slot",
+  "description": "1-6 for treasures\n7-12 for weapons",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Slot (1-12)",
+      "passByReference": true
+    }
+  },
+  "actors": {},
+  "symbol": "script_1",
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "lte",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 6
+          }
+        },
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Draw Treasure",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Top Left",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "($V0$ * 2) + 1",
+                          "__collapse": true
+                        },
+                        "id": "455eafd1-54bf-42ab-8654-d71ef9dea1c8"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "1c117182-bddb-4f6d-b1cf-6b533455454d"
+                      }
+                    ]
+                  },
+                  "id": "c23ff775-3b58-45d1-95dc-58cca2c303fe"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Top Right",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "($V0$ * 2) + 2"
+                        },
+                        "id": "735bbf68-a797-4354-9f4c-2bd2316276ba"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          },
+                          "variable": "V2",
+                          "expression": "(($V0$ - 1) * 4) + 1"
+                        },
+                        "id": "5159ec49-2ee9-40de-898f-98adadcb70eb"
+                      }
+                    ]
+                  },
+                  "id": "2c38aa80-f9a5-49fa-ac86-0a20cfd32c48"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__collapse": true,
+                    "__label": "Bottom Left"
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "($V0$ * 2) + 1"
+                        },
+                        "id": "9ddf3fc0-fb31-4fdd-ba66-a2f2e20d47ed"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "0da04b00-d3e0-479d-93dc-24dc75db2550"
+                      }
+                    ]
+                  },
+                  "id": "b366b84a-043b-42c0-b342-04f646ac761c"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Bottom Right",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "($V0$ * 2) + 2"
+                        },
+                        "id": "3c7ff3d9-bc69-42d9-80ec-504bf36045d0"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "f2fb3bf6-b516-4f91-a3b1-e53c07bb3372"
+                      }
+                    ]
+                  },
+                  "id": "ab6056d4-97f8-4a61-a016-819b54cd33d8"
+                }
+              ]
+            },
+            "id": "c3713bd1-54b8-4cc7-b4d2-0b2764de3e66"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Draw Weapons",
+              "__collapse": false,
+              "__comment": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Top Left",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "(($V0$ - 6)* 2) + 1"
+                        },
+                        "id": "f8fbba77-36dd-404e-9c97-458860db3ca7"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "a4548484-5d59-4d2d-a51f-b60dd7bcdb94"
+                      }
+                    ]
+                  },
+                  "id": "c3ed5e03-f756-4212-819c-2d3c60ca3c9e"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Top Right",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "(($V0$ - 6)* 2) + 2"
+                        },
+                        "id": "b505fb5e-4062-4ab5-bb07-fb95a347fccb"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          },
+                          "variable": "V2",
+                          "expression": "(($V0$ - 1) * 4) + 1"
+                        },
+                        "id": "5d34e5d9-a44c-4a8f-b472-a2e0b105a20d"
+                      }
+                    ]
+                  },
+                  "id": "67a36c01-a8c2-4d2b-b114-1385f8e55420"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__collapse": true,
+                    "__label": "Bottom Left"
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "(($V0$ - 6)* 2) + 1"
+                        },
+                        "id": "8a03cfac-7d52-4a02-88cc-18e08f3e3650"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "d92a65ac-8fae-46e5-8805-0aa8f6f57966"
+                      }
+                    ]
+                  },
+                  "id": "c00e8938-531a-4903-8c0a-2db6fa96363e"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "Bottom Right",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH_EVALUATE",
+                        "args": {
+                          "variable": "77",
+                          "expression": "(($V0$ - 6)* 2) + 2"
+                        },
+                        "id": "892a586c-ad2f-45ab-8cc0-ed5d74648635"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "variable",
+                            "value": "77"
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "tilesetId": "422e2ac2-ebf7-4c07-b8bf-ee7ae3c998c2",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 190
+                          }
+                        },
+                        "id": "c398ed04-4a35-4c03-802e-917535825f79"
+                      }
+                    ]
+                  },
+                  "id": "f87453c8-2b25-4dfe-a04d-878ef473804c"
+                }
+              ]
+            },
+            "id": "b2137f97-a4db-4166-937c-4353dc4856ff"
+          }
+        ]
+      },
+      "id": "95f33f1d-480d-40a6-92cb-75924e7b1ba3"
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "_resourceType": "script",
+  "id": "521f95b6-1f86-421a-971e-ce74ad1366da",
+  "name": "Combat/spawn_collectable",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Random Number",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Collectable"
+    }
+  },
+  "symbol": "script_21",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "17",
+        "flag": 2,
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Prevent collectable from spawning if player doesn't collect a dropped item and defeats another enemy",
+              "__collapse": false
+            },
+            "id": "f3487bc6-7953-45bb-b76a-2aae79ef6bea"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "V0",
+              "operation": "set",
+              "other": "rnd",
+              "vectorY": "V0",
+              "value": "0",
+              "minValue": "0",
+              "maxValue": 2,
+              "clamp": false,
+              "__collapse": false
+            },
+            "id": "9d96b0ab-cdf7-4c2c-8139-3ad66680d801"
+          },
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "V0",
+              "choices": 2,
+              "__collapseCase0": false,
+              "value0": 0,
+              "__collapseCase1": false,
+              "value1": 1,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Spawn Heart",
+                    "__collapse": true
+                  },
+                  "id": "a5d9c271-97c0-4cb0-8318-445819ef50f8"
+                },
+                {
+                  "command": "EVENT_ADD_FLAGS",
+                  "args": {
+                    "variable": "17",
+                    "flag1": true,
+                    "flag2": false,
+                    "flag3": true,
+                    "flag4": false,
+                    "flag5": false,
+                    "flag6": false,
+                    "flag7": false,
+                    "flag8": false,
+                    "flag9": false,
+                    "flag10": false,
+                    "flag11": false,
+                    "flag12": false,
+                    "flag13": false,
+                    "flag14": false,
+                    "flag15": false,
+                    "flag16": false,
+                    "__collapse": true
+                  },
+                  "id": "901e76ca-0187-4c63-9ac6-96f21936a5cf"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "45332f5b-54c1-4a3e-9393-028a99ae1168"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "8153d1ac-50a0-4c5a-924a-8ff71a067ec8"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "40a8cce9-72f9-40dc-80c9-d32ce3376849"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Spawn Rupee",
+                    "__collapse": true
+                  },
+                  "id": "75c3fa91-d0db-4cc2-9c8d-07400a59be03"
+                },
+                {
+                  "command": "EVENT_ADD_FLAGS",
+                  "args": {
+                    "variable": "17",
+                    "flag1": false,
+                    "flag2": true,
+                    "flag3": true,
+                    "flag4": false,
+                    "flag5": false,
+                    "flag6": false,
+                    "flag7": false,
+                    "flag8": false,
+                    "flag9": false,
+                    "flag10": false,
+                    "flag11": false,
+                    "flag12": false,
+                    "flag13": false,
+                    "flag14": false,
+                    "flag15": false,
+                    "flag16": false,
+                    "__collapse": true
+                  },
+                  "id": "610dcde4-1a77-4d03-822a-ba18a2274633"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "__collapse": true
+                  },
+                  "id": "b8957829-a832-4e9e-bc0e-340aafb106e7"
+                },
+                {
+                  "command": "EVENT_ACTOR_SHOW",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "eafda433-0fe9-4471-95eb-638848ebbe74"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_ENABLE",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "eb2ead53-622b-4f85-97e0-4476ad6f6fed"
+                }
+              ],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_ACTOR_HIDE",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "86d1a564-98db-4ddc-aaf2-22baa87a7875"
+                },
+                {
+                  "command": "EVENT_ACTOR_COLLISIONS_DISABLE",
+                  "args": {
+                    "actorId": "0",
+                    "__collapse": true
+                  },
+                  "id": "bf51d55f-c059-4ffd-a7ae-138d042f5a7d"
+                }
+              ]
+            },
+            "id": "d82d26d0-e9b5-49e1-8c46-ac9a506cee0e"
+          }
+        ]
+      },
+      "id": "271f5bbb-1f0e-4fc2-abed-cf289c7c7a0b"
+    }
+  ]
+}

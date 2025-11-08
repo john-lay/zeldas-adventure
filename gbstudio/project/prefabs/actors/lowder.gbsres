@@ -1,0 +1,174 @@
+{
+  "_resourceType": "actorPrefab",
+  "id": "24751fcc-7618-4ce5-b8e9-4dd77240d879",
+  "name": "Lowder",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "c9b1d215-0d7f-4ba8-b9f0-5991cfe8a7b6",
+  "moveSpeed": 0.5,
+  "animSpeed": 255,
+  "paletteId": "",
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "_index": 2,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "$self$",
+        "spriteStateId": "Enemy - Hardhat Beetle Squash"
+      },
+      "id": "632202f2-c706-4a61-8082-f0265089f01f",
+      "children": {}
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "01c53c25-39b0-4252-818b-9afab244138b",
+        "__collapse": true
+      },
+      "id": "1a682098-8d93-4852-bd76-970569ce3b8b"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "75a3ef6b-6aa2-435f-bb36-5bca646ca3e0",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 3
+        }
+      },
+      "id": "d961dce6-1be4-4311-b5d0-e2b4d94ba395",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d1546d0f-633d-43d5-9da0-4240ee937231"
+      },
+      "id": "0d4e561a-e574-4202-98fd-64355b136259",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "6b0712a3-91ae-4f89-992f-d5c5eaba500c",
+        "$actor[2]$": "767ba684-e739-44ae-aca6-1e7d5ae3dcfb"
+      },
+      "id": "e9f45db6-92e2-4708-a761-512d0b4e826e",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "f5626358-1836-4839-8b8d-baa3b14e0827",
+            "children": {}
+          }
+        ],
+        "false": []
+      },
+      "id": "4f4eac8b-e33b-4b31-bca3-456b66a2a4f3"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": []
+}

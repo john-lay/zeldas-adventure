@@ -5,29 +5,13 @@
 A listing of variables used in GB Studio and their types.
 
 ### Global
-* `$00$: Variable 000` _Health - `number`. (Private variable. Represents the old/cached health. 2 health units equal 1 heart)
-* `$01$: Variable 001` Health - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
-* `$02$: Variable 002` _Max Hearts - `number`. (Private variable. Represents the old/cached maximum hearts. 2 health units equal 1 heart)
-* `$03$: Variable 003` Max Hearts - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
-* `$04$: Variable 004` _Rupees - `number`. (Private variable. Indicates the old/cached number of rupees Zelda has collected)
-* `$05$: Variable 005` Rupees - `number`. (Public variable. Can be updated in GB Studio. If the value above is different it triggers a HUD redraw)
-* `$06$: Variable 006` Inventory Interaction - `number`. (Update the background tiles in the inventory screen based on point and click user interaction)
-    * (1 represents the inventory weapons have been scrolled left)
-    * (2 represents the inventory weapons have been scrolled right)
-    * (3 represents the 1st weapon slot has been selected)
-    * (4 represents the 2nd weapon slot has been selected)
-    * (5 represents the 3rd weapon slot has been selected)
-    * (6 represents the 4th weapon slot has been selected)
-    * (7 represents the 5th weapon slot has been selected)
-    * (8 represents the 6th weapon slot has been selected)
-    * (9 represents the inventory treasures have been scrolled left)
-    * (10 represents the inventory treasures have been scrolled right)
-    * (11 represents the 1st treasure slot has been selected)
-    * (12 represents the 2nd treasure slot has been selected)
-    * (13 represents the 3rd treasure slot has been selected)
-    * (14 represents the 4th treasure slot has been selected)
-    * (15 represents the 5th treasure slot has been selected)
-    * (16 represents the 6th treasure slot has been selected)
+* `$00$: Variable 000` Health - `number`. (Represents the players health. 2 health units equal 1 heart)
+* `$01$: Variable 001` Max Hearts - `number`. (Represents the number of hearts the player has. 2 health units equal 1 heart)
+* `$03$: Variable 002` Rupees - `number`. (Represents the number of rupees the player has collected)
+* `$04$: Variable 003` Weapons Found - `number`. (Count of the number of weapons the player has found)
+* `$05$: Variable 004` Weapon Scroll Offset - `number`. (Tracks the scroll offset for the weapons in the inventory screen)
+* `$04$: Variable 005` Treasures Found - `number`. (Count of the number of treasures the player has found)
+* `$05$: Variable 006` Treasure Scroll Offset - `number`. (Tracks the scroll offset for the treasures in the inventory screen)
 * `$07$: Variable 007` Inventory1 - `word`. (Keep track of the weapons Zelda has found)
   * (Flag 1 represents the weapon: Wand)
   * (Flag 2 represents the weapon: Bow and Arrow)
@@ -141,16 +125,10 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 indicates whether or not Zelda is sailing from the Seacoast dock to the Sea Island)
   * (Flag 15 represents Zelda has collected the Mystery Island heart container)
   * (Flag 16 is ???)
-* `$12$: Variable 012` Zelda PosX - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
-* `$13$: Variable 013` Zelda PosY - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
-* `$14$: Variable 014` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
-    * (0 represents Zelda's position should be restored by GB Studio's last known position of Zelda. i.e. When the scene is popped off the stack)
-    * (1 represents Zelda exitted at the __top__ of the screen)
-    * (2 represents Zelda exitted at the __right__ side of the screen)
-    * (3 represents Zelda exitted at the __bottom__ of the screen)
-    * (4 represents Zelda exitted at the __left__ side of the screen)
-    * (5 represents Zelda's screen position is explicitly set)
-* `$15$: Variable 015` Attack Power - `number`. (Zelda's attack power)
+* `$12$: Variable 012` Player PosX - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
+* `$13$: Variable 013` Player PosY - `number`. (Stores Zelda's position when she exits the screen. Used to maintain her relative position on the next screen)
+* `$14$: Variable 014` Player Direction - `number`. (Stores Zelda's direction between scenes)
+* `$15$: Variable 015` Player Attack Power - `number`. (Zelda's attack power)
 * `$16$: Variable 016` Spell Cost - `number`. (Cost of the equipped spell)
 ```
   * (1.  Wand ------------- No cost)
@@ -184,14 +162,14 @@ A listing of variables used in GB Studio and their types.
   * (Flag 8 is ???)
   * (Flag 9 is ???)
   * (Flag 10 is ???)
-  * (Flag 11 is ???)
-  * (Flag 12 is ???)
-  * (Flag 13 is ???)
-  * (Flag 14 is ???)
-  * (Flag 15 is ???)
-  * (Flag 16 is ???)
+  * (Flag 11 represents enemy 1 has been defeated)
+  * (Flag 12 represents enemy 2 has been defeated)
+  * (Flag 13 represents enemy 3 has been defeated)
+  * (Flag 14 represents enemy 4 has been defeated)
+  * (Flag 15 represents enemy 5 has been defeated)
+  * (Flag 16 reprents the player has paused the game. Enemy and collectable position needs to be maintained)
 * `$18$: Variable 018` Resume location - `word`.
-  * (Flag 1 represents a Save and Continue operation)
+  * ~~(Flag 1 represents a Save and Continue operation)~~
   * (Flag 2 represents a Save and Quit operation)
   * (Flag 3 represents Zelda should resume at Vision Henge)
   * (Flag 4 represents Zelda should resume in the Earth Shrine)
@@ -209,8 +187,103 @@ A listing of variables used in GB Studio and their types.
   * (Flag 16 is ???)
 * `$19$: Variable 019` Map PosX - `number`. (Stores the player's dungeon position. Shows which dungeon room the player is in on the minimap)
 * `$20$: Variable 020` Map PosY - `number`. (Stores the player's dungeon position. Shows which dungeon room the player is in on the minimap)
-* `$21$: Variable 021` Enemy Counter - `number`. (Indicates the number of Zelda has defeated in this scene)
-* `$22$: Variable 022` Earth Shrine Flags - `word`.
+* `$21$: Variable 021` Boss Hit Counter - `number`. (Indicates the number of times the boss in this scene has been hit)
+* `$22$: Variable 022` Exit Screen: Top, Right, Bottom, Left - `number`. (Indicates the direction Zelda was facing when exiting the screen. Used with the above)
+    * (0 represents player opened the inventory or map)
+    * (1 represents Zelda exitted at the __top__ of the screen)
+    * (2 represents Zelda exitted at the __right__ side of the screen)
+    * (3 represents Zelda exitted at the __bottom__ of the screen)
+    * (4 represents Zelda exitted at the __left__ side of the screen)
+    * (5 represents Zelda's moved from a shadow scene bridge/no candle)
+* `$23$: Variable 023` Language - `number`.
+    * (0 represents English)
+    * (1 represents French)
+    * (2 represents Japanese)
+* `$24$: Variable 024` Debug Flags - `word`.
+  * (Flag 1 represents all Treasures enabled in Debug)
+  * (Flag 2 represents all Weapons enabled in Debug)
+  * (Flag 3 represents open doors on touch flag is enabled in Debug)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$25$: Variable 025` Enemy1 PosX - `number`. (Stores the first enemies' x position when the player pauses)
+* `$26$: Variable 026` Enemy1 PosY - `number`. (Stores the first enemies' y position when the player pauses)
+* `$27$: Variable 027` Enemy1 Direction - `number`. (Stores the first enemies' direction when the player pauses)
+* `$28$: Variable 028` Enemy2 PosX - `number`. (Stores the second enemies' x position when the player pauses)
+* `$29$: Variable 029` Enemy2 PosY - `number`. (Stores the second enemies' y position when the player pauses)
+* `$30$: Variable 030` Enemy2 Direction - `number`. (Stores the second enemies' direction when the player pauses)
+* `$31$: Variable 031` Enemy3 PosX - `number`. (Stores the third enemies' x position when the player pauses)
+* `$32$: Variable 032` Enemy3 PosY - `number`. (Stores the third enemies' y position when the player pauses)
+* `$33$: Variable 033` Enemy3 Direction - `number`. (Stores the third enemies' direction when the player pauses)
+* `$34$: Variable 034` Enemy4 PosX - `number`. (Stores the fourth enemies' x position when the player pauses)
+* `$35$: Variable 035` Enemy4 PosY - `number`. (Stores the fourth enemies' y position when the player pauses)
+* `$36$: Variable 036` Enemy4 Direction - `number`. (Stores the fourth enemies' direction when the player pauses)
+* `$37$: Variable 037` Enemy5 PosX - `number`. (Stores the fifth enemies' x position when the player pauses)
+* `$38$: Variable 038` Enemy5 PosY - `number`. (Stores the fifth enemies' y position when the player pauses)
+* `$39$: Variable 039` Enemy5 Direction - `number`. (Stores the fifth enemies' direction when the player pauses)
+* `$40$: Variable 040` Collectable PosX - `number`. (Stores the collectable's x position when the player pauses)
+* `$41$: Variable 041` Collectable PosY - `number`. (Stores the collectable's y position when the player pauses)
+* `$42$: Variable 042` Enemy Type 1 - Defeated OffsetX - `number`. (used in the enemy take damage script to position the defeated enemy animation over enemy actor type 1)
+* `$43$: Variable 043` Enemy Type 1 - Defeated OffsetY - `number`. (used in the enemy take damage script to position the defeated enemy animation over enemy actor type 1)
+* `$44$: Variable 044` Enemy Type 1 - Collectable OffsetX - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 1)
+* `$45$: Variable 045` Enemy Type 1 - Collectable OffsetY - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 1)
+* `$46$: Variable 046` Enemy Type 2 - Defeated OffsetX - `number`. (used in the enemy take damage script to position the defeated enemy animation over enemy actor type 2)
+* `$47$: Variable 047` Enemy Type 2 - Defeated OffsetY - `number`. (used in the enemy take damage script to position the defeated enemy animation over enemy actor type 2)
+* `$48$: Variable 048` Enemy Type 2 - Collectable OffsetX - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 2)
+* `$49$: Variable 049` Enemy Type 2 - Collectable OffsetY - `number`. (used in the enemy take damage script to position the collectable over enemy actor type 2)
+* `$50$: Variable 050` Scene L0 - HUD_draw_rupee_count - `number`. (replace local scene variable with global variable)
+* `$51$: Variable 051` Scene L1 - HUD_draw_rupee_digit - `number`. (replace local scene variable with global variable)
+* `$52$: Variable 052` Scene L2 - HUD_draw_hearts_count - `number`. (replace local scene variable with global variable)
+* `$53$: Variable 053` Scene L3 - HUD_draw_hearts_start - `number`. (replace local scene variable with global variable)
+* `$54$: Variable 054` Scene L4 - HUD_draw_hearts_tile_index - `number`. (replace local scene variable with global variable)
+* `$55$: Variable 055` Scene L5 - combat_projectile_has_taken_damage - `number`. (replace local scene variable with global variable)
+* `$56$: Variable 056` Scene L6 - combat_projectile_damage - `number`. (replace local scene variable with global variable)
+* `$57$: Variable 057` Scene L7 - animate_tiles - `number`. (replace local scene variable with global variable)
+* `$58$: Variable 058` Enemy Type 1 - Attack - `number`. Attack power of enemy type 1
+* `$59$: Variable 059` Enemy Type 2 - Attack - `number`. Attack power of enemy type 2
+* `$60$: Variable 060` Enemy1 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$61$: Variable 061` Enemy1 Defense - `number`. Defense of enemy
+* `$62$: Variable 062` Enemy1 Random - `number`. Random number (shared between collectable and movement)
+* `$63$: Variable 063` Enemy2 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$64$: Variable 064` Enemy2 Defense - `number`. Defense of enemy
+* `$65$: Variable 065` Enemy2 Random - `number`. Random number (shared between collectable and movement)
+* `$66$: Variable 066` Enemy3 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$67$: Variable 067` Enemy3 Defense - `number`. Defense of enemy
+* `$68$: Variable 068` Enemy3 Random - `number`. Random number (shared between collectable and movement)
+* `$69$: Variable 069` Enemy4 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$70$: Variable 070` Enemy4 Defense - `number`. Defense of enemy
+* `$71$: Variable 071` Enemy4 Random - `number`. Random number (shared between collectable and movement)
+* `$72$: Variable 072` Enemy5 Has Taken Damage - `bool`. Flag to prevent enemy from taking additional damage when hit
+* `$73$: Variable 073` Enemy5 Defense - `number`. Defense of enemy
+* `$74$: Variable 074` Enemy5 Random - `number`. Random number (shared between collectable and movement)
+* `$75$: Variable 075` Scene L8 - collect_heart_max_health - `number`. (Replace local scene variable with global variable)
+* `$76$: Variable 076` QS_draw_inventory_tile_index - `number`. Inventory screen. Used to track tile index
+* `$77$: Variable 077` QS_draw_inventory_x_tile_index - `number`. Inventory screen. X tile index to draw the inventory item
+* `$78$: Variable 078` QS_draw_item_slot - `number`. Inventory screen. Used to calculate which slot to draw
+* `$79$: Variable 079` QS_draw_item_found_count - `number`. Inventory screen. Used to track the number of weapons/treasures found
+* `$80$: Variable 080` QS_draw_item_condition - `number`. Inventory screen. Used to calculate if this item has scrolled into view
+* `$81$: Variable 081` QS_equip_item_slot - `number`. Inventory screen. The slot of the item to equip
+* `$82$: Variable 082` QS_equip_item_identified - `number`. Inventory screen. The found item in the item list
+* `$83$: Variable 083` QS_equip_item_found_count - `number`. Inventory screen. Used to track the number of weapons/treasures found
+* `$84$: Variable 084` QS_equip_item_found_flag - `number`. Inventory screen. Flag to set when item is found in item list
+* `$85$: Variable 085` QS_can_scroll - `number`. Inventory screen. Used to calculate to weapon/treasure offset
+* `$86$: Variable 086` world_map_warp_flag - `number`. World map. Set when the player uses the compass to warp
+* `$87$: Variable 087` Scene has_paid - `bool`. represents Zelda has paid for an item
+* `$88$: Variable 088` Scene L7 - animate_tiles2 - `number`. (replace local scene variable with global variable)
+* `$89$: Variable 089` Scene L7 - animate_tiles3 - `number`. (replace local scene variable with global variable)
+* `$90$: Variable 090` Scene L7 - animate_tiles4 - `number`. (replace local scene variable with global variable)
+* `$91$: Variable 091` Menu Choice - `number`. represents player's menu choice
+* `$100$: Variable 100` Earth Shrine Flags - `word`.
   * (Flag 1 is the Earth Shrine Map)
   * (Flag 2 is the Earth Shrine Compass)
   * (Flag 3 represents Zelda has used the ladder)
@@ -227,12 +300,11 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents the (first) Red Sardak has given his speech)
   * (Flag 15 represents the (second) Blue Sardak has given his speech)
   * (Flag 16 represents the (third) Yellow Sardak has given his speech)
-* `$23$: Variable 023` Zelda Direction - `number`. (Stores Zelda's direction between scenes)
-* `$24$: Variable 024` ZA Engine Flags - `word`.
-  * (Flag 1 extend the spell reference sprite search to include region `0x8800`-`0x8FFF`. Causes slow scene load - use with caution!)
-  * (Flag 2 represents all Treasures enabled in Debug)
-  * (Flag 3 represents all Weapons enabled in Debug)
-  * (Flag 4 represents open doors on touch flag is enabled in Debug)
+* `$101$: Variable 101` More Earth Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
   * (Flag 5 is ???)
   * (Flag 6 is ???)
   * (Flag 7 is ???)
@@ -245,7 +317,7 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$25$: Variable 025` Illusion Shrine Flags - `word`.
+* `$102$: Variable 102` Illusion Shrine Flags - `word`.
   * (Flag 1 is the Illusion Shrine Map)
   * (Flag 2 is the Illusion Shrine Compass)
   * (Flag 3 represents Zelda has placed the Orb on the pedestal)
@@ -262,7 +334,24 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$26$: Variable 026` Air Shrine Flags - `word`.
+* `$103$: Variable 103` More Illusion Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$104$: Variable 104` Air Shrine Flags - `word`.
   * (Flag 1 is the Air Shrine Map)
   * (Flag 2 is the Air Shrine Compass)
   * (Flag 3 represents Zelda has defeated the 1st Vapora)
@@ -279,10 +368,27 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$27$: Variable 027` Destiny Shrine Flags - `word`.
+* `$105$: Variable 105` More Air Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$106$: Variable 106` Destiny Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
-  * (Flag 3 represents Zelda has activated a switch)
+  * ~~(Flag 3 represents Zelda has activated a switch)~~
   * (Flag 4 represents Malmord has given her third speech)
   * (Flag 5 represents Zelda has defeated Malmord)
   * (Flag 6 represents Zelda has collected the heart piece)
@@ -296,7 +402,24 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 is ???)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$28$: Variable 028` Water Shrine Flags - `word`.
+* `$107$: Variable 107` More Destiny Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$108$: Variable 108` Water Shrine Flags - `word`.
   * (Flag 1 is the Destiny Shrine Map)
   * (Flag 2 is the Destiny Shrine Compass)
   * (Flag 3 represents Zelda has used the plank)
@@ -313,7 +436,24 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents Zelda has collected the celestial sign)
   * (Flag 15 is ???)
   * (Flag 16 is ???)
-* `$29$: Variable 029` Strength Shrine Flags - `word`.
+* `$109$: Variable 109` More Water Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$110$: Variable 110` Strength Shrine Flags - `word`.
   * (Flag 1 is the Strength Shrine Map)
   * (Flag 2 is the Strength Shrine Compass)
   * (Flag 3 represents Zelda has spoken to the thirsty child)
@@ -330,7 +470,24 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents Zelda has collected the heart piece)
   * (Flag 15 represents Ursore has given his first speech)
   * (Flag 16 represents the red knight has given his speech)
-* `$29$: Variable 029` Fire Shrine Flags - `word`.
+* `$111$: Variable 111` More Strength Shrine Flags - `word`.
+  * (Flag 1 represents Ursore has given his second speech)
+  * (Flag 2 represents the blue knight has given his speech)
+  * (Flag 3 represents the green knight has given his speech)
+  * (Flag 4 represents Ursore has given his third speech)
+  * (Flag 5 represents Zelda has collected the celestial sign)
+  * (Flag 6 is ???)
+  * (Flag 7 is ???)
+  * (Flag 8 is ???)
+  * (Flag 9 is ???)
+  * (Flag 10 is ???)
+  * (Flag 11 is ???)
+  * (Flag 12 is ???)
+  * (Flag 13 is ???)
+  * (Flag 14 is ???)
+  * (Flag 15 is ???)
+  * (Flag 16 is ???)
+* `$112$: Variable 112` Fire Shrine Flags - `word`.
   * (Flag 1 is the Fire Shrine Map)
   * (Flag 2 is the Fire Shrine Compass)
   * (Flag 3 represents Zelda has unlocked the first door)
@@ -347,12 +504,12 @@ A listing of variables used in GB Studio and their types.
   * (Flag 14 represents the second blacksmith has given his speech)
   * (Flag 15 represents Zelda has collected the celestial sign)
   * (Flag 16 is ???)
-* `$29$: Variable 029` More Strength Shrine Flags - `word`.
-  * (Flag 1 represents Ursore has given his second speech)
-  * (Flag 2 represents the blue knight has given his speech)
-  * (Flag 3 represents the green knight has given his speech)
-  * (Flag 4 represents Ursore has given his third speech)
-  * (Flag 5 represents Zelda has collected the celestial sign)
+* `$113$: Variable 113` More Fire Shrine Flags - `word`.
+  * (Flag 1 is ???)
+  * (Flag 2 is ???)
+  * (Flag 3 is ???)
+  * (Flag 4 is ???)
+  * (Flag 5 is ???)
   * (Flag 6 is ???)
   * (Flag 7 is ???)
   * (Flag 8 is ???)
@@ -404,6 +561,7 @@ __Shock (!), Question (?), Love (❤), Pause (...), Anger (>_<), Sweat (O_O;), M
 ### NPCs
 - __Pause (...)__
   - Krebb after receiving the dagger spell
+  - Kron the pegleg
   - Lonlyn after giving Zelda rupees
 - __Music (♫)__
   - Yvonne singing
@@ -475,3 +633,19 @@ A list of features missing from the GB port which are present in the original.
 - Flying/jumping enemies should have a shadow
 - Enemy/boss reset on pause
 - Missing sound FX
+
+## Reducing sprite limits
+At this point in time I ran into the following error during compilation:
+
+`Your project contains too many unique variables and will not work as expected. VM_HEAP_SIZE defines the maximum amount of variables allowed 768 but your project contained 820 unique variables.`
+
+After some research, I understood the root cause was the total count (`MAX_GLOBAL_VARS` in build\src\include\data\game_globals.i) combines global and all local variables. To reduce the count, I moved as many local variables to global variables, as possible:
+
+1. I moved the scene init. variables into global variables (50-55) which reduced the total to __690__.
+2. I moved the enemy projectile and animated tiles local scene variables to global variables (56-57), reducing the count to __555__.
+3. I moved all the local enemy actor variables to global variables (58-74, and reusing enemy position variables: globals 25-38), which reduced the total count to __247__.
+4. I moved the collectable local variables to global variables (75), which reduced the total count to __155__.
+5. I moved the inventory local variables to global variables (76-85), which reduced the total count to __90__.
+6. Finally, I moved the shop owner/seller `has paid` local variable to a global variable (86), which reduced the total count to __87__.
+
+The final few `game_globals.i` from 84-87 are used for debug and menu flags in the title screen and for a single actor who has multiple dialogue options depending on what already's been said.

@@ -1,0 +1,100 @@
+{
+  "_resourceType": "actor",
+  "id": "8457711d-d1e4-45d6-bff7-752a5c3e3fd1",
+  "name": "barrier",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "9fc5ef08-f4ad-4766-98ee-805d59ca4a4c",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_985",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "8b23d010-a20e-4af0-b62d-b881f557576c"
+      },
+      "id": "60a597e1-c6ba-4459-85cb-ffd586c2264b"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Check all 3 Sardak's defeated",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "100",
+              "flag": 3,
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "100",
+                    "flag": 4,
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "100",
+                          "flag": 7,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_ACTOR_DEACTIVATE",
+                              "args": {
+                                "actorId": "$self$"
+                              },
+                              "id": "181726bc-2dd3-4a02-80ac-9bd8916706f2"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "4fdced0d-87ef-4bd2-99a2-f86ae02dc0b8"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "609e63a5-8934-44de-87e6-9ca972e56156"
+                }
+              ],
+              "false": []
+            },
+            "id": "0d128d83-f3be-49c4-b1c2-d117264d8ae4"
+          }
+        ]
+      },
+      "id": "aee96a61-fef0-41b1-913f-0785d07a71d9"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 2,
+  "_index": 4
+}

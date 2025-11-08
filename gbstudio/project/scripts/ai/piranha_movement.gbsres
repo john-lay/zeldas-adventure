@@ -1,0 +1,370 @@
+{
+  "_resourceType": "script",
+  "id": "ee92ffa9-0366-47a5-9fd5-ae7010d25115",
+  "name": "AI/Piranha Movement",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Pos X",
+      "passByReference": true
+    },
+    "V1": {
+      "id": "V1",
+      "name": "Pos Y",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Piranha"
+    }
+  },
+  "symbol": "script_72",
+  "script": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "0",
+        "vectorX": "V0",
+        "vectorY": "V1",
+        "__collapse": true
+      },
+      "id": "b3d2f0e7-1604-4721-990a-1c174cfcbee0"
+    },
+    {
+      "command": "EVENT_IF_VALUE",
+      "args": {
+        "variable": "V0",
+        "operator": "<=",
+        "comparator": 9,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Move right",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Right",
+                    "__collapse": true
+                  },
+                  "id": "ba7af4b6-e5a0-4dbe-8d6f-078d27d6952e"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "y": 0,
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": true
+                  },
+                  "id": "e2de30c4-4929-42c5-9f6d-96b0986b0252"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Jump Right",
+                    "__collapse": true
+                  },
+                  "id": "1be6a32e-9b47-40bc-a0ad-6b71bb907b17"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "18faa738-a0c1-4f7a-b076-94519be2c65a",
+                    "__collapse": true
+                  },
+                  "id": "f5ee8ab9-8228-4dc8-a44c-d41d36fb721f"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "b8eadb08-5da8-4d17-948a-2ed81fbcaff6"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": false
+                  },
+                  "id": "b9912367-0c6a-4caf-8623-22f052ab2d14"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "b5d8f04e-641c-4a7f-8b3f-40c8850d8038"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.1,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true
+                  },
+                  "id": "555e359d-aa2e-42bb-bb2f-0758077fc495"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "__collapse": true
+                  },
+                  "id": "1852c907-c50a-404f-bb6d-9117d0ed6185"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": false
+                  },
+                  "id": "0bf6ef3c-773b-46d2-b134-2bf1d28b30b2"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "d1cf9e52-eee3-47d5-96c9-49e9f5d3d2fa",
+                    "__collapse": true
+                  },
+                  "id": "65926472-3d76-4a79-b004-43e46ab0beae"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Right",
+                    "__collapse": true
+                  },
+                  "id": "24efa6bc-b425-4fe6-93bd-2ab52c5e574b"
+                }
+              ]
+            },
+            "id": "98b1c5f7-5eca-4a15-8eec-0a353330affd"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Move left",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Left",
+                    "__collapse": true
+                  },
+                  "id": "823e34d1-823d-4eb8-b42b-0be715cb90f9"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": -4
+                    },
+                    "y": 0,
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": true
+                  },
+                  "id": "eb11c5d8-3138-4fe6-8401-ae66d8ae6d85"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Jump Left",
+                    "__collapse": true
+                  },
+                  "id": "9dadfdc1-d0a6-4935-963b-5cb85e7d9cb0"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "18faa738-a0c1-4f7a-b076-94519be2c65a",
+                    "__collapse": true
+                  },
+                  "id": "954b0e60-235e-48aa-a8a6-7987da85cb3e"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "__collapse": true,
+                    "__comment": false
+                  },
+                  "id": "3fe4445e-3f6b-461b-af20-0960d258e2b0"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": false
+                  },
+                  "id": "7b27aed3-7c5d-4697-a095-07a24c54926f"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "__collapse": true
+                  },
+                  "id": "d5995271-2693-481f-95c9-e492a0d280ed"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.1,
+                    "frames": 30,
+                    "units": "time",
+                    "__collapse": true
+                  },
+                  "id": "a9ac8388-1eca-43f5-a51d-c1732da16119"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_FRAME",
+                  "args": {
+                    "actorId": "0",
+                    "frame": {
+                      "type": "number",
+                      "value": 2
+                    },
+                    "__collapse": true
+                  },
+                  "id": "bb98810b-aadd-43b0-b5b1-b89104ac720f"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "0",
+                    "x": {
+                      "type": "number",
+                      "value": -1
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 1
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": false
+                  },
+                  "id": "d3a20543-5555-41d7-9631-88776912a62a"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "d1cf9e52-eee3-47d5-96c9-49e9f5d3d2fa",
+                    "__collapse": true
+                  },
+                  "id": "1f602041-6490-41ff-88d3-c89169a97743"
+                },
+                {
+                  "command": "EVENT_ACTOR_SET_STATE",
+                  "args": {
+                    "actorId": "0",
+                    "spriteStateId": "Enemy - Piranha Left",
+                    "__collapse": true
+                  },
+                  "id": "98413b95-b011-4e90-b873-90ef478f77bc"
+                }
+              ]
+            },
+            "id": "1bea6128-3081-436d-8e84-403448e92a75"
+          }
+        ]
+      },
+      "id": "710167eb-4cf2-43d6-9812-ba09843febd0"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 1,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "eac1c85e-4c69-4405-bd68-2052f2622557"
+    }
+  ]
+}

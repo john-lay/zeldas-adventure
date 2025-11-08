@@ -1,0 +1,274 @@
+{
+  "_resourceType": "actor",
+  "id": "d94e02b4-cc7e-47c5-b912-ff741afbba47",
+  "name": "enemy1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1fc61a1a-4ce1-4d8e-9947-3ed53e25f9cc",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1189",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "60"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "d1d266f0-7173-4c3a-9a3a-561f42bcec57",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "61",
+        "value": {
+          "type": "number",
+          "value": 5
+        }
+      },
+      "id": "e0f7bd1e-4a1f-46a6-b87c-65a64f86400c",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_GET_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "vectorX": "25",
+        "vectorY": "26"
+      },
+      "id": "2f5b67bd-0c19-427e-b008-38f2ee1f611c"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bcba526f-cece-4979-8200-202b67eebd7d",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "25"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "26"
+        }
+      },
+      "id": "d5d0bf7a-061a-4843-b463-be1782870e61",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "61"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "62"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "88e8a113-3ae4-4f00-b732-ed894b9ab827",
+        "$actor[2]$": "708473df-8d82-422a-bb0d-f51843e6e010",
+        "$actor[0]$": "$self$"
+      },
+      "id": "58d41d02-614d-4498-947b-e2cd3979d5e1",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "61"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "ee4eb7f8-11e0-4719-ac6c-c92acf350182",
+            "children": {}
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Enable bow",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "17",
+                    "flag": 10,
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 11,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_FLAGS_COMPARE",
+                              "args": {
+                                "variable": "17",
+                                "flag": 12,
+                                "__collapseElse": true,
+                                "__disableElse": true
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_IF_FLAGS_COMPARE",
+                                    "args": {
+                                      "variable": "7",
+                                      "flag": 1,
+                                      "__collapseElse": false,
+                                      "__disableElse": false,
+                                      "__collapse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_COMMENT",
+                                          "args": {
+                                            "text": "Bow already collected",
+                                            "__collapse": true
+                                          },
+                                          "id": "a6acf98e-eaf0-41c4-bada-95685e125654"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_ACTOR_ACTIVATE",
+                                          "args": {
+                                            "actorId": "4ed23773-6556-4379-b8ad-2557c0b88df1"
+                                          },
+                                          "id": "84785d6a-8526-44fe-bd06-a5e2bbd23332"
+                                        }
+                                      ]
+                                    },
+                                    "id": "5b0bb136-4418-4033-b4df-29b87b75e65a"
+                                  }
+                                ],
+                                "false": []
+                              },
+                              "id": "5e0a85af-7088-44be-96a2-3ae980f17b1a"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "38b134e8-1893-4832-a09d-7c9242bde350"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "0b5ec225-4fe8-439a-861f-23fc5921820b"
+                }
+              ]
+            },
+            "id": "2bad5040-0475-4f64-a623-aea1b64098f0"
+          }
+        ],
+        "false": []
+      },
+      "id": "5f6ddf0a-211a-488f-974f-f1dacbe44184"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 10,
+  "_index": 3
+}

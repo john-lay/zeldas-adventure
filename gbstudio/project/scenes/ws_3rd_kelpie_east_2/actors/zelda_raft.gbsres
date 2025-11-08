@@ -1,0 +1,137 @@
+{
+  "_resourceType": "actor",
+  "id": "5e88f0b8-c9e3-40a1-864f-8d69bafac9e9",
+  "name": "Zelda raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "293bd966-b2ff-4f86-b85d-8f6b97548b39",
+  "prefabId": "",
+  "direction": "right",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1315",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false,
+        "__label": "Zelda's Sailing"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Zelda's sailing",
+              "__collapse": true
+            },
+            "id": "5b5d70e2-20b2-494a-a42c-aff5749923d8"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "62c8ec09-3b48-4da1-ac54-7016327e3723"
+          }
+        ]
+      },
+      "id": "6f8fde59-a2ec-4a96-a86b-96c589b335c4"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": 0,
+        "moveType": "horizontal",
+        "useCollisions": false,
+        "__collapse": false
+      },
+      "id": "9ac924f8-ca9c-476a-b690-6df4d031dd02"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": 0,
+        "y": {
+          "type": "number",
+          "value": 4
+        },
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": false
+      },
+      "id": "82a9fe3b-c3c2-4305-822a-eb71aa95f27f"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": {
+          "type": "number",
+          "value": 17
+        },
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8ef26ab4-0c78-4a57-863f-014b9155cde5"
+            },
+            "id": "14dbaa95-4fcf-49b4-81a1-e81fa62a9baa"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "f8a68d3a-6097-4f1e-b774-26ac4868d0e2",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "down",
+              "fadeSpeed": "2",
+              "__collapse": false
+            },
+            "id": "5fa9d755-5b75-4e23-9a73-fc808518c189"
+          }
+        ],
+        "false": []
+      },
+      "id": "96a1f941-bfe4-429e-83d7-87ac96ca9ebc"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 0,
+  "y": 13,
+  "_index": 1
+}

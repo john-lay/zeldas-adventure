@@ -1,0 +1,61 @@
+{
+  "_resourceType": "trigger",
+  "id": "830dd56c-aa5b-4573-9cb0-ce6d86aed6d7",
+  "name": "Treasures Left",
+  "prefabId": "",
+  "x": 1,
+  "y": 12,
+  "symbol": "trigger_3",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "6"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_DEC_VALUE",
+            "args": {
+              "variable": "6"
+            },
+            "id": "a6f921bd-bcb7-4acd-9225-d2f23dbc4702"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "67de1b27-f7c7-4f73-bb29-6f2bc3455f66"
+            },
+            "id": "0b10a7dd-8306-473f-b35e-0e5585a16bde"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "3e5061c3-03a4-4820-a3ec-d8447f99cbdf"
+            },
+            "id": "204db28b-0c88-4ec8-8095-8df326985a26"
+          }
+        ],
+        "false": []
+      },
+      "id": "7cf2fae2-44a6-4ff1-99ab-58a77469661d"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 2
+}

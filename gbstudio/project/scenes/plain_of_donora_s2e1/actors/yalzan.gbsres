@@ -1,0 +1,452 @@
+{
+  "_resourceType": "actor",
+  "id": "55aaabc7-c12a-4405-9bcb-365969d0ec70",
+  "name": "Yalzan",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "da210778-78ca-4b72-af1e-c588283e0bff",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_512",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "87",
+        "value": {
+          "type": "false"
+        },
+        "__collapse": true
+      },
+      "id": "b9cb675a-c2b6-484e-9137-970c66f39068"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 1,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Dix Rubis vous permet-\ntent de passer, jeune\ndemoiselle. Pas moins."
+              ],
+              "avatarId": ""
+            },
+            "id": "98bd9c60-b9ed-4859-a2c5-777cf2a3675e"
+          },
+          {
+            "id": "ea5800ba-cd65-4e98-88cd-a5d40e6bf5f0",
+            "command": "EVENT_CHOICE",
+            "args": {
+              "variable": "87",
+              "trueText": "Payer 10 Rubis",
+              "falseText": "Y'a pas moyen!",
+              "__collapse": false
+            }
+          }
+        ],
+        "true1": [],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ten Rupees gets you\nthrough the pass,\nyoung lady. No less."
+              ],
+              "avatarId": ""
+            },
+            "id": "c6d8bed2-841e-43bb-b38d-15ec0794b97b"
+          },
+          {
+            "id": "cca24258-1bd6-4379-bbe7-41cd8829587d",
+            "command": "EVENT_CHOICE",
+            "args": {
+              "variable": "87",
+              "trueText": "Pay 10 Rupees",
+              "falseText": "No way!",
+              "__collapse": false
+            }
+          }
+        ]
+      },
+      "id": "6a019035-5159-474c-a46b-4e5cb431077a"
+    },
+    {
+      "command": "EVENT_IF_TRUE",
+      "args": {
+        "variable": "87",
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "id": "c991595e-73e6-4225-8b2e-b92c0fca4f13",
+            "command": "EVENT_IF_VALUE",
+            "args": {
+              "variable": "2",
+              "operator": ">=",
+              "comparator": 10,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "2",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 10,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "bdb93c6b-cecb-4bfa-aeff-3e728562d3f2"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+                    "$variable[V0]$": {
+                      "type": "variable",
+                      "value": "2"
+                    },
+                    "$variable[V1]$": {
+                      "type": "variable",
+                      "value": "L1"
+                    },
+                    "$variable[V2]$": {
+                      "type": "variable",
+                      "value": "L2"
+                    },
+                    "__collapse": true
+                  },
+                  "id": "c36fdb52-0ee9-4a22-a3dc-239202bbd807"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "7cdd7a6f-fcd4-4b47-a47c-f9e6d2fb29fc",
+                    "__collapse": true
+                  },
+                  "id": "52404508-801d-4d09-9467-a7018b6f158a"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "56110a85-e0bc-49db-837c-5d1aab0c4ce8",
+                    "__collapse": true
+                  },
+                  "id": "36b97ee4-6352-44a0-8deb-39deef12ea7c"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "de9e65f7-5062-406e-8029-b36a475dec10",
+                    "__collapse": true
+                  },
+                  "id": "bc6af641-aca0-4fef-898d-b28a8df26324"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "23",
+                    "choices": 1,
+                    "__collapseCase0": false,
+                    "value0": 1,
+                    "__collapseCase1": false,
+                    "value1": 2,
+                    "__collapseCase2": false,
+                    "value2": 3,
+                    "__collapseCase3": false,
+                    "value3": 4,
+                    "__collapseCase4": false,
+                    "value4": 5,
+                    "__collapseCase5": false,
+                    "value5": 6,
+                    "__collapseCase6": false,
+                    "value6": 7,
+                    "__collapseCase7": false,
+                    "value7": 8,
+                    "__collapseCase8": false,
+                    "value8": 9,
+                    "__collapseCase9": false,
+                    "value9": 10,
+                    "__collapseCase10": false,
+                    "value10": 11,
+                    "__collapseCase11": false,
+                    "value11": 12,
+                    "__collapseCase12": false,
+                    "value12": 13,
+                    "__collapseCase13": false,
+                    "value13": 14,
+                    "__collapseCase14": false,
+                    "value14": 15,
+                    "__collapseCase15": false,
+                    "value15": 16,
+                    "__collapseElse": false,
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "id": "97653154-bf52-490b-98c6-8f017a586cd4",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Désolé, tu n'as pas\nassez de rubis. "
+                          ],
+                          "avatarId": ""
+                        }
+                      }
+                    ],
+                    "true1": [],
+                    "true2": [],
+                    "true3": [],
+                    "true4": [],
+                    "true5": [],
+                    "true6": [],
+                    "true7": [],
+                    "true8": [],
+                    "true9": [],
+                    "true10": [],
+                    "true11": [],
+                    "true12": [],
+                    "true13": [],
+                    "true14": [],
+                    "true15": [],
+                    "false": [
+                      {
+                        "id": "8001b5cd-d310-47d4-a9f6-6253b961cd21",
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Sorry, you don't \nhave enough rupees"
+                          ],
+                          "avatarId": ""
+                        }
+                      }
+                    ]
+                  },
+                  "id": "d867bae7-0633-4790-91f9-12b7a712ee17"
+                }
+              ]
+            }
+          }
+        ],
+        "false": []
+      },
+      "id": "637173bc-6189-4685-9fe7-a4392da9afd5"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+      "args": {
+        "actorId": "player",
+        "operation": "up",
+        "otherActorId": "$self$",
+        "__collapseElse": false,
+        "__comment": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 16
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              }
+            },
+            "id": "50499abf-0948-4a62-957e-7aed3dd2f702"
+          }
+        ],
+        "false": []
+      },
+      "id": "7e693d67-53a0-402b-900f-4c9be7867af5"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gte",
+          "valueA": {
+            "type": "variable",
+            "value": "13"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 10
+          }
+        },
+        "__collapseElse": false,
+        "__comment": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Do nothing, Zelda's entering from Vendross",
+              "__collapse": true
+            },
+            "id": "9d4dfc52-433a-44e5-9a1e-6f9741a8b9fd"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 16
+              },
+              "y": {
+                "type": "number",
+                "value": 8
+              }
+            },
+            "id": "a9b319f7-b4e0-42dd-9a26-d4f61848f38b"
+          }
+        ]
+      },
+      "id": "9fd75f8a-4a98-482b-b8dd-b723d9206609"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 16
+        },
+        "y": {
+          "type": "number",
+          "value": 8
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__comment": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+            "args": {
+              "actorId": "player",
+              "operation": "down",
+              "otherActorId": "$self$",
+              "__collapseElse": false,
+              "__comment": false,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_ACTOR_SET_POSITION",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 16
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 11
+                    }
+                  },
+                  "id": "a356ada7-3663-4001-9cba-4aadcb05ddb7"
+                }
+              ],
+              "false": []
+            },
+            "id": "b4147b6a-d9ab-45ab-aa5c-c025dde4bd30"
+          }
+        ],
+        "false": []
+      },
+      "id": "126b01e3-53ba-4c41-bee5-92a06d39bcc1"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 16,
+  "y": 11,
+  "_index": 1
+}

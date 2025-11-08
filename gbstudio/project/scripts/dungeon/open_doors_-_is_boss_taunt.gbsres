@@ -1,0 +1,119 @@
+{
+  "_resourceType": "script",
+  "id": "d89e8001-c143-406f-920e-b0b8d3233f55",
+  "name": "Dungeon/Open Doors - IS Boss Taunt",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_90",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "7cdd7a6f-fcd4-4b47-a47c-f9e6d2fb29fc",
+        "__collapse": true
+      },
+      "id": "b230ee5a-5683-4241-816e-7e293d681891"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "East Door",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 0
+              },
+              "__collapse": false
+            },
+            "id": "96d5c95f-d786-4490-83a7-ade7e45de6ad"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 19
+              },
+              "y": {
+                "type": "number",
+                "value": 11
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 1
+              },
+              "__collapse": false
+            },
+            "id": "75de389d-ae45-404b-a5b7-12eb2cc2d5bd"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 18
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 2
+              },
+              "__collapse": false
+            },
+            "id": "438dc4d6-2d9f-4698-9c2f-0efc2a3e4916"
+          },
+          {
+            "command": "EVENT_REPLACE_TILE_XY",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 19
+              },
+              "y": {
+                "type": "number",
+                "value": 12
+              },
+              "tilesetId": "58fba6b0-2931-44fe-96e7-b8fb691666a1",
+              "tileIndex": {
+                "type": "number",
+                "value": 3
+              },
+              "__collapse": false
+            },
+            "id": "f66beb38-f3df-4359-a6f8-21b457c17867"
+          }
+        ]
+      },
+      "id": "15c552d5-8b85-4f6e-9713-2e5ff05e9770"
+    },
+    {
+      "command": "EVENT_ENGINE_FIELD_SET",
+      "args": {
+        "engineFieldKey": "solid_ladders",
+        "__collapse": false
+      },
+      "id": "22c9ad93-6b38-4609-bd12-87cdfd24defd"
+    }
+  ]
+}

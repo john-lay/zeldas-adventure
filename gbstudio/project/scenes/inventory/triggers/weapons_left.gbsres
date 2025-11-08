@@ -1,0 +1,61 @@
+{
+  "_resourceType": "trigger",
+  "id": "fd5ad467-6f87-414d-b3ad-649430fed29b",
+  "name": "Weapons Left",
+  "prefabId": "",
+  "x": 1,
+  "y": 16,
+  "symbol": "trigger_5",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "4"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_DEC_VALUE",
+            "args": {
+              "variable": "4"
+            },
+            "id": "f46b03e9-541b-4535-b630-9b40807bda3a"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "44814647-78b4-46e7-ae14-d0fcb4167d50"
+            },
+            "id": "3525d16a-10d5-4ea2-b332-3ffaba141e7b"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "3e5061c3-03a4-4820-a3ec-d8447f99cbdf"
+            },
+            "id": "9e2205db-0f49-457a-93c2-e1268f4e8f29"
+          }
+        ],
+        "false": []
+      },
+      "id": "17ad9a45-d3ff-4d74-a4b0-548db5dd35f8"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 4
+}
