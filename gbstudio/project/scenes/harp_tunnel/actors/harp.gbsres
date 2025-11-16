@@ -1,0 +1,176 @@
+{
+  "_resourceType": "actor",
+  "id": "1e8d3f8d-b648-451a-8dc3-db447430faa3",
+  "name": "Harp",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1e326c1f-ae68-4d54-adda-4c8e922a6175",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_342",
+  "script": [
+    {
+      "id": "ae223693-adba-49bb-9a13-47e447022ccf",
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "9",
+        "flag1": true,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "__collapse": true,
+        "flag13": false,
+        "flag11": false
+      }
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$",
+        "__collapse": true
+      },
+      "id": "e240aaa9-1ca7-4a84-b00d-95b1a58e4f3b"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33"
+      },
+      "id": "63fa20cf-7c7b-45f8-a478-24d80a6d77ee"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 1,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Tu as obtenu le trésor\nde la Harpe! Tu peux te",
+                "téléporter à l'entrée\nd'un donjon."
+              ],
+              "avatarId": ""
+            },
+            "id": "7984263b-28c4-474c-a845-49b7aa7f4b27"
+          }
+        ],
+        "true1": [],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You've got the Harp\ntreasure! You can warp\nto a dungeon entrance."
+              ],
+              "avatarId": ""
+            },
+            "id": "12b2dbea-1a4a-4a4f-96d1-9b3ad3462be6"
+          }
+        ]
+      },
+      "id": "894d7d3b-044f-4c39-be07-7b2a98b58d1d"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "9",
+        "flag": 0,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has Collected harp",
+              "__collapse": true
+            },
+            "id": "63342c50-0b25-44ba-8af6-7b2d07a23cbe"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "c0456d1b-bc9e-4d31-ab68-bd7f925ae11d"
+          }
+        ],
+        "false": []
+      },
+      "id": "c763cb4a-2f59-42a2-8631-3bcdccff454e"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 5,
+  "_index": 1
+}

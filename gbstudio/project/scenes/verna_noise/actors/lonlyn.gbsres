@@ -1,0 +1,245 @@
+{
+  "_resourceType": "actor",
+  "id": "0f426db0-7693-41eb-805a-15c5175c99e9",
+  "name": "Lonlyn",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "541187e0-54ab-4b6c-99f2-9d509177d37c",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1704",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 10,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has spoken with Lonlyn",
+              "__collapse": true
+            },
+            "id": "10d9a5e9-5503-45db-bb0b-7c521b7b66bf"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba",
+              "__collapse": true
+            },
+            "id": "b06a4cf7-61c7-4e4a-b2d4-b2a5f26ab876"
+          },
+          {
+            "command": "EVENT_ACTOR_EMOTE",
+            "args": {
+              "actorId": "$self$",
+              "emoteId": "d508e529-57eb-458b-9782-66f318243c32",
+              "__collapse": true
+            },
+            "id": "7e6bc266-def9-4e06-8cde-5259439bc50d"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 1,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Salutations ! Je suis\nLonlyn, et je suis un\nfermier. J'ai entendu",
+                      "parler de vous et de\nvotre quête. Je suis\nun homme avec peu",
+                      "d'argent, mais tout ce\nque j'ai, je vous le\ndonne!"
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "a813348e-fb99-466f-8b4f-ff066c0592cd"
+                }
+              ],
+              "true1": [],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Greetings! I am Lonlyn,\nand I am a farmer. I\nhave heard of you and",
+                      "your quest. I am a man\nof little wealth, but all\nthat I have I give you!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "3e73c23e-a8ae-4878-accf-0edef746e263"
+                }
+              ]
+            },
+            "id": "183720fc-bb7d-4009-b0a5-b201057f4c79"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "52de343a-a175-46cb-b68b-e225c548ae02",
+              "__collapse": true
+            },
+            "id": "d6aca26e-e588-4217-9855-8292f4c47e53"
+          },
+          {
+            "command": "EVENT_VARIABLE_MATH",
+            "args": {
+              "vectorX": "2",
+              "operation": "add",
+              "other": "val",
+              "vectorY": "V0",
+              "value": 25,
+              "minValue": "0",
+              "maxValue": "32767",
+              "clamp": false,
+              "__collapse": true
+            },
+            "id": "f60b2253-aca4-405c-a9a0-ecef8bbd2be6"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              }
+            },
+            "id": "03c329c6-1740-4295-85da-bd78ba8524d6"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "11",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": true,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "f57f79b5-db39-44e8-b5ef-a526c316b911"
+          }
+        ]
+      },
+      "id": "1d62c2b6-815b-456f-94eb-868cc2c45181"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 13,
+        "__collapseElse": false,
+        "__disableElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has collected the Noise spell",
+              "__collapse": true
+            },
+            "id": "8f24a52d-6cb4-46b4-b0f8-be6b59b53612"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "7baf2091-e4af-4c45-85fe-a30f92c11f45"
+          }
+        ]
+      },
+      "id": "4dccd2d4-3ea3-4624-b280-2745dd19dcbe"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 12,
+  "y": 12,
+  "_index": 1
+}
