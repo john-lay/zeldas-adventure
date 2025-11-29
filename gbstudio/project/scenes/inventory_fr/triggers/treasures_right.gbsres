@@ -1,0 +1,124 @@
+{
+  "_resourceType": "trigger",
+  "id": "446f8146-eef0-427f-9264-8cc06f4caecb",
+  "name": "Treasures Right",
+  "prefabId": "",
+  "x": 16,
+  "y": 12,
+  "symbol": "trigger_47",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "treas. found = $05$\nscroll offset = $06$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__comment": true
+      },
+      "id": "51e4f010-f017-4674-b655-bbaa593d1917"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "85",
+        "value": {
+          "type": "expression",
+          "value": "$05$ - $06$"
+        }
+      },
+      "id": "8705a039-0abc-42ec-8170-ec812afc5198"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "can scroll = $85$"
+        ],
+        "__section": "text",
+        "avatarId": "",
+        "minHeight": 4,
+        "maxHeight": 7,
+        "textX": 1,
+        "textY": 1,
+        "textHeight": 5,
+        "position": "bottom",
+        "clearPrevious": true,
+        "showFrame": "true",
+        "speedIn": -1,
+        "speedOut": -1,
+        "closeWhen": "key",
+        "closeButton": "a",
+        "closeDelayTime": 0.5,
+        "closeDelayFrames": 30,
+        "__comment": true
+      },
+      "id": "a8a7333f-2b3b-48e3-a85c-da2853790a11"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "gt",
+          "valueA": {
+            "type": "variable",
+            "value": "85"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 6
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_INC_VALUE",
+            "args": {
+              "variable": "6"
+            },
+            "id": "ffc9c51b-fe3a-48d9-9557-142bf895593b"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "67de1b27-f7c7-4f73-bb29-6f2bc3455f66"
+            },
+            "id": "0aff2f69-93c7-49b4-944c-4822d72989ba"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "3e5061c3-03a4-4820-a3ec-d8447f99cbdf"
+            },
+            "id": "1417462d-d127-4947-b334-dbe143cd2395"
+          }
+        ],
+        "false": []
+      },
+      "id": "bbaed2f8-4ded-4a5d-98da-6fca0df8932d"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 3
+}
