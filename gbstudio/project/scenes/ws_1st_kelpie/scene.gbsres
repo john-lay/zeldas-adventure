@@ -1,0 +1,474 @@
+{
+  "_resourceType": "scene",
+  "id": "b9e70efd-47df-4f92-ac2d-f3c6ecb48316",
+  "_index": 93,
+  "name": "WS 1st Kelpie",
+  "backgroundId": "e5f0f95c-3eb1-4da0-8c8e-ef15a538a37d",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "paletteIds": [
+    "0753b752-9775-41d8-9ff5-3cdff5ef13e2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "ff572a7d-db8f-4fc2-b0ff-784ad4d32479",
+    "000998fb-33a5-417e-b2cf-8f2def7baa72",
+    "4dc5d766-6ee7-411b-89e7-8f9da52bc81b",
+    "d719df77-3f39-401e-a317-920d9f173fd8",
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "77762eab-8ff3-40a7-896a-31630623ff57",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "9a6093f8-2c39-4efa-a4ec-edd1daf35e7d",
+    "0d8f7f80-a57f-4155-9b8b-b52636dd78fd",
+    "5810d571-6df9-46a0-b890-905bf3be1dfe"
+  ],
+  "collisions": "002b+0f!007+0f!00b+0f!007+0f!00!0f5+005+0f!007+0f2+005+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!00e+0f!004+0f!0014+0f!002+0f4+00e+0f2+004+0f!006+0f!00c+0f!006+0f!00b+0f!007+0f!00a+0f!002+0f2+002+0f2+00c+0f2+00!0f!00!0f!0012+0f!002d+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_270",
+  "x": 3424,
+  "y": 6944,
+  "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
+      },
+      "id": "8ac8df9f-e1c0-4018-9450-f19e83d96e7f"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Swap tiles",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "211b4336-a1ec-4956-b9db-2dbe3357f2f2"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "2a100049-a97c-4f49-8c43-c029222b19e6"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "equippedValue": {
+                "type": "variable",
+                "value": "10"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "2525b9a6-8f90-4ed6-a503-9be67d68f3eb"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "5f7c2a0e-409f-4f7a-b010-892b2a7d6501"
+                }
+              ],
+              "false": []
+            },
+            "id": "5a8afc11-f7fb-4051-ae78-26283b50eeca"
+          }
+        ]
+      },
+      "id": "8f9b05bd-c83b-40ef-8f80-3ff239e5537e"
+    },
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.4,
+        "frames": 30,
+        "__scriptTabs": "end",
+        "__collapse": true,
+        "__label": "Animated Water"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 11
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
+              "tileIndex": {
+                "type": "number",
+                "value": 4
+              },
+              "frames": {
+                "type": "number",
+                "value": 4
+              },
+              "variable": "57"
+            },
+            "id": "21489c0b-6738-4eef-86c8-9c4e4d8f4190"
+          }
+        ]
+      },
+      "id": "b34d8f91-7e19-48e6-8bf2-7d53183df35a"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+              "__comment": false,
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              }
+            },
+            "id": "aadfcb5b-d3d3-4bd4-81f4-9867aad1cf56"
+          }
+        ]
+      },
+      "id": "315835a0-f620-4a5e-8335-3a3e65350bbb"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "f8741854-6ec6-4f2e-9ae9-dce4cf0ba765",
+              "$actor[1]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[2]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[3]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[4]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[5]$": "07cef930-4d2c-422f-8d05-b3cdcd14fd1f"
+            },
+            "id": "cf8b8a1f-6f86-4623-8eff-5a730a195dba"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
+            },
+            "id": "71bb7467-112d-4027-83d5-b3c0e4a552d2"
+          }
+        ]
+      },
+      "id": "4d87324e-ff32-4bd3-8228-e6cf8403f0a7"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": false,
+        "__scriptTabs": "press",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "f8741854-6ec6-4f2e-9ae9-dce4cf0ba765",
+              "$actor[1]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[2]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[3]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[4]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[5]$": "07cef930-4d2c-422f-8d05-b3cdcd14fd1f"
+            },
+            "id": "5748cf2f-5074-4d82-b50f-2b24b99890c3"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "099e4f92-ab19-4795-8ae2-c8c4b433bf8a"
+            },
+            "id": "b75dee41-94ba-4de4-a70e-834232f1dd0e"
+          }
+        ]
+      },
+      "id": "96ddc6b4-5558-4cdb-b2d8-c9eb6185806a"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Combat",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "58",
+              "value": {
+                "type": "number",
+                "value": 3
+              },
+              "__comment": false
+            },
+            "id": "06c429c2-2e75-4abd-9f4a-7ab5fa792f79",
+            "children": {}
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "154cfce4-919a-4c61-80be-4b53949794e2",
+              "$actor[0]$": "f8741854-6ec6-4f2e-9ae9-dce4cf0ba765",
+              "$actor[1]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[2]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[3]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[4]$": "bc094eaf-f074-4af3-a988-d115e3f92b29",
+              "$actor[5]$": "07cef930-4d2c-422f-8d05-b3cdcd14fd1f"
+            },
+            "id": "7268c5da-dce6-4ba9-87d9-01fb63310af7"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "45",
+              "value": {
+                "type": "number",
+                "value": -1
+              }
+            },
+            "id": "ef0c4b61-64f8-4451-be87-f8531bf5e6a6"
+          }
+        ]
+      },
+      "id": "f918e4f6-0d4b-4be4-ba5d-cf7193af9432"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "108",
+        "flag": 8,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "1st Kelpie has given her speech",
+              "__collapse": true
+            },
+            "id": "058cbe21-355d-4caf-a934-7d13380db72c"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 1,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Je suis le Kelpie du\nNord! C'est un honneur\npour moi de combattre",
+                      "pour ma maîtresse,\nla grande Agwanda!"
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "d5877eaf-d935-4989-8c29-2f9f339f9da3"
+                }
+              ],
+              "true1": [],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "I am the North Kelpie!\nIt is my honor to fight",
+                      "you for my mistress,\nthe great Agwanda!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "0d680958-3b9f-4f63-82d0-0e35ab5fc823"
+                }
+              ]
+            },
+            "id": "936c4516-bf3b-44e5-875f-95024bd89015"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "108",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": true,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "f0c711ec-e756-42f8-a709-4df68b7e982f"
+          }
+        ]
+      },
+      "id": "d19beaf9-966b-4d28-bbd9-ce2eeebde029"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

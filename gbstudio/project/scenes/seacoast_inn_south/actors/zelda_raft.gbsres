@@ -1,0 +1,96 @@
+{
+  "_resourceType": "actor",
+  "id": "388ddeae-d840-4de1-ae3d-f225b080f3c7",
+  "name": "Zelda raft",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "293bd966-b2ff-4f86-b85d-8f6b97548b39",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_717",
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "72bec71d-1cec-44b7-a415-2eefd6b10acb"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": 0,
+        "moveType": "horizontal",
+        "useCollisions": false
+      },
+      "id": "18494f4b-34fc-473c-bcdf-cdbb0f4f497f"
+    },
+    {
+      "command": "EVENT_IF_ACTOR_AT_POSITION",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 18
+        },
+        "y": {
+          "type": "number",
+          "value": 16
+        },
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "97b7d334-ff1e-4e07-9c1d-ae08d3d20cc8"
+            },
+            "id": "afc6bb4f-a29f-4dfd-8ee9-3e9e38c484a9"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "043ebfe5-ac6b-447a-93da-8f20be74e95a",
+              "x": {
+                "type": "number",
+                "value": 2
+              },
+              "y": {
+                "type": "number",
+                "value": 16
+              },
+              "direction": "right",
+              "fadeSpeed": "2"
+            },
+            "id": "b8cb3567-ce65-46c3-8e60-e6bc6ab1a5dd"
+          }
+        ],
+        "false": []
+      },
+      "id": "48e99480-7714-46a6-b7b2-a99914607fb4"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 9,
+  "y": 16,
+  "_index": 5
+}

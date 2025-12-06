@@ -1,0 +1,134 @@
+{
+  "_resourceType": "actor",
+  "id": "54870d91-4aac-45f2-975e-953e9d7230a9",
+  "name": "Old Sailor",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "a13ed15a-9d92-47d7-86ea-2df04b4ec6ff",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_589",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e7bd46a8-b50a-4d56-a4ad-77aa505dc670",
+        "__collapse": true
+      },
+      "id": "6d10a83e-be42-4800-b351-649247257a2e"
+    },
+    {
+      "command": "EVENT_VARIABLE_MATH",
+      "args": {
+        "vectorX": "2",
+        "operation": "sub",
+        "other": "val",
+        "vectorY": "16",
+        "value": 25,
+        "minValue": "0",
+        "maxValue": "32767",
+        "clamp": false,
+        "__collapse": true
+      },
+      "id": "6c3da640-d19b-4c9c-90dd-134fa8c0d34b"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Player blink",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "player",
+              "__collapse": true
+            },
+            "id": "3a813ee5-dd80-4939-b1d8-5057096d7fe1"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "29a63981-be0a-4969-9622-6627d3e0a5d8"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "player",
+              "__collapse": true
+            },
+            "id": "dcb6a421-ce29-4fb2-95fe-78226bdc6678"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "0cdf6f7b-1f0f-4cae-9ca7-ce78079b27a7"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "player",
+              "__collapse": true
+            },
+            "id": "722a2644-f63e-47b6-8fc3-dde227d6d666"
+          },
+          {
+            "command": "EVENT_WAIT",
+            "args": {
+              "time": 0.1,
+              "frames": 30,
+              "__collapse": true
+            },
+            "id": "bf5d55d6-18fe-4929-86be-44214de429b3"
+          },
+          {
+            "command": "EVENT_ACTOR_SHOW",
+            "args": {
+              "actorId": "player",
+              "__collapse": true
+            },
+            "id": "ea9afce7-85cc-4d73-b901-3ffe5a7dbad5"
+          }
+        ]
+      },
+      "id": "aba9df98-db14-4d3c-9588-85cf661409c7"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "2"
+        },
+        "__collapse": true
+      },
+      "id": "801c941c-8a46-4b3a-ae92-9e3ffc1779b3"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 6,
+  "_index": 1
+}
