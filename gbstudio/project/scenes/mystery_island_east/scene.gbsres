@@ -1,0 +1,308 @@
+{
+  "_resourceType": "scene",
+  "id": "2b49e8f0-b6b0-4974-bf68-f47cf00385d8",
+  "_index": 54,
+  "name": "Mystery Island East",
+  "backgroundId": "3c9aadc8-690f-47ee-9ca9-626aba20ec81",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "paletteIds": [
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "f229b5cc-93a3-40a1-86d9-b47b427c6301",
+    "000998fb-33a5-417e-b2cf-8f2def7baa72",
+    "cd27c087-78de-403f-b7ec-dff452c880db",
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "77762eab-8ff3-40a7-896a-31630623ff57",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "000998fb-33a5-417e-b2cf-8f2def7baa72",
+    "5810d571-6df9-46a0-b890-905bf3be1dfe"
+  ],
+  "collisions": "00168+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_368",
+  "x": 3424,
+  "y": 4064,
+  "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
+      },
+      "id": "220a75d3-c8f3-491f-b1ae-24fa6f1a9419"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Swap tiles",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "d1642dfe-1634-499f-be35-f67a685dd998"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "c6d447ad-dfdc-4756-b843-18473f11dd1d"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "equippedValue": {
+                "type": "variable",
+                "value": "10"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "36fe7430-3622-4379-98fe-6638da35fe0d"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "40eec0a4-6d6a-4980-a9ac-d478bf910fa0"
+                }
+              ],
+              "false": []
+            },
+            "id": "918e8c08-c98a-4dd0-b00c-37457de1a031"
+          }
+        ]
+      },
+      "id": "466401ec-35fa-4742-b541-4a6c66a34905"
+    },
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.4,
+        "frames": 30,
+        "__scriptTabs": "end",
+        "__collapse": true,
+        "__label": "Animated Water"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
+              "tileIndex": {
+                "type": "number",
+                "value": 4
+              },
+              "frames": {
+                "type": "number",
+                "value": 4
+              },
+              "variable": "88"
+            },
+            "id": "5bdf32f2-c50b-49b0-9cca-dc3ce1f282f6"
+          }
+        ]
+      },
+      "id": "eedfed85-d5bb-4574-a326-dc1092876b97"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 13,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true,
+              "__comment": false
+            },
+            "id": "3597371a-9a30-41a3-81fa-27c56975e90d"
+          },
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "left",
+                "up",
+                "down",
+                "right"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": true
+            },
+            "children": {
+              "true": []
+            },
+            "id": "be926ac8-6b80-4655-a4e8-919545d5550a"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "b"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+                    "__comment": false,
+                    "$variable[V0]$": {
+                      "type": "variable",
+                      "value": "L0"
+                    },
+                    "$variable[V1]$": {
+                      "type": "variable",
+                      "value": "L1"
+                    },
+                    "$variable[V2]$": {
+                      "type": "variable",
+                      "value": "L2"
+                    }
+                  },
+                  "id": "fc4ce742-ae44-42f7-9772-008a7de557f9"
+                }
+              ]
+            },
+            "id": "e382e150-429e-4c2a-821b-c15359e8d6ce"
+          },
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "start"
+              ],
+              "override": true,
+              "__scriptTabs": "press",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
+                  },
+                  "id": "690073e5-6b8c-44cb-9fa3-a5c6c063e3ca"
+                }
+              ]
+            },
+            "id": "0c1b4bbb-5f42-4951-86e2-02a20a96356c"
+          },
+          {
+            "command": "EVENT_SET_INPUT_SCRIPT",
+            "args": {
+              "input": [
+                "select"
+              ],
+              "override": false,
+              "__scriptTabs": "press",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "11dc352f-8faa-463b-97fa-9240e73a0db7"
+                  },
+                  "id": "b34a4773-d7fd-4959-bfc1-e493a3432e33"
+                }
+              ]
+            },
+            "id": "31ddd67d-f0e5-4d3b-84ad-10988bf59e3a"
+          }
+        ]
+      },
+      "id": "68e882a0-e23c-4068-8761-d99c7e67e044"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}
