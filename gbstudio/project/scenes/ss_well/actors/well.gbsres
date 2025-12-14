@@ -1,0 +1,212 @@
+{
+  "_resourceType": "actor",
+  "id": "160d7dfe-6b04-4a5e-b749-54827ebc7e6b",
+  "name": "Well",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "aece7b4d-4fc4-4144-a659-3b77def3c77f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1777",
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 7,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Gold Necklace collected",
+              "__collapse": true
+            },
+            "id": "550e4706-87ee-435b-8ffa-86eea4023ead"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "110",
+              "flag": 2,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Spoken to thirsty child",
+                    "__collapse": true
+                  },
+                  "id": "a97fb49d-1515-46e5-9149-2c4d0286194e"
+                },
+                {
+                  "command": "EVENT_SWITCH",
+                  "args": {
+                    "variable": "23",
+                    "choices": 2,
+                    "__collapseCase0": false,
+                    "value0": 1,
+                    "__collapseCase1": false,
+                    "value1": 2,
+                    "__collapseCase2": false,
+                    "value2": 3,
+                    "__collapseCase3": false,
+                    "value3": 4,
+                    "__collapseCase4": false,
+                    "value4": 5,
+                    "__collapseCase5": false,
+                    "value5": 6,
+                    "__collapseCase6": false,
+                    "value6": 7,
+                    "__collapseCase7": false,
+                    "value7": 8,
+                    "__collapseCase8": false,
+                    "value8": 9,
+                    "__collapseCase9": false,
+                    "value9": 10,
+                    "__collapseCase10": false,
+                    "value10": 11,
+                    "__collapseCase11": false,
+                    "value11": 12,
+                    "__collapseCase12": false,
+                    "value12": 13,
+                    "__collapseCase13": false,
+                    "value13": 14,
+                    "__collapseCase14": false,
+                    "value14": 15,
+                    "__collapseCase15": false,
+                    "value15": 16,
+                    "__collapseElse": false,
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true0": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Tu as bon cœur. Mon\ngardien t'a récompensé\navec un collier en or",
+                            "pour augmenter ta déf-\nense magique. Puisses-\ntu en faire bon usage!"
+                          ],
+                          "avatarId": "",
+                          "__collapse": false
+                        },
+                        "id": "39595e4a-6152-4d94-ad7e-eb35d703db28"
+                      }
+                    ],
+                    "true1": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "Du hast ein gütiges\nHerz. Mein Wächter\ngibt dir eine Goldkette,",
+                            "die deine magische\nVerteidigung stärkt.\nNutze sie sinnvoll!"
+                          ],
+                          "__section": "text",
+                          "avatarId": "",
+                          "minHeight": 4,
+                          "maxHeight": 7,
+                          "textX": 1,
+                          "textY": 1,
+                          "textHeight": 5,
+                          "position": "bottom",
+                          "clearPrevious": true,
+                          "showFrame": "true",
+                          "speedIn": -1,
+                          "speedOut": -1,
+                          "closeWhen": "key",
+                          "closeButton": "a",
+                          "closeDelayTime": 0.5,
+                          "closeDelayFrames": 30
+                        },
+                        "id": "b2a4725e-2719-48b8-9fc0-64de3d4beb93"
+                      }
+                    ],
+                    "true2": [],
+                    "true3": [],
+                    "true4": [],
+                    "true5": [],
+                    "true6": [],
+                    "true7": [],
+                    "true8": [],
+                    "true9": [],
+                    "true10": [],
+                    "true11": [],
+                    "true12": [],
+                    "true13": [],
+                    "true14": [],
+                    "true15": [],
+                    "false": [
+                      {
+                        "command": "EVENT_TEXT",
+                        "args": {
+                          "text": [
+                            "You have a kind heart.\nMy guardian's reward-\ned you with a Gold",
+                            "Necklace to increase\nyour magic defense.\nMay you use it well!"
+                          ],
+                          "avatarId": ""
+                        },
+                        "id": "f5ad16ef-81a6-4373-a35d-804a18dbb620"
+                      }
+                    ]
+                  },
+                  "id": "2ebe8774-2429-4e9e-bcc0-28ff7bf95cfd"
+                },
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                    "__collapse": true
+                  },
+                  "id": "9d39a408-9e0b-4163-a207-d128b5c1ab09"
+                },
+                {
+                  "command": "EVENT_ACTOR_ACTIVATE",
+                  "args": {
+                    "actorId": "b5e0d685-fef1-463a-bce4-86cf191e3c10"
+                  },
+                  "id": "7dce48d2-d580-40ed-b361-f4ed9e3c6f2e"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "786b4677-ed28-4323-a6b2-d11871c09bba",
+                    "__collapse": true
+                  },
+                  "id": "c26f88b9-aa17-4711-a8a0-491b17cfb6bf"
+                }
+              ]
+            },
+            "id": "28c19ea2-3301-4a02-9416-a30b5d24e6f3"
+          }
+        ]
+      },
+      "id": "29fb5add-ab20-494d-ba81-54f7b4af5145"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 6,
+  "_index": 3
+}

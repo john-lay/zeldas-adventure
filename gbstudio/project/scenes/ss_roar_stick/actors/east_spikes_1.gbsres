@@ -1,0 +1,66 @@
+{
+  "_resourceType": "actor",
+  "id": "ee32ee02-32b8-40a0-9507-59f92c6ba54f",
+  "name": "East spikes 1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1796",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "b991560d-8b5b-4609-ae0f-85f3dba7fa4b"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "110",
+        "flag": 6,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Switch flipped in room above",
+              "__collapse": true
+            },
+            "id": "100f2e24-1d2c-423f-965c-be841d97002a"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "08c6b825-b659-4a89-8a26-d4f97473ed28"
+          }
+        ],
+        "false": []
+      },
+      "id": "f1545bab-eab3-4ad6-be70-b9febacc5569"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 18,
+  "y": 8,
+  "_index": 5
+}
