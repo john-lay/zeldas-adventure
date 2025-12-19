@@ -1,0 +1,177 @@
+{
+  "_resourceType": "actor",
+  "id": "28c24542-89a7-42c6-83ca-6ff2c9afb772",
+  "name": "Thabul",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "71bce05d-a750-4c27-b506-980a91259f3f",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_855",
+  "script": [
+    {
+      "command": "EVENT_IF_ACTOR_RELATIVE_TO_ACTOR",
+      "args": {
+        "actorId": "player",
+        "operation": "right",
+        "otherActorId": "$self$",
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": {
+                "type": "direction",
+                "value": "right"
+              }
+            },
+            "id": "aee01931-1967-4649-ae20-074226347b21"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": {
+                "type": "direction",
+                "value": "left"
+              }
+            },
+            "id": "83d7d691-a52e-4772-8540-1734d8cea753"
+          }
+        ]
+      },
+      "id": "dfe9d660-6640-4bb9-9caa-4e9661fde303"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 2,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ce que tu recherches\nn'est pas de ce monde...\nmais d'au-delà!",
+                "Vaincre la femme de\nl'air. C'est à l'est que\ntu dois aller."
+              ],
+              "avatarId": ""
+            },
+            "id": "3f74a12c-2285-4a39-aa37-ae4b4e75f3aa"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Was du suchst, ist nicht\nvon dieser Welt...\nsondern jenseits davon!",
+                "Besiege die Frau der\nLüfte. Du musst nach\nOsten gehen."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "ca2bd3f0-967b-4e44-a8a4-29203ef607ce"
+          }
+        ],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Something you seek is\nnot of this world... but\nabove it!",
+                "Defeat the woman of\nthe air. It is to the\neast you must go."
+              ],
+              "avatarId": ""
+            },
+            "id": "5cc4c63e-c337-4e92-9497-55284f91410e"
+          }
+        ]
+      },
+      "id": "f6d337a5-9077-4bb6-b87a-847ee8d9d24f"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 6,
+  "y": 6,
+  "_index": 1
+}
