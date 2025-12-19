@@ -18,7 +18,7 @@
   "collisions": "",
   "autoFadeSpeed": 1,
   "symbol": "scene_370",
-  "x": 2544,
+  "x": 2720,
   "y": 216,
   "script": [
     {
@@ -103,26 +103,42 @@
             "children": {
               "true0": [
                 {
-                  "id": "e5c6cf24-74ed-4fa6-b4c1-c982b700e8d2",
-                  "command": "EVENT_CHOICE",
+                  "command": "EVENT_MENU",
                   "args": {
                     "variable": "91",
-                    "trueText": "Quitter",
-                    "falseText": "Ne pas sauvegarder",
-                    "__collapse": false
-                  }
+                    "items": 2,
+                    "option1": "Quitter",
+                    "option2": "Ne pas sauvegarder",
+                    "option3": "",
+                    "option4": "",
+                    "option5": "",
+                    "option6": "",
+                    "option7": "",
+                    "option8": "",
+                    "cancelOnB": false,
+                    "layout": "dialogue"
+                  },
+                  "id": "f3d8a6eb-f8bc-4932-8e23-1e1fa0ed1491"
                 }
               ],
               "true1": [
                 {
-                  "id": "a7b845ca-9907-486f-abf8-7069b29ac664",
-                  "command": "EVENT_CHOICE",
+                  "command": "EVENT_MENU",
                   "args": {
                     "variable": "91",
-                    "trueText": "Speichern & Ende",
-                    "falseText": "Ende (Nicht speichern)",
-                    "__collapse": false
-                  }
+                    "items": 2,
+                    "option1": "Speichern & Ende",
+                    "option2": "Ende (Nicht speichern)",
+                    "option3": "",
+                    "option4": "",
+                    "option5": "",
+                    "option6": "",
+                    "option7": "",
+                    "option8": "",
+                    "cancelOnB": false,
+                    "layout": "dialogue"
+                  },
+                  "id": "787026bd-7a6d-423d-806b-0edb26053b27"
                 }
               ],
               "true2": [],
@@ -149,19 +165,44 @@
                     "falseText": "Quit (No Save)",
                     "__collapse": false
                   }
+                },
+                {
+                  "command": "EVENT_MENU",
+                  "args": {
+                    "variable": "91",
+                    "items": 2,
+                    "option1": "Save & Quit",
+                    "option2": "Quit (No Save)",
+                    "option3": "",
+                    "option4": "",
+                    "option5": "",
+                    "option6": "",
+                    "option7": "",
+                    "option8": "",
+                    "cancelOnB": false,
+                    "layout": "dialogue"
+                  },
+                  "id": "dd9bf71f-2fc6-4fad-a2f8-f5e765f8b010"
                 }
               ]
             },
             "id": "6b87c086-fa81-485b-9b5f-281e413dbf43"
           },
           {
-            "id": "7d0c56a7-9029-4a1d-9b86-814c29e33351",
-            "command": "EVENT_IF_TRUE",
+            "command": "EVENT_IF",
             "args": {
-              "variable": "91",
-              "__collapse": false,
-              "__collapseElse": false,
-              "__label": "New Game"
+              "condition": {
+                "type": "eq",
+                "valueA": {
+                  "type": "variable",
+                  "value": "91"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 1
+                }
+              },
+              "__collapseElse": false
             },
             "children": {
               "true": [
@@ -245,7 +286,8 @@
                   "id": "7d5d0fa8-3abd-4a88-be24-19a530de1546"
                 }
               ]
-            }
+            },
+            "id": "6fa7c116-8b8e-4e1e-a49d-1e1fc00d93bc"
           }
         ]
       }
