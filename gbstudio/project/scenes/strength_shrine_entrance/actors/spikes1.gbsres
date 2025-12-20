@@ -1,0 +1,66 @@
+{
+  "_resourceType": "actor",
+  "id": "2c12f0bd-1a36-4284-8c11-308b16768997",
+  "name": "spikes1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_919",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "2b176aa5-8106-4ba3-8086-1ac3fde97465"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 4,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Water Shrine",
+              "__collapse": false
+            },
+            "id": "36f6b3e4-3933-42c9-ac04-6962aab0e03c"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "05fbbb15-abfc-4371-9416-ac6f9b09a25f"
+          }
+        ],
+        "false": []
+      },
+      "id": "a74e47c8-9bcb-46cf-9f79-e690d58502aa"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 16,
+  "y": 9,
+  "_index": 1
+}

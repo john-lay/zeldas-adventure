@@ -1,0 +1,226 @@
+{
+  "_resourceType": "scene",
+  "id": "22397838-4436-449e-b71e-f70fa990b38d",
+  "_index": 187,
+  "name": "Canvula Shop SE",
+  "backgroundId": "db4099dc-df27-4bc0-a533-3fc5fecebf87",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "paletteIds": [
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "000998fb-33a5-417e-b2cf-8f2def7baa72",
+    "cd27c087-78de-403f-b7ec-dff452c880db",
+    "f229b5cc-93a3-40a1-86d9-b47b427c6301",
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "77762eab-8ff3-40a7-896a-31630623ff57",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "default-sprite",
+    "default-sprite",
+    "default-sprite",
+    "",
+    "",
+    "5810d571-6df9-46a0-b890-905bf3be1dfe"
+  ],
+  "collisions": "0029+0f!004+0f!0013+0f!0013+0f!0013+0f!0013+0f!0013+0f!0013+0f4+0014+0f!0013+0f!0013+0f4+0014+0f!0013+0f!0013+0f!0013+0f!0013+0f!0019+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_133",
+  "x": 960,
+  "y": 2144,
+  "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
+      },
+      "id": "fc247f5f-7160-4548-97fe-28399fef3185"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Swap tiles",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "4bf7222f-23d4-400c-a579-a17c22243b07"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "8dfc4a7d-2906-4e08-9b1f-598df3ffcb61"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "equippedValue": {
+                "type": "variable",
+                "value": "10"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "657da142-d52f-4519-931b-fdf5cd004792"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "0bd24e36-d40b-4a45-94ae-9c96594002de"
+                }
+              ],
+              "false": []
+            },
+            "id": "22e02283-865d-4dc8-9ed6-80244d9fb5cf"
+          }
+        ]
+      },
+      "id": "183fe01f-12db-48a8-89f4-95bae175afe3"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+              "__comment": false,
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              }
+            },
+            "id": "bdf2b149-617d-4eaf-b34d-f8c63467b1c1"
+          }
+        ]
+      },
+      "id": "a22cc593-eab0-4bd4-b7c9-94d6a1443ead"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
+            },
+            "id": "7fa6c4c8-d4f0-46ac-87f2-61df889f8a69"
+          }
+        ]
+      },
+      "id": "8ca5e5bc-29e8-4f92-baed-dfe08f0526ff"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": false,
+        "__scriptTabs": "press",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "11dc352f-8faa-463b-97fa-9240e73a0db7"
+            },
+            "id": "f2599b75-74f3-4b78-b9c4-f86ed51275dd"
+          }
+        ]
+      },
+      "id": "79a78480-5e27-4755-b70a-62f4764c7ac9"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

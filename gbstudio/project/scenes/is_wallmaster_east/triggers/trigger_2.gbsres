@@ -1,0 +1,111 @@
+{
+  "_resourceType": "trigger",
+  "id": "62a9c1be-a917-409b-ac56-767247878cc9",
+  "name": "",
+  "prefabId": "",
+  "x": 1,
+  "y": 1,
+  "symbol": "trigger_682",
+  "prefabScriptOverrides": {},
+  "width": 18,
+  "height": 1,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "426b7178-e412-4d38-a198-0d17a3b942cc"
+      },
+      "id": "42ecac10-7a62-4b74-a853-4adf1084a47f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": true
+      },
+      "id": "8400afba-db9f-4e32-a909-673543e747a0"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "21",
+        "value": {
+          "type": "number",
+          "value": 9
+        },
+        "__collapse": true
+      },
+      "id": "25a55138-b3b7-44b7-a7ce-137bc7d14441"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Change Music",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "102",
+              "flag": 8,
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Boss defeated. Music changed to celstial sign music",
+                    "__collapse": true
+                  },
+                  "id": "0a70e2f9-ceea-44a6-b01e-a96a8789340e"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_MUSIC_STOP",
+                  "args": {},
+                  "id": "cd0b5a3b-5c77-4737-9673-b79553e0202b"
+                },
+                {
+                  "command": "EVENT_MUSIC_PLAY",
+                  "args": {
+                    "musicId": "74782a2c-f455-4380-8728-e86009891b9b"
+                  },
+                  "id": "ec538567-f0d2-46c5-9cf1-c0bc691fbb2b"
+                }
+              ]
+            },
+            "id": "d52b653e-715c-4796-92fb-4cc402345e47"
+          }
+        ]
+      },
+      "id": "32566436-a627-4d9b-8502-bfbfd8b4c1e7"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "55c14c67-f6ba-40b1-8a39-cc5407caf9c0",
+        "x": {
+          "type": "number",
+          "value": 9
+        },
+        "y": {
+          "type": "number",
+          "value": 15
+        },
+        "direction": "up",
+        "fadeSpeed": "2"
+      },
+      "id": "004ae5f7-4712-4501-9868-e86c1836a6ca"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

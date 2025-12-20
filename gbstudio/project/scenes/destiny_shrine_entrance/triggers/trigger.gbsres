@@ -1,0 +1,63 @@
+{
+  "_resourceType": "trigger",
+  "id": "618b10c4-85ae-4f22-97bb-d62de9c0a10a",
+  "name": "",
+  "prefabId": "",
+  "_index": 0,
+  "symbol": "trigger_588",
+  "x": 4,
+  "y": 12,
+  "width": 2,
+  "height": 2,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 2,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Air Shrine",
+              "__collapse": true
+            },
+            "id": "7d926cf1-e506-47aa-839e-a4b3a618c889"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "fb4b3038-56f1-4f74-b76c-55420ee3dee6"
+            },
+            "id": "619fca0e-d6a9-40ca-bd44-63dc59a80b3a"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "da9d2231-9754-4f40-9633-0fc2b6a03a51",
+              "x": {
+                "type": "number",
+                "value": 9
+              },
+              "y": {
+                "type": "number",
+                "value": 16
+              },
+              "direction": "up",
+              "fadeSpeed": "2"
+            },
+            "id": "9d55fdcf-f95f-4f53-9c57-bd8b80a66fd7"
+          }
+        ],
+        "false": []
+      },
+      "id": "3369b138-0b51-47c9-a469-0bf0bd24e592"
+    }
+  ],
+  "leaveScript": []
+}

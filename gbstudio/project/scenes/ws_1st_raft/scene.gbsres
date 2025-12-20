@@ -1,0 +1,510 @@
+{
+  "_resourceType": "scene",
+  "id": "7b7d45e3-cc5c-4780-b1b6-9c1535999e6a",
+  "_index": 453,
+  "name": "WS 1st Raft",
+  "backgroundId": "b599e865-9633-4435-aeae-bd10232d061b",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "paletteIds": [
+    "0753b752-9775-41d8-9ff5-3cdff5ef13e2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "ff572a7d-db8f-4fc2-b0ff-784ad4d32479",
+    "000998fb-33a5-417e-b2cf-8f2def7baa72",
+    "4dc5d766-6ee7-411b-89e7-8f9da52bc81b",
+    "d719df77-3f39-401e-a317-920d9f173fd8",
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "77762eab-8ff3-40a7-896a-31630623ff57",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "5810d571-6df9-46a0-b890-905bf3be1dfe"
+  ],
+  "collisions": "0010a+0f8+00b+0f!008+0f!009+0f!00a+0f!008+0f!00a+0f!0018+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_294",
+  "x": 3248,
+  "y": 5984,
+  "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "4b825b33-ded9-43bd-9f81-6e5add3f529e",
+        "__collapse": true
+      },
+      "id": "ccd7f4ce-6a33-45e9-8dc4-2d543932c384"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Swap tiles",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "76064fdd-6177-4f20-8bfd-299bedb67576"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "c8a8df18-c1ad-4899-bd92-2dad9b552f33"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "equippedValue": {
+                "type": "variable",
+                "value": "10"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "7143c0b1-dad6-4751-a063-5dbddc8d8ee2"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "f8a85c6a-f6c0-4883-8a30-891fc79ddfa9"
+                }
+              ],
+              "false": []
+            },
+            "id": "cd9caa72-46d5-4b1f-9213-a5f5b80f6238"
+          }
+        ]
+      },
+      "id": "2995cfab-a7ac-48b7-93da-a7b603c29945"
+    },
+    {
+      "command": "EVENT_SET_TIMER_SCRIPT",
+      "args": {
+        "timer": 1,
+        "duration": 0.4,
+        "frames": 30,
+        "__scriptTabs": "end",
+        "__collapse": true,
+        "__label": "Animated Water"
+      },
+      "children": {
+        "script": [
+          {
+            "command": "EVENT_REPLACE_TILE_XY_SEQUENCE",
+            "args": {
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 1
+              },
+              "tilesetId": "65ca0579-4035-462e-b66b-3b7c01f4e9b8",
+              "tileIndex": {
+                "type": "number",
+                "value": 4
+              },
+              "frames": {
+                "type": "number",
+                "value": 4
+              },
+              "variable": "57"
+            },
+            "id": "98269a3f-d7dd-4c76-8d15-55a9579c3e02"
+          }
+        ]
+      },
+      "id": "286e8acf-5eed-4fd6-b35d-28a16d189738"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+              "__comment": false,
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              }
+            },
+            "id": "5582baea-5c80-4619-b0d5-79140c9d5342"
+          }
+        ]
+      },
+      "id": "94bc65f4-9687-44be-8898-ac84c5b9e30f"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
+            },
+            "id": "2419a3c1-45be-47f9-b2f3-cdc20e42fcc2"
+          }
+        ]
+      },
+      "id": "e02ab002-e0b4-4fba-b0d1-dd3eba879d11"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": false,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "099e4f92-ab19-4795-8ae2-c8c4b433bf8a"
+            },
+            "id": "204000aa-2e44-40d2-9e9b-f9392d3f9c6f"
+          }
+        ]
+      },
+      "id": "c85edfb5-b467-4b85-b30a-bcbf19d9f759"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Explicitly set map position",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "19",
+              "value": {
+                "type": "number",
+                "value": 6
+              },
+              "__collapse": true
+            },
+            "id": "5b5e4d3d-74ec-4b1e-a657-0eda20d8d0b5"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "20",
+              "value": {
+                "type": "number",
+                "value": 5
+              },
+              "__collapse": true
+            },
+            "id": "7095dfc7-fe37-40b3-9df4-597fd4bd800e"
+          }
+        ]
+      },
+      "id": "231e9567-bb07-485b-ab7f-b384e40b80cf"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "108",
+        "flag": 11,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Agwanda has given her speech",
+              "__collapse": true
+            },
+            "id": "6acd33ce-2e2c-4ab6-8095-ae1b043d919d"
+          },
+          {
+            "command": "EVENT_ACTOR_HIDE",
+            "args": {
+              "actorId": "1978737c-d6cb-40dc-817e-d2c18e7aa8c3",
+              "__collapse": true
+            },
+            "id": "dce70684-88f6-4b65-ab87-4e3f516a51df"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 2,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Je sais que tu es venu\npour voler l'Eau de la\nVie! Tu ne l'auras pas",
+                      "tant que j'aurai la\nsubstance nécessaire\npour remplir ma forme.",
+                      "Va-t'en!"
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "2b322cd5-d4d7-4b24-9944-02a3eca94192"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Ich weiß, dass du\ngekommen bist, um das\nWasser des Lebens zu",
+                      "stehlen! Du sollst es\nnicht bekommen, solange\nich Substanz habe, um",
+                      "meine Gestalt zu füllen.\nVerschwinde!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "1c6b7633-0421-4a1e-b52c-2ef6a7ef0db0"
+                }
+              ],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "I know you've come to\nsteal the Water of\nLife! You shall not have",
+                      "it while I have\nsubstance to fill my\nform. Begone!"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "7ef2c1c9-258d-4cc6-aec0-74d741f0f2eb"
+                }
+              ]
+            },
+            "id": "b13b2cfc-6f26-4970-8048-8db2aaca9214"
+          },
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "108",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": true,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "c461be1c-73bc-4f7e-bcbd-b1331c2caf10"
+          },
+          {
+            "command": "EVENT_GROUP",
+            "args": {
+              "__label": "Boss taunt",
+              "__collapse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "5d5704da-27e2-43d1-bc10-31efd812e7e9",
+                    "__collapse": true
+                  },
+                  "id": "b5cc093b-0246-4c69-a936-f2e2bbe2085f"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 0.5,
+                    "frames": 30,
+                    "__collapse": true
+                  },
+                  "id": "85047752-706a-4059-b343-ef7029a543ea"
+                },
+                {
+                  "command": "EVENT_ACTOR_DEACTIVATE",
+                  "args": {
+                    "actorId": "1978737c-d6cb-40dc-817e-d2c18e7aa8c3",
+                    "__collapse": true
+                  },
+                  "id": "2c344327-386d-43e3-8936-ce865577dc22"
+                }
+              ]
+            },
+            "id": "27916609-3da5-4f91-97ee-08ecfd2bfbfb"
+          }
+        ]
+      },
+      "id": "ed3a6b37-4ccb-4807-8f9b-7a0974c8352d"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

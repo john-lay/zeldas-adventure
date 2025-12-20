@@ -1,0 +1,66 @@
+{
+  "_resourceType": "actor",
+  "id": "34d80746-e629-4aba-828a-06b6a62d923e",
+  "name": "spikes1",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "6ffe8089-0566-4283-8984-332afaf5e917",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_851",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "7c6c90be-0003-4a98-a3bd-036b6e3f1c85"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "11",
+        "flag": 2,
+        "__collapseElse": true,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Completed Air Shrine",
+              "__collapse": true
+            },
+            "id": "0012fe01-cb4e-4f79-983b-b492e2fe903e"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "c0ca77e6-cf06-4633-b20f-8b8aadd59b3f"
+          }
+        ],
+        "false": []
+      },
+      "id": "953d8d22-8b5b-4bbd-883f-415238239540"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 4,
+  "y": 13,
+  "_index": 1
+}

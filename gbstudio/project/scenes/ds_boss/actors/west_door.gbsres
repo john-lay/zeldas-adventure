@@ -1,0 +1,81 @@
+{
+  "_resourceType": "actor",
+  "id": "f5391b92-faff-42d7-b534-140ff6194574",
+  "name": "West Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f2396966-ea94-468d-afaa-98c4b775fcf4",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1151",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "5f8ee5d7-f5d5-462a-8614-d2ae9991f12a"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "106",
+        "flag": 4,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Malmort defeated",
+              "__collapse": true
+            },
+            "id": "3d8cbe79-5d9f-4f47-a960-e7072bede316"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "be598b2b-3703-4a7f-8367-7db4b966c2eb"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "2f0e1587-4cd7-47e3-a3ca-0c8f2cea8354"
+          }
+        ]
+      },
+      "id": "a57f78ae-8304-4c91-9c2b-d1121658f8ca"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 0,
+  "y": 9,
+  "_index": 3
+}
