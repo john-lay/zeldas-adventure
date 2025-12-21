@@ -15,6 +15,52 @@
       "id": "86a9b6c3-03f1-494b-95b2-b62e70e362b8"
     },
     {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Store player position+direction"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "The player paused the game and may save their progress. This stops the inventory cursor representing the player's position when the scene is restored."
+            },
+            "id": "2fefcd32-faa7-4c15-b9c3-67834b06182c"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_POSITION",
+            "args": {
+              "actorId": "$self$",
+              "vectorX": "12",
+              "vectorY": "13"
+            },
+            "id": "98f6a587-a301-485c-ad2b-7ae1106d7548"
+          },
+          {
+            "command": "EVENT_ACTOR_GET_DIRECTION",
+            "args": {
+              "actorId": "$self$",
+              "direction": "14"
+            },
+            "id": "d0b584e4-da01-4ef7-ba3d-57f239dd14b2"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "22",
+              "value": {
+                "type": "number",
+                "value": 5
+              }
+            },
+            "id": "e6dbefb9-cd30-4fb7-8441-db0373acf1da"
+          }
+        ]
+      },
+      "id": "cb0b05a3-ffb9-4f33-ab33-523c439b3b52"
+    },
+    {
       "command": "EVENT_SCENE_PUSH_STATE",
       "args": {},
       "id": "0a3eaf42-2d51-45f3-873c-8074c7b65fc8"
