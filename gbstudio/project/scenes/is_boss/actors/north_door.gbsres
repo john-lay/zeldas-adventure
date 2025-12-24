@@ -1,0 +1,81 @@
+{
+  "_resourceType": "actor",
+  "id": "75f5c3fc-3afb-48c0-b039-2707dfa92ec6",
+  "name": "North Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f2396966-ea94-468d-afaa-98c4b775fcf4",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1249",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "6f38818d-5a2b-4b19-9445-7d27abc4714c"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "102",
+        "flag": 8,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Pasquinade defeated",
+              "__collapse": true
+            },
+            "id": "8494499a-3802-43e9-9b6a-ae9b41f05184"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "24c4c60f-ceb4-48ad-84ec-685f6427c2fe"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 0
+              }
+            },
+            "id": "50580558-3aef-4cd2-994c-578df8decf49"
+          }
+        ]
+      },
+      "id": "6d868dfc-9730-4dde-81a0-8515bea036b7"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 2,
+  "_index": 3
+}

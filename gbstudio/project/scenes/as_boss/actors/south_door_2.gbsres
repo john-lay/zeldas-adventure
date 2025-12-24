@@ -1,0 +1,81 @@
+{
+  "_resourceType": "actor",
+  "id": "d25f4822-ff3e-4c83-a950-32fba88ca0ee",
+  "name": "South Door 2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f2396966-ea94-468d-afaa-98c4b775fcf4",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1435",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "210ac571-6c55-4474-b8a2-a09d60c45e1a"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "104",
+        "flag": 5,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Aviana defeated",
+              "__collapse": true
+            },
+            "id": "8b1b47e7-e701-4e2c-bd99-2b331434b97c"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "d75aadd9-fb8b-44d4-98ab-e7a86ebb71fc"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "7a868aa4-1ba9-47bc-a680-14c83aac5a3b"
+          }
+        ]
+      },
+      "id": "9c0ce425-cb32-4149-99bc-8751afe53956"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 10,
+  "y": 17,
+  "_index": 7
+}

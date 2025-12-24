@@ -1,0 +1,275 @@
+{
+  "_resourceType": "actor",
+  "id": "800002ba-2864-44ee-b1d4-f41493d1b3fe",
+  "name": "enemy2",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "d098f354-e9a3-47d7-9bb2-cb3b24e6a18d",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 31,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_804",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "13357c3c-6dc7-4a32-845b-70569fdb3093",
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "L0"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "L1"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "L2"
+        },
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "63"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "58"
+        }
+      },
+      "id": "1229370f-c287-4c26-b5b4-e0ce65741589",
+      "children": {}
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "64",
+        "value": {
+          "type": "number",
+          "value": 4
+        }
+      },
+      "id": "06d935e0-9ba9-49e8-bb00-28eeb6e91905",
+      "children": {}
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e0816661-3348-4b69-a8dd-485854cc5e3f",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "65"
+        }
+      },
+      "id": "48ab2366-937c-4cfa-802a-45970ee8dba1",
+      "children": {}
+    }
+  ],
+  "hit1Script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "__collapse": false,
+        "customEventId": "3c2f6c26-65c0-434d-b407-c7d1828a858e",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "64"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "65"
+        },
+        "$variable[V2]$": {
+          "type": "variable",
+          "value": "44"
+        },
+        "$variable[V3]$": {
+          "type": "variable",
+          "value": "45"
+        },
+        "$variable[V4]$": {
+          "type": "variable",
+          "value": "42"
+        },
+        "$variable[V5]$": {
+          "type": "variable",
+          "value": "43"
+        },
+        "$actor[1]$": "bc506db3-7935-4a2c-a61e-a8326d610f27",
+        "$actor[2]$": "b57cc88d-4020-4334-8fdd-b8e8eb18119c",
+        "$actor[0]$": "$self$"
+      },
+      "id": "f4b59d35-5926-4f0d-adc9-53dde82f288e",
+      "children": {}
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "64"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "17",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": false,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": true,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false
+            },
+            "id": "9a23eb09-7631-4408-a41d-8305c1cf7d6f",
+            "children": {}
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "17",
+              "flag": 10,
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_IF_FLAGS_COMPARE",
+                  "args": {
+                    "variable": "17",
+                    "flag": 11,
+                    "__collapseElse": true,
+                    "__disableElse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_IF_FLAGS_COMPARE",
+                        "args": {
+                          "variable": "17",
+                          "flag": 12,
+                          "__collapseElse": true,
+                          "__disableElse": true
+                        },
+                        "children": {
+                          "true": [
+                            {
+                              "command": "EVENT_IF_FLAGS_COMPARE",
+                              "args": {
+                                "variable": "9",
+                                "flag": 12,
+                                "__collapseElse": false,
+                                "__disableElse": false
+                              },
+                              "children": {
+                                "true": [
+                                  {
+                                    "command": "EVENT_COMMENT",
+                                    "args": {
+                                      "text": "Key already collected",
+                                      "__collapse": true
+                                    },
+                                    "id": "0d315faf-7c4e-4839-bf9e-38b0af793cbb"
+                                  }
+                                ],
+                                "false": [
+                                  {
+                                    "command": "EVENT_IF_FLAGS_COMPARE",
+                                    "args": {
+                                      "variable": "102",
+                                      "flag": 6,
+                                      "__collapseElse": false
+                                    },
+                                    "children": {
+                                      "true": [
+                                        {
+                                          "command": "EVENT_COMMENT",
+                                          "args": {
+                                            "text": "Key already used to open second locked door",
+                                            "__collapse": true
+                                          },
+                                          "id": "1fe73c7e-14c3-425e-a3e3-c9b614835df5"
+                                        }
+                                      ],
+                                      "false": [
+                                        {
+                                          "command": "EVENT_CALL_CUSTOM_EVENT",
+                                          "args": {
+                                            "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+                                            "__collapse": true
+                                          },
+                                          "id": "ba881d1a-c411-4c97-89dc-f132c63299ea"
+                                        },
+                                        {
+                                          "command": "EVENT_ACTOR_ACTIVATE",
+                                          "args": {
+                                            "actorId": "dcf702ca-4db5-4c33-a1aa-1ed379de426f"
+                                          },
+                                          "id": "e39468ac-c8d9-46bd-b712-854985b09581"
+                                        }
+                                      ]
+                                    },
+                                    "id": "d15555cb-2141-4ee9-b6c1-14fc9cc0a327"
+                                  }
+                                ]
+                              },
+                              "id": "a403ec4c-6f76-4274-a849-5f7d16031552"
+                            }
+                          ],
+                          "false": []
+                        },
+                        "id": "9853dbc3-2261-4cb1-99c1-4d84eec4e71e"
+                      }
+                    ],
+                    "false": []
+                  },
+                  "id": "520a00fd-e04f-4769-9dac-36e0815c5ffb"
+                }
+              ],
+              "false": []
+            },
+            "id": "44ae584f-c392-4200-9838-92e2f60770d5"
+          }
+        ],
+        "false": []
+      },
+      "id": "7d135ea6-56cd-43f1-8ceb-13976faee061"
+    }
+  ],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 8,
+  "y": 7,
+  "_index": 4
+}
