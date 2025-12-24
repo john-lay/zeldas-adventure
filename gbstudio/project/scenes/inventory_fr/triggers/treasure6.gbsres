@@ -1,0 +1,52 @@
+{
+  "_resourceType": "trigger",
+  "id": "d925d727-999d-4a60-a236-ec8342d3c96b",
+  "name": "Treasure6",
+  "prefabId": "",
+  "x": 13,
+  "y": 11,
+  "symbol": "trigger_310",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Equip Treasure"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "81",
+              "value": {
+                "type": "number",
+                "value": 6
+              }
+            },
+            "id": "76f4d522-4f39-42b1-ad27-bcbf6a670dfe"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "0d7e8fae-6208-4936-8a75-2323a74f9713"
+            },
+            "id": "05cfde95-30dc-4a68-8785-a708e12f57bc"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "52de343a-a175-46cb-b68b-e225c548ae02"
+            },
+            "id": "0bbdddc5-99bb-4f52-a78b-181eb377f75b"
+          }
+        ]
+      },
+      "id": "6dcdaacd-b9f8-4e76-b10c-b67c6a50694f"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 11
+}

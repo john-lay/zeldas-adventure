@@ -361,19 +361,55 @@
                   "id": "0d318ec9-2b04-47d0-9e5f-e104292c97a1"
                 },
                 {
-                  "command": "EVENT_VARIABLE_MATH",
+                  "command": "EVENT_IF",
                   "args": {
-                    "vectorX": "2",
-                    "operation": "add",
-                    "other": "val",
-                    "vectorY": "16",
-                    "value": 25,
-                    "minValue": "0",
-                    "maxValue": "32767",
-                    "clamp": false,
-                    "__collapse": true
+                    "condition": {
+                      "type": "lt",
+                      "valueA": {
+                        "type": "variable",
+                        "value": "2"
+                      },
+                      "valueB": {
+                        "type": "number",
+                        "value": 974
+                      }
+                    },
+                    "__collapseElse": false,
+                    "__collapse": false
                   },
-                  "id": "9e0fb3e5-9f0a-4316-984b-fc3d6e6a63a6"
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_VARIABLE_MATH",
+                        "args": {
+                          "vectorX": "2",
+                          "operation": "add",
+                          "other": "val",
+                          "vectorY": "16",
+                          "value": 25,
+                          "minValue": "0",
+                          "maxValue": "32767",
+                          "clamp": false,
+                          "__collapse": true
+                        },
+                        "id": "7bbc8ad7-51ad-4029-a454-a915e84ed824"
+                      }
+                    ],
+                    "false": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "2",
+                          "value": {
+                            "type": "number",
+                            "value": 999
+                          }
+                        },
+                        "id": "9ea0eeae-28dc-4c8a-863e-28756813ffe0"
+                      }
+                    ]
+                  },
+                  "id": "71d5149f-379e-476b-b9a0-240c007fee24"
                 },
                 {
                   "command": "EVENT_CALL_CUSTOM_EVENT",

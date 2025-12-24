@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "a9b27e97-2bd2-45a3-bc84-1a6adcbf7a90",
-  "_index": 112,
+  "_index": 69,
   "name": "Air Altar",
   "backgroundId": "fcd44f06-bd76-4ad5-9eb7-1ccd72a0f1bf",
   "tilesetId": "",
@@ -30,7 +30,7 @@
   ],
   "collisions": "006c+0f4+00d+0f3+004+0f3+00b+0f!006+0f!00c+0f!002+0f2+002+0f!00c+0f!00!0f!002+0f!00!0f!00c+0f!00!0f!002+0f!00!0f!00c+0f!00!0f!002+0f!00!0f!00c+0f3+002+0f3+006a+",
   "autoFadeSpeed": 1,
-  "symbol": "scene_37",
+  "symbol": "scene_38",
   "x": 1312,
   "y": 5216,
   "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
@@ -218,6 +218,141 @@
         ]
       },
       "id": "73702cfd-e7b9-4dc2-9166-d8da00538f35"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "7",
+        "flag": 0,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has found the wand",
+              "__collapse": false
+            },
+            "id": "8df63062-da88-4188-9952-63d61ee72579"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 2,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Zelda, ne sois pas si\npressée ! Il y a quelque\nchose que tu dois ",
+                      "trou-er ici. L'explora-\ntion est la clé de ta\nréussite."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "5739f1f2-4a8f-4a83-be92-4198aa4e8fae"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Zelda, nicht so schnell!\nEs gibt hier in der\nNähe etwas, das du",
+                      "unbedingt haben musst.\nErkundung ist der\nSchlüssel zum Erfolg."
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "5e4e5292-66e4-4442-aa33-af1c5cd14660"
+                }
+              ],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Zelda, do not be hasty!\nThere is something you\nmust have nearby here.",
+                      "Exploration is the key\nto your success."
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "f5e63b7b-5ada-4299-b8c8-2e855ea016d3"
+                }
+              ]
+            },
+            "id": "5dcd8929-6e84-4b09-8ab4-760e8b674d27"
+          }
+        ]
+      },
+      "id": "4a35f7b8-5b67-45c6-bf13-5de345dd07e9"
     }
   ],
   "playerHit1Script": [],
