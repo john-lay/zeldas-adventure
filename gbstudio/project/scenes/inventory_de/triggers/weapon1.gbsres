@@ -1,0 +1,52 @@
+{
+  "_resourceType": "trigger",
+  "id": "198df8be-33bd-4d2c-858d-cbcec9313f2c",
+  "name": "Weapon1",
+  "prefabId": "",
+  "x": 3,
+  "y": 15,
+  "symbol": "trigger_425",
+  "prefabScriptOverrides": {},
+  "width": 2,
+  "height": 2,
+  "script": [
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Equip weapon"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "81",
+              "value": {
+                "type": "number",
+                "value": 1
+              }
+            },
+            "id": "00b08530-cdd2-4bda-a210-bbf5b19eca49"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "aa432661-ef70-4e8d-97c9-2e6e0f55bf63"
+            },
+            "id": "52328391-34d2-40cb-9232-69772915a434"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "52de343a-a175-46cb-b68b-e225c548ae02"
+            },
+            "id": "0df65a8c-64dc-4989-b31d-d505337768b4"
+          }
+        ]
+      },
+      "id": "8e1eac99-d84d-4d7c-ae54-ba0c170b1863"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 12
+}

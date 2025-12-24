@@ -1,0 +1,547 @@
+{
+  "_resourceType": "script",
+  "id": "80a676e3-8784-4f76-812b-9f2df093de42",
+  "name": "Navigation/Game Over screen",
+  "description": "Logic applied when game over screen loads (on init)",
+  "variables": {},
+  "actors": {},
+  "symbol": "script_138",
+  "script": [
+    {
+      "command": "EVENT_MUSIC_STOP",
+      "args": {
+        "__collapse": true
+      },
+      "id": "a7298c60-9258-4496-b795-8dd967cb07a5"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "0",
+        "value": {
+          "type": "number",
+          "value": 6
+        },
+        "__collapse": true
+      },
+      "id": "dfa2b4a6-9af4-4742-befc-afd767e27716"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 0
+        },
+        "__collapse": true,
+        "__comment": false
+      },
+      "id": "4e38111a-5631-4fd1-a557-c3ba0ea381a2"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 2,
+        "frames": 30,
+        "__collapse": false
+      },
+      "id": "1885a6fc-49db-433e-a5ba-fc33836f10cc"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 3,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Earth Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "54dd0e56-8d12-4dd1-a15d-ee6d0f16324b"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room",
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "8652cddf-0793-4c89-95dc-c978cc95a6d1",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "95c4e928-9c0a-4087-b72f-195d0950ec47"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "2a536751-842a-4408-8cd8-4bb3a5575480"
+                  },
+                  "id": "27dfb141-ec88-4769-b9a7-8f97126399b0"
+                }
+              ]
+            },
+            "id": "1ba20fb5-bfb5-4f29-ae2a-a511daa257fc"
+          }
+        ],
+        "false": []
+      },
+      "id": "cbde6124-678a-4488-b5b7-bd672f47309c"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 4,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Illusion Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "4fbdda1a-a3d2-4f87-a42d-139a7e1a4787"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "47e2183a-2bb1-4686-af65-fd990f2e5f12",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "687da68d-e4d7-4177-8377-d9936a3ab844"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "1cb4cf65-5fb3-4aa7-8dce-11eecbc9e388"
+                  },
+                  "id": "91e1d32c-1495-48ce-ac7b-7dddfa7868a2"
+                }
+              ]
+            },
+            "id": "35c178c5-e4a8-453c-b05e-54d57b81ebf0"
+          }
+        ],
+        "false": []
+      },
+      "id": "68c8e154-28e9-485e-9066-0f7fdfba6250"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 5,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Air Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "b1caa174-3f39-424f-9767-ce436f069b65"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "f5b224d0-01a3-4e48-a971-15ef1df706e5",
+                    "x": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 4
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "095db94f-482c-4464-8880-22a0f72cf7fc"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "358f3368-0be6-47de-a21b-25f2728a2be9"
+                  },
+                  "id": "cb8ccdfc-698f-4e52-87d4-ff2f405fcaaf"
+                }
+              ]
+            },
+            "id": "723cfb04-e782-4f8f-8239-4c04e32c69c5"
+          }
+        ],
+        "false": []
+      },
+      "id": "418b296e-e8b3-42ae-bbb6-ca8578320332"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 6,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Destiny Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "c4e5db25-170c-4b99-b3f9-40d749b8bd91"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "4fd2f2d6-ab89-4154-898d-0f503d1a232f",
+                    "x": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 5
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "0dbe7627-8ba0-45ea-8a63-a80271f0872a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "033093f4-b05c-4ad0-82e5-2447fd308df0"
+                  },
+                  "id": "bcad9490-0d85-4179-b83b-25308c87eb5b"
+                }
+              ]
+            },
+            "id": "9da603ea-b097-47a5-86fe-3bf2146c7c47"
+          }
+        ],
+        "false": []
+      },
+      "id": "f0d91e2a-2980-4cf2-83f1-0d9fa93ec0b4"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 7,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Water Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "3ac41dd7-c004-49de-a893-5641936ca272"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "f8a68d3a-6097-4f1e-b774-26ac4868d0e2",
+                    "x": {
+                      "type": "number",
+                      "value": 15
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 12
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "233994e2-4c19-47bb-8beb-1ac3c0e6d17a"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "ca2bf1ee-4b2c-48d5-8680-773b22a783c1"
+                  },
+                  "id": "feca210c-7c9f-4a10-8243-0f889cbbea64"
+                }
+              ]
+            },
+            "id": "615cb6cd-bcc6-4c16-97af-d07635002def"
+          }
+        ],
+        "false": []
+      },
+      "id": "d6bad60e-6306-47a0-ab29-085628e3f6e5"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 8,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Strength Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "c7ad6b6a-07cd-4af0-a61b-6565aab94b26"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "ba42d1bd-b2ef-4f37-8f73-2083d0dc3e90",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 9
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "584638d1-f577-4bd6-80f8-080785d02411"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "e5f25f46-8ee4-4cdd-87a0-3e778d8a8335"
+                  },
+                  "id": "527ed081-8520-4f83-a78e-5067c98afa8c"
+                }
+              ]
+            },
+            "id": "09b4b050-cf7e-4fdf-9546-6b94a8d63761"
+          }
+        ],
+        "false": []
+      },
+      "id": "cc9d8f0f-d797-4b9a-84e5-fda4dc3641b6"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "18",
+        "flag": 9,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Fire Shrine",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "930cafa8-f128-4917-9da6-5565a7953a57",
+              "__collapse": true
+            },
+            "id": "dec37086-d711-4695-9b55-941f5e1cfb64"
+          },
+          {
+            "command": "EVENT_IF_FLAGS_COMPARE",
+            "args": {
+              "variable": "18",
+              "flag": 10,
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__label": "Boss Room"
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "46f8677d-7365-4260-b1bb-3efcfc427fdd",
+                    "x": {
+                      "type": "number",
+                      "value": 3
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 10
+                    },
+                    "direction": "down",
+                    "fadeSpeed": "2",
+                    "__comment": false
+                  },
+                  "id": "cb9a11c7-ea32-431c-90d2-5f6ffee565c5"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "9557fcc0-7a14-4f0e-8377-882f7fb8a8e4"
+                  },
+                  "id": "97088134-b122-4384-9723-51262f825125"
+                }
+              ]
+            },
+            "id": "bb918d00-220b-4c7b-a6a2-b891cc1114a5"
+          }
+        ],
+        "false": []
+      },
+      "id": "f84dc07a-df1c-449a-9ab8-298b4143f56f"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Vision Henge",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_MUSIC_PLAY",
+            "args": {
+              "musicId": "33d7d664-59bf-4a75-919d-1157e764f8a6"
+            },
+            "id": "550e26f7-9374-417c-a0e3-454b9895597f"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "93c8317b-4d6e-4079-85de-818140f70027"
+            },
+            "id": "3956c364-4ba5-4089-b963-d1037b4a6e8d"
+          }
+        ]
+      },
+      "id": "7a1ee09b-5f77-4e4a-afae-793517d3e872"
+    }
+  ]
+}
