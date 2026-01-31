@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "1349db96-6ff4-4329-a58f-ba5e9c555472",
-  "_index": 173,
+  "_index": 60,
   "name": "Vendoss Map North",
   "backgroundId": "a1a1a662-296a-4d7e-bad7-10e996d64cc3",
   "tilesetId": "",
@@ -47,7 +47,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -114,8 +114,8 @@
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "__collapseElse": true,
-              "__disableElse": true,
+              "__collapseElse": false,
+              "__disableElse": false,
               "__collapse": false
             },
             "children": {
@@ -126,12 +126,169 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "81d6d699-42e1-4a87-a9d2-8cd88077a793"
+                  "id": "af8fee44-ca65-442e-af86-a8d62aa80fb7"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake sides",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "__collapse": false
+                        },
+                        "id": "eb1d6aba-b3fa-427a-b9f4-48cd1e168d5a"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 6
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": false
+                        },
+                        "id": "6b5b5851-247f-4dee-8778-82fab955ab74"
+                      }
+                    ]
+                  },
+                  "id": "bfa83fc1-364a-437a-8698-49a59a88eec1"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake inner corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 7
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "__collapse": false
+                        },
+                        "id": "dc50cfc9-c1c1-468e-b0f0-8f5e26700aae"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 7
+                          },
+                          "__collapse": false
+                        },
+                        "id": "40af663d-d84f-462b-af48-b5e970837b71"
+                      }
+                    ]
+                  },
+                  "id": "7372dda0-5ad5-43ba-b44f-0a186e600efd"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake outer corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 6
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "__collapse": false
+                        },
+                        "id": "d27ed53c-d308-404e-be79-241275b0b4ef"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 11
+                          },
+                          "__collapse": false
+                        },
+                        "id": "7bd6ffff-56b7-473b-be45-9403d3eee863"
+                      }
+                    ]
+                  },
+                  "id": "c1c6b523-729b-4e48-98c2-604d9ef88c1f"
+                }
+              ]
             },
-            "id": "b16d5cab-ab26-465b-a9a5-fb92ea22d7cf"
+            "id": "a078fd3c-e776-45c3-afe5-29c9d2a17de8"
           }
         ]
       },

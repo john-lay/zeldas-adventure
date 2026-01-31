@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "fa2ed9be-73eb-44b8-8828-c0fdaf5eafeb",
-  "_index": 437,
+  "_index": 141,
   "name": "Boss Rush - Fire",
   "backgroundId": "71c9829a-ca33-494b-800b-5303567abf50",
   "tilesetId": "",
@@ -51,7 +51,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -118,8 +118,8 @@
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "__collapseElse": true,
-              "__disableElse": true,
+              "__collapseElse": false,
+              "__disableElse": false,
               "__collapse": false
             },
             "children": {
@@ -130,12 +130,105 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "4914ce02-f0c4-4cc9-9b69-0ef945668393"
+                  "id": "bc68802e-cd5b-4a0f-ba73-d922032fa3c2"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "floor tiles",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 22
+                          },
+                          "__collapse": false
+                        },
+                        "id": "b9c3cf2b-4741-4352-9f8d-5b3dd00d6a54"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 23
+                          },
+                          "__collapse": false
+                        },
+                        "id": "58f9e442-8a6a-4fea-864f-5cdba83315f5"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 24
+                          },
+                          "__collapse": false
+                        },
+                        "id": "b2311f4f-36a6-461e-ae56-281825d4a61d"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 25
+                          },
+                          "__collapse": false
+                        },
+                        "id": "fb51f86d-8a46-4af4-9641-c473d15feb28"
+                      }
+                    ]
+                  },
+                  "id": "753dbe28-7f5d-439b-97f7-bb171f707e70"
+                }
+              ]
             },
-            "id": "3c8448a0-0db2-4049-937b-43fd8928dc85"
+            "id": "397b7862-6587-4144-9282-8a7eb6a34977"
           }
         ]
       },
