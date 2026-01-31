@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "ff24f747-f396-45e1-bbc7-0b35626ca341",
-  "_index": 81,
+  "_index": 80,
   "name": "Boruna Dock South",
   "backgroundId": "6c717c14-a3f2-45f5-9c0f-d0b6821c8545",
   "tilesetId": "",
@@ -47,7 +47,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -114,9 +114,9 @@
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "__collapseElse": true,
-              "__disableElse": true,
-              "__collapse": true
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -126,12 +126,109 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "ae6763a1-616f-407b-a808-a5aa9cd6d829"
+                  "id": "b98759e7-5212-425a-8fd0-2bc8ba330a16"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake sides",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "__collapse": false
+                        },
+                        "id": "cdeffb53-12d2-4463-a5fa-35e734c35525"
+                      }
+                    ]
+                  },
+                  "id": "ec28f0ac-97df-43e6-afa7-ace0ca3ba046"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake inner corners",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 5
+                          },
+                          "__collapse": false
+                        },
+                        "id": "48101446-b26c-4bd3-b3a2-62e13a155ce1"
+                      }
+                    ]
+                  },
+                  "id": "ff4a9bd9-1de0-40c5-9a56-154386fbf067"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake outer corners",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 8
+                          },
+                          "__collapse": false
+                        },
+                        "id": "bbb324ff-be43-4c28-a56f-8e0ec1d905f4"
+                      }
+                    ]
+                  },
+                  "id": "912fe2fe-c708-4df6-be2e-0678cc5583b0"
+                }
+              ]
             },
-            "id": "3fc15438-547f-456e-a9fb-46b8dd71e313"
+            "id": "0bffcc91-0fcb-40f9-af99-3f39bc16393b"
           }
         ]
       },

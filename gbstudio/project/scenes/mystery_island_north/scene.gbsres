@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "7726944c-d320-4295-b2c2-0056c070063f",
-  "_index": 11,
+  "_index": 10,
   "name": "Mystery Island North",
   "backgroundId": "babf1fb5-4848-4667-b47c-3905af33a149",
   "tilesetId": "",
@@ -47,7 +47,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -114,9 +114,9 @@
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "__collapseElse": true,
-              "__disableElse": true,
-              "__collapse": true
+              "__collapseElse": false,
+              "__disableElse": false,
+              "__collapse": false
             },
             "children": {
               "true": [
@@ -126,12 +126,149 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "fa106165-80fa-489d-b675-0c8da59410ea"
+                  "id": "62dadbc7-9972-4afe-a5df-6bef6a13ac7f"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake sides",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 7
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": false
+                        },
+                        "id": "c6b3d593-5b6e-4602-b582-32aecd55f830"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 15
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 3
+                          },
+                          "__collapse": false
+                        },
+                        "id": "f41a1727-8bab-4027-bf18-58649ca707e1"
+                      }
+                    ]
+                  },
+                  "id": "00430df7-d89b-4bf8-8e1b-3d9c1bb4bb14"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake inner corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 6
+                          },
+                          "__collapse": false
+                        },
+                        "id": "fa573149-2012-4893-91ab-77021bb3423a"
+                      }
+                    ]
+                  },
+                  "id": "d6b761c5-7b01-44be-bece-e04660376383"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake outer corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 7
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 14
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 8
+                          },
+                          "__collapse": false
+                        },
+                        "id": "acc74b2c-104a-4f32-941e-eb61720dec4e"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 12
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 14
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 10
+                          },
+                          "__collapse": false
+                        },
+                        "id": "8e25900a-274a-4f4c-ab9c-da6c2ab280da"
+                      }
+                    ]
+                  },
+                  "id": "fe1cf0f2-aed0-417c-8dde-e82ef5e8cd09"
+                }
+              ]
             },
-            "id": "5a62a07b-bd7a-4aee-8c11-52394f290767"
+            "id": "fcbdb9d9-5c51-498f-8246-f3cd48791809"
           }
         ]
       },

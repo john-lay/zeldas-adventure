@@ -1,7 +1,7 @@
 {
   "_resourceType": "scene",
   "id": "9ee2504d-8bc7-4f7c-8a84-eefbb8d18a49",
-  "_index": 22,
+  "_index": 21,
   "name": "Golden Boots North",
   "backgroundId": "bd608bdd-b634-4c06-8306-a2ef1f094382",
   "tilesetId": "",
@@ -47,7 +47,7 @@
       "command": "EVENT_GROUP",
       "args": {
         "__label": "Swap tiles",
-        "__collapse": true
+        "__collapse": false
       },
       "children": {
         "true": [
@@ -114,8 +114,8 @@
           {
             "command": "EVENT_IF_COLOR_SUPPORTED",
             "args": {
-              "__collapseElse": true,
-              "__disableElse": true,
+              "__collapseElse": false,
+              "__disableElse": false,
               "__collapse": false
             },
             "children": {
@@ -126,12 +126,129 @@
                     "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
                     "__collapse": true
                   },
-                  "id": "988e9496-5225-4adb-a021-afef011d430f"
+                  "id": "3b32608e-8d02-49b2-846d-5d83cb000479"
                 }
               ],
-              "false": []
+              "false": [
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake sides",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 0
+                          },
+                          "__collapse": false
+                        },
+                        "id": "2e59ba94-1745-4868-bbbd-5fdae5fdea0b"
+                      },
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 13
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 1
+                          },
+                          "__collapse": false
+                        },
+                        "id": "e7067a47-a724-4b9f-a7ee-94a2f0402a2a"
+                      }
+                    ]
+                  },
+                  "id": "056b4c48-ce22-4689-bceb-cb9f45f88311"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake inner corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 16
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 4
+                          },
+                          "__collapse": false
+                        },
+                        "id": "e032a349-6983-4619-bcf5-366bb8d66a85"
+                      }
+                    ]
+                  },
+                  "id": "2eec7477-9d40-41d4-a220-6997dea54d2b"
+                },
+                {
+                  "command": "EVENT_GROUP",
+                  "args": {
+                    "__label": "lake outer corners",
+                    "__collapse": false
+                  },
+                  "children": {
+                    "true": [
+                      {
+                        "command": "EVENT_REPLACE_TILE_XY",
+                        "args": {
+                          "x": {
+                            "type": "number",
+                            "value": 13
+                          },
+                          "y": {
+                            "type": "number",
+                            "value": 2
+                          },
+                          "tilesetId": "4c797fb1-b16e-4d51-846c-0f1ab84fd9d6",
+                          "tileIndex": {
+                            "type": "number",
+                            "value": 9
+                          },
+                          "__collapse": false
+                        },
+                        "id": "79aeac52-b5b5-44da-82cf-498fa6ac6a1a"
+                      }
+                    ]
+                  },
+                  "id": "dbeea950-317a-4bc9-a9f6-455ea7528346"
+                }
+              ]
             },
-            "id": "0c2ae4f2-e77b-4769-a013-f6fbfac6c31d"
+            "id": "9ba9eb60-c534-4163-92cf-6ad4ab2d7832"
           }
         ]
       },
