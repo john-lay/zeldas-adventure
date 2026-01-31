@@ -1,0 +1,81 @@
+{
+  "_resourceType": "actor",
+  "id": "358baac9-8ae1-48ec-ba18-591dbd9d5337",
+  "name": "West Door",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "f2396966-ea94-468d-afaa-98c4b775fcf4",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 255,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1390",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "3d05e5e3-67df-4bb8-8955-b326d36d4b02"
+      },
+      "id": "3279cd4d-2e83-43e0-9eb4-b4e1f645c8f9"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "108",
+        "flag": 5,
+        "__collapseElse": false,
+        "__disableElse": false,
+        "__collapse": false,
+        "__comment": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Agwanda defeated",
+              "__collapse": true
+            },
+            "id": "f28bae7d-96f7-4724-97eb-02c9f9264866"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "fa4a552e-3ff9-4c9a-bcd5-5d21a2b72778"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ACTOR_SET_FRAME",
+            "args": {
+              "actorId": "$self$",
+              "frame": {
+                "type": "number",
+                "value": 3
+              }
+            },
+            "id": "31c1e988-0a4c-4ece-b3f6-700bca7c1265"
+          }
+        ]
+      },
+      "id": "2f25494e-207b-4ef1-b831-a7e585addd55"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 0,
+  "y": 12,
+  "_index": 3
+}

@@ -1,0 +1,501 @@
+{
+  "_resourceType": "scene",
+  "id": "db69620b-6483-4eb0-84cd-d968016c75a5",
+  "_index": 290,
+  "name": "DS Boss",
+  "backgroundId": "78c6e53b-fa72-4c17-b5b6-4a8b942ee81f",
+  "tilesetId": "",
+  "width": 20,
+  "height": 18,
+  "type": "ADVENTURE",
+  "paletteIds": [
+    "740a5a6b-bad2-4686-b2a7-e0f3f87126e2",
+    "5ce0c891-99f3-4797-a9ad-87b91eadfc62",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "f506682d-4ea3-46d7-88e3-4f7ed8cb8c4b",
+    "fa612877-16a8-4526-ad31-2d4f130c5c10",
+    "0e19213a-ad88-4447-8755-2626a243578a",
+    "",
+    "default-ui"
+  ],
+  "spritePaletteIds": [
+    "77762eab-8ff3-40a7-896a-31630623ff57",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "39d900a4-f4c3-4780-98ff-fa274f670332",
+    "05949994-d76a-41b8-bd52-834e367e6e50",
+    "e2998ce4-0a1e-4d2a-856d-29bd8bfa6d2d",
+    "9a6093f8-2c39-4efa-a4ec-edd1daf35e7d",
+    "067f5134-5f20-4f48-9c60-446848b5b3c2",
+    "5810d571-6df9-46a0-b890-905bf3be1dfe"
+  ],
+  "collisions": "002d+0fa+009+0f!00a+0f!008+0f!00a+0f!006+0f3+00a+0f!005+0f!00e+0f!004+0f!00e+0f3+002a+0f!0010+0f!002+0f!0010+0f!002+0f!0010+0f!003+0f3+00a+0f3+006+0f!00a+0f!008+0f!00a+0f!009+0fa+0019+",
+  "autoFadeSpeed": 1,
+  "symbol": "scene_261",
+  "x": 3776,
+  "y": 1376,
+  "playerSpriteSheetId": "1ba39310-dd1f-48e7-88f8-23fb6989db9d",
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "22",
+        "value": {
+          "type": "number",
+          "value": 1
+        },
+        "__collapse": true
+      },
+      "id": "5cf28568-0aee-4196-8b13-be3f70d2d1a6"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Swap tiles",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "e4aaad06-3fd2-4a18-ae82-2867e1273765",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "2"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "159b2670-48a7-442b-bb1b-f2d4c8b46882"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "8d0dcfce-d033-44ae-a485-63a170e5fc09",
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              },
+              "$variable[V3]$": {
+                "type": "variable",
+                "value": "L3"
+              },
+              "__collapse": true
+            },
+            "id": "87e31f36-35ea-4772-ad1e-afbd01da33f1"
+          },
+          {
+            "command": "ZA_EVENT_SWAP_SPELL_SPRITE",
+            "args": {
+              "equippedValue": {
+                "type": "variable",
+                "value": "10"
+              },
+              "__comment": false,
+              "__collapse": true
+            },
+            "id": "fe9ccd92-7b82-42c4-867f-0abeea6b911c"
+          },
+          {
+            "command": "EVENT_IF_COLOR_SUPPORTED",
+            "args": {
+              "__collapseElse": true,
+              "__disableElse": true,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_CALL_CUSTOM_EVENT",
+                  "args": {
+                    "customEventId": "011b368f-796b-423b-ae88-4173cb173ede",
+                    "__collapse": true
+                  },
+                  "id": "16580d89-e5e5-4c55-86ad-de102089bfdd"
+                }
+              ],
+              "false": []
+            },
+            "id": "543d4d9d-c642-4fe9-a3c3-b804cb8c5049"
+          }
+        ]
+      },
+      "id": "6b575f45-4a46-4181-bc35-4ac250eb214a"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "b"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "473284bb-51d0-42ce-8ff2-ed0e3d6d7fd2",
+              "__comment": false,
+              "$variable[V0]$": {
+                "type": "variable",
+                "value": "L0"
+              },
+              "$variable[V1]$": {
+                "type": "variable",
+                "value": "L1"
+              },
+              "$variable[V2]$": {
+                "type": "variable",
+                "value": "L2"
+              }
+            },
+            "id": "57b04425-7861-48ac-b854-f1c6bb2db994"
+          }
+        ]
+      },
+      "id": "4fa34cdd-0028-4701-8336-bfdf57e7bfb6"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press",
+        "__collapse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "127ff4c6-c988-4506-a5c6-a132c5cdb955",
+              "$actor[1]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[2]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[3]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[4]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[5]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "__comment": true
+            },
+            "id": "0e04af16-348f-41a0-a1ca-dd8adaf6f875"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "32c135cd-6231-4e10-83e4-b4c641dc8759"
+            },
+            "id": "616427a1-9fc2-46ab-967e-5f6977f2c3b7"
+          }
+        ]
+      },
+      "id": "54caefc5-4815-40dd-b403-52aec38ac18b"
+    },
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "select"
+        ],
+        "override": false,
+        "__scriptTabs": "press",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "415d5220-6f4b-4a0b-b7d4-947b31c6cd9e",
+              "$actor[0]$": "127ff4c6-c988-4506-a5c6-a132c5cdb955",
+              "$actor[1]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[2]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[3]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[4]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[5]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "__comment": true
+            },
+            "id": "4c62cbb4-0916-4970-b1a9-29c6bdd02f7c"
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "4d6dfcf7-ef4e-45c8-8fe8-be802572879f"
+            },
+            "id": "7875a96d-2e7d-44a2-bc77-dfa4dfa2c8c7"
+          }
+        ]
+      },
+      "id": "b4cf8b5e-949d-40b4-b8cb-afde3ac47031"
+    },
+    {
+      "command": "EVENT_GROUP",
+      "args": {
+        "__label": "Combat",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "58",
+              "value": {
+                "type": "number",
+                "value": 2
+              }
+            },
+            "id": "a58df4ee-6c4b-4af8-b2b9-4c7ee9967b09",
+            "children": {}
+          },
+          {
+            "command": "EVENT_CALL_CUSTOM_EVENT",
+            "args": {
+              "customEventId": "154cfce4-919a-4c61-80be-4b53949794e2",
+              "$actor[0]$": "127ff4c6-c988-4506-a5c6-a132c5cdb955",
+              "$actor[1]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[2]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[3]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[4]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "$actor[5]$": "ca299a37-19d7-4d51-a47d-669ac4492a47",
+              "__comment": true
+            },
+            "id": "1fa7854f-c705-4cc8-a4e3-cd25dab7a650"
+          }
+        ]
+      },
+      "id": "8173f5c1-e56c-4ed5-8381-7bdced7c61da"
+    },
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "18",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": true,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": false,
+        "flag16": false,
+        "__collapse": true
+      },
+      "id": "2428d9e7-e900-4350-adaa-3bde0cd88738"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "106",
+        "flag": 3,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Malmort has given her third speech",
+              "__collapse": true
+            },
+            "id": "134cfc2f-17a8-4b03-b603-186301557eac"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_ADD_FLAGS",
+            "args": {
+              "variable": "106",
+              "flag1": false,
+              "flag2": false,
+              "flag3": false,
+              "flag4": true,
+              "flag5": false,
+              "flag6": false,
+              "flag7": false,
+              "flag8": false,
+              "flag9": false,
+              "flag10": false,
+              "flag11": false,
+              "flag12": false,
+              "flag13": false,
+              "flag14": false,
+              "flag15": false,
+              "flag16": false,
+              "__collapse": true
+            },
+            "id": "1f48ee8b-a7cf-4537-85d3-ab86a6d201d0"
+          },
+          {
+            "command": "EVENT_SWITCH",
+            "args": {
+              "variable": "23",
+              "choices": 2,
+              "__collapseCase0": false,
+              "value0": 1,
+              "__collapseCase1": false,
+              "value1": 2,
+              "__collapseCase2": false,
+              "value2": 3,
+              "__collapseCase3": false,
+              "value3": 4,
+              "__collapseCase4": false,
+              "value4": 5,
+              "__collapseCase5": false,
+              "value5": 6,
+              "__collapseCase6": false,
+              "value6": 7,
+              "__collapseCase7": false,
+              "value7": 8,
+              "__collapseCase8": false,
+              "value8": 9,
+              "__collapseCase9": false,
+              "value9": 10,
+              "__collapseCase10": false,
+              "value10": 11,
+              "__collapseCase11": false,
+              "value11": 12,
+              "__collapseCase12": false,
+              "value12": 13,
+              "__collapseCase13": false,
+              "value13": 14,
+              "__collapseCase14": false,
+              "value14": 15,
+              "__collapseCase15": false,
+              "value15": 16,
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true0": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Alors, vous avez enfin\ntrouvé la demeure de\nMalmord! Maintenant,",
+                      "touchez avec votre\nbaguette la pierre de\ndroite. Car je suis",
+                      "Malmord, qui contrôle le\nfutur et le passé, et je\nnous rendrai égaux en",
+                      "magie et en puissance!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "2b6edc2d-d36c-4ded-af61-1d269225fbb4"
+                }
+              ],
+              "true1": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "Du hast also endlich\nMalmords Zuhause\ngefunden!",
+                      "Berühre mit deinem\nZauberstab den Stein\nauf der rechten Seite.",
+                      "Denn ich bin Malmord,\nder Zukunft und die\nVergangenheit lenkt,",
+                      "und ich werde uns in\nMagie und Macht gleich-\nstellen!"
+                    ],
+                    "__section": "text",
+                    "avatarId": "",
+                    "minHeight": 4,
+                    "maxHeight": 7,
+                    "textX": 1,
+                    "textY": 1,
+                    "textHeight": 5,
+                    "position": "bottom",
+                    "clearPrevious": true,
+                    "showFrame": "true",
+                    "speedIn": -1,
+                    "speedOut": -1,
+                    "closeWhen": "key",
+                    "closeButton": "a",
+                    "closeDelayTime": 0.5,
+                    "closeDelayFrames": 30
+                  },
+                  "id": "31d68cd4-63df-4510-86bb-7accfc9a990e"
+                }
+              ],
+              "true2": [],
+              "true3": [],
+              "true4": [],
+              "true5": [],
+              "true6": [],
+              "true7": [],
+              "true8": [],
+              "true9": [],
+              "true10": [],
+              "true11": [],
+              "true12": [],
+              "true13": [],
+              "true14": [],
+              "true15": [],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "So, you found \nMalmord's home at last!\nNow touch your wand to",
+                      "the stone on the right.\nFor I am Malmord, who\ncontrols future and",
+                      "past, and I will make us\neven in magic and might!"
+                    ],
+                    "avatarId": "",
+                    "__collapse": false
+                  },
+                  "id": "d5ea7925-ebaa-4159-8a22-19573688d762"
+                }
+              ]
+            },
+            "id": "8975bdd0-79aa-4d4d-ad17-dc534fb89fd4"
+          }
+        ]
+      },
+      "id": "777a7006-0e20-4658-9627-7304fc923436"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": []
+}

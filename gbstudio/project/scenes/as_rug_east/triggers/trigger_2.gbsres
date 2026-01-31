@@ -1,0 +1,80 @@
+{
+  "_resourceType": "trigger",
+  "id": "70b57827-7a4b-4002-8fcd-5db03d25f8af",
+  "name": "",
+  "prefabId": "",
+  "x": 0,
+  "y": 2,
+  "symbol": "trigger_1170",
+  "prefabScriptOverrides": {},
+  "width": 1,
+  "height": 15,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "da9e6929-6fef-47ae-bb80-1958fc27e202"
+      },
+      "id": "86d63812-da31-4d86-8129-1e554a1d6b47"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "104",
+        "flag": 3,
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Defeated 2nd Vapora",
+              "__collapse": true
+            },
+            "id": "691a0a8e-5e3a-428c-953b-aa88178ce02b"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "9cc4df5e-9257-4f5a-bc90-27ed715ae755",
+              "x": {
+                "type": "number",
+                "value": 17
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "left",
+              "fadeSpeed": "2"
+            },
+            "id": "849d017a-a58a-4ff1-bfba-772a595b6054"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "46737cdf-4a7b-4ca7-8743-0c36786de812",
+              "x": {
+                "type": "number",
+                "value": 17
+              },
+              "y": {
+                "type": "number",
+                "value": 9
+              },
+              "direction": "left",
+              "fadeSpeed": "2"
+            },
+            "id": "1a153478-469d-4ae2-b8f8-219f1dd3982d"
+          }
+        ]
+      },
+      "id": "1ae56093-2ca8-4e95-8466-486354974634"
+    }
+  ],
+  "leaveScript": [],
+  "_index": 1
+}

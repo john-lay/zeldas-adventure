@@ -1,0 +1,235 @@
+{
+  "_resourceType": "actor",
+  "id": "5b852acc-731a-43b8-8e6b-dec66ed2f4bd",
+  "name": "plank",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "23a21cc3-21d6-4ee5-b15c-1a49eb262c84",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "1",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_944",
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "336fa60d-6958-4ca4-bd2f-4d60ac592e33",
+        "__collapse": true
+      },
+      "id": "def77e0f-d421-483e-b9d1-ab4844480cd0"
+    },
+    {
+      "command": "EVENT_ADD_FLAGS",
+      "args": {
+        "variable": "8",
+        "flag1": false,
+        "flag2": false,
+        "flag3": false,
+        "flag4": false,
+        "flag5": false,
+        "flag6": false,
+        "flag7": false,
+        "flag8": false,
+        "flag9": false,
+        "flag10": false,
+        "flag11": false,
+        "flag12": false,
+        "flag13": false,
+        "flag14": false,
+        "flag15": true,
+        "flag16": false,
+        "__collapse": true
+      },
+      "id": "5c5575cf-8d42-4398-bfb0-337e9accd0bc"
+    },
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 2,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Tu as le trésor de la\nPlanche!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            },
+            "id": "80d19520-df42-4b87-b466-46e12b9aaaab"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Du hast den Schatz\nBrett gefunden!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "3efc8efc-eaf9-4831-8e70-1f184022b53f"
+          }
+        ],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "You've got the Plank\ntreasure!"
+              ],
+              "avatarId": "",
+              "__collapse": false
+            },
+            "id": "f8c63025-67a0-4782-915c-b1aeaf08812d"
+          }
+        ]
+      },
+      "id": "cf89bd65-f2c2-4af9-aaa1-114124570817"
+    },
+    {
+      "command": "EVENT_ACTOR_DEACTIVATE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "198a1c2e-b675-48ff-8d4d-6d47ef571a75"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "8",
+        "flag": 14,
+        "__collapseElse": false,
+        "__disableElse": true
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Has Collected plank",
+              "__collapse": true
+            },
+            "id": "73d6818d-252b-4c8d-893d-d0343a84312f"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "39500b56-1c35-4d56-b732-c365800dad3a"
+          }
+        ],
+        "false": []
+      },
+      "id": "6d3c5ed2-7f66-4bba-aef9-ff6c5c1b7ce0"
+    },
+    {
+      "command": "EVENT_IF_FLAGS_COMPARE",
+      "args": {
+        "variable": "108",
+        "flag": 2,
+        "__collapseElse": true,
+        "__disableElse": true,
+        "__label": "Plank already used",
+        "__collapse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "5879a576-fc34-407c-95d6-4be6506029bf"
+          }
+        ],
+        "false": []
+      },
+      "id": "5bc58373-e62a-4af6-bba9-b77a54d6c265"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 12,
+  "y": 10,
+  "_index": 1
+}

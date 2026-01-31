@@ -1,0 +1,380 @@
+{
+  "_resourceType": "actor",
+  "id": "c19163d6-430e-4769-8608-3ef9357e88db",
+  "name": "Seafarer",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "56d18443-98ab-46e3-980c-2cf2b02641df",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 63,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_563",
+  "script": [
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 2,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Nous sommes trop\noccupés pour vous\naider maintenant,",
+                "mademoiselle. Trouvez\nun autre marin!"
+              ],
+              "avatarId": ""
+            },
+            "id": "d1d5a0fa-3ac3-42c4-8475-bdf9ca042c80"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Wir sind zu beschäftigt,\num dir jetzt zu helfen,",
+                "Fräulein. Such dir einen\nanderen Seemann!"
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "68307bc5-bad7-40c0-9ead-dc50c05e9b7c"
+          }
+        ],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "We're too busy to help\nyou now, miss. Find\nanother seafarer!"
+              ],
+              "avatarId": ""
+            },
+            "id": "6f646e1b-ba9c-4105-87d2-c988a1b14007"
+          }
+        ]
+      },
+      "id": "d12d96e6-01af-4444-859b-a826c5f837ca"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "can leave",
+        "__collapse": true
+      },
+      "id": "7a9d955c-733b-4bfb-a7c4-017e3fa09cb1"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "27",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "424f9079-070e-4a65-bfe7-b3bd05c3a4fe"
+    },
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "timer started",
+        "__collapse": true
+      },
+      "id": "57bada57-d8d8-4774-adc3-742e96e83083"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "60",
+        "value": {
+          "type": "false"
+        },
+        "__collapse": true
+      },
+      "id": "bb22687d-d3ac-4b93-aa89-bee89a37cb87"
+    }
+  ],
+  "updateScript": [
+    {
+      "command": "EVENT_COMMENT",
+      "args": {
+        "text": "can leave",
+        "__collapse": true
+      },
+      "id": "ac8ca064-ad0b-422b-a1b5-9f03eb2eddbf"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "condition": {
+          "type": "not",
+          "value": {
+            "type": "variable",
+            "value": "27"
+          }
+        },
+        "__collapseElse": false
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "timer started",
+              "__collapse": true
+            },
+            "id": "d69d028a-d8b5-4849-871f-6913a720dbe5"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "condition": {
+                "type": "not",
+                "value": {
+                  "type": "variable",
+                  "value": "60"
+                }
+              },
+              "__collapseElse": true,
+              "__disableElse": true
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Walk over to other sea farer",
+                    "__collapse": true
+                  },
+                  "id": "e0574968-dfef-4b6f-a182-e81be4e887dc"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 6
+                    },
+                    "moveType": "vertical",
+                    "useCollisions": false,
+                    "__collapse": true
+                  },
+                  "id": "a5e6b67f-fd93-4e73-9861-e0141cd323ca"
+                },
+                {
+                  "command": "EVENT_ACTOR_MOVE_RELATIVE",
+                  "args": {
+                    "actorId": "$self$",
+                    "x": {
+                      "type": "number",
+                      "value": -10
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 0
+                    },
+                    "moveType": "horizontal",
+                    "useCollisions": false,
+                    "__collapse": true
+                  },
+                  "id": "1bd310ec-5de9-40a3-8f44-adde56f83b93"
+                },
+                {
+                  "command": "EVENT_ACTOR_EMOTE",
+                  "args": {
+                    "actorId": "$self$",
+                    "emoteId": "d508e529-57eb-458b-9782-66f318243c32"
+                  },
+                  "id": "35f7b0e3-0608-490f-a9b6-9f346ec837ff"
+                },
+                {
+                  "command": "EVENT_COMMENT",
+                  "args": {
+                    "text": "Pause here for 15 seconds",
+                    "__collapse": true
+                  },
+                  "id": "bc4a4b16-3086-49f0-b2fc-1f46067664a2"
+                },
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "60",
+                    "value": {
+                      "type": "true"
+                    },
+                    "__collapse": true
+                  },
+                  "id": "469ccac2-b8fa-4912-91aa-648066a1a85a"
+                },
+                {
+                  "command": "EVENT_SET_TIMER_SCRIPT",
+                  "args": {
+                    "timer": 2,
+                    "duration": 15,
+                    "frames": 30,
+                    "__scriptTabs": "end",
+                    "__collapse": true
+                  },
+                  "children": {
+                    "script": [
+                      {
+                        "command": "EVENT_SET_VALUE",
+                        "args": {
+                          "variable": "27",
+                          "value": {
+                            "type": "true"
+                          },
+                          "__collapse": true
+                        },
+                        "id": "a8d5bd9f-56e9-475f-85d7-5fd716eeca1a"
+                      },
+                      {
+                        "command": "EVENT_TIMER_DISABLE",
+                        "args": {
+                          "timer": 2,
+                          "__collapse": false
+                        },
+                        "id": "548e7ab3-3d3b-4cec-8004-7750b97a6851"
+                      }
+                    ]
+                  },
+                  "id": "3c6e0a56-60f3-413c-ba9a-b05e24848f99"
+                },
+                {
+                  "command": "EVENT_ACTOR_EMOTE",
+                  "args": {
+                    "actorId": "db082626-4436-4ab4-aee9-42709040a786",
+                    "emoteId": "d508e529-57eb-458b-9782-66f318243c32"
+                  },
+                  "id": "95bc1443-2556-490c-906d-504689dfed10"
+                }
+              ],
+              "false": []
+            },
+            "id": "dce46884-a1ce-46b0-8caf-0f8cbd927ae1"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_COMMENT",
+            "args": {
+              "text": "Exit stage right",
+              "__collapse": true
+            },
+            "id": "66ba9c97-aee7-4008-a5aa-822baf9506ac"
+          },
+          {
+            "command": "EVENT_ACTOR_MOVE_RELATIVE",
+            "args": {
+              "actorId": "$self$",
+              "x": {
+                "type": "number",
+                "value": 13
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "moveType": "horizontal",
+              "useCollisions": false,
+              "__collapse": true
+            },
+            "id": "60baf1fc-751c-4293-b97c-49a0d26b6e87"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$",
+              "__collapse": true
+            },
+            "id": "651b2227-bb41-4d76-bebb-411dce3e22a7"
+          }
+        ]
+      },
+      "id": "3ebf417b-cbe4-4a0d-8c51-58cd2f056dc1"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 15,
+  "y": 9,
+  "_index": 1
+}

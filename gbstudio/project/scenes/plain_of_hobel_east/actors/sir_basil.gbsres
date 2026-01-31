@@ -1,0 +1,219 @@
+{
+  "_resourceType": "actor",
+  "id": "02790555-2a53-4f68-8d68-b9c54feac8e9",
+  "name": "Sir Basil",
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "e100cbc0-e073-4d57-b544-5c6f19cd54bd",
+  "prefabId": "",
+  "direction": "down",
+  "moveSpeed": 0.5,
+  "animSpeed": 31,
+  "paletteId": "",
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "symbol": "actor_1748",
+  "script": [
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "23",
+        "choices": 2,
+        "__collapseCase0": false,
+        "value0": 1,
+        "__collapseCase1": false,
+        "value1": 2,
+        "__collapseCase2": false,
+        "value2": 3,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false,
+        "__collapse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ah, Zelda. C'est moi,\nSir Basil. Vous avez\nbien réussi jusqu'ici",
+                "votre difficile voyage.\nVous allez bientôt\nrencontrer Ursore;",
+                "utilisez bien vos\nconnaissances de\nl'épée large."
+              ],
+              "avatarId": ""
+            },
+            "id": "701f663c-7dfa-4dad-aaa3-aafe7b02f2aa"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ah, Zelda. Ich bin es,\nSir Basil. Du hast deine\nschwierige Reise bisher",
+                "gut gemeistert. Bald\nwirst du Ursore\ntreffen; setze dein",
+                "Wissen über das\nBreitschwert gut ein."
+              ],
+              "__section": "text",
+              "avatarId": "",
+              "minHeight": 4,
+              "maxHeight": 7,
+              "textX": 1,
+              "textY": 1,
+              "textHeight": 5,
+              "position": "bottom",
+              "clearPrevious": true,
+              "showFrame": "true",
+              "speedIn": -1,
+              "speedOut": -1,
+              "closeWhen": "key",
+              "closeButton": "a",
+              "closeDelayTime": 0.5,
+              "closeDelayFrames": 30
+            },
+            "id": "5c7e44e0-ba24-47c8-8b32-a2fd9ed2881b"
+          }
+        ],
+        "true2": [],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                "Ah, Zelda. It's me,\nSir Basil. You've fared\nwell so far on your",
+                "difficult journey. You\nwill shortly be meeting\nUrsore; use well your",
+                "knowledge of the\nBroadsword."
+              ],
+              "avatarId": "",
+              "__collapse": false
+            },
+            "id": "0aa76c0c-a7b5-4b3e-9fd4-de11e976d7a1"
+          }
+        ]
+      },
+      "id": "3de7083e-e7fb-4107-b1a9-3056179c5a70"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.8,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "e8822125-f354-431b-b5d8-aaf7dd48bf62"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": 8
+        },
+        "y": 0,
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "6feb6939-ab75-4be0-a041-7c7dcfc870d7"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "down"
+        },
+        "__collapse": true
+      },
+      "id": "0be08d79-4ff7-4550-b987-8ffd10d7642f"
+    },
+    {
+      "command": "EVENT_WAIT",
+      "args": {
+        "time": 0.8,
+        "frames": 30,
+        "units": "time",
+        "__collapse": true
+      },
+      "id": "8aa1b164-372c-4a51-9d8e-2e9ac873bb40"
+    },
+    {
+      "command": "EVENT_ACTOR_MOVE_RELATIVE",
+      "args": {
+        "actorId": "$self$",
+        "x": {
+          "type": "number",
+          "value": -8
+        },
+        "y": 0,
+        "moveType": "vertical",
+        "useCollisions": false,
+        "__collapse": true
+      },
+      "id": "285f5aeb-737e-46b4-b56f-365b864b1ab5"
+    },
+    {
+      "command": "EVENT_ACTOR_SET_DIRECTION",
+      "args": {
+        "actorId": "$self$",
+        "direction": {
+          "type": "direction",
+          "value": "down"
+        },
+        "__collapse": true
+      },
+      "id": "1d8fe768-4a8d-43ff-a27c-631472f9fed7"
+    }
+  ],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": [],
+  "x": 5,
+  "y": 11,
+  "_index": 1
+}
